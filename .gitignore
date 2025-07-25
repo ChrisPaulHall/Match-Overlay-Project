@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+
+# DeepFace temp files
+temp_frame.jpg
+
+# Your debug snapshots
+matched_frames/
+# Virtualenv
+deepface_env/
+env310/
+
+# Data files you’ll regenerate
+*.csv
+*.db

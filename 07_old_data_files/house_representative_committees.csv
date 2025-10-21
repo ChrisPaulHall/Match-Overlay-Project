@@ -1,0 +1,1779 @@
+first_name,last_name,state,district,party,committee
+Mike,Collins,,10th,R,Natural Resources
+Mike,Collins,,10th,R,"Science, Space, and Technology"
+Mike,Collins,,10th,R,Transportation and Infrastructure
+Mark,DeSaulnier,,10th,D,Education and Workforce
+Mark,DeSaulnier,,10th,D,Ethics
+Mark,DeSaulnier,,10th,D,Transportation and Infrastructure
+Maxwell,Frost,,10th,D,Oversight and Government Reform
+Maxwell,Frost,,10th,D,"Science, Space, and Technology"
+Maxwell,Frost,,10th,D,Transportation and Infrastructure
+Daniel,Goldman,,10th,D,Homeland Security
+Daniel,Goldman,,10th,D,Judiciary
+Pat,Harrigan,,10th,R,Armed Services
+Pat,Harrigan,,10th,R,"Science, Space, and Technology"
+John,James,,10th,R,Energy and Commerce
+Michael,McCaul,,10th,R,Foreign Affairs
+Michael,McCaul,,10th,R,Homeland Security
+LaMonica,McIver,,10th,D,Homeland Security
+LaMonica,McIver,,10th,D,Small Business
+Scott,Perry,,10th,R,Foreign Affairs
+Scott,Perry,,10th,R,Intelligence
+Scott,Perry,,10th,R,Oversight and Government Reform
+Scott,Perry,,10th,R,Transportation and Infrastructure
+Bradley,Schneider,,10th,D,Foreign Affairs
+Bradley,Schneider,,10th,D,Ways and Means
+Marilyn,Strickland,,10th,D,Armed Services
+Marilyn,Strickland,,10th,D,Transportation and Infrastructure
+Suhas,Subramanyam,,10th,D,Ethics
+Suhas,Subramanyam,,10th,D,Oversight and Government Reform
+Suhas,Subramanyam,,10th,D,"Science, Space, and Technology"
+Michael,Turner,,10th,R,Armed Services
+Michael,Turner,,10th,R,Oversight and Government Reform
+Shontel,Brown,,11th,D,Agriculture
+Shontel,Brown,,11th,D,Oversight and Government Reform
+Shontel,Brown,,11th,D,Select Comm on the Strategic Competition US and China
+Chuck,Edwards,,11th,R,Appropriations
+Chuck,Edwards,,11th,R,Budget
+Bill,Foster,,11th,D,Financial Services
+Bill,Foster,,11th,D,"Science, Space, and Technology"
+Barry,Loudermilk,,11th,R,Financial Services
+Barry,Loudermilk,,11th,R,House Administration
+Barry,Loudermilk,,11th,R,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Nicole,Malliotakis,,11th,R,Ways and Means
+Nancy,Pelosi,,11th,D,
+August,Pfluger,,11th,R,Energy and Commerce
+August,Pfluger,,11th,R,Homeland Security
+Mikie,Sherrill,,11th,D,Armed Services
+Mikie,Sherrill,,11th,D,Select Comm on the Strategic Competition US and China
+Lloyd,Smucker,,11th,R,Budget
+Lloyd,Smucker,,11th,R,Ways and Means
+Haley,Stevens,,11th,D,Education and Workforce
+Haley,Stevens,,11th,D,"Science, Space, and Technology"
+Haley,Stevens,,11th,D,Select Comm on the Strategic Competition US and China
+James,Walkinshaw,,11th,D,Oversight and Government Reform
+Daniel,Webster,,11th,R,Natural Resources
+Daniel,Webster,,11th,R,"Science, Space, and Technology"
+Daniel,Webster,,11th,R,Transportation and Infrastructure
+Alma,Adams,,12th,D,Agriculture
+Alma,Adams,,12th,D,Education and Workforce
+Rick,Allen,,12th,R,Education and Workforce
+Rick,Allen,,12th,R,Energy and Commerce
+Troy,Balderson,,12th,R,Energy and Commerce
+Gus,Bilirakis,,12th,R,Energy and Commerce
+Gus,Bilirakis,,12th,R,Select Comm on the Strategic Competition US and China
+Mike,Bost,,12th,R,Agriculture
+Mike,Bost,,12th,R,Transportation and Infrastructure
+Mike,Bost,,12th,R,Veterans' Affairs
+Craig,Goldman,,12th,R,Energy and Commerce
+Summer,Lee,,12th,D,Education and Workforce
+Summer,Lee,,12th,D,Oversight and Government Reform
+Jerrold,Nadler,,12th,D,Judiciary
+Jerrold,Nadler,,12th,D,Transportation and Infrastructure
+Lateefah,Simon,,12th,D,Oversight and Government Reform
+Lateefah,Simon,,12th,D,Small Business
+Rashida,Tlaib,,12th,D,Financial Services
+Rashida,Tlaib,,12th,D,Oversight and Government Reform
+Bonnie,Watson Coleman,,12th,D,Appropriations
+Bonnie,Watson Coleman,,12th,D,Budget
+Nikki,Budzinski,,13th,D,Agriculture
+Nikki,Budzinski,,13th,D,Veterans' Affairs
+Adriano,Espaillat,,13th,D,Appropriations
+Adam,Gray,,13th,D,Agriculture
+Adam,Gray,,13th,D,Natural Resources
+Ronny,Jackson,,13th,R,Agriculture
+Ronny,Jackson,,13th,R,Armed Services
+Ronny,Jackson,,13th,R,Foreign Affairs
+Ronny,Jackson,,13th,R,Intelligence
+John,Joyce,,13th,R,Energy and Commerce
+Brad,Knott,,13th,R,Homeland Security
+Brad,Knott,,13th,R,Judiciary
+Brad,Knott,,13th,R,Transportation and Infrastructure
+Anna Paulina,Luna,,13th,R,Foreign Affairs
+Anna Paulina,Luna,,13th,R,Oversight and Government Reform
+David,Scott,,13th,D,Agriculture
+David,Scott,,13th,D,Financial Services
+Emilia,Sykes,,13th,D,"Science, Space, and Technology"
+Emilia,Sykes,,13th,D,Transportation and Infrastructure
+Shri,Thanedar,,13th,D,Agriculture
+Shri,Thanedar,,13th,D,Homeland Security
+Kathy,Castor,,14th,D,Energy and Commerce
+Kathy,Castor,,14th,D,Select Comm on the Strategic Competition US and China
+Marjorie,Greene,,14th,R,Homeland Security
+Marjorie,Greene,,14th,R,Oversight and Government Reform
+David,Joyce,,14th,R,Appropriations
+Tim,Moore,,14th,R,Budget
+Tim,Moore,,14th,R,Financial Services
+Alexandria,Ocasio-Cortez,,14th,D,Energy and Commerce
+Guy,Reschenthaler,,14th,R,Appropriations
+Eric,Swalwell,,14th,D,Homeland Security
+Eric,Swalwell,,14th,D,Judiciary
+Eric,Swalwell,,14th,D,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Lauren,Underwood,,14th,D,Appropriations
+Randy,Weber,,14th,R,Energy and Commerce
+Randy,Weber,,14th,R,"Science, Space, and Technology"
+Mike,Carey,,15th,R,Budget
+Mike,Carey,,15th,R,House Administration
+Mike,Carey,,15th,R,Joint Committee of Congress on the Library
+Mike,Carey,,15th,R,Ways and Means
+Monica,De La Cruz,,15th,R,Agriculture
+Monica,De La Cruz,,15th,R,Financial Services
+Laurel,Lee,,15th,R,Energy and Commerce
+Laurel,Lee,,15th,R,House Administration
+Laurel,Lee,,15th,R,Judiciary
+Mary,Miller,,15th,R,Agriculture
+Mary,Miller,,15th,R,Education and Workforce
+Mary,Miller,,15th,R,House Administration
+Kevin,Mullin,,15th,D,Energy and Commerce
+Glenn,Thompson,,15th,R,Agriculture
+Glenn,Thompson,,15th,R,Education and Workforce
+Ritchie,Torres,,15th,D,Financial Services
+Ritchie,Torres,,15th,D,Select Comm on the Strategic Competition US and China
+Vern,Buchanan,,16th,R,Joint Committee on Taxation
+Vern,Buchanan,,16th,R,Ways and Means
+Veronica,Escobar,,16th,D,Appropriations
+Veronica,Escobar,,16th,D,Budget
+Mike,Kelly,,16th,R,Ways and Means
+Darin,LaHood,,16th,R,Intelligence
+Darin,LaHood,,16th,R,Select Comm on the Strategic Competition US and China
+Darin,LaHood,,16th,R,Ways and Means
+George,Latimer,,16th,D,Foreign Affairs
+George,Latimer,,16th,D,Small Business
+Sam,Liccardo,,16th,D,Financial Services
+Christopher,Deluzio,,17th,D,Armed Services
+Christopher,Deluzio,,17th,D,Transportation and Infrastructure
+Ro,Khanna,,17th,D,Armed Services
+Ro,Khanna,,17th,D,Oversight and Government Reform
+Ro,Khanna,,17th,D,Select Comm on the Strategic Competition US and China
+Michael,Lawler,,17th,R,Financial Services
+Michael,Lawler,,17th,R,Foreign Affairs
+Pete,Sessions,,17th,R,Financial Services
+Pete,Sessions,,17th,R,Oversight and Government Reform
+Eric,Sorensen,,17th,D,Agriculture
+Eric,Sorensen,,17th,D,Armed Services
+W.,Steube,,17th,R,Intelligence
+W.,Steube,,17th,R,Ways and Means
+Scott,Franklin,,18th,R,Appropriations
+Scott,Franklin,,18th,R,"Science, Space, and Technology"
+Zoe,Lofgren,,18th,D,Judiciary
+Zoe,Lofgren,,18th,D,"Science, Space, and Technology"
+Patrick,Ryan,,18th,D,Armed Services
+Patrick,Ryan,,18th,D,Transportation and Infrastructure
+Sylvester,Turner,,18th,D,
+Jodey,Arrington,,19th,R,Budget
+Jodey,Arrington,,19th,R,Ways and Means
+Byron,Donalds,,19th,R,Financial Services
+Byron,Donalds,,19th,R,Oversight and Government Reform
+Jimmy,Panetta,,19th,D,Budget
+Jimmy,Panetta,,19th,D,Ways and Means
+Josh,Riley,,19th,D,Agriculture
+Josh,Riley,,19th,D,"Science, Space, and Technology"
+Gabe,Amo,,1st,D,Budget
+Gabe,Amo,,1st,D,Foreign Affairs
+Gabe,Amo,,1st,D,"Science, Space, and Technology"
+Wesley,Bell,,1st,D,Armed Services
+Wesley,Bell,,1st,D,Oversight and Government Reform
+Jack,Bergman,,1st,R,Armed Services
+Jack,Bergman,,1st,R,Budget
+Jack,Bergman,,1st,R,Veterans' Affairs
+Suzanne,Bonamici,,1st,D,Education and Workforce
+Suzanne,Bonamici,,1st,D,"Science, Space, and Technology"
+Earl,Carter,,1st,R,Budget
+Earl,Carter,,1st,R,Energy and Commerce
+Ed,Case,,1st,D,Appropriations
+James,Comer,,1st,R,Education and Workforce
+James,Comer,,1st,R,Oversight and Government Reform
+Eric,Crawford,,1st,R,Agriculture
+Eric,Crawford,,1st,R,Intelligence
+Eric,Crawford,,1st,R,Transportation and Infrastructure
+Donald,Davis,,1st,D,Agriculture
+Donald,Davis,,1st,D,Armed Services
+Diana,DeGette,,1st,D,Energy and Commerce
+Suzan,DelBene,,1st,D,Ways and Means
+Brad,Finstad,,1st,R,Agriculture
+Brad,Finstad,,1st,R,Armed Services
+Brad,Finstad,,1st,R,Small Business
+Brian,Fitzpatrick,,1st,R,Intelligence
+Brian,Fitzpatrick,,1st,R,Ways and Means
+Mike,Flood,,1st,R,Financial Services
+Russ,Fulcher,,1st,R,Energy and Commerce
+Russ,Fulcher,,1st,R,Natural Resources
+Andy,Harris,,1st,R,Appropriations
+Diana,Harshbarger,,1st,R,Energy and Commerce
+Kevin,Hern,,1st,R,Ways and Means
+Jonathan,Jackson,,1st,D,Agriculture
+Jonathan,Jackson,,1st,D,Foreign Affairs
+Trent,Kelly,,1st,R,Agriculture
+Trent,Kelly,,1st,R,Armed Services
+Trent,Kelly,,1st,R,Intelligence
+Nick,LaLota,,1st,R,Appropriations
+Nick,LaLota,,1st,R,Small Business
+Doug,LaMalfa,,1st,R,Agriculture
+Doug,LaMalfa,,1st,R,Natural Resources
+Doug,LaMalfa,,1st,R,Transportation and Infrastructure
+Greg,Landsman,,1st,D,Energy and Commerce
+John,Larson,,1st,D,Ways and Means
+Nancy,Mace,,1st,R,Armed Services
+Nancy,Mace,,1st,R,Oversight and Government Reform
+Nancy,Mace,,1st,R,Veterans' Affairs
+Tracey,Mann,,1st,R,Agriculture
+Tracey,Mann,,1st,R,Transportation and Infrastructure
+Carol,Miller,,1st,R,Ways and Means
+Mariannette,Miller-Meeks,,1st,R,Energy and Commerce
+Mariannette,Miller-Meeks,,1st,R,Veterans' Affairs
+Barry,Moore,,1st,R,Agriculture
+Blake,Moore,,1st,R,Budget
+Barry,Moore,,1st,R,Judiciary
+Blake,Moore,,1st,R,Ways and Means
+Nathaniel,Moran,,1st,R,Ethics
+Nathaniel,Moran,,1st,R,Select Comm on the Strategic Competition US and China
+Nathaniel,Moran,,1st,R,Ways and Means
+Frank,Mrvan,,1st,D,Appropriations
+Richard,Neal,,1st,D,Joint Committee on Taxation
+Richard,Neal,,1st,D,Ways and Means
+Donald,Norcross,,1st,D,Armed Services
+Donald,Norcross,,1st,D,Education and Workforce
+Chris,Pappas,,1st,D,Transportation and Infrastructure
+Chris,Pappas,,1st,D,Veterans' Affairs
+Jimmy,Patronis,,1st,R,Small Business
+Jimmy,Patronis,,1st,R,Transportation and Infrastructure
+Chellie,Pingree,,1st,D,Agriculture
+Chellie,Pingree,,1st,D,Appropriations
+Steve,Scalise,,1st,R,
+David,Schweikert,,1st,R,Ways and Means
+Melanie,Stansbury,,1st,D,Natural Resources
+Melanie,Stansbury,,1st,D,Oversight and Government Reform
+Bryan,Steil,,1st,R,Financial Services
+Bryan,Steil,,1st,R,House Administration
+Bryan,Steil,,1st,R,Joint Committee of Congress on the Library
+Dina,Titus,,1st,D,Foreign Affairs
+Dina,Titus,,1st,D,Transportation and Infrastructure
+Robert,Wittman,,1st,R,Armed Services
+Robert,Wittman,,1st,R,Natural Resources
+Robert,Wittman,,1st,R,Select Comm on the Strategic Competition US and China
+Ryan,Zinke,,1st,R,Appropriations
+Ryan,Zinke,,1st,R,Foreign Affairs
+Joaquin,Castro,,20th,D,Foreign Affairs
+Joaquin,Castro,,20th,D,Intelligence
+Sheila,Cherfilus-McCormick,,20th,D,Foreign Affairs
+Sheila,Cherfilus-McCormick,,20th,D,Veterans' Affairs
+Vince,Fong,,20th,R,"Science, Space, and Technology"
+Vince,Fong,,20th,R,Transportation and Infrastructure
+Paul,Tonko,,20th,D,Budget
+Paul,Tonko,,20th,D,Energy and Commerce
+Jim,Costa,,21st,D,Agriculture
+Jim,Costa,,21st,D,Foreign Affairs
+Brian,Mast,,21st,R,Foreign Affairs
+Brian,Mast,,21st,R,Transportation and Infrastructure
+Chip,Roy,,21st,R,Budget
+Chip,Roy,,21st,R,Judiciary
+Chip,Roy,,21st,R,Rules
+Elise,Stefanik,,21st,R,Armed Services
+Elise,Stefanik,,21st,R,Education and Workforce
+Elise,Stefanik,,21st,R,Intelligence
+Lois,Frankel,,22nd,D,Appropriations
+John,Mannion,,22nd,D,Agriculture
+John,Mannion,,22nd,D,Education and Workforce
+Troy,Nehls,,22nd,R,Judiciary
+Troy,Nehls,,22nd,R,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Troy,Nehls,,22nd,R,Transportation and Infrastructure
+David,Valadao,,22nd,R,Appropriations
+David,Valadao,,22nd,R,Joint Committee of Congress on the Library
+Tony,Gonzales,,23rd,R,Appropriations
+Tony,Gonzales,,23rd,R,Homeland Security
+Nicholas,Langworthy,,23rd,R,Energy and Commerce
+Nicholas,Langworthy,,23rd,R,Oversight and Government Reform
+Nicholas,Langworthy,,23rd,R,Rules
+Jared,Moskowitz,,23rd,D,Foreign Affairs
+Jared,Moskowitz,,23rd,D,Judiciary
+Jared,Moskowitz,,23rd,D,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Jay,Obernolte,,23rd,R,Budget
+Jay,Obernolte,,23rd,R,Energy and Commerce
+Jay,Obernolte,,23rd,R,"Science, Space, and Technology"
+Salud,Carbajal,,24th,D,Agriculture
+Salud,Carbajal,,24th,D,Armed Services
+Salud,Carbajal,,24th,D,Transportation and Infrastructure
+Claudia,Tenney,,24th,R,Intelligence
+Claudia,Tenney,,24th,R,"Science, Space, and Technology"
+Claudia,Tenney,,24th,R,Ways and Means
+Beth,Van Duyne,,24th,R,Small Business
+Beth,Van Duyne,,24th,R,Ways and Means
+Frederica,Wilson,,24th,D,Education and Workforce
+Frederica,Wilson,,24th,D,Transportation and Infrastructure
+Joseph,Morelle,,25th,D,Appropriations
+Joseph,Morelle,,25th,D,House Administration
+Joseph,Morelle,,25th,D,Joint Committee of Congress on the Library
+Raul,Ruiz,,25th,D,Energy and Commerce
+Debbie,Wasserman Schultz,,25th,D,Appropriations
+Roger,Williams,,25th,R,Financial Services
+Roger,Williams,,25th,R,Small Business
+Julia,Brownley,,26th,D,Natural Resources
+Julia,Brownley,,26th,D,Transportation and Infrastructure
+Julia,Brownley,,26th,D,Veterans' Affairs
+Mario,Diaz-Balart,,26th,R,Appropriations
+Brandon,Gill,,26th,R,Budget
+Brandon,Gill,,26th,R,Judiciary
+Brandon,Gill,,26th,R,Oversight and Government Reform
+Timothy,Kennedy,,26th,D,Homeland Security
+Timothy,Kennedy,,26th,D,Veterans' Affairs
+Michael,Cloud,,27th,R,Appropriations
+Michael,Cloud,,27th,R,Oversight and Government Reform
+Maria,Salazar,,27th,R,Financial Services
+Maria,Salazar,,27th,R,Foreign Affairs
+George,Whitesides,,27th,D,Armed Services
+George,Whitesides,,27th,D,"Science, Space, and Technology"
+Judy,Chu,,28th,D,Budget
+Judy,Chu,,28th,D,Ways and Means
+Henry,Cuellar,,28th,D,Appropriations
+Carlos,Gimenez,,28th,R,Armed Services
+Carlos,Gimenez,,28th,R,Homeland Security
+Carlos,Gimenez,,28th,R,Select Comm on the Strategic Competition US and China
+Sylvia,Garcia,,29th,D,Ethics
+Sylvia,Garcia,,29th,D,Financial Services
+Luz,Rivas,,29th,D,Natural Resources
+Luz,Rivas,,29th,D,"Science, Space, and Technology"
+Mark,Amodei,,2nd,R,Appropriations
+Mark,Amodei,,2nd,R,Natural Resources
+Don,Bacon,,2nd,R,Agriculture
+Don,Bacon,,2nd,R,Armed Services
+Cliff,Bentz,,2nd,R,Energy and Commerce
+Cliff,Bentz,,2nd,R,Natural Resources
+Sanford,Bishop,,2nd,D,Appropriations
+Brendan,Boyle,,2nd,D,Budget
+Brendan,Boyle,,2nd,D,Ways and Means
+Josh,Brecheen,,2nd,R,Budget
+Josh,Brecheen,,2nd,R,Homeland Security
+Tim,Burchett,,2nd,R,Foreign Affairs
+Tim,Burchett,,2nd,R,Oversight and Government Reform
+Tim,Burchett,,2nd,R,Transportation and Infrastructure
+Troy,Carter,,2nd,D,Energy and Commerce
+Troy,Carter,,2nd,D,Homeland Security
+Joe,Courtney,,2nd,D,Armed Services
+Joe,Courtney,,2nd,D,Education and Workforce
+Angie,Craig,,2nd,D,Agriculture
+Elijah,Crane,,2nd,R,Homeland Security
+Elijah,Crane,,2nd,R,Oversight and Government Reform
+Dan,Crenshaw,,2nd,R,Energy and Commerce
+Dan,Crenshaw,,2nd,R,Intelligence
+Troy,Downing,,2nd,R,Financial Services
+Troy,Downing,,2nd,R,Small Business
+Neal,Dunn,,2nd,R,Energy and Commerce
+Neal,Dunn,,2nd,R,Select Comm on the Strategic Competition US and China
+Shomari,Figures,,2nd,D,Agriculture
+Shomari,Figures,,2nd,D,Transportation and Infrastructure
+Andrew,Garbarino,,2nd,R,Ethics
+Andrew,Garbarino,,2nd,R,Financial Services
+Andrew,Garbarino,,2nd,R,Homeland Security
+Jared,Golden,,2nd,D,Armed Services
+Jared,Golden,,2nd,D,Natural Resources
+Maggie,Goodlander,,2nd,D,Armed Services
+Maggie,Goodlander,,2nd,D,Small Business
+Brett,Guthrie,,2nd,R,Energy and Commerce
+J.,Hill,,2nd,R,Financial Services
+J.,Hill,,2nd,R,Intelligence
+Ashley,Hinson,,2nd,R,Appropriations
+Ashley,Hinson,,2nd,R,Ethics
+Ashley,Hinson,,2nd,R,Select Comm on the Strategic Competition US and China
+Jared,Huffman,,2nd,D,Natural Resources
+Jared,Huffman,,2nd,D,Transportation and Infrastructure
+Robin,Kelly,,2nd,D,Energy and Commerce
+Jennifer,Kiggans,,2nd,R,Armed Services
+Jennifer,Kiggans,,2nd,R,Natural Resources
+Jennifer,Kiggans,,2nd,R,Veterans' Affairs
+Rick,Larsen,,2nd,D,Transportation and Infrastructure
+Seth,Magaziner,,2nd,D,Homeland Security
+Seth,Magaziner,,2nd,D,Natural Resources
+Celeste,Maloy,,2nd,R,Appropriations
+Celeste,Maloy,,2nd,R,Natural Resources
+James,McGovern,,2nd,D,Agriculture
+James,McGovern,,2nd,D,Rules
+John,Moolenaar,,2nd,R,Appropriations
+John,Moolenaar,,2nd,R,Select Comm on the Strategic Competition US and China
+Riley,Moore,,2nd,R,Appropriations
+Joe,Neguse,,2nd,D,Judiciary
+Joe,Neguse,,2nd,D,Natural Resources
+Joe,Neguse,,2nd,D,Rules
+Johnny,Olszewski,,2nd,D,Foreign Affairs
+Johnny,Olszewski,,2nd,D,Small Business
+Mark,Pocan,,2nd,D,Appropriations
+Deborah,Ross,,2nd,D,Ethics
+Deborah,Ross,,2nd,D,Judiciary
+Deborah,Ross,,2nd,D,"Science, Space, and Technology"
+Derek,Schmidt,,2nd,R,Armed Services
+Derek,Schmidt,,2nd,R,Judiciary
+Derek,Schmidt,,2nd,R,Small Business
+Michael,Simpson,,2nd,R,Appropriations
+David,Taylor,,2nd,R,Agriculture
+David,Taylor,,2nd,R,Transportation and Infrastructure
+Bennie,Thompson,,2nd,D,Homeland Security
+Jill,Tokuda,,2nd,D,Agriculture
+Jill,Tokuda,,2nd,D,Armed Services
+Jill,Tokuda,,2nd,D,Select Comm on the Strategic Competition US and China
+Jefferson,Van Drew,,2nd,R,Judiciary
+Jefferson,Van Drew,,2nd,R,Transportation and Infrastructure
+Gabe,Vasquez,,2nd,D,Agriculture
+Gabe,Vasquez,,2nd,D,Armed Services
+Ann,Wagner,,2nd,R,Financial Services
+Ann,Wagner,,2nd,R,Intelligence
+Joe,Wilson,,2nd,R,Armed Services
+Joe,Wilson,,2nd,R,Education and Workforce
+Joe,Wilson,,2nd,R,Foreign Affairs
+Rudy,Yakym,,2nd,R,Ways and Means
+Jasmine,Crockett,,30th,D,Judiciary
+Jasmine,Crockett,,30th,D,Oversight and Government Reform
+Jasmine,Crockett,,30th,D,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Laura,Friedman,,30th,D,"Science, Space, and Technology"
+Laura,Friedman,,30th,D,Transportation and Infrastructure
+John,Carter,,31st,R,Appropriations
+Gilbert,Cisneros,,31st,D,Armed Services
+Gilbert,Cisneros,,31st,D,Small Business
+Julie,Johnson,,32nd,D,Foreign Affairs
+Julie,Johnson,,32nd,D,Homeland Security
+Julie,Johnson,,32nd,D,House Administration
+Julie,Johnson,,32nd,D,Joint Committee of Congress on the Library
+Brad,Sherman,,32nd,D,Financial Services
+Brad,Sherman,,32nd,D,Foreign Affairs
+Pete,Aguilar,,33rd,D,Appropriations
+Marc,Veasey,,33rd,D,Energy and Commerce
+Jimmy,Gomez,,34th,D,Intelligence
+Jimmy,Gomez,,34th,D,Ways and Means
+Vicente,Gonzalez,,34th,D,Financial Services
+Greg,Casar,,35th,D,Education and Workforce
+Greg,Casar,,35th,D,Oversight and Government Reform
+Norma,Torres,,35th,D,Appropriations
+Norma,Torres,,35th,D,House Administration
+Brian,Babin,,36th,R,"Science, Space, and Technology"
+Brian,Babin,,36th,R,Transportation and Infrastructure
+Ted,Lieu,,36th,D,Foreign Affairs
+Ted,Lieu,,36th,D,Judiciary
+Lloyd,Doggett,,37th,D,Budget
+Lloyd,Doggett,,37th,D,Joint Committee on Taxation
+Lloyd,Doggett,,37th,D,Ways and Means
+Sydney,Kamlager-Dove,,37th,D,Foreign Affairs
+Sydney,Kamlager-Dove,,37th,D,Judiciary
+Wesley,Hunt,,38th,R,Judiciary
+Wesley,Hunt,,38th,R,Natural Resources
+Linda,Sanchez,,38th,D,Ways and Means
+Mark,Takano,,39th,D,Education and Workforce
+Mark,Takano,,39th,D,Veterans' Affairs
+Yassamin,Ansari,,3rd,D,Education and Workforce
+Yassamin,Ansari,,3rd,D,Natural Resources
+Yassamin,Ansari,,3rd,D,Oversight and Government Reform
+Joyce,Beatty,,3rd,D,Financial Services
+Sheri,Biggs,,3rd,R,Foreign Affairs
+Sheri,Biggs,,3rd,R,Homeland Security
+Sheri,Biggs,,3rd,R,"Science, Space, and Technology"
+Kat,Cammack,,3rd,R,Agriculture
+Kat,Cammack,,3rd,R,Energy and Commerce
+Herbert,Conaway,,3rd,D,Small Business
+Herbert,Conaway,,3rd,D,Veterans' Affairs
+Sharice,Davids,,3rd,D,Agriculture
+Sharice,Davids,,3rd,D,Transportation and Infrastructure
+Rosa,DeLauro,,3rd,D,Appropriations
+Maxine,Dexter,,3rd,D,Natural Resources
+Maxine,Dexter,,3rd,D,Veterans' Affairs
+Sarah,Elfreth,,3rd,D,Armed Services
+Sarah,Elfreth,,3rd,D,Natural Resources
+Dwight,Evans,,3rd,D,Ways and Means
+Charles,Fleischmann,,3rd,R,Appropriations
+Charles,Fleischmann,,3rd,R,"Science, Space, and Technology"
+Michael,Guest,,3rd,R,Appropriations
+Michael,Guest,,3rd,R,Ethics
+Michael,Guest,,3rd,R,Homeland Security
+Clay,Higgins,,3rd,R,Armed Services
+Clay,Higgins,,3rd,R,Oversight and Government Reform
+Clay,Higgins,,3rd,R,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Jeff,Hurd,,3rd,R,Natural Resources
+Jeff,Hurd,,3rd,R,"Science, Space, and Technology"
+Jeff,Hurd,,3rd,R,Transportation and Infrastructure
+Brian,Jack,,3rd,R,Oversight and Government Reform
+Brian,Jack,,3rd,R,Rules
+Brian,Jack,,3rd,R,Small Business
+Mike,Kennedy,,3rd,R,Natural Resources
+Mike,Kennedy,,3rd,R,"Science, Space, and Technology"
+Mike,Kennedy,,3rd,R,Transportation and Infrastructure
+Kevin,Kiley,,3rd,R,Education and Workforce
+Kevin,Kiley,,3rd,R,Judiciary
+Kevin,Kiley,,3rd,R,Transportation and Infrastructure
+Susie,Lee,,3rd,D,Appropriations
+Susie,Lee,,3rd,D,Natural Resources
+Teresa,Leger Fernandez,,3rd,D,Natural Resources
+Teresa,Leger Fernandez,,3rd,D,Rules
+Frank,Lucas,,3rd,R,Agriculture
+Frank,Lucas,,3rd,R,Financial Services
+Morgan,McGarvey,,3rd,D,Budget
+Morgan,McGarvey,,3rd,D,Small Business
+Morgan,McGarvey,,3rd,D,Veterans' Affairs
+Kelly,Morrison,,3rd,D,Small Business
+Kelly,Morrison,,3rd,D,Veterans' Affairs
+Gregory,Murphy,,3rd,R,House Administration
+Gregory,Murphy,,3rd,R,Veterans' Affairs
+Gregory,Murphy,,3rd,R,Ways and Means
+Zachary,Nunn,,3rd,R,Agriculture
+Zachary,Nunn,,3rd,R,Financial Services
+Zachary,Nunn,,3rd,R,Select Comm on the Strategic Competition US and China
+Robert,Onder,,3rd,R,Education and Workforce
+Robert,Onder,,3rd,R,Judiciary
+Robert,Onder,,3rd,R,Transportation and Infrastructure
+Marie,Perez,,3rd,D,Appropriations
+Delia,Ramirez,,3rd,D,Homeland Security
+Delia,Ramirez,,3rd,D,Veterans' Affairs
+Mike,Rogers,,3rd,R,Armed Services
+Hillary,Scholten,,3rd,D,Small Business
+Hillary,Scholten,,3rd,D,Transportation and Infrastructure
+Robert,Scott,,3rd,D,Budget
+Robert,Scott,,3rd,D,Education and Workforce
+Keith,Self,,3rd,R,Foreign Affairs
+Keith,Self,,3rd,R,"Science, Space, and Technology"
+Keith,Self,,3rd,R,Veterans' Affairs
+Adrian,Smith,,3rd,R,Joint Committee on Taxation
+Adrian,Smith,,3rd,R,Ways and Means
+Marlin,Stutzman,,3rd,R,Budget
+Marlin,Stutzman,,3rd,R,Financial Services
+Thomas R.,Suozzi,,3rd,D,Ways and Means
+Lori,Trahan,,3rd,D,Energy and Commerce
+Derrick,Van Orden,,3rd,R,Agriculture
+Derrick,Van Orden,,3rd,R,Armed Services
+Derrick,Van Orden,,3rd,R,Veterans' Affairs
+Steve,Womack,,3rd,R,Appropriations
+Young,Kim,,40th,R,Financial Services
+Young,Kim,,40th,R,Foreign Affairs
+Young,Kim,,40th,R,Select Comm on the Strategic Competition US and China
+Ken,Calvert,,41st,R,Appropriations
+Robert,Garcia,,42nd,D,Oversight and Government Reform
+Robert,Garcia,,42nd,D,Transportation and Infrastructure
+Maxine,Waters,,43rd,D,Financial Services
+Nanette,Barragan,,44th,D,Energy and Commerce
+Derek,Tran,,45th,D,Armed Services
+Derek,Tran,,45th,D,Small Business
+J.,Correa,,46th,D,Homeland Security
+J.,Correa,,46th,D,Judiciary
+Dave,Min,,47th,D,Natural Resources
+Dave,Min,,47th,D,Oversight and Government Reform
+Darrell,Issa,,48th,R,Foreign Affairs
+Darrell,Issa,,48th,R,Judiciary
+Darrell,Issa,,48th,R,"Science, Space, and Technology"
+Mike,Levin,,49th,D,Appropriations
+Robert,Aderholt,,4th,R,Appropriations
+Mark,Alford,,4th,R,Appropriations
+Mark,Alford,,4th,R,Small Business
+Jake,Auchincloss,,4th,D,Energy and Commerce
+James,Baird,,4th,R,Agriculture
+James,Baird,,4th,R,Foreign Affairs
+James,Baird,,4th,R,"Science, Space, and Technology"
+Aaron,Bean,,4th,R,Ways and Means
+Lauren,Boebert,,4th,R,Natural Resources
+Lauren,Boebert,,4th,R,Oversight and Government Reform
+Tom,Cole,,4th,R,Appropriations
+Madeleine,Dean,,4th,D,Appropriations
+Madeleine,Dean,,4th,D,Foreign Affairs
+Scott,DesJarlais,,4th,R,Agriculture
+Scott,DesJarlais,,4th,R,Armed Services
+Ron,Estes,,4th,R,Budget
+Ron,Estes,,4th,R,Ways and Means
+Mike,Ezell,,4th,R,Natural Resources
+Mike,Ezell,,4th,R,Transportation and Infrastructure
+Pat,Fallon,,4th,R,Armed Services
+Pat,Fallon,,4th,R,Intelligence
+Pat,Fallon,,4th,R,Oversight and Government Reform
+Randy,Feenstra,,4th,R,Agriculture
+Randy,Feenstra,,4th,R,Ways and Means
+Valerie,Foushee,,4th,D,"Science, Space, and Technology"
+Valerie,Foushee,,4th,D,Transportation and Infrastructure
+Jesus,Garcia,,4th,D,Judiciary
+Jesus,Garcia,,4th,D,Transportation and Infrastructure
+Laura,Gillen,,4th,D,"Science, Space, and Technology"
+Laura,Gillen,,4th,D,Transportation and Infrastructure
+James,Himes,,4th,D,Financial Services
+James,Himes,,4th,D,Intelligence
+Steven,Horsford,,4th,D,Ways and Means
+Val,Hoyle,,4th,D,Natural Resources
+Val,Hoyle,,4th,D,Transportation and Infrastructure
+Bill,Huizenga,,4th,R,Financial Services
+Bill,Huizenga,,4th,R,Foreign Affairs
+Glenn,Ivey,,4th,D,Appropriations
+Glenn,Ivey,,4th,D,Ethics
+Mike,Johnson,,4th,R,
+Henry,Johnson,,4th,D,Judiciary
+Henry,Johnson,,4th,D,Transportation and Infrastructure
+Jim,Jordan,,4th,R,Judiciary
+Jim,Jordan,,4th,R,Oversight and Government Reform
+Thomas,Massie,,4th,R,Judiciary
+Thomas,Massie,,4th,R,Transportation and Infrastructure
+Jennifer,McClellan,,4th,D,Energy and Commerce
+Betty,McCollum,,4th,D,Appropriations
+Gwen,Moore,,4th,D,Ways and Means
+Dan,Newhouse,,4th,R,Agriculture
+Dan,Newhouse,,4th,R,Appropriations
+Dan,Newhouse,,4th,R,Select Comm on the Strategic Competition US and China
+Burgess,Owens,,4th,R,Education and Workforce
+Burgess,Owens,,4th,R,Transportation and Infrastructure
+Christopher,Smith,,4th,R,Foreign Affairs
+Greg,Stanton,,4th,D,Foreign Affairs
+Greg,Stanton,,4th,D,Select Comm on the Strategic Competition US and China
+Greg,Stanton,,4th,D,Transportation and Infrastructure
+Mike,Thompson,,4th,D,Ways and Means
+William,Timmons,,4th,R,Financial Services
+William,Timmons,,4th,R,Oversight and Government Reform
+Bruce,Westerman,,4th,R,Natural Resources
+Bruce,Westerman,,4th,R,Transportation and Infrastructure
+Scott,Peters,,50th,D,Budget
+Scott,Peters,,50th,D,Energy and Commerce
+Sara,Jacobs,,51st,D,Armed Services
+Sara,Jacobs,,51st,D,Foreign Affairs
+Juan,Vargas,,52nd,D,Financial Services
+Michael,Baumgartner,,5th,R,Education and Workforce
+Michael,Baumgartner,,5th,R,Foreign Affairs
+Michael,Baumgartner,,5th,R,Judiciary
+Stephanie,Bice,,5th,R,Appropriations
+Stephanie,Bice,,5th,R,House Administration
+Andy,Biggs,,5th,R,Judiciary
+Andy,Biggs,,5th,R,Oversight and Government Reform
+Janelle,Bynum,,5th,D,Financial Services
+Katherine,Clark,,5th,D,
+Emanuel,Cleaver,,5th,D,Financial Services
+Jeff,Crank,,5th,R,Armed Services
+Jeff,Crank,,5th,R,Natural Resources
+Scott,Fitzgerald,,5th,R,Financial Services
+Scott,Fitzgerald,,5th,R,Judiciary
+Virginia,Foxx,,5th,R,Education and Workforce
+Virginia,Foxx,,5th,R,Oversight and Government Reform
+Virginia,Foxx,,5th,R,Rules
+Lance,Gooden,,5th,R,Armed Services
+Lance,Gooden,,5th,R,Judiciary
+Josh,Gottheimer,,5th,D,Financial Services
+Josh,Gottheimer,,5th,D,Intelligence
+Jahana,Hayes,,5th,D,Agriculture
+Jahana,Hayes,,5th,D,Education and Workforce
+Steny,Hoyer,,5th,D,Appropriations
+Robert,Latta,,5th,R,Energy and Commerce
+Julia,Letlow,,5th,R,Appropriations
+Julia,Letlow,,5th,R,Education and Workforce
+Tom,McClintock,,5th,R,Budget
+Tom,McClintock,,5th,R,Judiciary
+Tom,McClintock,,5th,R,Natural Resources
+John,McGuire,,5th,R,Armed Services
+John,McGuire,,5th,R,Oversight and Government Reform
+Gregory,Meeks,,5th,D,Financial Services
+Gregory,Meeks,,5th,D,Foreign Affairs
+Ralph,Norman,,5th,R,Budget
+Ralph,Norman,,5th,R,Financial Services
+Ralph,Norman,,5th,R,Rules
+Andrew,Ogles,,5th,R,Financial Services
+Andrew,Ogles,,5th,R,Homeland Security
+Ilhan,Omar,,5th,D,Budget
+Ilhan,Omar,,5th,D,Education and Workforce
+Mike,Quigley,,5th,D,Appropriations
+Mike,Quigley,,5th,D,Intelligence
+Harold,Rogers,,5th,R,Appropriations
+John,Rutherford,,5th,R,Appropriations
+John,Rutherford,,5th,R,Ethics
+Mary Gay,Scanlon,,5th,D,Judiciary
+Mary Gay,Scanlon,,5th,D,Rules
+Victoria,Spartz,,5th,R,
+Dale,Strong,,5th,R,Appropriations
+Dale,Strong,,5th,R,Homeland Security
+Tim,Walberg,,5th,R,Education and Workforce
+Tim,Walberg,,5th,R,Natural Resources
+Nikema,Williams,,5th,D,Financial Services
+Andy,Barr,,6th,R,Financial Services
+Andy,Barr,,6th,R,Foreign Affairs
+Andy,Barr,,6th,R,Select Comm on the Strategic Competition US and China
+Ami,Bera,,6th,D,Foreign Affairs
+Ami,Bera,,6th,D,Intelligence
+Sean,Casten,,6th,D,Financial Services
+Juan,Ciscomani,,6th,R,Appropriations
+Juan,Ciscomani,,6th,R,Veterans' Affairs
+Ben,Cline,,6th,R,Appropriations
+Ben,Cline,,6th,R,Budget
+Ben,Cline,,6th,R,Intelligence
+Ben,Cline,,6th,R,Judiciary
+James,Clyburn,,6th,D,Appropriations
+Jason,Crow,,6th,D,Armed Services
+Jason,Crow,,6th,D,Intelligence
+Debbie,Dingell,,6th,D,Energy and Commerce
+Debbie,Dingell,,6th,D,Natural Resources
+Jake,Ellzey,,6th,R,Appropriations
+Jake,Ellzey,,6th,R,Small Business
+Tom,Emmer,,6th,R,Financial Services
+Cleo,Fields,,6th,D,Financial Services
+Randy,Fine,,6th,R,Education and Workforce
+Randy,Fine,,6th,R,Foreign Affairs
+Sam,Graves,,6th,R,Armed Services
+Sam,Graves,,6th,R,Transportation and Infrastructure
+Glenn,Grothman,,6th,R,Budget
+Glenn,Grothman,,6th,R,Education and Workforce
+Glenn,Grothman,,6th,R,Judiciary
+Glenn,Grothman,,6th,R,Oversight and Government Reform
+Chrissy,Houlahan,,6th,D,Armed Services
+Chrissy,Houlahan,,6th,D,Intelligence
+Lucy,McBath,,6th,D,Education and Workforce
+Lucy,McBath,,6th,D,Judiciary
+April,McClain Delaney,,6th,D,Agriculture
+April,McClain Delaney,,6th,D,"Science, Space, and Technology"
+Addison,McDowell,,6th,R,Budget
+Addison,McDowell,,6th,R,Natural Resources
+Addison,McDowell,,6th,R,Transportation and Infrastructure
+Grace,Meng,,6th,D,Appropriations
+Seth,Moulton,,6th,D,Armed Services
+Seth,Moulton,,6th,D,Select Comm on the Strategic Competition US and China
+Seth,Moulton,,6th,D,Transportation and Infrastructure
+Frank,Pallone,,6th,D,Energy and Commerce
+Gary,Palmer,,6th,R,Energy and Commerce
+Gary,Palmer,,6th,R,Oversight and Government Reform
+Emily,Randall,,6th,D,Natural Resources
+Emily,Randall,,6th,D,Oversight and Government Reform
+John,Rose,,6th,R,Agriculture
+John,Rose,,6th,R,Financial Services
+Michael A.,Rulli,,6th,R,Education and Workforce
+Michael A.,Rulli,,6th,R,Energy and Commerce
+Andrea,Salinas,,6th,D,Agriculture
+Andrea,Salinas,,6th,D,"Science, Space, and Technology"
+Jefferson,Shreve,,6th,R,Foreign Affairs
+Jefferson,Shreve,,6th,R,Transportation and Infrastructure
+Tom,Barrett,,7th,R,Transportation and Infrastructure
+Tom,Barrett,,7th,R,Veterans' Affairs
+Eric,Burlison,,7th,R,Oversight and Government Reform
+Eric,Burlison,,7th,R,Transportation and Infrastructure
+Andre,Carson,,7th,D,Intelligence
+Andre,Carson,,7th,D,Select Comm on the Strategic Competition US and China
+Andre,Carson,,7th,D,Transportation and Infrastructure
+Danny,Davis,,7th,D,Ways and Means
+Michelle,Fischbach,,7th,R,Rules
+Michelle,Fischbach,,7th,R,Ways and Means
+Lizzie,Fletcher,,7th,D,Energy and Commerce
+Russell,Fry,,7th,R,Energy and Commerce
+Russell,Fry,,7th,R,Judiciary
+Mark E.,Green,,7th,R,
+Raúl M.,Grijalva,,7th,D,
+Pramila,Jayapal,,7th,D,Budget
+Pramila,Jayapal,,7th,D,Foreign Affairs
+Pramila,Jayapal,,7th,D,Judiciary
+Thomas,Kean,,7th,R,Energy and Commerce
+Thomas,Kean,,7th,R,Foreign Affairs
+Ryan,Mackenzie,,7th,R,Education and Workforce
+Ryan,Mackenzie,,7th,R,Foreign Affairs
+Ryan,Mackenzie,,7th,R,Homeland Security
+Doris,Matsui,,7th,D,Energy and Commerce
+Richard,McCormick,,7th,R,Armed Services
+Richard,McCormick,,7th,R,Foreign Affairs
+Richard,McCormick,,7th,R,"Science, Space, and Technology"
+Kweisi,Mfume,,7th,D,Foreign Affairs
+Kweisi,Mfume,,7th,D,Oversight and Government Reform
+Max,Miller,,7th,R,"Science, Space, and Technology"
+Max,Miller,,7th,R,Ways and Means
+Cory,Mills,,7th,R,Armed Services
+Cory,Mills,,7th,R,Foreign Affairs
+Brittany,Pettersen,,7th,D,Financial Services
+Ayanna,Pressley,,7th,D,Financial Services
+Ayanna,Pressley,,7th,D,Oversight and Government Reform
+David,Rouzer,,7th,R,Agriculture
+David,Rouzer,,7th,R,"Science, Space, and Technology"
+David,Rouzer,,7th,R,Transportation and Infrastructure
+Terri,Sewell,,7th,D,House Administration
+Terri,Sewell,,7th,D,Ways and Means
+Thomas,Tiffany,,7th,R,Judiciary
+Thomas,Tiffany,,7th,R,Natural Resources
+Nydia,Velazquez,,7th,D,Financial Services
+Nydia,Velazquez,,7th,D,Natural Resources
+Nydia,Velazquez,,7th,D,Small Business
+Eugene,Vindman,,7th,D,Agriculture
+Eugene,Vindman,,7th,D,Armed Services
+Donald,Beyer,,8th,D,Ways and Means
+Robert,Bresnahan,,8th,R,Agriculture
+Robert,Bresnahan,,8th,R,Small Business
+Robert,Bresnahan,,8th,R,Transportation and Infrastructure
+Warren,Davidson,,8th,R,Financial Services
+Warren,Davidson,,8th,R,Foreign Affairs
+Gabe,Evans,,8th,R,Energy and Commerce
+Gabe,Evans,,8th,R,Homeland Security
+John,Garamendi,,8th,D,Armed Services
+John,Garamendi,,8th,D,Transportation and Infrastructure
+Abraham,Hamadeh,,8th,R,Armed Services
+Abraham,Hamadeh,,8th,R,Veterans' Affairs
+Mike,Haridopolos,,8th,R,Financial Services
+Mike,Haridopolos,,8th,R,"Science, Space, and Technology"
+Mark,Harris,,8th,R,Agriculture
+Mark,Harris,,8th,R,Education and Workforce
+Mark,Harris,,8th,R,Judiciary
+Hakeem,Jeffries,,8th,D,
+Raja,Krishnamoorthi,,8th,D,Intelligence
+Raja,Krishnamoorthi,,8th,D,Oversight and Government Reform
+Raja,Krishnamoorthi,,8th,D,Select Comm on the Strategic Competition US and China
+David,Kustoff,,8th,R,Ways and Means
+Morgan,Luttrell,,8th,R,Armed Services
+Morgan,Luttrell,,8th,R,Homeland Security
+Morgan,Luttrell,,8th,R,Veterans' Affairs
+Stephen,Lynch,,8th,D,Financial Services
+Stephen,Lynch,,8th,D,Oversight and Government Reform
+Kristen,McDonald Rivet,,8th,D,Agriculture
+Kristen,McDonald Rivet,,8th,D,Transportation and Infrastructure
+Robert,Menendez,,8th,D,Energy and Commerce
+Mark,Messmer,,8th,R,Agriculture
+Mark,Messmer,,8th,R,Armed Services
+Mark,Messmer,,8th,R,Education and Workforce
+Jamie,Raskin,,8th,D,Judiciary
+Kim,Schrier,,8th,D,Energy and Commerce
+Austin,Scott,,8th,R,Agriculture
+Austin,Scott,,8th,R,Armed Services
+Austin,Scott,,8th,R,Intelligence
+Austin,Scott,,8th,R,Rules
+Jason,Smith,,8th,R,Joint Committee on Taxation
+Jason,Smith,,8th,R,Ways and Means
+Pete,Stauber,,8th,R,Natural Resources
+Pete,Stauber,,8th,R,Small Business
+Pete,Stauber,,8th,R,Transportation and Infrastructure
+Tony,Wied,,8th,R,Agriculture
+Tony,Wied,,8th,R,Small Business
+Tony,Wied,,8th,R,Transportation and Infrastructure
+Yvette,Clarke,,9th,D,Energy and Commerce
+Andrew,Clyde,,9th,R,Appropriations
+Andrew,Clyde,,9th,R,Budget
+Steve,Cohen,,9th,D,Intelligence
+Steve,Cohen,,9th,D,Judiciary
+Paul,Gosar,,9th,R,Natural Resources
+Paul,Gosar,,9th,R,Oversight and Government Reform
+Al,Green,,9th,D,Financial Services
+Al,Green,,9th,D,Homeland Security
+H.,Griffith,,9th,R,Energy and Commerce
+H.,Griffith,,9th,R,House Administration
+H.,Griffith,,9th,R,Rules
+H.,Griffith,,9th,R,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Josh,Harder,,9th,D,Appropriations
+Erin,Houchin,,9th,R,Budget
+Erin,Houchin,,9th,R,Energy and Commerce
+Erin,Houchin,,9th,R,Rules
+Richard,Hudson,,9th,R,Energy and Commerce
+Marcy,Kaptur,,9th,D,Appropriations
+Marcy,Kaptur,,9th,D,Budget
+William,Keating,,9th,D,Armed Services
+William,Keating,,9th,D,Foreign Affairs
+Lisa,McClain,,9th,R,Education and Workforce
+Lisa,McClain,,9th,R,Financial Services
+Daniel,Meuser,,9th,R,Financial Services
+Daniel,Meuser,,9th,R,Small Business
+Nellie,Pou,,9th,D,Homeland Security
+Nellie,Pou,,9th,D,Transportation and Infrastructure
+Janice,Schakowsky,,9th,D,Energy and Commerce
+Adam,Smith,,9th,D,Armed Services
+Darren,Soto,,9th,D,Energy and Commerce
+Darren,Soto,,9th,D,Natural Resources
+North Carolina,12th,,"Adams, Alma",2436 RHOB,Agriculture
+North Carolina,12th,,"Adams, Alma",2436 RHOB,Education and Workforce
+Alabama,4th,,"Aderholt, Robert",272 CHOB,Appropriations
+California,33rd,,"Aguilar, Pete",108 CHOB,Appropriations
+Missouri,4th,,"Alford, Mark",328 CHOB,Appropriations
+Missouri,4th,,"Alford, Mark",328 CHOB,Small Business
+Georgia,12th,,"Allen, Rick",462 CHOB,Education and Workforce
+Georgia,12th,,"Allen, Rick",462 CHOB,Energy and Commerce
+Rhode Island,1st,,"Amo, Gabe",1119 LHOB,Budget
+Rhode Island,1st,,"Amo, Gabe",1119 LHOB,Foreign Affairs
+Rhode Island,1st,,"Amo, Gabe",1119 LHOB,"Science, Space, and Technology"
+Nevada,2nd,,"Amodei, Mark",104 CHOB,Appropriations
+Nevada,2nd,,"Amodei, Mark",104 CHOB,Natural Resources
+Arizona,3rd,,"Ansari, Yassamin",1432 LHOB,Education and Workforce
+Arizona,3rd,,"Ansari, Yassamin",1432 LHOB,Natural Resources
+Arizona,3rd,,"Ansari, Yassamin",1432 LHOB,Oversight and Government Reform
+Texas,19th,,"Arrington, Jodey",1111 LHOB,Budget
+Texas,19th,,"Arrington, Jodey",1111 LHOB,Ways and Means
+Becca,Balint,,At Large,D,Budget
+Becca,Balint,,At Large,D,Judiciary
+Nicholas,Begich,,At Large,R,Natural Resources
+Nicholas,Begich,,At Large,R,"Science, Space, and Technology"
+Nicholas,Begich,,At Large,R,Transportation and Infrastructure
+Julie,Fedorchak,,At Large,R,Energy and Commerce
+Harriet,Hageman,,At Large,R,Judiciary
+Harriet,Hageman,,At Large,R,Natural Resources
+Harriet,Hageman,,At Large,R,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Dusty,Johnson,,At Large,R,Agriculture
+Dusty,Johnson,,At Large,R,Select Comm on the Strategic Competition US and China
+Dusty,Johnson,,At Large,R,Transportation and Infrastructure
+Sarah,McBride,,At Large,D,Foreign Affairs
+Sarah,McBride,,At Large,D,"Science, Space, and Technology"
+Massachusetts,4th,,"Auchincloss, Jake",1524 LHOB,Energy and Commerce
+Texas,36th,,"Babin, Brian",2236 RHOB,"Science, Space, and Technology"
+Texas,36th,,"Babin, Brian",2236 RHOB,Transportation and Infrastructure
+Nebraska,2nd,,"Bacon, Don",2104 RHOB,Agriculture
+Nebraska,2nd,,"Bacon, Don",2104 RHOB,Armed Services
+Indiana,4th,,"Baird, James",2303 RHOB,Agriculture
+Indiana,4th,,"Baird, James",2303 RHOB,Foreign Affairs
+Indiana,4th,,"Baird, James",2303 RHOB,"Science, Space, and Technology"
+Ohio,12th,,"Balderson, Troy",2429 RHOB,Energy and Commerce
+Vermont At,Large,,"Balint, Becca",1510 LHOB,Budget
+Vermont At,Large,,"Balint, Becca",1510 LHOB,Judiciary
+Kentucky,6th,,"Barr, Andy",2430 RHOB,Financial Services
+Kentucky,6th,,"Barr, Andy",2430 RHOB,Foreign Affairs
+Kentucky,6th,,"Barr, Andy",2430 RHOB,Select Comm on the Strategic Competition US and China
+California,44th,,"Barragan, Nanette",2312 RHOB,Energy and Commerce
+Michigan,7th,,"Barrett, Tom",1232 LHOB,Transportation and Infrastructure
+Michigan,7th,,"Barrett, Tom",1232 LHOB,Veterans' Affairs
+Washington,5th,,"Baumgartner, Michael",124 CHOB,Education and Workforce
+Washington,5th,,"Baumgartner, Michael",124 CHOB,Foreign Affairs
+Washington,5th,,"Baumgartner, Michael",124 CHOB,Judiciary
+Florida,4th,,"Bean, Aaron",2459 RHOB,Ways and Means
+Ohio,3rd,,"Beatty, Joyce",2079 RHOB,Financial Services
+Alaska At,Large,,"Begich, Nicholas",153 CHOB,Natural Resources
+Alaska At,Large,,"Begich, Nicholas",153 CHOB,"Science, Space, and Technology"
+Alaska At,Large,,"Begich, Nicholas",153 CHOB,Transportation and Infrastructure
+Missouri,1st,,"Bell, Wesley",1429 LHOB,Armed Services
+Missouri,1st,,"Bell, Wesley",1429 LHOB,Oversight and Government Reform
+Oregon,2nd,,"Bentz, Cliff",409 CHOB,Energy and Commerce
+Oregon,2nd,,"Bentz, Cliff",409 CHOB,Natural Resources
+California,6th,,"Bera, Ami",172 CHOB,Foreign Affairs
+California,6th,,"Bera, Ami",172 CHOB,Intelligence
+Michigan,1st,,"Bergman, Jack",566 CHOB,Armed Services
+Michigan,1st,,"Bergman, Jack",566 CHOB,Budget
+Michigan,1st,,"Bergman, Jack",566 CHOB,Veterans' Affairs
+Virginia,8th,,"Beyer, Donald",1226 LHOB,Ways and Means
+Oklahoma,5th,,"Bice, Stephanie",2402 RHOB,Appropriations
+Oklahoma,5th,,"Bice, Stephanie",2402 RHOB,House Administration
+Arizona,5th,,"Biggs, Andy",464 CHOB,Judiciary
+Arizona,5th,,"Biggs, Andy",464 CHOB,Oversight and Government Reform
+South Carolina,3rd,,"Biggs, Sheri",1530 LHOB,Foreign Affairs
+South Carolina,3rd,,"Biggs, Sheri",1530 LHOB,Homeland Security
+South Carolina,3rd,,"Biggs, Sheri",1530 LHOB,"Science, Space, and Technology"
+Florida,12th,,"Bilirakis, Gus",2306 RHOB,Energy and Commerce
+Florida,12th,,"Bilirakis, Gus",2306 RHOB,Select Comm on the Strategic Competition US and China
+Georgia,2nd,,"Bishop, Sanford",2407 RHOB,Appropriations
+Colorado,4th,,"Boebert, Lauren",1713 LHOB,Natural Resources
+Colorado,4th,,"Boebert, Lauren",1713 LHOB,Oversight and Government Reform
+Oregon,1st,,"Bonamici, Suzanne",2231 RHOB,Education and Workforce
+Oregon,1st,,"Bonamici, Suzanne",2231 RHOB,"Science, Space, and Technology"
+Illinois,12th,,"Bost, Mike",352 CHOB,Agriculture
+Illinois,12th,,"Bost, Mike",352 CHOB,Transportation and Infrastructure
+Illinois,12th,,"Bost, Mike",352 CHOB,Veterans' Affairs
+Pennsylvania,2nd,,"Boyle, Brendan",1502 LHOB,Budget
+Pennsylvania,2nd,,"Boyle, Brendan",1502 LHOB,Ways and Means
+Oklahoma,2nd,,"Brecheen, Josh",351 CHOB,Budget
+Oklahoma,2nd,,"Brecheen, Josh",351 CHOB,Homeland Security
+Pennsylvania,8th,,"Bresnahan, Robert",1133 LHOB,Agriculture
+Pennsylvania,8th,,"Bresnahan, Robert",1133 LHOB,Small Business
+Pennsylvania,8th,,"Bresnahan, Robert",1133 LHOB,Transportation and Infrastructure
+Ohio,11th,,"Brown, Shontel",2455 RHOB,Agriculture
+Ohio,11th,,"Brown, Shontel",2455 RHOB,Oversight and Government Reform
+Ohio,11th,,"Brown, Shontel",2455 RHOB,Select Comm on the Strategic Competition US and China
+California,26th,,"Brownley, Julia",2262 RHOB,Natural Resources
+California,26th,,"Brownley, Julia",2262 RHOB,Transportation and Infrastructure
+California,26th,,"Brownley, Julia",2262 RHOB,Veterans' Affairs
+Florida,16th,,"Buchanan, Vern",2409 RHOB,Joint Committee on Taxation
+Florida,16th,,"Buchanan, Vern",2409 RHOB,Ways and Means
+Illinois,13th,,"Budzinski, Nikki",1717 LHOB,Agriculture
+Illinois,13th,,"Budzinski, Nikki",1717 LHOB,Veterans' Affairs
+Tennessee,2nd,,"Burchett, Tim",1122 LHOB,Foreign Affairs
+Tennessee,2nd,,"Burchett, Tim",1122 LHOB,Oversight and Government Reform
+Tennessee,2nd,,"Burchett, Tim",1122 LHOB,Transportation and Infrastructure
+Missouri,7th,,"Burlison, Eric",1108 LHOB,Oversight and Government Reform
+Missouri,7th,,"Burlison, Eric",1108 LHOB,Transportation and Infrastructure
+Oregon,5th,,"Bynum, Janelle",1508 LHOB,Financial Services
+California,41st,,"Calvert, Ken",2205 RHOB,Appropriations
+Florida,3rd,,"Cammack, Kat",2421 RHOB,Agriculture
+Florida,3rd,,"Cammack, Kat",2421 RHOB,Energy and Commerce
+California,24th,,"Carbajal, Salud",2331 RHOB,Agriculture
+California,24th,,"Carbajal, Salud",2331 RHOB,Armed Services
+California,24th,,"Carbajal, Salud",2331 RHOB,Transportation and Infrastructure
+Ohio,15th,,"Carey, Mike",1433 LHOB,Budget
+Ohio,15th,,"Carey, Mike",1433 LHOB,House Administration
+Ohio,15th,,"Carey, Mike",1433 LHOB,Joint Committee of Congress on the Library
+Ohio,15th,,"Carey, Mike",1433 LHOB,Ways and Means
+Indiana,7th,,"Carson, Andre",2135 RHOB,Intelligence
+Indiana,7th,,"Carson, Andre",2135 RHOB,Select Comm on the Strategic Competition US and China
+Indiana,7th,,"Carson, Andre",2135 RHOB,Transportation and Infrastructure
+Georgia,1st,,"Carter, Earl",2432 RHOB,Budget
+Georgia,1st,,"Carter, Earl",2432 RHOB,Energy and Commerce
+Texas,31st,,"Carter, John",2208 RHOB,Appropriations
+Louisiana,2nd,,"Carter, Troy",442 CHOB,Energy and Commerce
+Louisiana,2nd,,"Carter, Troy",442 CHOB,Homeland Security
+Texas,35th,,"Casar, Greg",446 CHOB,Education and Workforce
+Texas,35th,,"Casar, Greg",446 CHOB,Oversight and Government Reform
+Hawaii,1st,,"Case, Ed",2210 RHOB,Appropriations
+Illinois,6th,,"Casten, Sean",2440 RHOB,Financial Services
+Florida,14th,,"Castor, Kathy",2188 RHOB,Energy and Commerce
+Florida,14th,,"Castor, Kathy",2188 RHOB,Select Comm on the Strategic Competition US and China
+Texas,20th,,"Castro, Joaquin",2241 RHOB,Foreign Affairs
+Texas,20th,,"Castro, Joaquin",2241 RHOB,Intelligence
+Florida,20th,,"Cherfilus-McCormick, Sheila",2442 RHOB,Foreign Affairs
+Florida,20th,,"Cherfilus-McCormick, Sheila",2442 RHOB,Veterans' Affairs
+California,28th,,"Chu, Judy",2423 RHOB,Budget
+California,28th,,"Chu, Judy",2423 RHOB,Ways and Means
+Arizona,6th,,"Ciscomani, Juan",461 CHOB,Appropriations
+Arizona,6th,,"Ciscomani, Juan",461 CHOB,Veterans' Affairs
+California,31st,,"Cisneros, Gilbert",2463 RHOB,Armed Services
+California,31st,,"Cisneros, Gilbert",2463 RHOB,Small Business
+Massachusetts,5th,,"Clark, Katherine",2368 RHOB,
+New York,9th,,"Clarke, Yvette",2058 RHOB,Energy and Commerce
+Missouri,5th,,"Cleaver, Emanuel",2217 RHOB,Financial Services
+Virginia,6th,,"Cline, Ben",2443 RHOB,Appropriations
+Virginia,6th,,"Cline, Ben",2443 RHOB,Budget
+Virginia,6th,,"Cline, Ben",2443 RHOB,Intelligence
+Virginia,6th,,"Cline, Ben",2443 RHOB,Judiciary
+Texas,27th,,"Cloud, Michael",304 CHOB,Appropriations
+Texas,27th,,"Cloud, Michael",304 CHOB,Oversight and Government Reform
+South Carolina,6th,,"Clyburn, James",274 CHOB,Appropriations
+Georgia,9th,,"Clyde, Andrew",445 CHOB,Appropriations
+Georgia,9th,,"Clyde, Andrew",445 CHOB,Budget
+Tennessee,9th,,"Cohen, Steve",2268 RHOB,Intelligence
+Tennessee,9th,,"Cohen, Steve",2268 RHOB,Judiciary
+Oklahoma,4th,,"Cole, Tom",2207 RHOB,Appropriations
+Georgia,10th,,"Collins, Mike",2351 RHOB,Natural Resources
+Georgia,10th,,"Collins, Mike",2351 RHOB,"Science, Space, and Technology"
+Georgia,10th,,"Collins, Mike",2351 RHOB,Transportation and Infrastructure
+Kentucky,1st,,"Comer, James",2410 RHOB,Education and Workforce
+Kentucky,1st,,"Comer, James",2410 RHOB,Oversight and Government Reform
+New Jersey,3rd,,"Conaway, Herbert",1022 LHOB,Small Business
+New Jersey,3rd,,"Conaway, Herbert",1022 LHOB,Veterans' Affairs
+California,46th,,"Correa, J.",2082 RHOB,Homeland Security
+California,46th,,"Correa, J.",2082 RHOB,Judiciary
+California,21st,,"Costa, Jim",2081 RHOB,Agriculture
+California,21st,,"Costa, Jim",2081 RHOB,Foreign Affairs
+Connecticut,2nd,,"Courtney, Joe",2449 RHOB,Armed Services
+Connecticut,2nd,,"Courtney, Joe",2449 RHOB,Education and Workforce
+Minnesota,2nd,,"Craig, Angie",2052 RHOB,Agriculture
+Arizona,2nd,,"Crane, Elijah",307 CHOB,Homeland Security
+Arizona,2nd,,"Crane, Elijah",307 CHOB,Oversight and Government Reform
+Colorado,5th,,"Crank, Jeff",1029 LHOB,Armed Services
+Colorado,5th,,"Crank, Jeff",1029 LHOB,Natural Resources
+Arkansas,1st,,"Crawford, Eric",2422 RHOB,Agriculture
+Arkansas,1st,,"Crawford, Eric",2422 RHOB,Intelligence
+Arkansas,1st,,"Crawford, Eric",2422 RHOB,Transportation and Infrastructure
+Texas,2nd,,"Crenshaw, Dan",248 CHOB,Energy and Commerce
+Texas,2nd,,"Crenshaw, Dan",248 CHOB,Intelligence
+Texas,30th,,"Crockett, Jasmine",1616 LHOB,Judiciary
+Texas,30th,,"Crockett, Jasmine",1616 LHOB,Oversight and Government Reform
+Texas,30th,,"Crockett, Jasmine",1616 LHOB,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Colorado,6th,,"Crow, Jason",1323 LHOB,Armed Services
+Colorado,6th,,"Crow, Jason",1323 LHOB,Intelligence
+Texas,28th,,"Cuellar, Henry",2308 RHOB,Appropriations
+Kansas,3rd,,"Davids, Sharice",2435 RHOB,Agriculture
+Kansas,3rd,,"Davids, Sharice",2435 RHOB,Transportation and Infrastructure
+Ohio,8th,,"Davidson, Warren",2113 RHOB,Financial Services
+Ohio,8th,,"Davidson, Warren",2113 RHOB,Foreign Affairs
+Illinois,7th,,"Davis, Danny",2159 RHOB,Ways and Means
+North Carolina,1st,,"Davis, Donald",1123 LHOB,Agriculture
+North Carolina,1st,,"Davis, Donald",1123 LHOB,Armed Services
+Texas,15th,,"De La Cruz, Monica",1415 LHOB,Agriculture
+Texas,15th,,"De La Cruz, Monica",1415 LHOB,Financial Services
+Colorado,1st,,"DeGette, Diana",2111 RHOB,Energy and Commerce
+Connecticut,3rd,,"DeLauro, Rosa",2413 RHOB,Appropriations
+California,10th,,"DeSaulnier, Mark",2134 RHOB,Education and Workforce
+California,10th,,"DeSaulnier, Mark",2134 RHOB,Ethics
+California,10th,,"DeSaulnier, Mark",2134 RHOB,Transportation and Infrastructure
+Pennsylvania,4th,,"Dean, Madeleine",150 CHOB,Appropriations
+Pennsylvania,4th,,"Dean, Madeleine",150 CHOB,Foreign Affairs
+Washington,1st,,"DelBene, Suzan",2311 RHOB,Ways and Means
+Kimberlyn,King-Hinds,,Delegate,R,Small Business
+Kimberlyn,King-Hinds,,Delegate,R,Transportation and Infrastructure
+Kimberlyn,King-Hinds,,Delegate,R,Veterans' Affairs
+James,Moylan,,Delegate,R,Armed Services
+James,Moylan,,Delegate,R,Education and Workforce
+James,Moylan,,Delegate,R,Foreign Affairs
+Eleanor,Norton,,Delegate,D,Oversight and Government Reform
+Eleanor,Norton,,Delegate,D,Transportation and Infrastructure
+Stacey,Plaskett,,Delegate,D,Budget
+Stacey,Plaskett,,Delegate,D,Intelligence
+Stacey,Plaskett,,Delegate,D,Ways and Means
+Aumua Amata,Radewagen,,Delegate,R,Foreign Affairs
+Aumua Amata,Radewagen,,Delegate,R,Natural Resources
+Aumua Amata,Radewagen,,Delegate,R,Veterans' Affairs
+Pennsylvania,17th,,"Deluzio, Christopher",1222 LHOB,Armed Services
+Pennsylvania,17th,,"Deluzio, Christopher",1222 LHOB,Transportation and Infrastructure
+Tennessee,4th,,"DesJarlais, Scott",2304 RHOB,Agriculture
+Tennessee,4th,,"DesJarlais, Scott",2304 RHOB,Armed Services
+Oregon,3rd,,"Dexter, Maxine",1207 LHOB,Natural Resources
+Oregon,3rd,,"Dexter, Maxine",1207 LHOB,Veterans' Affairs
+Florida,26th,,"Diaz-Balart, Mario",374 CHOB,Appropriations
+Michigan,6th,,"Dingell, Debbie",102 CHOB,Energy and Commerce
+Michigan,6th,,"Dingell, Debbie",102 CHOB,Natural Resources
+Texas,37th,,"Doggett, Lloyd",2307 RHOB,Budget
+Texas,37th,,"Doggett, Lloyd",2307 RHOB,Joint Committee on Taxation
+Texas,37th,,"Doggett, Lloyd",2307 RHOB,Ways and Means
+Florida,19th,,"Donalds, Byron",1710 LHOB,Financial Services
+Florida,19th,,"Donalds, Byron",1710 LHOB,Oversight and Government Reform
+Montana,2nd,,"Downing, Troy",1529 LHOB,Financial Services
+Montana,2nd,,"Downing, Troy",1529 LHOB,Small Business
+Florida,2nd,,"Dunn, Neal",466 CHOB,Energy and Commerce
+Florida,2nd,,"Dunn, Neal",466 CHOB,Select Comm on the Strategic Competition US and China
+North Carolina,11th,,"Edwards, Chuck",1505 LHOB,Appropriations
+North Carolina,11th,,"Edwards, Chuck",1505 LHOB,Budget
+Maryland,3rd,,"Elfreth, Sarah",1213 LHOB,Armed Services
+Maryland,3rd,,"Elfreth, Sarah",1213 LHOB,Natural Resources
+Texas,6th,,"Ellzey, Jake",1721 LHOB,Appropriations
+Texas,6th,,"Ellzey, Jake",1721 LHOB,Small Business
+Minnesota,6th,,"Emmer, Tom",326 CHOB,Financial Services
+Texas,16th,,"Escobar, Veronica",2448 RHOB,Appropriations
+Texas,16th,,"Escobar, Veronica",2448 RHOB,Budget
+New York,13th,,"Espaillat, Adriano",2332 RHOB,Appropriations
+Kansas,4th,,"Estes, Ron",2234 RHOB,Budget
+Kansas,4th,,"Estes, Ron",2234 RHOB,Ways and Means
+Pennsylvania,3rd,,"Evans, Dwight",1105 LHOB,Ways and Means
+Colorado,8th,,"Evans, Gabe",1229 LHOB,Energy and Commerce
+Colorado,8th,,"Evans, Gabe",1229 LHOB,Homeland Security
+Mississippi,4th,,"Ezell, Mike",443 CHOB,Natural Resources
+Mississippi,4th,,"Ezell, Mike",443 CHOB,Transportation and Infrastructure
+Texas,4th,,"Fallon, Pat",2416 RHOB,Armed Services
+Texas,4th,,"Fallon, Pat",2416 RHOB,Intelligence
+Texas,4th,,"Fallon, Pat",2416 RHOB,Oversight and Government Reform
+North Dakota At,Large,,"Fedorchak, Julie",1607 LHOB,Energy and Commerce
+Iowa,4th,,"Feenstra, Randy",2434 RHOB,Agriculture
+Iowa,4th,,"Feenstra, Randy",2434 RHOB,Ways and Means
+Louisiana,6th,,"Fields, Cleo",2349 RHOB,Financial Services
+Alabama,2nd,,"Figures, Shomari",225 CHOB,Agriculture
+Alabama,2nd,,"Figures, Shomari",225 CHOB,Transportation and Infrastructure
+Florida,6th,,"Fine, Randy",244 CHOB,Education and Workforce
+Florida,6th,,"Fine, Randy",244 CHOB,Foreign Affairs
+Minnesota,1st,,"Finstad, Brad",2418 RHOB,Agriculture
+Minnesota,1st,,"Finstad, Brad",2418 RHOB,Armed Services
+Minnesota,1st,,"Finstad, Brad",2418 RHOB,Small Business
+Minnesota,7th,,"Fischbach, Michelle",2229 RHOB,Rules
+Minnesota,7th,,"Fischbach, Michelle",2229 RHOB,Ways and Means
+Wisconsin,5th,,"Fitzgerald, Scott",2444 RHOB,Financial Services
+Wisconsin,5th,,"Fitzgerald, Scott",2444 RHOB,Judiciary
+Pennsylvania,1st,,"Fitzpatrick, Brian",271 CHOB,Intelligence
+Pennsylvania,1st,,"Fitzpatrick, Brian",271 CHOB,Ways and Means
+Tennessee,3rd,,"Fleischmann, Charles",2187 RHOB,Appropriations
+Tennessee,3rd,,"Fleischmann, Charles",2187 RHOB,"Science, Space, and Technology"
+Texas,7th,,"Fletcher, Lizzie",2004 RHOB,Energy and Commerce
+Nebraska,1st,,"Flood, Mike",343 CHOB,Financial Services
+California,20th,,"Fong, Vince",243 CHOB,"Science, Space, and Technology"
+California,20th,,"Fong, Vince",243 CHOB,Transportation and Infrastructure
+Illinois,11th,,"Foster, Bill",2366 RHOB,Financial Services
+Illinois,11th,,"Foster, Bill",2366 RHOB,"Science, Space, and Technology"
+North Carolina,4th,,"Foushee, Valerie",2452 RHOB,"Science, Space, and Technology"
+North Carolina,4th,,"Foushee, Valerie",2452 RHOB,Transportation and Infrastructure
+North Carolina,5th,,"Foxx, Virginia",2462 RHOB,Education and Workforce
+North Carolina,5th,,"Foxx, Virginia",2462 RHOB,Oversight and Government Reform
+North Carolina,5th,,"Foxx, Virginia",2462 RHOB,Rules
+Florida,22nd,,"Frankel, Lois",2305 RHOB,Appropriations
+Florida,18th,,"Franklin, Scott",2301 RHOB,Appropriations
+Florida,18th,,"Franklin, Scott",2301 RHOB,"Science, Space, and Technology"
+California,30th,,"Friedman, Laura",1517 LHOB,"Science, Space, and Technology"
+California,30th,,"Friedman, Laura",1517 LHOB,Transportation and Infrastructure
+Florida,10th,,"Frost, Maxwell",1224 LHOB,Oversight and Government Reform
+Florida,10th,,"Frost, Maxwell",1224 LHOB,"Science, Space, and Technology"
+Florida,10th,,"Frost, Maxwell",1224 LHOB,Transportation and Infrastructure
+South Carolina,7th,,"Fry, Russell",345 CHOB,Energy and Commerce
+South Carolina,7th,,"Fry, Russell",345 CHOB,Judiciary
+Idaho,1st,,"Fulcher, Russ",1514 LHOB,Energy and Commerce
+Idaho,1st,,"Fulcher, Russ",1514 LHOB,Natural Resources
+California,8th,,"Garamendi, John",2428 RHOB,Armed Services
+California,8th,,"Garamendi, John",2428 RHOB,Transportation and Infrastructure
+New York,2nd,,"Garbarino, Andrew",2344 RHOB,Ethics
+New York,2nd,,"Garbarino, Andrew",2344 RHOB,Financial Services
+New York,2nd,,"Garbarino, Andrew",2344 RHOB,Homeland Security
+Illinois,4th,,"Garcia, Jesus",2334 RHOB,Judiciary
+Illinois,4th,,"Garcia, Jesus",2334 RHOB,Transportation and Infrastructure
+California,42nd,,"Garcia, Robert",109 CHOB,Oversight and Government Reform
+California,42nd,,"Garcia, Robert",109 CHOB,Transportation and Infrastructure
+Texas,29th,,"Garcia, Sylvia",2419 RHOB,Ethics
+Texas,29th,,"Garcia, Sylvia",2419 RHOB,Financial Services
+Texas,26th,,"Gill, Brandon",1305 LHOB,Budget
+Texas,26th,,"Gill, Brandon",1305 LHOB,Judiciary
+Texas,26th,,"Gill, Brandon",1305 LHOB,Oversight and Government Reform
+New York,4th,,"Gillen, Laura",428 CHOB,"Science, Space, and Technology"
+New York,4th,,"Gillen, Laura",428 CHOB,Transportation and Infrastructure
+Florida,28th,,"Gimenez, Carlos",448 CHOB,Armed Services
+Florida,28th,,"Gimenez, Carlos",448 CHOB,Homeland Security
+Florida,28th,,"Gimenez, Carlos",448 CHOB,Select Comm on the Strategic Competition US and China
+Maine,2nd,,"Golden, Jared",1107 LHOB,Armed Services
+Maine,2nd,,"Golden, Jared",1107 LHOB,Natural Resources
+Texas,12th,,"Goldman, Craig",1716 LHOB,Energy and Commerce
+New York,10th,,"Goldman, Daniel",245 CHOB,Homeland Security
+New York,10th,,"Goldman, Daniel",245 CHOB,Judiciary
+California,34th,,"Gomez, Jimmy",506 CHOB,Intelligence
+California,34th,,"Gomez, Jimmy",506 CHOB,Ways and Means
+Texas,23rd,,"Gonzales, Tony",2239 RHOB,Appropriations
+Texas,23rd,,"Gonzales, Tony",2239 RHOB,Homeland Security
+Texas,34th,,"Gonzalez, Vicente",1201 LHOB,Financial Services
+Texas,5th,,"Gooden, Lance",2431 RHOB,Armed Services
+Texas,5th,,"Gooden, Lance",2431 RHOB,Judiciary
+New Hampshire,2nd,,"Goodlander, Maggie",223 CHOB,Armed Services
+New Hampshire,2nd,,"Goodlander, Maggie",223 CHOB,Small Business
+Arizona,9th,,"Gosar, Paul",2057 RHOB,Natural Resources
+Arizona,9th,,"Gosar, Paul",2057 RHOB,Oversight and Government Reform
+New Jersey,5th,,"Gottheimer, Josh",106 CHOB,Financial Services
+New Jersey,5th,,"Gottheimer, Josh",106 CHOB,Intelligence
+Missouri,6th,,"Graves, Sam",1135 LHOB,Armed Services
+Missouri,6th,,"Graves, Sam",1135 LHOB,Transportation and Infrastructure
+California,13th,,"Gray, Adam",1230 LHOB,Agriculture
+California,13th,,"Gray, Adam",1230 LHOB,Natural Resources
+Texas,9th,,"Green, Al",2347 RHOB,Financial Services
+Texas,9th,,"Green, Al",2347 RHOB,Homeland Security
+Tennessee,7th,,"Green, Mark E. - Vacancy",2446 RHOB,
+Georgia,14th,,"Greene, Marjorie",2201 RHOB,Homeland Security
+Georgia,14th,,"Greene, Marjorie",2201 RHOB,Oversight and Government Reform
+Virginia,9th,,"Griffith, H.",2110 RHOB,Energy and Commerce
+Virginia,9th,,"Griffith, H.",2110 RHOB,House Administration
+Virginia,9th,,"Griffith, H.",2110 RHOB,Rules
+Virginia,9th,,"Griffith, H.",2110 RHOB,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Arizona,7th,,"Grijalva, Raúl M. - Vacancy",1203 LHOB,
+Wisconsin,6th,,"Grothman, Glenn",1211 LHOB,Budget
+Wisconsin,6th,,"Grothman, Glenn",1211 LHOB,Education and Workforce
+Wisconsin,6th,,"Grothman, Glenn",1211 LHOB,Judiciary
+Wisconsin,6th,,"Grothman, Glenn",1211 LHOB,Oversight and Government Reform
+Mississippi,3rd,,"Guest, Michael",450 CHOB,Appropriations
+Mississippi,3rd,,"Guest, Michael",450 CHOB,Ethics
+Mississippi,3rd,,"Guest, Michael",450 CHOB,Homeland Security
+Kentucky,2nd,,"Guthrie, Brett",2161 RHOB,Energy and Commerce
+Wyoming At,Large,,"Hageman, Harriet",1227 LHOB,Judiciary
+Wyoming At,Large,,"Hageman, Harriet",1227 LHOB,Natural Resources
+Wyoming At,Large,,"Hageman, Harriet",1227 LHOB,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Arizona,8th,,"Hamadeh, Abraham",1722 LHOB,Armed Services
+Arizona,8th,,"Hamadeh, Abraham",1722 LHOB,Veterans' Affairs
+California,9th,,"Harder, Josh",209 CHOB,Appropriations
+Florida,8th,,"Haridopolos, Mike",1039 LHOB,Financial Services
+Florida,8th,,"Haridopolos, Mike",1039 LHOB,"Science, Space, and Technology"
+North Carolina,10th,,"Harrigan, Pat",1233 LHOB,Armed Services
+North Carolina,10th,,"Harrigan, Pat",1233 LHOB,"Science, Space, and Technology"
+Maryland,1st,,"Harris, Andy",1536 LHOB,Appropriations
+North Carolina,8th,,"Harris, Mark",126 CHOB,Agriculture
+North Carolina,8th,,"Harris, Mark",126 CHOB,Education and Workforce
+North Carolina,8th,,"Harris, Mark",126 CHOB,Judiciary
+Tennessee,1st,,"Harshbarger, Diana",167 CHOB,Energy and Commerce
+Connecticut,5th,,"Hayes, Jahana",2049 RHOB,Agriculture
+Connecticut,5th,,"Hayes, Jahana",2049 RHOB,Education and Workforce
+Oklahoma,1st,,"Hern, Kevin",171 CHOB,Ways and Means
+Puerto Rico Resident,Commissioner,,"Hernandez, Pablo",1419 LHOB,Homeland Security
+Puerto Rico Resident,Commissioner,,"Hernandez, Pablo",1419 LHOB,Natural Resources
+Louisiana,3rd,,"Higgins, Clay",572 CHOB,Armed Services
+Louisiana,3rd,,"Higgins, Clay",572 CHOB,Oversight and Government Reform
+Louisiana,3rd,,"Higgins, Clay",572 CHOB,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Arkansas,2nd,,"Hill, J.",1533 LHOB,Financial Services
+Arkansas,2nd,,"Hill, J.",1533 LHOB,Intelligence
+Connecticut,4th,,"Himes, James",2137 RHOB,Financial Services
+Connecticut,4th,,"Himes, James",2137 RHOB,Intelligence
+Iowa,2nd,,"Hinson, Ashley",2458 RHOB,Appropriations
+Iowa,2nd,,"Hinson, Ashley",2458 RHOB,Ethics
+Iowa,2nd,,"Hinson, Ashley",2458 RHOB,Select Comm on the Strategic Competition US and China
+Nevada,4th,,"Horsford, Steven",406 CHOB,Ways and Means
+Indiana,9th,,"Houchin, Erin",342 CHOB,Budget
+Indiana,9th,,"Houchin, Erin",342 CHOB,Energy and Commerce
+Indiana,9th,,"Houchin, Erin",342 CHOB,Rules
+Pennsylvania,6th,,"Houlahan, Chrissy",1727 LHOB,Armed Services
+Pennsylvania,6th,,"Houlahan, Chrissy",1727 LHOB,Intelligence
+Maryland,5th,,"Hoyer, Steny",1705 LHOB,Appropriations
+Oregon,4th,,"Hoyle, Val",1620 LHOB,Natural Resources
+Oregon,4th,,"Hoyle, Val",1620 LHOB,Transportation and Infrastructure
+North Carolina,9th,,"Hudson, Richard",2112 RHOB,Energy and Commerce
+California,2nd,,"Huffman, Jared",2330 RHOB,Natural Resources
+California,2nd,,"Huffman, Jared",2330 RHOB,Transportation and Infrastructure
+Michigan,4th,,"Huizenga, Bill",2232 RHOB,Financial Services
+Michigan,4th,,"Huizenga, Bill",2232 RHOB,Foreign Affairs
+Texas,38th,,"Hunt, Wesley",1520 LHOB,Judiciary
+Texas,38th,,"Hunt, Wesley",1520 LHOB,Natural Resources
+Colorado,3rd,,"Hurd, Jeff",1641 LHOB,Natural Resources
+Colorado,3rd,,"Hurd, Jeff",1641 LHOB,"Science, Space, and Technology"
+Colorado,3rd,,"Hurd, Jeff",1641 LHOB,Transportation and Infrastructure
+California,48th,,"Issa, Darrell",2108 RHOB,Foreign Affairs
+California,48th,,"Issa, Darrell",2108 RHOB,Judiciary
+California,48th,,"Issa, Darrell",2108 RHOB,"Science, Space, and Technology"
+Maryland,4th,,"Ivey, Glenn",1610 LHOB,Appropriations
+Maryland,4th,,"Ivey, Glenn",1610 LHOB,Ethics
+Georgia,3rd,,"Jack, Brian",1320 LHOB,Oversight and Government Reform
+Georgia,3rd,,"Jack, Brian",1320 LHOB,Rules
+Georgia,3rd,,"Jack, Brian",1320 LHOB,Small Business
+Illinois,1st,,"Jackson, Jonathan",1632 LHOB,Agriculture
+Illinois,1st,,"Jackson, Jonathan",1632 LHOB,Foreign Affairs
+Texas,13th,,"Jackson, Ronny",125 CHOB,Agriculture
+Texas,13th,,"Jackson, Ronny",125 CHOB,Armed Services
+Texas,13th,,"Jackson, Ronny",125 CHOB,Foreign Affairs
+Texas,13th,,"Jackson, Ronny",125 CHOB,Intelligence
+California,51st,,"Jacobs, Sara",2348 RHOB,Armed Services
+California,51st,,"Jacobs, Sara",2348 RHOB,Foreign Affairs
+Michigan,10th,,"James, John",1519 LHOB,Energy and Commerce
+Washington,7th,,"Jayapal, Pramila",2346 RHOB,Budget
+Washington,7th,,"Jayapal, Pramila",2346 RHOB,Foreign Affairs
+Washington,7th,,"Jayapal, Pramila",2346 RHOB,Judiciary
+New York,8th,,"Jeffries, Hakeem",2267 RHOB,
+South Dakota At,Large,,"Johnson, Dusty",1714 LHOB,Agriculture
+South Dakota At,Large,,"Johnson, Dusty",1714 LHOB,Select Comm on the Strategic Competition US and China
+South Dakota At,Large,,"Johnson, Dusty",1714 LHOB,Transportation and Infrastructure
+Georgia,4th,,"Johnson, Henry",2240 RHOB,Judiciary
+Georgia,4th,,"Johnson, Henry",2240 RHOB,Transportation and Infrastructure
+Texas,32nd,,"Johnson, Julie",221 CHOB,Foreign Affairs
+Texas,32nd,,"Johnson, Julie",221 CHOB,Homeland Security
+Texas,32nd,,"Johnson, Julie",221 CHOB,House Administration
+Texas,32nd,,"Johnson, Julie",221 CHOB,Joint Committee of Congress on the Library
+Louisiana,4th,,"Johnson, Mike",521 CHOB,
+Ohio,4th,,"Jordan, Jim",2056 RHOB,Judiciary
+Ohio,4th,,"Jordan, Jim",2056 RHOB,Oversight and Government Reform
+Ohio,14th,,"Joyce, David",2065 RHOB,Appropriations
+Pennsylvania,13th,,"Joyce, John",2102 RHOB,Energy and Commerce
+California,37th,,"Kamlager-Dove, Sydney",144 CHOB,Foreign Affairs
+California,37th,,"Kamlager-Dove, Sydney",144 CHOB,Judiciary
+Ohio,9th,,"Kaptur, Marcy",2314 RHOB,Appropriations
+Ohio,9th,,"Kaptur, Marcy",2314 RHOB,Budget
+New Jersey,7th,,"Kean, Thomas",251 CHOB,Energy and Commerce
+New Jersey,7th,,"Kean, Thomas",251 CHOB,Foreign Affairs
+Massachusetts,9th,,"Keating, William",2372 RHOB,Armed Services
+Massachusetts,9th,,"Keating, William",2372 RHOB,Foreign Affairs
+Pennsylvania,16th,,"Kelly, Mike",1707 LHOB,Ways and Means
+Illinois,2nd,,"Kelly, Robin",2329 RHOB,Energy and Commerce
+Mississippi,1st,,"Kelly, Trent",2243 RHOB,Agriculture
+Mississippi,1st,,"Kelly, Trent",2243 RHOB,Armed Services
+Mississippi,1st,,"Kelly, Trent",2243 RHOB,Intelligence
+Utah,3rd,,"Kennedy, Mike",1626 LHOB,Natural Resources
+Utah,3rd,,"Kennedy, Mike",1626 LHOB,"Science, Space, and Technology"
+Utah,3rd,,"Kennedy, Mike",1626 LHOB,Transportation and Infrastructure
+New York,26th,,"Kennedy, Timothy",423 CHOB,Homeland Security
+New York,26th,,"Kennedy, Timothy",423 CHOB,Veterans' Affairs
+California,17th,,"Khanna, Ro",306 CHOB,Armed Services
+California,17th,,"Khanna, Ro",306 CHOB,Oversight and Government Reform
+California,17th,,"Khanna, Ro",306 CHOB,Select Comm on the Strategic Competition US and China
+Virginia,2nd,,"Kiggans, Jennifer",152 CHOB,Armed Services
+Virginia,2nd,,"Kiggans, Jennifer",152 CHOB,Natural Resources
+Virginia,2nd,,"Kiggans, Jennifer",152 CHOB,Veterans' Affairs
+California,3rd,,"Kiley, Kevin",2445 RHOB,Education and Workforce
+California,3rd,,"Kiley, Kevin",2445 RHOB,Judiciary
+California,3rd,,"Kiley, Kevin",2445 RHOB,Transportation and Infrastructure
+California,40th,,"Kim, Young",2439 RHOB,Financial Services
+California,40th,,"Kim, Young",2439 RHOB,Foreign Affairs
+California,40th,,"Kim, Young",2439 RHOB,Select Comm on the Strategic Competition US and China
+Northern Mariana Islands,Delegate,,"King-Hinds, Kimberlyn",425 CHOB,Small Business
+Northern Mariana Islands,Delegate,,"King-Hinds, Kimberlyn",425 CHOB,Transportation and Infrastructure
+Northern Mariana Islands,Delegate,,"King-Hinds, Kimberlyn",425 CHOB,Veterans' Affairs
+North Carolina,13th,,"Knott, Brad",1239 LHOB,Homeland Security
+North Carolina,13th,,"Knott, Brad",1239 LHOB,Judiciary
+North Carolina,13th,,"Knott, Brad",1239 LHOB,Transportation and Infrastructure
+Illinois,8th,,"Krishnamoorthi, Raja",2367 RHOB,Intelligence
+Illinois,8th,,"Krishnamoorthi, Raja",2367 RHOB,Oversight and Government Reform
+Illinois,8th,,"Krishnamoorthi, Raja",2367 RHOB,Select Comm on the Strategic Competition US and China
+Tennessee,8th,,"Kustoff, David",560 CHOB,Ways and Means
+Illinois,16th,,"LaHood, Darin",503 CHOB,Intelligence
+Illinois,16th,,"LaHood, Darin",503 CHOB,Select Comm on the Strategic Competition US and China
+Illinois,16th,,"LaHood, Darin",503 CHOB,Ways and Means
+New York,1st,,"LaLota, Nick",122 CHOB,Appropriations
+New York,1st,,"LaLota, Nick",122 CHOB,Small Business
+California,1st,,"LaMalfa, Doug",408 CHOB,Agriculture
+California,1st,,"LaMalfa, Doug",408 CHOB,Natural Resources
+California,1st,,"LaMalfa, Doug",408 CHOB,Transportation and Infrastructure
+Ohio,1st,,"Landsman, Greg",2244 RHOB,Energy and Commerce
+New York,23rd,,"Langworthy, Nicholas",422 CHOB,Energy and Commerce
+New York,23rd,,"Langworthy, Nicholas",422 CHOB,Oversight and Government Reform
+New York,23rd,,"Langworthy, Nicholas",422 CHOB,Rules
+Washington,2nd,,"Larsen, Rick",2163 RHOB,Transportation and Infrastructure
+Connecticut,1st,,"Larson, John",1501 LHOB,Ways and Means
+New York,16th,,"Latimer, George",1507 LHOB,Foreign Affairs
+New York,16th,,"Latimer, George",1507 LHOB,Small Business
+Ohio,5th,,"Latta, Robert",2470 RHOB,Energy and Commerce
+New York,17th,,"Lawler, Michael",324 CHOB,Financial Services
+New York,17th,,"Lawler, Michael",324 CHOB,Foreign Affairs
+Florida,15th,,"Lee, Laurel",2464 RHOB,Energy and Commerce
+Florida,15th,,"Lee, Laurel",2464 RHOB,House Administration
+Florida,15th,,"Lee, Laurel",2464 RHOB,Judiciary
+Pennsylvania,12th,,"Lee, Summer",2437 RHOB,Education and Workforce
+Pennsylvania,12th,,"Lee, Summer",2437 RHOB,Oversight and Government Reform
+Nevada,3rd,,"Lee, Susie",365 CHOB,Appropriations
+Nevada,3rd,,"Lee, Susie",365 CHOB,Natural Resources
+New Mexico,3rd,,"Leger Fernandez, Teresa",2417 RHOB,Natural Resources
+New Mexico,3rd,,"Leger Fernandez, Teresa",2417 RHOB,Rules
+Louisiana,5th,,"Letlow, Julia",142 CHOB,Appropriations
+Louisiana,5th,,"Letlow, Julia",142 CHOB,Education and Workforce
+California,49th,,"Levin, Mike",2352 RHOB,Appropriations
+California,16th,,"Liccardo, Sam",1117 LHOB,Financial Services
+California,36th,,"Lieu, Ted",2454 RHOB,Foreign Affairs
+California,36th,,"Lieu, Ted",2454 RHOB,Judiciary
+California,18th,,"Lofgren, Zoe",1401 LHOB,Judiciary
+California,18th,,"Lofgren, Zoe",1401 LHOB,"Science, Space, and Technology"
+Georgia,11th,,"Loudermilk, Barry",2133 RHOB,Financial Services
+Georgia,11th,,"Loudermilk, Barry",2133 RHOB,House Administration
+Georgia,11th,,"Loudermilk, Barry",2133 RHOB,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Oklahoma,3rd,,"Lucas, Frank",2405 RHOB,Agriculture
+Oklahoma,3rd,,"Lucas, Frank",2405 RHOB,Financial Services
+Florida,13th,,"Luna, Anna Paulina",226 CHOB,Foreign Affairs
+Florida,13th,,"Luna, Anna Paulina",226 CHOB,Oversight and Government Reform
+Texas,8th,,"Luttrell, Morgan",444 CHOB,Armed Services
+Texas,8th,,"Luttrell, Morgan",444 CHOB,Homeland Security
+Texas,8th,,"Luttrell, Morgan",444 CHOB,Veterans' Affairs
+Massachusetts,8th,,"Lynch, Stephen",2109 RHOB,Financial Services
+Massachusetts,8th,,"Lynch, Stephen",2109 RHOB,Oversight and Government Reform
+South Carolina,1st,,"Mace, Nancy",1728 LHOB,Armed Services
+South Carolina,1st,,"Mace, Nancy",1728 LHOB,Oversight and Government Reform
+South Carolina,1st,,"Mace, Nancy",1728 LHOB,Veterans' Affairs
+Pennsylvania,7th,,"Mackenzie, Ryan",121 CHOB,Education and Workforce
+Pennsylvania,7th,,"Mackenzie, Ryan",121 CHOB,Foreign Affairs
+Pennsylvania,7th,,"Mackenzie, Ryan",121 CHOB,Homeland Security
+Rhode Island,2nd,,"Magaziner, Seth",252 CHOB,Homeland Security
+Rhode Island,2nd,,"Magaziner, Seth",252 CHOB,Natural Resources
+New York,11th,,"Malliotakis, Nicole",1124 LHOB,Ways and Means
+Utah,2nd,,"Maloy, Celeste",249 CHOB,Appropriations
+Utah,2nd,,"Maloy, Celeste",249 CHOB,Natural Resources
+Kansas,1st,,"Mann, Tracey",344 CHOB,Agriculture
+Kansas,1st,,"Mann, Tracey",344 CHOB,Transportation and Infrastructure
+New York,22nd,,"Mannion, John",1516 LHOB,Agriculture
+New York,22nd,,"Mannion, John",1516 LHOB,Education and Workforce
+Kentucky,4th,,"Massie, Thomas",2371 RHOB,Judiciary
+Kentucky,4th,,"Massie, Thomas",2371 RHOB,Transportation and Infrastructure
+Florida,21st,,"Mast, Brian",2182 RHOB,Foreign Affairs
+Florida,21st,,"Mast, Brian",2182 RHOB,Transportation and Infrastructure
+California,7th,,"Matsui, Doris",2206 RHOB,Energy and Commerce
+Georgia,6th,,"McBath, Lucy",2246 RHOB,Education and Workforce
+Georgia,6th,,"McBath, Lucy",2246 RHOB,Judiciary
+Delaware At,Large,,"McBride, Sarah",1306 LHOB,Foreign Affairs
+Delaware At,Large,,"McBride, Sarah",1306 LHOB,"Science, Space, and Technology"
+Texas,10th,,"McCaul, Michael",2300 RHOB,Foreign Affairs
+Texas,10th,,"McCaul, Michael",2300 RHOB,Homeland Security
+Maryland,6th,,"McClain Delaney, April",1130 LHOB,Agriculture
+Maryland,6th,,"McClain Delaney, April",1130 LHOB,"Science, Space, and Technology"
+Michigan,9th,,"McClain, Lisa",562 CHOB,Education and Workforce
+Michigan,9th,,"McClain, Lisa",562 CHOB,Financial Services
+Virginia,4th,,"McClellan, Jennifer",1628 LHOB,Energy and Commerce
+California,5th,,"McClintock, Tom",2256 RHOB,Budget
+California,5th,,"McClintock, Tom",2256 RHOB,Judiciary
+California,5th,,"McClintock, Tom",2256 RHOB,Natural Resources
+Minnesota,4th,,"McCollum, Betty",2426 RHOB,Appropriations
+Georgia,7th,,"McCormick, Richard",1719 LHOB,Armed Services
+Georgia,7th,,"McCormick, Richard",1719 LHOB,Foreign Affairs
+Georgia,7th,,"McCormick, Richard",1719 LHOB,"Science, Space, and Technology"
+Michigan,8th,,"McDonald Rivet, Kristen",1408 LHOB,Agriculture
+Michigan,8th,,"McDonald Rivet, Kristen",1408 LHOB,Transportation and Infrastructure
+North Carolina,6th,,"McDowell, Addison",1032 LHOB,Budget
+North Carolina,6th,,"McDowell, Addison",1032 LHOB,Natural Resources
+North Carolina,6th,,"McDowell, Addison",1032 LHOB,Transportation and Infrastructure
+Kentucky,3rd,,"McGarvey, Morgan",1527 LHOB,Budget
+Kentucky,3rd,,"McGarvey, Morgan",1527 LHOB,Small Business
+Kentucky,3rd,,"McGarvey, Morgan",1527 LHOB,Veterans' Affairs
+Massachusetts,2nd,,"McGovern, James",370 CHOB,Agriculture
+Massachusetts,2nd,,"McGovern, James",370 CHOB,Rules
+Virginia,5th,,"McGuire, John",1013 LHOB,Armed Services
+Virginia,5th,,"McGuire, John",1013 LHOB,Oversight and Government Reform
+New Jersey,10th,,"McIver, LaMonica",426 CHOB,Homeland Security
+New Jersey,10th,,"McIver, LaMonica",426 CHOB,Small Business
+New York,5th,,"Meeks, Gregory",2310 RHOB,Financial Services
+New York,5th,,"Meeks, Gregory",2310 RHOB,Foreign Affairs
+New Jersey,8th,,"Menendez, Robert",2453 RHOB,Energy and Commerce
+New York,6th,,"Meng, Grace",2468 RHOB,Appropriations
+Indiana,8th,,"Messmer, Mark",1208 LHOB,Agriculture
+Indiana,8th,,"Messmer, Mark",1208 LHOB,Armed Services
+Indiana,8th,,"Messmer, Mark",1208 LHOB,Education and Workforce
+Pennsylvania,9th,,"Meuser, Daniel",350 CHOB,Financial Services
+Pennsylvania,9th,,"Meuser, Daniel",350 CHOB,Small Business
+Maryland,7th,,"Mfume, Kweisi",2263 RHOB,Foreign Affairs
+Maryland,7th,,"Mfume, Kweisi",2263 RHOB,Oversight and Government Reform
+West Virginia,1st,,"Miller, Carol",465 CHOB,Ways and Means
+Illinois,15th,,"Miller, Mary",1740 LHOB,Agriculture
+Illinois,15th,,"Miller, Mary",1740 LHOB,Education and Workforce
+Illinois,15th,,"Miller, Mary",1740 LHOB,House Administration
+Ohio,7th,,"Miller, Max",143 CHOB,"Science, Space, and Technology"
+Ohio,7th,,"Miller, Max",143 CHOB,Ways and Means
+Iowa,1st,,"Miller-Meeks, Mariannette",504 CHOB,Energy and Commerce
+Iowa,1st,,"Miller-Meeks, Mariannette",504 CHOB,Veterans' Affairs
+Florida,7th,,"Mills, Cory",346 CHOB,Armed Services
+Florida,7th,,"Mills, Cory",346 CHOB,Foreign Affairs
+California,47th,,"Min, Dave",1034 LHOB,Natural Resources
+California,47th,,"Min, Dave",1034 LHOB,Oversight and Government Reform
+Michigan,2nd,,"Moolenaar, John",246 CHOB,Appropriations
+Michigan,2nd,,"Moolenaar, John",246 CHOB,Select Comm on the Strategic Competition US and China
+Alabama,1st,,"Moore, Barry",1511 LHOB,Agriculture
+Alabama,1st,,"Moore, Barry",1511 LHOB,Judiciary
+Utah,1st,,"Moore, Blake",1131 LHOB,Budget
+Utah,1st,,"Moore, Blake",1131 LHOB,Ways and Means
+Wisconsin,4th,,"Moore, Gwen",2252 RHOB,Ways and Means
+West Virginia,2nd,,"Moore, Riley",1337 LHOB,Appropriations
+North Carolina,14th,,"Moore, Tim",1424 LHOB,Budget
+North Carolina,14th,,"Moore, Tim",1424 LHOB,Financial Services
+Texas,1st,,"Moran, Nathaniel",1605 LHOB,Ethics
+Texas,1st,,"Moran, Nathaniel",1605 LHOB,Select Comm on the Strategic Competition US and China
+Texas,1st,,"Moran, Nathaniel",1605 LHOB,Ways and Means
+New York,25th,,"Morelle, Joseph",570 CHOB,Appropriations
+New York,25th,,"Morelle, Joseph",570 CHOB,House Administration
+New York,25th,,"Morelle, Joseph",570 CHOB,Joint Committee of Congress on the Library
+Minnesota,3rd,,"Morrison, Kelly",1205 LHOB,Small Business
+Minnesota,3rd,,"Morrison, Kelly",1205 LHOB,Veterans' Affairs
+Florida,23rd,,"Moskowitz, Jared",242 CHOB,Foreign Affairs
+Florida,23rd,,"Moskowitz, Jared",242 CHOB,Judiciary
+Florida,23rd,,"Moskowitz, Jared",242 CHOB,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Massachusetts,6th,,"Moulton, Seth",1126 LHOB,Armed Services
+Massachusetts,6th,,"Moulton, Seth",1126 LHOB,Select Comm on the Strategic Competition US and China
+Massachusetts,6th,,"Moulton, Seth",1126 LHOB,Transportation and Infrastructure
+Guam,Delegate,,"Moylan, James",228 CHOB,Armed Services
+Guam,Delegate,,"Moylan, James",228 CHOB,Education and Workforce
+Guam,Delegate,,"Moylan, James",228 CHOB,Foreign Affairs
+Indiana,1st,,"Mrvan, Frank",2441 RHOB,Appropriations
+California,15th,,"Mullin, Kevin",1404 LHOB,Energy and Commerce
+North Carolina,3rd,,"Murphy, Gregory",407 CHOB,House Administration
+North Carolina,3rd,,"Murphy, Gregory",407 CHOB,Veterans' Affairs
+North Carolina,3rd,,"Murphy, Gregory",407 CHOB,Ways and Means
+New York,12th,,"Nadler, Jerrold",2132 RHOB,Judiciary
+New York,12th,,"Nadler, Jerrold",2132 RHOB,Transportation and Infrastructure
+Massachusetts,1st,,"Neal, Richard",372 CHOB,Joint Committee on Taxation
+Massachusetts,1st,,"Neal, Richard",372 CHOB,Ways and Means
+Colorado,2nd,,"Neguse, Joe",2400 RHOB,Judiciary
+Colorado,2nd,,"Neguse, Joe",2400 RHOB,Natural Resources
+Colorado,2nd,,"Neguse, Joe",2400 RHOB,Rules
+Texas,22nd,,"Nehls, Troy",1104 LHOB,Judiciary
+Texas,22nd,,"Nehls, Troy",1104 LHOB,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Texas,22nd,,"Nehls, Troy",1104 LHOB,Transportation and Infrastructure
+Washington,4th,,"Newhouse, Dan",460 CHOB,Agriculture
+Washington,4th,,"Newhouse, Dan",460 CHOB,Appropriations
+Washington,4th,,"Newhouse, Dan",460 CHOB,Select Comm on the Strategic Competition US and China
+New Jersey,1st,,"Norcross, Donald",2427 RHOB,Armed Services
+New Jersey,1st,,"Norcross, Donald",2427 RHOB,Education and Workforce
+South Carolina,5th,,"Norman, Ralph",569 CHOB,Budget
+South Carolina,5th,,"Norman, Ralph",569 CHOB,Financial Services
+South Carolina,5th,,"Norman, Ralph",569 CHOB,Rules
+District of Columbia,Delegate,,"Norton, Eleanor",2136 RHOB,Oversight and Government Reform
+District of Columbia,Delegate,,"Norton, Eleanor",2136 RHOB,Transportation and Infrastructure
+Iowa,3rd,,"Nunn, Zachary",1410 LHOB,Agriculture
+Iowa,3rd,,"Nunn, Zachary",1410 LHOB,Financial Services
+Iowa,3rd,,"Nunn, Zachary",1410 LHOB,Select Comm on the Strategic Competition US and China
+California,23rd,,"Obernolte, Jay",2433 RHOB,Budget
+California,23rd,,"Obernolte, Jay",2433 RHOB,Energy and Commerce
+California,23rd,,"Obernolte, Jay",2433 RHOB,"Science, Space, and Technology"
+New York,14th,,"Ocasio-Cortez, Alexandria",250 CHOB,Energy and Commerce
+Tennessee,5th,,"Ogles, Andrew",151 CHOB,Financial Services
+Tennessee,5th,,"Ogles, Andrew",151 CHOB,Homeland Security
+Maryland,2nd,,"Olszewski, Johnny",1339 LHOB,Foreign Affairs
+Maryland,2nd,,"Olszewski, Johnny",1339 LHOB,Small Business
+Minnesota,5th,,"Omar, Ilhan",1730 LHOB,Budget
+Minnesota,5th,,"Omar, Ilhan",1730 LHOB,Education and Workforce
+Missouri,3rd,,"Onder, Robert",1113 LHOB,Education and Workforce
+Missouri,3rd,,"Onder, Robert",1113 LHOB,Judiciary
+Missouri,3rd,,"Onder, Robert",1113 LHOB,Transportation and Infrastructure
+Utah,4th,,"Owens, Burgess",309 CHOB,Education and Workforce
+Utah,4th,,"Owens, Burgess",309 CHOB,Transportation and Infrastructure
+New Jersey,6th,,"Pallone, Frank",2107 RHOB,Energy and Commerce
+Alabama,6th,,"Palmer, Gary",170 CHOB,Energy and Commerce
+Alabama,6th,,"Palmer, Gary",170 CHOB,Oversight and Government Reform
+California,19th,,"Panetta, Jimmy",200 CHOB,Budget
+California,19th,,"Panetta, Jimmy",200 CHOB,Ways and Means
+New Hampshire,1st,,"Pappas, Chris",452 CHOB,Transportation and Infrastructure
+New Hampshire,1st,,"Pappas, Chris",452 CHOB,Veterans' Affairs
+Florida,1st,,"Patronis, Jimmy",2021 RHOB,Small Business
+Florida,1st,,"Patronis, Jimmy",2021 RHOB,Transportation and Infrastructure
+California,11th,,"Pelosi, Nancy",1236 LHOB,
+Washington,3rd,,"Perez, Marie",1431 LHOB,Appropriations
+Pennsylvania,10th,,"Perry, Scott",2160 RHOB,Foreign Affairs
+Pennsylvania,10th,,"Perry, Scott",2160 RHOB,Intelligence
+Pennsylvania,10th,,"Perry, Scott",2160 RHOB,Oversight and Government Reform
+Pennsylvania,10th,,"Perry, Scott",2160 RHOB,Transportation and Infrastructure
+California,50th,,"Peters, Scott",2369 RHOB,Budget
+California,50th,,"Peters, Scott",2369 RHOB,Energy and Commerce
+Colorado,7th,,"Pettersen, Brittany",348 CHOB,Financial Services
+Texas,11th,,"Pfluger, August",2202 RHOB,Energy and Commerce
+Texas,11th,,"Pfluger, August",2202 RHOB,Homeland Security
+Maine,1st,,"Pingree, Chellie",2354 RHOB,Agriculture
+Maine,1st,,"Pingree, Chellie",2354 RHOB,Appropriations
+Virgin Islands,Delegate,,"Plaskett, Stacey",2059 RHOB,Budget
+Virgin Islands,Delegate,,"Plaskett, Stacey",2059 RHOB,Intelligence
+Virgin Islands,Delegate,,"Plaskett, Stacey",2059 RHOB,Ways and Means
+Wisconsin,2nd,,"Pocan, Mark",1026 LHOB,Appropriations
+New Jersey,9th,,"Pou, Nellie",1007 LHOB,Homeland Security
+New Jersey,9th,,"Pou, Nellie",1007 LHOB,Transportation and Infrastructure
+Massachusetts,7th,,"Pressley, Ayanna",402 CHOB,Financial Services
+Massachusetts,7th,,"Pressley, Ayanna",402 CHOB,Oversight and Government Reform
+Illinois,5th,,"Quigley, Mike",2083 RHOB,Appropriations
+Illinois,5th,,"Quigley, Mike",2083 RHOB,Intelligence
+American Samoa,Delegate,,"Radewagen, Aumua Amata",2001 RHOB,Foreign Affairs
+American Samoa,Delegate,,"Radewagen, Aumua Amata",2001 RHOB,Natural Resources
+American Samoa,Delegate,,"Radewagen, Aumua Amata",2001 RHOB,Veterans' Affairs
+Illinois,3rd,,"Ramirez, Delia",1523 LHOB,Homeland Security
+Illinois,3rd,,"Ramirez, Delia",1523 LHOB,Veterans' Affairs
+Washington,6th,,"Randall, Emily",1531 LHOB,Natural Resources
+Washington,6th,,"Randall, Emily",1531 LHOB,Oversight and Government Reform
+Maryland,8th,,"Raskin, Jamie",2242 RHOB,Judiciary
+Pennsylvania,14th,,"Reschenthaler, Guy",2209 RHOB,Appropriations
+Pablo,Hernandez,,Resident Commissioner,D,Homeland Security
+Pablo,Hernandez,,Resident Commissioner,D,Natural Resources
+New York,19th,,"Riley, Josh",128 CHOB,Agriculture
+New York,19th,,"Riley, Josh",128 CHOB,"Science, Space, and Technology"
+California,29th,,"Rivas, Luz",1319 LHOB,Natural Resources
+California,29th,,"Rivas, Luz",1319 LHOB,"Science, Space, and Technology"
+Kentucky,5th,,"Rogers, Harold",2406 RHOB,Appropriations
+Alabama,3rd,,"Rogers, Mike",2469 RHOB,Armed Services
+Tennessee,6th,,"Rose, John",2238 RHOB,Agriculture
+Tennessee,6th,,"Rose, John",2238 RHOB,Financial Services
+North Carolina,2nd,,"Ross, Deborah",1221 LHOB,Ethics
+North Carolina,2nd,,"Ross, Deborah",1221 LHOB,Judiciary
+North Carolina,2nd,,"Ross, Deborah",1221 LHOB,"Science, Space, and Technology"
+North Carolina,7th,,"Rouzer, David",2333 RHOB,Agriculture
+North Carolina,7th,,"Rouzer, David",2333 RHOB,"Science, Space, and Technology"
+North Carolina,7th,,"Rouzer, David",2333 RHOB,Transportation and Infrastructure
+Texas,21st,,"Roy, Chip",103 CHOB,Budget
+Texas,21st,,"Roy, Chip",103 CHOB,Judiciary
+Texas,21st,,"Roy, Chip",103 CHOB,Rules
+California,25th,,"Ruiz, Raul",2342 RHOB,Energy and Commerce
+Ohio,6th,,"Rulli, Michael A.",421 CHOB,Education and Workforce
+Ohio,6th,,"Rulli, Michael A.",421 CHOB,Energy and Commerce
+Florida,5th,,"Rutherford, John",1711 LHOB,Appropriations
+Florida,5th,,"Rutherford, John",1711 LHOB,Ethics
+New York,18th,,"Ryan, Patrick",1708 LHOB,Armed Services
+New York,18th,,"Ryan, Patrick",1708 LHOB,Transportation and Infrastructure
+Florida,27th,,"Salazar, Maria",2162 RHOB,Financial Services
+Florida,27th,,"Salazar, Maria",2162 RHOB,Foreign Affairs
+Oregon,6th,,"Salinas, Andrea",403 CHOB,Agriculture
+Oregon,6th,,"Salinas, Andrea",403 CHOB,"Science, Space, and Technology"
+California,38th,,"Sanchez, Linda",2309 RHOB,Ways and Means
+Louisiana,1st,,"Scalise, Steve",266 CHOB,
+Pennsylvania,5th,,"Scanlon, Mary Gay",1214 LHOB,Judiciary
+Pennsylvania,5th,,"Scanlon, Mary Gay",1214 LHOB,Rules
+Illinois,9th,,"Schakowsky, Janice",2408 RHOB,Energy and Commerce
+Kansas,2nd,,"Schmidt, Derek",1223 LHOB,Armed Services
+Kansas,2nd,,"Schmidt, Derek",1223 LHOB,Judiciary
+Kansas,2nd,,"Schmidt, Derek",1223 LHOB,Small Business
+Illinois,10th,,"Schneider, Bradley",300 CHOB,Foreign Affairs
+Illinois,10th,,"Schneider, Bradley",300 CHOB,Ways and Means
+Michigan,3rd,,"Scholten, Hillary",1317 LHOB,Small Business
+Michigan,3rd,,"Scholten, Hillary",1317 LHOB,Transportation and Infrastructure
+Washington,8th,,"Schrier, Kim",1110 LHOB,Energy and Commerce
+Arizona,1st,,"Schweikert, David",166 CHOB,Ways and Means
+Georgia,8th,,"Scott, Austin",2185 RHOB,Agriculture
+Georgia,8th,,"Scott, Austin",2185 RHOB,Armed Services
+Georgia,8th,,"Scott, Austin",2185 RHOB,Intelligence
+Georgia,8th,,"Scott, Austin",2185 RHOB,Rules
+Georgia,13th,,"Scott, David",468 CHOB,Agriculture
+Georgia,13th,,"Scott, David",468 CHOB,Financial Services
+Virginia,3rd,,"Scott, Robert",2328 RHOB,Budget
+Virginia,3rd,,"Scott, Robert",2328 RHOB,Education and Workforce
+Texas,3rd,,"Self, Keith",1030 LHOB,Foreign Affairs
+Texas,3rd,,"Self, Keith",1030 LHOB,"Science, Space, and Technology"
+Texas,3rd,,"Self, Keith",1030 LHOB,Veterans' Affairs
+Texas,17th,,"Sessions, Pete",2204 RHOB,Financial Services
+Texas,17th,,"Sessions, Pete",2204 RHOB,Oversight and Government Reform
+Alabama,7th,,"Sewell, Terri",1035 LHOB,House Administration
+Alabama,7th,,"Sewell, Terri",1035 LHOB,Ways and Means
+California,32nd,,"Sherman, Brad",2365 RHOB,Financial Services
+California,32nd,,"Sherman, Brad",2365 RHOB,Foreign Affairs
+New Jersey,11th,,"Sherrill, Mikie",1427 LHOB,Armed Services
+New Jersey,11th,,"Sherrill, Mikie",1427 LHOB,Select Comm on the Strategic Competition US and China
+Indiana,6th,,"Shreve, Jefferson",224 CHOB,Foreign Affairs
+Indiana,6th,,"Shreve, Jefferson",224 CHOB,Transportation and Infrastructure
+California,12th,,"Simon, Lateefah",1023 LHOB,Oversight and Government Reform
+California,12th,,"Simon, Lateefah",1023 LHOB,Small Business
+Idaho,2nd,,"Simpson, Michael",2084 RHOB,Appropriations
+Washington,9th,,"Smith, Adam",2264 RHOB,Armed Services
+Nebraska,3rd,,"Smith, Adrian",502 CHOB,Joint Committee on Taxation
+Nebraska,3rd,,"Smith, Adrian",502 CHOB,Ways and Means
+New Jersey,4th,,"Smith, Christopher",2373 RHOB,Foreign Affairs
+Missouri,8th,,"Smith, Jason",1011 LHOB,Joint Committee on Taxation
+Missouri,8th,,"Smith, Jason",1011 LHOB,Ways and Means
+Pennsylvania,11th,,"Smucker, Lloyd",302 CHOB,Budget
+Pennsylvania,11th,,"Smucker, Lloyd",302 CHOB,Ways and Means
+Illinois,17th,,"Sorensen, Eric",1314 LHOB,Agriculture
+Illinois,17th,,"Sorensen, Eric",1314 LHOB,Armed Services
+Florida,9th,,"Soto, Darren",2353 RHOB,Energy and Commerce
+Florida,9th,,"Soto, Darren",2353 RHOB,Natural Resources
+Indiana,5th,,"Spartz, Victoria",1609 LHOB,
+New Mexico,1st,,"Stansbury, Melanie",1421 LHOB,Natural Resources
+New Mexico,1st,,"Stansbury, Melanie",1421 LHOB,Oversight and Government Reform
+Arizona,4th,,"Stanton, Greg",207 CHOB,Foreign Affairs
+Arizona,4th,,"Stanton, Greg",207 CHOB,Select Comm on the Strategic Competition US and China
+Arizona,4th,,"Stanton, Greg",207 CHOB,Transportation and Infrastructure
+Minnesota,8th,,"Stauber, Pete",145 CHOB,Natural Resources
+Minnesota,8th,,"Stauber, Pete",145 CHOB,Small Business
+Minnesota,8th,,"Stauber, Pete",145 CHOB,Transportation and Infrastructure
+New York,21st,,"Stefanik, Elise",2211 RHOB,Armed Services
+New York,21st,,"Stefanik, Elise",2211 RHOB,Education and Workforce
+New York,21st,,"Stefanik, Elise",2211 RHOB,Intelligence
+Wisconsin,1st,,"Steil, Bryan",1526 LHOB,Financial Services
+Wisconsin,1st,,"Steil, Bryan",1526 LHOB,House Administration
+Wisconsin,1st,,"Steil, Bryan",1526 LHOB,Joint Committee of Congress on the Library
+Florida,17th,,"Steube, W.",2457 RHOB,Intelligence
+Florida,17th,,"Steube, W.",2457 RHOB,Ways and Means
+Michigan,11th,,"Stevens, Haley",2411 RHOB,Education and Workforce
+Michigan,11th,,"Stevens, Haley",2411 RHOB,"Science, Space, and Technology"
+Michigan,11th,,"Stevens, Haley",2411 RHOB,Select Comm on the Strategic Competition US and China
+Washington,10th,,"Strickland, Marilyn",1724 LHOB,Armed Services
+Washington,10th,,"Strickland, Marilyn",1724 LHOB,Transportation and Infrastructure
+Alabama,5th,,"Strong, Dale",449 CHOB,Appropriations
+Alabama,5th,,"Strong, Dale",449 CHOB,Homeland Security
+Indiana,3rd,,"Stutzman, Marlin",404 CHOB,Budget
+Indiana,3rd,,"Stutzman, Marlin",404 CHOB,Financial Services
+Virginia,10th,,"Subramanyam, Suhas",1009 LHOB,Ethics
+Virginia,10th,,"Subramanyam, Suhas",1009 LHOB,Oversight and Government Reform
+Virginia,10th,,"Subramanyam, Suhas",1009 LHOB,"Science, Space, and Technology"
+New York,3rd,,"Suozzi, Thomas R.",203 CHOB,Ways and Means
+California,14th,,"Swalwell, Eric",174 CHOB,Homeland Security
+California,14th,,"Swalwell, Eric",174 CHOB,Judiciary
+California,14th,,"Swalwell, Eric",174 CHOB,"Select Subcomm to Investigate Questions about Jan 6, 2021"
+Ohio,13th,,"Sykes, Emilia",1217 LHOB,"Science, Space, and Technology"
+Ohio,13th,,"Sykes, Emilia",1217 LHOB,Transportation and Infrastructure
+California,39th,,"Takano, Mark",2078 RHOB,Education and Workforce
+California,39th,,"Takano, Mark",2078 RHOB,Veterans' Affairs
+Ohio,2nd,,"Taylor, David",325 CHOB,Agriculture
+Ohio,2nd,,"Taylor, David",325 CHOB,Transportation and Infrastructure
+New York,24th,,"Tenney, Claudia",2230 RHOB,Intelligence
+New York,24th,,"Tenney, Claudia",2230 RHOB,"Science, Space, and Technology"
+New York,24th,,"Tenney, Claudia",2230 RHOB,Ways and Means
+Michigan,13th,,"Thanedar, Shri",154 CHOB,Agriculture
+Michigan,13th,,"Thanedar, Shri",154 CHOB,Homeland Security
+Mississippi,2nd,,"Thompson, Bennie",2466 RHOB,Homeland Security
+Pennsylvania,15th,,"Thompson, Glenn",400 CHOB,Agriculture
+Pennsylvania,15th,,"Thompson, Glenn",400 CHOB,Education and Workforce
+California,4th,,"Thompson, Mike",268 CHOB,Ways and Means
+Wisconsin,7th,,"Tiffany, Thomas",451 CHOB,Judiciary
+Wisconsin,7th,,"Tiffany, Thomas",451 CHOB,Natural Resources
+South Carolina,4th,,"Timmons, William",267 CHOB,Financial Services
+South Carolina,4th,,"Timmons, William",267 CHOB,Oversight and Government Reform
+Nevada,1st,,"Titus, Dina",2370 RHOB,Foreign Affairs
+Nevada,1st,,"Titus, Dina",2370 RHOB,Transportation and Infrastructure
+Michigan,12th,,"Tlaib, Rashida",2438 RHOB,Financial Services
+Michigan,12th,,"Tlaib, Rashida",2438 RHOB,Oversight and Government Reform
+Hawaii,2nd,,"Tokuda, Jill",1027 LHOB,Agriculture
+Hawaii,2nd,,"Tokuda, Jill",1027 LHOB,Armed Services
+Hawaii,2nd,,"Tokuda, Jill",1027 LHOB,Select Comm on the Strategic Competition US and China
+New York,20th,,"Tonko, Paul",2269 RHOB,Budget
+New York,20th,,"Tonko, Paul",2269 RHOB,Energy and Commerce
+California,35th,,"Torres, Norma",2227 RHOB,Appropriations
+California,35th,,"Torres, Norma",2227 RHOB,House Administration
+New York,15th,,"Torres, Ritchie",1414 LHOB,Financial Services
+New York,15th,,"Torres, Ritchie",1414 LHOB,Select Comm on the Strategic Competition US and China
+Massachusetts,3rd,,"Trahan, Lori",2233 RHOB,Energy and Commerce
+California,45th,,"Tran, Derek",1127 LHOB,Armed Services
+California,45th,,"Tran, Derek",1127 LHOB,Small Business
+Ohio,10th,,"Turner, Michael",2183 RHOB,Armed Services
+Ohio,10th,,"Turner, Michael",2183 RHOB,Oversight and Government Reform
+Texas,18th,,"Turner, Sylvester - Vacancy",1318 LHOB,
+Illinois,14th,,"Underwood, Lauren",2228 RHOB,Appropriations
+California,22nd,,"Valadao, David",2465 RHOB,Appropriations
+California,22nd,,"Valadao, David",2465 RHOB,Joint Committee of Congress on the Library
+New Jersey,2nd,,"Van Drew, Jefferson",2447 RHOB,Judiciary
+New Jersey,2nd,,"Van Drew, Jefferson",2447 RHOB,Transportation and Infrastructure
+Texas,24th,,"Van Duyne, Beth",1725 LHOB,Small Business
+Texas,24th,,"Van Duyne, Beth",1725 LHOB,Ways and Means
+Wisconsin,3rd,,"Van Orden, Derrick",1513 LHOB,Agriculture
+Wisconsin,3rd,,"Van Orden, Derrick",1513 LHOB,Armed Services
+Wisconsin,3rd,,"Van Orden, Derrick",1513 LHOB,Veterans' Affairs
+California,52nd,,"Vargas, Juan",2467 RHOB,Financial Services
+New Mexico,2nd,,"Vasquez, Gabe",322 CHOB,Agriculture
+New Mexico,2nd,,"Vasquez, Gabe",322 CHOB,Armed Services
+Texas,33rd,,"Veasey, Marc",2186 RHOB,Energy and Commerce
+New York,7th,,"Velazquez, Nydia",2302 RHOB,Financial Services
+New York,7th,,"Velazquez, Nydia",2302 RHOB,Natural Resources
+New York,7th,,"Velazquez, Nydia",2302 RHOB,Small Business
+Virginia,7th,,"Vindman, Eugene",1005 LHOB,Agriculture
+Virginia,7th,,"Vindman, Eugene",1005 LHOB,Armed Services
+Missouri,2nd,,"Wagner, Ann",2350 RHOB,Financial Services
+Missouri,2nd,,"Wagner, Ann",2350 RHOB,Intelligence
+Michigan,5th,,"Walberg, Tim",2266 RHOB,Education and Workforce
+Michigan,5th,,"Walberg, Tim",2266 RHOB,Natural Resources
+Virginia,11th,,"Walkinshaw, James",2265 RHOB,Oversight and Government Reform
+Florida,25th,,"Wasserman Schultz, Debbie",270 CHOB,Appropriations
+California,43rd,,"Waters, Maxine",2221 RHOB,Financial Services
+New Jersey,12th,,"Watson Coleman, Bonnie",168 CHOB,Appropriations
+New Jersey,12th,,"Watson Coleman, Bonnie",168 CHOB,Budget
+Texas,14th,,"Weber, Randy",107 CHOB,Energy and Commerce
+Texas,14th,,"Weber, Randy",107 CHOB,"Science, Space, and Technology"
+Florida,11th,,"Webster, Daniel",2184 RHOB,Natural Resources
+Florida,11th,,"Webster, Daniel",2184 RHOB,"Science, Space, and Technology"
+Florida,11th,,"Webster, Daniel",2184 RHOB,Transportation and Infrastructure
+Arkansas,4th,,"Westerman, Bruce",202 CHOB,Natural Resources
+Arkansas,4th,,"Westerman, Bruce",202 CHOB,Transportation and Infrastructure
+California,27th,,"Whitesides, George",1504 LHOB,Armed Services
+California,27th,,"Whitesides, George",1504 LHOB,"Science, Space, and Technology"
+Wisconsin,8th,,"Wied, Tony",424 CHOB,Agriculture
+Wisconsin,8th,,"Wied, Tony",424 CHOB,Small Business
+Wisconsin,8th,,"Wied, Tony",424 CHOB,Transportation and Infrastructure
+Georgia,5th,,"Williams, Nikema",1406 LHOB,Financial Services
+Texas,25th,,"Williams, Roger",2336 RHOB,Financial Services
+Texas,25th,,"Williams, Roger",2336 RHOB,Small Business
+Florida,24th,,"Wilson, Frederica",2080 RHOB,Education and Workforce
+Florida,24th,,"Wilson, Frederica",2080 RHOB,Transportation and Infrastructure
+South Carolina,2nd,,"Wilson, Joe",1436 LHOB,Armed Services
+South Carolina,2nd,,"Wilson, Joe",1436 LHOB,Education and Workforce
+South Carolina,2nd,,"Wilson, Joe",1436 LHOB,Foreign Affairs
+Virginia,1st,,"Wittman, Robert",2055 RHOB,Armed Services
+Virginia,1st,,"Wittman, Robert",2055 RHOB,Natural Resources
+Virginia,1st,,"Wittman, Robert",2055 RHOB,Select Comm on the Strategic Competition US and China
+Arkansas,3rd,,"Womack, Steve",2412 RHOB,Appropriations
+Indiana,2nd,,"Yakym, Rudy",349 CHOB,Ways and Means
+Montana,1st,,"Zinke, Ryan",512 CHOB,Appropriations
+Montana,1st,,"Zinke, Ryan",512 CHOB,Foreign Affairs

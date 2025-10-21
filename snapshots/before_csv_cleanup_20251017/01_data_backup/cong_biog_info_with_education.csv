@@ -1,0 +1,532 @@
+first_name,last_name,full_name,date_of_birth,age,assumed_office,tenure_months,tenure_years,tenure_pretty,chamber,bioguide_id,military_service,has_military_service,education
+Alma,Adams,Alma Adams,5/27/46,79,11/12/14,130,10.83,"10 years, 10 months",House,A000370,,,"North Carolina A&T State University ( BS , MS ) Ohio State University ( PhD )"
+Robert,Aderholt,Robert Aderholt,7/22/65,60,1/3/97,344,28.67,"28 years, 8 months",House,A000055,,,University of North Alabama Birmingham–Southern College ( BA ) Samford University ( JD )
+Pete,Aguilar,Pete Aguilar,6/19/79,46,1/3/15,128,10.67,"10 years, 8 months",House,A000371,,,University of Redlands ( BS )
+Mark,Alford,Mark Alford,10/4/63,61,1/3/23,32,2.67,"2 years, 8 months",House,A000379,,,University of Texas at Austin ( BA )
+Rick,Allen,Rick Allen,11/7/51,73,1/3/15,128,10.67,"10 years, 8 months",House,A000372,,,Auburn University ( BS )
+Angela,Alsobrooks,Angela Alsobrooks,2/23/71,54,1/3/25,8,0.67,8 months,Senate,A000382,,,
+Gabe,Amo,Gabe Amo,12/11/87,37,11/13/23,22,1.83,"1 year, 10 months",House,A000380,,,"Wheaton College ( BA ) Merton College, Oxford ( MSc )"
+Mark,Amodei,Mark Amodei,6/12/58,67,9/13/11,168,14,14 years,House,A000369,Army,Yes,"University of Nevada, Reno ( BA ) University of the Pacific ( JD )"
+Yassamin,Ansari,Yassamin Ansari,4/7/92,33,1/3/25,8,0.67,8 months,House,A000381,,,"Stanford University ( BA ) St. John's College, Cambridge ( MPhil )"
+Jodey,Arrington,Jodey Arrington,3/9/72,53,1/3/17,104,8.67,"8 years, 8 months",House,A000375,,,"Texas Tech University ( BA , MPA )"
+Jake,Auchincloss,Jake Auchincloss,1/29/88,37,1/3/21,56,4.67,"4 years, 8 months",House,A000148,Marine Corps Marine Corps Reserve,Yes,Harvard University ( BA ) Massachusetts Institute of Technology ( MBA )
+Brian,Babin,Brian Babin,3/23/48,77,1/3/15,128,10.67,"10 years, 8 months",House,B001291,Air Force Texas Army National Guard,Yes,"Lamar University ( BS ) University of Texas, Houston ( DDS )"
+Don,Bacon,Don Bacon,8/16/63,62,1/3/17,104,8.67,"8 years, 8 months",House,B001298,Air Force,Yes,Northern Illinois University ( BA ) University of Phoenix ( MBA ) National Defense University ( MA )
+Jim,Baird,Jim Baird,6/4/45,80,1/3/19,80,6.67,"6 years, 8 months",House,,Army,Yes,"Purdue University, West Lafayette ( BS , MS ) University of Kentucky ( PhD )"
+Troy,Balderson,Troy Balderson,1/16/62,63,9/5/18,84,7,7 years,House,B001306,,,Muskingum University Ohio State University
+Tammy,Baldwin,Tammy Baldwin,2/11/62,63,1/3/13,152,12.67,"12 years, 8 months",Senate,B001230,,,
+Becca,Balint,Becca Balint,5/4/68,57,1/3/23,32,2.67,"2 years, 8 months",House,B001318,,,Smith College ( BA ) Harvard University ( MEd ) University of Massachusetts Amherst ( MA )
+Jim,Banks,Jim Banks,7/16/79,46,1/3/25,8,0.67,8 months,Senate,B001299,,,
+Andy,Barr,Andy Barr,7/24/73,52,1/3/13,152,12.67,"12 years, 8 months",House,B001282,,,University of Virginia ( BA ) University of Kentucky ( JD )
+Nanette,Barragán,Nanette Barragán,9/15/76,49,1/3/17,104,8.67,"8 years, 8 months",House,B001300,,,"University of California, Los Angeles ( BA ) University of Southern California ( JD )"
+John,Barrasso,John Barrasso,7/21/52,73,6/25/07,219,18.25,"18 years, 3 months",Senate,B001261,,,"Rensselaer Polytechnic Institute Georgetown University ( BS , MD )"
+Tom,Barrett,Tom Barrett,4/30/81,44,1/3/25,8,0.67,8 months,House,B001321,Army Michigan National Guard,Yes,Western Michigan University ( BA )
+Michael,Baumgartner,Michael Baumgartner,12/13/75,49,1/3/25,8,0.67,8 months,House,B001322,,,Washington State University ( BA ) Harvard University ( MPA )
+Aaron,Bean,Aaron Bean,1/25/67,58,1/3/23,32,2.67,"2 years, 8 months",House,B001314,,,Jacksonville University ( BS )
+Joyce,Beatty,Joyce Beatty,3/12/50,75,1/3/13,152,12.67,"12 years, 8 months",House,B001281,,,Central State University ( BA ) Wright State University ( MS ) University of Cincinnati
+Wesley,Bell,Wesley Bell,11/5/74,50,1/3/25,8,0.67,8 months,House,B001324,,,Lindenwood University ( BA ) University of Missouri ( JD )
+Michael,Bennet,Michael Bennet,11/28/64,60,1/21/09,200,16.67,"16 years, 8 months",Senate,B001267,,,Wesleyan University ( BA ) Yale University ( JD )
+Cliff,Bentz,Cliff Bentz,1/12/52,73,1/3/21,56,4.67,"4 years, 8 months",House,B000668,,,Eastern Oregon University ( BA ) Lewis and Clark College ( JD )
+Ami,Bera,Ami Bera,3/2/65,60,1/3/13,152,12.67,"12 years, 8 months",House,B001287,,,"University of California, Irvine ( BS , MD )"
+Jack,Bergman,Jack Bergman,2/2/47,78,1/3/17,104,8.67,"8 years, 8 months",House,B001301,Marine Corps,Yes,Gustavus Adolphus College ( BA ) University of West Florida ( MBA )
+Don,Beyer,Don Beyer,6/20/50,75,1/3/15,128,10.67,"10 years, 8 months",House,,,,Williams College ( BA ) George Mason University
+Stephanie,Bice,Stephanie Bice,11/11/73,51,1/3/21,56,4.67,"4 years, 8 months",House,B000740,,,"Oklahoma State University, Stillwater ( BS )"
+Andy,Biggs,Andy Biggs,11/7/58,66,1/3/17,104,8.67,"8 years, 8 months",House,B001302,,,"Brigham Young University ( BA ) University of Arizona ( JD ) Arizona State University, Phoenix ( MA )"
+Sheri,Biggs,Sheri Biggs,3/28/70,55,1/3/25,8,0.67,8 months,House,B001325,Mississippi Air National Guard,Yes,Carolina Bible College ( BA ) Samford University ( DNP ) Air War College
+Gus,Bilirakis,Gus Bilirakis,2/8/63,62,1/3/07,224,18.67,"18 years, 8 months",House,B001257,,,St. Petersburg College University of Florida ( BA ) Stetson University ( JD )
+Sanford,Bishop,Sanford Bishop,2/4/47,78,1/3/93,392,32.67,"32 years, 8 months",House,B000490,Army,Yes,Morehouse College ( BA ) Emory University ( JD )
+Marsha,Blackburn,Marsha Blackburn,6/6/52,73,1/3/19,80,6.67,"6 years, 8 months",Senate,B001243,,,Mississippi State University ( BS )
+Richard,Blumenthal,Richard Blumenthal,2/13/46,79,1/3/11,176,14.67,"14 years, 8 months",Senate,B001277,,,"Harvard University ( AB ) Trinity College, Cambridge Yale University ( JD )"
+Lisa,Blunt Rochester,Lisa Blunt Rochester,2/10/62,63,1/3/25,8,0.67,8 months,Senate,B001303,,,
+Lauren,Boebert,Lauren Boebert,12/15/86,38,1/3/21,56,4.67,"4 years, 8 months",House,B000825,,,–
+Suzanne,Bonamici,Suzanne Bonamici,10/14/54,70,1/31/12,163,13.58,"13 years, 7 months",House,B001278,,,"Lane Community College University of Oregon ( BA , JD )"
+Cory,Booker,Cory Booker,4/27/69,56,10/31/13,142,11.83,"11 years, 10 months",Senate,B001288,,,"Stanford University ( BA , MA ) The Queen's College, Oxford ( MA ) Yale University ( JD )"
+John,Boozman,John Boozman,12/10/50,74,1/3/11,176,14.67,"14 years, 8 months",Senate,B001236,,,University of Arkansas Southern College of Optometry ( OD )
+Mike,Bost,Mike Bost,12/30/60,64,1/3/15,128,10.67,"10 years, 8 months",House,B001295,Marine Corps,Yes,–
+Brendan,Boyle,Brendan Boyle,2/6/77,48,1/3/15,128,10.67,"10 years, 8 months",House,B001296,,,University of Notre Dame ( BA ) Harvard University ( MPP )
+Josh,Brecheen,Josh Brecheen,6/19/79,46,1/3/23,32,2.67,"2 years, 8 months",House,B001317,,,"Oklahoma State University, Stillwater Southeastern Oklahoma State University ( BS )"
+Rob,Bresnahan,Rob Bresnahan,4/22/90,35,1/3/25,8,0.67,8 months,House,,,,University of Scranton ( BS )
+Katie,Britt,Katie Britt,2/2/82,43,1/3/23,32,2.67,"2 years, 8 months",Senate,B001319,,,
+Shontel,Brown,Shontel Brown,6/24/75,50,11/4/21,46,3.83,"3 years, 10 months",House,B001313,,,Cuyahoga Community College ( AS ) Wilberforce University ( BS )
+Julia,Brownley,Julia Brownley,8/28/52,73,1/3/13,152,12.67,"12 years, 8 months",House,B001285,,,George Washington University ( BA ) American University ( MBA )
+Vern,Buchanan,Vern Buchanan,5/8/51,74,1/3/07,224,18.67,"18 years, 8 months",House,B001260,Michigan Air National Guard,Yes,Cleary University ( BA ) University of Detroit Mercy ( MBA )
+Ted,Budd,Ted Budd,10/21/71,53,1/3/23,32,2.67,"2 years, 8 months",Senate,B001305,,,
+Nikki,Budzinski,Nikki Budzinski,3/11/77,48,1/3/23,32,2.67,"2 years, 8 months",House,B001315,,,"University of Illinois, Urbana-Champaign ( BA )"
+Tim,Burchett,Tim Burchett,8/25/64,61,1/3/19,80,6.67,"6 years, 8 months",House,B001309,,,"University of Tennessee, Knoxville ( BS )"
+Eric,Burlison,Eric Burlison,10/2/76,48,1/3/23,32,2.67,"2 years, 8 months",House,B001316,,,"Missouri State University ( BA , MBA )"
+Janelle,Bynum,Janelle Bynum,1/31/75,50,1/3/25,8,0.67,8 months,House,B001326,,,Florida A&M University ( BA ) University of Michigan ( MBA )
+Ken,Calvert,Ken Calvert,6/8/53,72,1/3/93,392,32.67,"32 years, 8 months",House,C000059,,,Chaffey College San Diego State University ( BA )
+Kat,Cammack,Kat Cammack,2/16/88,37,1/3/21,56,4.67,"4 years, 8 months",House,C001039,,,Metropolitan State University of Denver ( BA ) Naval War College ( MS )
+Maria,Cantwell,Maria Cantwell,10/13/58,66,1/3/01,296,24.67,"24 years, 8 months",Senate,C000127,,,
+Shelley Moore,Capito,Shelley Moore Capito,11/26/53,71,1/3/15,128,10.67,"10 years, 8 months",Senate,,,,Duke University ( BA ) University of Virginia ( MEd )
+Salud,Carbajal,Salud Carbajal,11/18/64,60,1/3/17,104,8.67,"8 years, 8 months",House,C001112,Marine Corps Reserve,Yes,"University of California, Santa Barbara ( BA ) Fielding Graduate University ( MA )"
+Mike,Carey,Mike Carey,3/13/71,54,11/4/21,46,3.83,"3 years, 10 months",House,C001126,Army Reserve,Yes,Marion Military Institute ( AA ) Ohio State University ( BA )
+André,Carson,André Carson,10/16/74,50,3/11/08,210,17.5,"17 years, 6 months",House,C001072,,,Concordia University Wisconsin ( BA ) Indiana Wesleyan University ( MS )
+Buddy,Carter,Buddy Carter,9/6/57,68,1/3/15,128,10.67,"10 years, 8 months",House,,,,Young Harris College University of Georgia ( BS )
+Troy,Carter,Troy Carter,10/26/63,61,5/11/21,52,4.33,"4 years, 4 months",House,C001125,,,Xavier University of Louisiana ( BA )
+John,Carter,John Carter,11/6/41,83,1/3/03,272,22.67,"22 years, 8 months",House,C001051,,,Texas Tech University ( BA ) University of Texas at Austin ( JD )
+Greg,Casar,Greg Casar,5/4/89,36,1/3/23,32,2.67,"2 years, 8 months",House,C001131,,,University of Virginia ( BA )
+Ed,Case,Ed Case,9/27/52,73,1/3/19,80,6.67,"6 years, 8 months",House,C001055,,,"Williams College ( BA ) University of California, Hastings ( JD )"
+Bill,Cassidy,Bill Cassidy,9/28/57,68,1/3/15,128,10.67,"10 years, 8 months",Senate,C001075,,,"Louisiana State University ( BS , MD )"
+Sean,Casten,Sean Casten,11/23/71,53,1/3/19,80,6.67,"6 years, 8 months",House,C001117,,,"Middlebury College ( BA ) Dartmouth College ( MSEM , MS )"
+Kathy,Castor,Kathy Castor,8/20/66,59,1/3/07,224,18.67,"18 years, 8 months",House,C001066,,,Emory University ( BA ) Florida State University ( JD )
+Joaquin,Castro,Joaquin Castro,9/16/74,51,1/3/13,152,12.67,"12 years, 8 months",House,C001091,,,Stanford University ( BA ) Harvard University ( JD )
+Sheila,Cherfilus-McCormick,Sheila Cherfilus-McCormick,1/25/79,46,1/18/22,44,3.67,"3 years, 8 months",House,C001127,,,Howard University ( BA ) St. Thomas University ( JD )
+Judy,Chu,Judy Chu,7/7/53,72,7/14/09,194,16.17,"16 years, 2 months",House,C001080,,,"University of California, Los Angeles ( BA ) Alliant International University ( MA , PhD )"
+Juan,Ciscomani,Juan Ciscomani,8/31/82,43,1/3/23,32,2.67,"2 years, 8 months",House,C001133,,,Pima Community College University of Arizona
+Gil,Cisneros,Gil Cisneros,2/12/71,54,1/3/25,8,0.67,8 months,House,,Navy,Yes,George Washington University ( BA ) Regis University ( MBA ) Brown University ( MA )
+Katherine,Clark,Katherine Clark,7/17/63,62,12/12/13,141,11.75,"11 years, 9 months",House,C001101,,,St. Lawrence University ( BA ) Cornell University ( JD ) Harvard University ( MPA )
+Yvette,Clarke,Yvette Clarke,11/21/64,60,1/3/07,224,18.67,"18 years, 8 months",House,C001067,,,Oberlin College Medgar Evers College
+Emanuel,Cleaver,Emanuel Cleaver,10/26/44,80,1/3/05,248,20.67,"20 years, 8 months",House,C001061,,,Prairie View A&M University ( BS ) Saint Paul School of Theology ( MDiv )
+Ben,Cline,Ben Cline,2/29/72,53,1/3/19,80,6.67,"6 years, 8 months",House,C001118,,,Bates College ( BA ) University of Richmond ( JD )
+Michael,Cloud,Michael Cloud,5/13/75,50,7/10/18,86,7.17,"7 years, 2 months",House,C001115,,,Oral Roberts University ( BS )
+Jim,Clyburn,Jim Clyburn,7/21/40,85,1/3/93,392,32.67,"32 years, 8 months",House,,,,South Carolina State University ( BA )
+Andrew,Clyde,Andrew Clyde,11/22/63,61,1/3/21,56,4.67,"4 years, 8 months",House,C001116,Navy Navy Reserve,Yes,University of Notre Dame ( BA ) Bethel University ( BBA ) University of Georgia ( MBA )
+Steve,Cohen,Steve Cohen,5/24/49,76,1/3/07,224,18.67,"18 years, 8 months",House,C001068,,,Vanderbilt University ( BA ) University of Memphis ( JD )
+Tom,Cole,Tom Cole,4/28/49,76,1/3/03,272,22.67,"22 years, 8 months",House,C001053,,,Grinnell College ( BA ) Yale University ( MA ) University of Oklahoma ( PhD )
+Bonnie Watson,Coleman,Bonnie Watson Coleman,2/6/45,80,1/3/15,128,10.67,"10 years, 8 months",House,W000822,,,Rutgers University-Camden Thomas Edison State University ( BA )
+Susan,Collins,Susan Collins,12/7/52,72,1/3/97,344,28.67,"28 years, 8 months",Senate,C001035,,,St. Lawrence University ( BA )
+Mike,Collins,Mike Collins,7/2/67,58,1/3/23,32,2.67,"2 years, 8 months",House,C001129,,,Georgia State University ( BA )
+James,Comer,James Comer,8/19/72,53,11/8/16,106,8.83,"8 years, 10 months",House,C001108,,,Western Kentucky University ( BS )
+Herb,Conaway,Herb Conaway,1/30/63,62,1/3/25,8,0.67,8 months,House,,Air Force,Yes,Princeton University ( BA ) Thomas Jefferson University ( MD ) Rutgers University–Newark ( JD )
+Chris,Coons,Chris Coons,9/9/63,62,11/15/10,178,14.83,"14 years, 10 months",Senate,,,,"Amherst College ( BA ) Yale University ( MAR , JD )"
+John,Cornyn,John Cornyn,2/2/52,73,12/2/02,273,22.75,"22 years, 9 months",Senate,C001056,,,"Trinity University ( BA ) St. Mary's University, Texas ( JD ) University of Virginia ( LLM )"
+Lou,Correa,Lou Correa,1/24/58,67,1/3/17,104,8.67,"8 years, 8 months",House,,,,"California State University, Fullerton ( BA ) University of California, Los Angeles ( JD , MBA )"
+Catherine,Cortez Masto,Catherine Cortez Masto,3/29/64,61,1/3/17,104,8.67,"8 years, 8 months",Senate,C001113,,,"University of Nevada, Reno ( BS ) Gonzaga University ( JD )"
+Jim,Costa,Jim Costa,4/13/52,73,1/3/05,248,20.67,"20 years, 8 months",House,C001059,,,"California State University, Fresno ( BA )"
+Tom,Cotton,Tom Cotton,5/13/77,48,1/3/15,128,10.67,"10 years, 8 months",Senate,C001095,,,
+Joe,Courtney,Joe Courtney,4/6/53,72,1/3/07,224,18.67,"18 years, 8 months",House,C001069,,,Tufts University ( BA ) University of Connecticut ( JD )
+Angie,Craig,Angie Craig,2/14/72,53,1/3/19,80,6.67,"6 years, 8 months",House,C001119,,,University of Memphis ( BA )
+Kevin,Cramer,Kevin Cramer,1/21/61,64,1/3/19,80,6.67,"6 years, 8 months",Senate,C001096,,,
+Eli,Crane,Eli Crane,1/3/80,45,1/3/23,32,2.67,"2 years, 8 months",House,,Navy,Yes,Arizona Western College University of Arizona
+Jeff,Crank,Jeff Crank,1/28/67,58,1/3/25,8,0.67,8 months,House,C001137,,,Colorado State University ( BA )
+Mike,Crapo,Mike Crapo,5/20/51,74,1/3/99,320,26.67,"26 years, 8 months",Senate,C000880,,,Brigham Young University ( BA ) Harvard University ( JD )
+Rick,Crawford,Rick Crawford,1/22/66,59,1/3/11,176,14.67,"14 years, 8 months",House,,Army,Yes,Arkansas State University ( BS )
+Dan,Crenshaw,Dan Crenshaw,3/14/84,41,1/3/19,80,6.67,"6 years, 8 months",House,C001120,Navy,Yes,Tufts University ( BA ) Harvard University ( MPA )
+Jasmine,Crockett,Jasmine Crockett,3/29/81,44,1/3/23,32,2.67,"2 years, 8 months",House,C001130,,,Rhodes College ( BA ) University of Houston ( JD )
+Jason,Crow,Jason Crow,3/15/79,46,1/3/19,80,6.67,"6 years, 8 months",House,C001121,Army Army National Guard,Yes,"University of Wisconsin, Madison ( BA ) University of Denver ( JD )"
+Ted,Cruz,Ted Cruz,12/22/70,54,1/3/13,152,12.67,"12 years, 8 months",Senate,C001098,,,
+Monica De La,Cruz,Monica De La Cruz,11/11/74,50,1/3/23,32,2.67,"2 years, 8 months",House,D000594,,,University of Texas at San Antonio ( BBS ) National Autonomous University of Mexico
+Henry,Cuellar,Henry Cuellar,9/19/55,70,1/3/05,248,20.67,"20 years, 8 months",House,C001063,,,"Laredo Community College Georgetown University ( BA ) University of Texas at Austin ( JD , PhD ) Texas A&M International University ( MA ) Naval War College"
+John,Curtis,John Curtis,5/10/60,65,1/3/25,8,0.67,8 months,Senate,C001114,,,
+Mario,Díaz-Balart,Mario Díaz-Balart,9/25/61,64,1/3/03,272,22.67,"22 years, 8 months",House,D000600,,,University of South Florida ( BA )
+Steve,Daines,Steve Daines,8/20/62,63,1/3/15,128,10.67,"10 years, 8 months",Senate,D000618,,,Montana State University ( BS )
+Sharice,Davids,Sharice Davids,5/22/80,45,1/3/19,80,6.67,"6 years, 8 months",House,D000629,,,Haskell Indian Nations University University of Kansas Johnson County Community College University of Missouri–Kansas City ( BA ) Cornell University ( JD )
+Warren,Davidson,Warren Davidson,3/1/70,55,6/9/16,111,9.25,"9 years, 3 months",House,D000626,Army,Yes,United States Military Academy ( BS ) University of Notre Dame ( MBA )
+Danny,Davis,Danny Davis,9/6/41,84,1/3/97,344,28.67,"28 years, 8 months",House,D000096,,,University of Arkansas at Pine Bluff ( BA ) Chicago State University ( MS ) Union Institute & University ( PhD )
+Don,Davis,Don Davis,8/29/71,54,1/3/23,32,2.67,"2 years, 8 months",House,,Air Force,Yes,"United States Air Force Academy ( BS ) Central Michigan University ( MS ) East Carolina University ( MA , EdD )"
+Madeleine,Dean,Madeleine Dean,6/6/59,66,1/3/19,80,6.67,"6 years, 8 months",House,D000631,,,La Salle University ( BA ) Widener University ( JD )
+Diana,DeGette,Diana DeGette,7/29/57,68,1/3/97,344,28.67,"28 years, 8 months",House,D000197,,,Colorado College ( BA ) New York University ( JD )
+April McClain,Delaney,April McClain Delaney,5/28/64,61,1/3/25,8,0.67,8 months,House,M001232,,,Northwestern University ( BS ) Georgetown University ( JD )
+Rosa,DeLauro,Rosa DeLauro,3/2/43,82,1/3/91,416,34.67,"34 years, 8 months",House,D000216,,,"Marymount College, Tarrytown ( BA ) London School of Economics ( MA ) Columbia University ( MA )"
+Suzan,DelBene,Suzan DelBene,2/17/62,63,11/13/12,154,12.83,"12 years, 10 months",House,D000617,,,Reed College ( BS ) University of Washington ( MBA )
+Chris,Deluzio,Chris Deluzio,7/13/84,41,1/3/23,32,2.67,"2 years, 8 months",House,,Navy,Yes,United States Naval Academy ( BS ) Georgetown University ( JD )
+Mark,DeSaulnier,Mark DeSaulnier,3/31/52,73,1/3/15,128,10.67,"10 years, 8 months",House,D000623,,,College of the Holy Cross ( BA )
+Scott,DesJarlais,Scott DesJarlais,2/21/64,61,1/3/11,176,14.67,"14 years, 8 months",House,D000616,,,"University of South Dakota ( BS , MD )"
+Maxine,Dexter,Maxine Dexter,12/5/72,52,1/3/25,8,0.67,8 months,House,D000635,,,"University of Washington ( BA , MD )"
+Debbie,Dingell,Debbie Dingell,11/23/53,71,1/3/15,128,10.67,"10 years, 8 months",House,D000624,,,"Georgetown University ( BS , MS )"
+Lloyd,Doggett,Lloyd Doggett,10/6/46,78,1/3/95,368,30.67,"30 years, 8 months",House,D000399,,,"University of Texas at Austin ( BA , JD )"
+Byron,Donalds,Byron Donalds,10/26/78,46,1/3/21,56,4.67,"4 years, 8 months",House,D000032,,,Florida State University ( BS )
+Troy,Downing,Troy Downing,3/4/67,58,1/3/25,8,0.67,8 months,House,D000634,Air Force Air National Guard,Yes,New York University
+Jeff Van,Drew,Jeff Van Drew,2/23/53,72,1/3/19,80,6.67,"6 years, 8 months",House,,,,Rutgers University–New Brunswick ( BS ) Fairleigh Dickinson University ( DMD )
+Tammy,Duckworth,Tammy Duckworth,3/12/68,57,1/3/17,104,8.67,"8 years, 8 months",Senate,D000622,,,
+Neal,Dunn,Neal Dunn,2/16/53,72,1/3/17,104,8.67,"8 years, 8 months",House,D000628,Army,Yes,Washington and Lee University ( BS ) George Washington University ( MD )
+Dick,Durbin,Dick Durbin,11/21/44,80,1/3/97,344,28.67,"28 years, 8 months",Senate,,,,"Georgetown University ( BS , JD )"
+Beth Van,Duyne,Beth Van Duyne,11/16/70,54,1/3/21,56,4.67,"4 years, 8 months",House,V000134,,,Cornell University ( BA )
+Chuck,Edwards,Chuck Edwards,9/13/60,65,1/3/23,32,2.67,"2 years, 8 months",House,E000246,,,Blue Ridge Community College
+Sarah,Elfreth,Sarah Elfreth,9/9/88,37,1/3/25,8,0.67,8 months,House,E000301,,,Towson University ( BA ) Johns Hopkins University ( MPP )
+Jake,Ellzey,Jake Ellzey,1/24/70,55,7/30/21,49,4.08,"4 years, 1 month",House,E000071,Navy,Yes,United States Naval Academy ( BS )
+Tom,Emmer,Tom Emmer,3/3/61,64,1/3/15,128,10.67,"10 years, 8 months",House,E000294,,,Boston College University of Alaska Fairbanks ( BA ) William Mitchell College of Law ( JD )
+Joni,Ernst,Joni Ernst,7/1/70,55,1/3/15,128,10.67,"10 years, 8 months",Senate,E000295,,,
+Veronica,Escobar,Veronica Escobar,9/15/69,56,1/3/19,80,6.67,"6 years, 8 months",House,E000299,,,"University of Texas, El Paso ( BA ) New York University ( MA )"
+Adriano,Espaillat,Adriano Espaillat,9/27/54,71,1/3/17,104,8.67,"8 years, 8 months",House,E000297,,,"Queens College, City University of New York ( BA )"
+Ron,Estes,Ron Estes,7/19/56,69,4/25/17,101,8.42,"8 years, 5 months",House,E000298,,,"Tennessee Technological University ( BS , MBA )"
+Gabe,Evans,Gabe Evans,7/28/86,39,1/3/25,8,0.67,8 months,House,E000300,Army Colorado Army National Guard Virginia Army National Guard,Yes,Patrick Henry College ( BA )
+Dwight,Evans,Dwight Evans,5/16/54,71,11/14/16,106,8.83,"8 years, 10 months",House,E000296,,,Community College of Philadelphia ( AA ) La Salle University ( BA )
+Mike,Ezell,Mike Ezell,4/6/59,66,1/3/23,32,2.67,"2 years, 8 months",House,E000235,,,University of Southern Mississippi ( BA )
+Pat,Fallon,Pat Fallon,12/19/67,57,1/3/21,56,4.67,"4 years, 8 months",House,F000246,Air Force,Yes,University of Notre Dame ( BA )
+Julie,Fedorchak,Julie Fedorchak,9/28/68,57,1/3/25,8,0.67,8 months,House,F000482,,,University of North Dakota ( BA )
+Randy,Feenstra,Randy Feenstra,1/14/69,56,1/3/21,56,4.67,"4 years, 8 months",House,F000446,,,Dordt University ( BA ) Iowa State University ( MPA )
+Teresa Leger,Fernandez,Teresa Leger Fernandez,7/1/59,66,1/3/21,56,4.67,"4 years, 8 months",House,L000273,,,Yale University ( BA ) Stanford University ( JD )
+John,Fetterman,John Fetterman,8/15/69,56,1/3/23,32,2.67,"2 years, 8 months",Senate,F000479,,,Albright College ( BA ) University of Connecticut ( MBA ) Harvard University ( MPP )
+Cleo,Fields,Cleo Fields,11/22/62,62,1/3/25,8,0.67,8 months,House,F000110,,,"Southern University ( BA , JD )"
+Shomari,Figures,Shomari Figures,9/3/85,40,1/3/25,8,0.67,8 months,House,F000481,,,"University of Alabama ( BA , JD )"
+Randy,Fine,Randy Fine,4/20/74,51,4/2/25,5,0.42,5 months,House,F000484,,,"Harvard University ( BA , MBA )"
+Brad,Finstad,Brad Finstad,5/30/76,49,8/12/22,37,3.08,"3 years, 1 month",House,F000475,,,University of Minnesota ( BS )
+Michelle,Fischbach,Michelle Fischbach,11/3/65,59,1/3/21,56,4.67,"4 years, 8 months",House,F000470,,,St. Cloud State University ( BA ) William Mitchell College of Law ( JD )
+Deb,Fischer,Deb Fischer,3/1/51,74,1/3/13,152,12.67,"12 years, 8 months",Senate,F000463,,,University of Nebraska–Lincoln ( BS )
+Scott,Fitzgerald,Scott Fitzgerald,11/16/63,61,1/3/21,56,4.67,"4 years, 8 months",House,F000471,Army Reserve,Yes,University of Wisconsin–Oshkosh ( BS )
+Brian,Fitzpatrick,Brian Fitzpatrick,12/17/73,51,1/3/17,104,8.67,"8 years, 8 months",House,F000466,,,"La Salle University ( BS ) Pennsylvania State University ( MBA ) Pennsylvania State University, Carlisle ( JD )"
+Chuck,Fleischmann,Chuck Fleischmann,10/11/62,62,1/3/11,176,14.67,"14 years, 8 months",House,,,,University of Illinois Urbana-Champaign ( BA ) University of Tennessee ( JD )
+Lizzie,Fletcher,Lizzie Fletcher,2/13/75,50,1/3/19,80,6.67,"6 years, 8 months",House,F000468,,,Kenyon College ( BA ) College of William and Mary ( JD )
+Mike,Flood,Mike Flood,2/23/75,50,7/12/22,38,3.17,"3 years, 2 months",House,F000474,,,University of Notre Dame ( BA ) University of Nebraska–Lincoln ( JD )
+Vince,Fong,Vince Fong,10/24/79,45,6/3/24,15,1.25,"1 year, 3 months",House,F000480,,,"University of California, Los Angeles ( BA ) Princeton University ( MPA )"
+Bill,Foster,Bill Foster,10/7/55,69,1/3/13,152,12.67,"12 years, 8 months",House,F000454,,,"University of Wisconsin–Madison ( BS ) Harvard University ( MS , PhD )"
+Valerie,Foushee,Valerie Foushee,5/7/56,69,1/3/23,32,2.67,"2 years, 8 months",House,F000477,,,University of North Carolina at Chapel Hill ( BA )
+Lois,Frankel,Lois Frankel,5/16/48,77,1/3/13,152,12.67,"12 years, 8 months",House,F000462,,,Boston University ( BA ) Georgetown University ( JD )
+Scott,Franklin,Scott Franklin,8/23/64,61,1/3/21,56,4.67,"4 years, 8 months",House,F000472,Navy Navy Reserve,Yes,United States Naval Academy ( BA ) Embry–Riddle Aeronautical University ( MBA )
+Laura,Friedman,Laura Friedman,12/3/66,58,1/3/25,8,0.67,8 months,House,F000483,,,University of Rochester ( BA )
+Maxwell,Frost,Maxwell Frost,1/17/97,28,1/3/23,32,2.67,"2 years, 8 months",House,F000476,,,Valencia College
+Russell,Fry,Russell Fry,1/31/85,40,1/3/23,32,2.67,"2 years, 8 months",House,F000478,,,University of South Carolina ( BA ) Charleston School of Law ( JD )
+Russ,Fulcher,Russ Fulcher,3/9/62,63,1/3/19,80,6.67,"6 years, 8 months",House,F000469,,,"Boise State University ( BA , MBA )"
+Ruben,Gallego,Ruben Gallego,11/20/79,45,1/3/25,8,0.67,8 months,Senate,G000574,,,
+John,Garamendi,John Garamendi,1/24/45,80,11/5/09,190,15.83,"15 years, 10 months",House,G000559,,,"University of California, Berkeley ( BA ) Harvard University ( MBA )"
+Andrew,Garbarino,Andrew Garbarino,9/27/84,41,1/3/21,56,4.67,"4 years, 8 months",House,G000597,,,George Washington University ( BA ) Hofstra University ( JD )
+Chuy,García,Chuy García,4/12/56,69,1/3/19,80,6.67,"6 years, 8 months",House,,,,"University of Illinois Chicago ( BA , MUP )"
+Robert,Garcia,Robert Garcia,12/2/77,47,1/3/23,32,2.67,"2 years, 8 months",House,G000598,,,"California State University, Long Beach ( BA , EdD ) University of Southern California ( MA )"
+Sylvia,Garcia,Sylvia Garcia,9/6/50,75,1/3/19,80,6.67,"6 years, 8 months",House,G000587,,,Texas Woman's University ( BA ) Texas Southern University ( JD )
+Brandon,Gill,Brandon Gill,2/26/94,31,1/3/25,8,0.67,8 months,House,G000603,,,Dartmouth College ( BS )
+Laura,Gillen,Laura Gillen,7/10/69,56,1/3/25,8,0.67,8 months,House,G000602,,,Georgetown University ( BA ) New York University ( JD )
+Kirsten,Gillibrand,Kirsten Gillibrand,12/9/66,58,1/26/09,200,16.67,"16 years, 8 months",Senate,G000555,,,
+Carlos,Giménez,Carlos Giménez,1/17/54,71,1/3/21,56,4.67,"4 years, 8 months",House,G000593,,,Barry University (BPA)
+Jared,Golden,Jared Golden,7/25/82,43,1/3/19,80,6.67,"6 years, 8 months",House,G000592,Marine Corps,Yes,"University of Maine, Farmington Bates College ( BA )"
+Dan,Goldman,Dan Goldman,2/26/76,49,1/3/23,32,2.67,"2 years, 8 months",House,,,,Yale University ( BA ) Stanford University ( JD )
+Craig,Goldman,Craig Goldman,10/3/68,56,1/3/25,8,0.67,8 months,House,G000601,,,University of Texas at Austin ( BA )
+Jimmy,Gomez,Jimmy Gomez,11/25/74,50,7/11/17,98,8.17,"8 years, 2 months",House,G000585,,,"University of California, Los Angeles ( BA ) Harvard University ( MPP )"
+Tony,Gonzales,Tony Gonzales,10/10/80,44,1/3/21,56,4.67,"4 years, 8 months",House,G000594,Navy,Yes,Chaminade University ( AA ) Excelsior College ( BS ) American Public University ( MA )
+Vicente,Gonzalez,Vicente Gonzalez,9/4/67,58,1/3/17,104,8.67,"8 years, 8 months",House,G000581,,,Embry–Riddle Aeronautical University ( BA ) Texas Wesleyan University ( JD )
+Lance,Gooden,Lance Gooden,12/1/82,42,1/3/19,80,6.67,"6 years, 8 months",House,G000589,,,"University of Texas, Austin ( BA , BBA )"
+Maggie,Goodlander,Maggie Goodlander,11/4/86,38,1/3/25,8,0.67,8 months,House,G000604,Navy Reserve,Yes,"Yale University ( BA , JD )"
+Paul,Gosar,Paul Gosar,11/27/58,66,1/3/11,176,14.67,"14 years, 8 months",House,G000565,,,"Creighton University ( BS , DDS )"
+Josh,Gottheimer,Josh Gottheimer,3/8/75,50,1/3/17,104,8.67,"8 years, 8 months",House,G000583,,,"University of Pennsylvania ( BA ) Pembroke College, Oxford Harvard University ( JD )"
+Lindsey,Graham,Lindsey Graham,7/9/55,70,1/3/03,272,22.67,"22 years, 8 months",Senate,G000359,,,"University of South Carolina ( BA , JD )"
+Chuck,Grassley,Chuck Grassley,9/17/33,92,1/3/81,536,44.67,"44 years, 8 months",Senate,G000386,,,"University of Northern Iowa ( BA , MA ) University of Iowa"
+Sam,Graves,Sam Graves,11/7/63,61,1/3/01,296,24.67,"24 years, 8 months",House,G000546,,,University of Missouri ( BS )
+Adam,Gray,Adam Gray,9/23/77,48,1/3/25,8,0.67,8 months,House,G000605,,,"Merced College University of California, Santa Barbara ( BA )"
+Al,Green,Al Green,9/1/47,78,1/3/05,248,20.67,"20 years, 8 months",House,G000553,,,Florida A&M University Tuskegee University ( BA ) Texas Southern University ( JD )
+Marjorie Taylor,Greene,Marjorie Taylor Greene,5/27/74,51,1/3/21,56,4.67,"4 years, 8 months",House,,,,University of Georgia ( BBA )
+Morgan,Griffith,Morgan Griffith,3/15/58,67,1/3/11,176,14.67,"14 years, 8 months",House,,,,Emory and Henry College ( BA ) Washington and Lee University ( JD )
+Glenn,Grothman,Glenn Grothman,7/3/55,70,1/3/15,128,10.67,"10 years, 8 months",House,G000576,,,"University of Wisconsin–Madison ( BA , JD )"
+Michael,Guest,Michael Guest,2/4/70,55,1/3/19,80,6.67,"6 years, 8 months",House,G000591,,,Mississippi State University ( BS ) University of Mississippi ( JD )
+Brett,Guthrie,Brett Guthrie,2/18/64,61,1/3/09,200,16.67,"16 years, 8 months",House,G000558,Army Army Reserve,Yes,United States Military Academy ( BS ) Yale University ( MBA )
+Harriet,Hageman,Harriet Hageman,10/18/62,62,1/3/23,32,2.67,"2 years, 8 months",House,H001096,,,"University of Wyoming ( BS , JD )"
+Bill,Hagerty,Bill Hagerty,8/14/59,66,1/3/21,56,4.67,"4 years, 8 months",Senate,H000601,,,
+Abraham,Hamadeh,Abraham Hamadeh,5/15/91,34,1/3/25,8,0.67,8 months,House,H001098,Army Reserve,Yes,Arizona State University ( BA ) University of Arizona ( JD )
+Josh,Harder,Josh Harder,8/1/86,39,1/3/19,80,6.67,"6 years, 8 months",House,H001090,,,"Stanford University ( BA ) Harvard University ( MBA , MPP )"
+Mike,Haridopolos,Mike Haridopolos,3/15/70,55,1/3/25,8,0.67,8 months,House,H001099,,,Stetson University ( BA ) University of Arkansas ( MA )
+Pat,Harrigan,Pat Harrigan,6/21/87,38,1/3/25,8,0.67,8 months,House,H001101,Army,Yes,United States Military Academy ( BS )
+Andy,Harris,Andy Harris,1/25/57,68,1/3/11,176,14.67,"14 years, 8 months",House,H001052,Navy Reserve,Yes,"Johns Hopkins University ( BS , MD , MHS )"
+Mark,Harris,Mark Harris,4/24/66,59,1/3/25,8,0.67,8 months,House,H001102,,,"Appalachian State University ( BA ) Southern Baptist Theological Seminary ( MDiv , DMin )"
+Diana,Harshbarger,Diana Harshbarger,1/1/60,65,1/3/21,56,4.67,"4 years, 8 months",House,H001086,,,East Tennessee State University ( BS ) Mercer University ( PharmD )
+Maggie,Hassan,Maggie Hassan,2/27/58,67,1/3/17,104,8.67,"8 years, 8 months",Senate,H001076,,,
+Josh,Hawley,Josh Hawley,12/31/79,45,1/3/19,80,6.67,"6 years, 8 months",Senate,H001089,,,Stanford University ( BA ) Yale University ( JD )
+Jahana,Hayes,Jahana Hayes,3/8/73,52,1/3/19,80,6.67,"6 years, 8 months",House,H001081,,,Naugatuck Valley Community College Southern Connecticut State University ( BA ) University of Saint Joseph ( MA ) University of Bridgeport ( SYC )
+Martin,Heinrich,Martin Heinrich,10/17/71,53,1/3/13,152,12.67,"12 years, 8 months",Senate,H001046,,,University of Missouri ( BS )
+Kevin,Hern,Kevin Hern,12/4/61,63,11/13/18,82,6.83,"6 years, 10 months",House,H001082,,,"Arkansas Tech University ( BS ) Georgia Institute of Technology University of Arkansas, Little Rock ( MBA )"
+John,Hickenlooper,John Hickenlooper,2/7/52,73,1/3/21,56,4.67,"4 years, 8 months",Senate,H000273,,,
+Clay,Higgins,Clay Higgins,8/24/61,64,1/3/17,104,8.67,"8 years, 8 months",House,H001077,Army Louisiana National Guard,Yes,Louisiana State University
+French,Hill,French Hill,12/5/56,68,1/3/15,128,10.67,"10 years, 8 months",House,,,,Vanderbilt University ( BS )
+Jim,Himes,Jim Himes,7/5/66,59,1/3/09,200,16.67,"16 years, 8 months",House,,,,"Harvard University ( BA ) St Edmund Hall, Oxford ( MPhil )"
+Ashley,Hinson,Ashley Hinson,6/27/83,42,1/3/21,56,4.67,"4 years, 8 months",House,H001091,,,University of Southern California ( BA )
+Mazie,Hirono,Mazie Hirono,11/3/47,77,1/3/13,152,12.67,"12 years, 8 months",Senate,H001042,,,
+John,Hoeven,John Hoeven,3/13/57,68,1/3/11,176,14.67,"14 years, 8 months",Senate,H001061,,,Dartmouth College ( BA ) Northwestern University ( MBA )
+Steven,Horsford,Steven Horsford,4/29/73,52,1/3/19,80,6.67,"6 years, 8 months",House,H001066,,,"University of Nevada, Reno ( BA )"
+Erin,Houchin,Erin Houchin,9/24/76,49,1/3/23,32,2.67,"2 years, 8 months",House,H001093,,,"Indiana University, Bloomington ( BS ) George Washington University ( MA )"
+Chrissy,Houlahan,Chrissy Houlahan,6/5/67,58,1/3/19,80,6.67,"6 years, 8 months",House,H001085,Air Force Air Force Reserve,Yes,Stanford University ( BS ) Massachusetts Institute of Technology ( MS )
+Steny,Hoyer,Steny Hoyer,6/14/39,86,5/19/81,532,44.33,"44 years, 4 months",House,H000874,,,"University of Maryland, College Park ( BA ) Georgetown University ( JD )"
+Val,Hoyle,Val Hoyle,2/14/64,61,1/3/23,32,2.67,"2 years, 8 months",House,H001094,,,Emmanuel College ( BA )
+Richard,Hudson,Richard Hudson,11/4/71,53,1/3/13,152,12.67,"12 years, 8 months",House,H001067,,,University of North Carolina at Charlotte ( BA )
+Jared,Huffman,Jared Huffman,2/18/64,61,1/3/13,152,12.67,"12 years, 8 months",House,H001068,,,"University of California, Santa Barbara ( BA ) Boston College ( JD )"
+Bill,Huizenga,Bill Huizenga,1/31/69,56,1/3/11,176,14.67,"14 years, 8 months",House,H001058,,,Calvin College ( BA )
+Wesley,Hunt,Wesley Hunt,11/13/81,43,1/3/23,32,2.67,"2 years, 8 months",House,H001095,Army,Yes,"United States Military Academy ( BS ) Cornell University ( MBA , MPA , MA )"
+Jeff,Hurd,Jeff Hurd,8/15/79,46,1/3/25,8,0.67,8 months,House,H001100,,,University of Notre Dame ( BA ) University of Denver ( JD ) Columbia University ( LL.M )
+Jon,Husted,Jon Husted,8/25/67,58,1/21/25,8,0.67,8 months,Senate,H001104,,,
+Cindy,Hyde-Smith,Cindy Hyde-Smith,5/10/59,66,4/9/18,89,7.42,"7 years, 5 months",Senate,H001079,,,
+Nick Begich,III,Nick Begich III,10/27/77,47,1/3/25,8,0.67,8 months,House,,,,Baylor University ( BBA ) Indiana University Bloomington ( MBA )
+Darrell,Issa,Darrell Issa,11/1/53,71,1/3/21,56,4.67,"4 years, 8 months",House,I000056,Army,Yes,Siena Heights University ( BA )
+Glenn,Ivey,Glenn Ivey,2/27/61,64,1/3/23,32,2.67,"2 years, 8 months",House,I000058,,,Princeton University ( BA ) Harvard University ( JD )
+Brian,Jack,Brian Jack,2/17/88,37,1/3/25,8,0.67,8 months,House,J000311,,,Pepperdine University ( BA )
+Jonathan,Jackson,Jonathan Jackson,1/7/66,59,1/3/23,32,2.67,"2 years, 8 months",House,J000309,,,North Carolina A&T State University ( BA ) Northwestern University ( MBA )
+Ronny,Jackson,Ronny Jackson,5/4/67,58,1/3/21,56,4.67,"4 years, 8 months",House,J000304,Navy Navy Reserve,Yes,Texas A&M University ( BS ) University of Texas Medical Branch ( MD )
+Sara,Jacobs,Sara Jacobs,2/1/89,36,1/3/21,56,4.67,"4 years, 8 months",House,J000305,,,"Columbia University ( BA , MIA )"
+John,James,John James,6/8/81,44,1/3/23,32,2.67,"2 years, 8 months",House,J000307,Army,Yes,United States Military Academy ( BS ) University of Michigan ( MBA ) Pennsylvania State University ( MS )
+Pramila,Jayapal,Pramila Jayapal,9/21/65,60,1/3/17,104,8.67,"8 years, 8 months",House,J000298,,,Georgetown University ( BA ) Northwestern University ( MBA )
+Hakeem,Jeffries,Hakeem Jeffries,8/4/70,55,1/3/13,152,12.67,"12 years, 8 months",House,J000294,,,Binghamton University ( BA ) Georgetown University ( MPP ) New York University ( JD )
+Ron,Johnson,Ron Johnson,4/8/55,70,1/3/11,176,14.67,"14 years, 8 months",Senate,J000293,,,University of Minnesota ( BS )
+Hank,Johnson,Hank Johnson,10/2/54,70,1/3/07,224,18.67,"18 years, 8 months",House,,,,Clark Atlanta University ( BA ) Texas Southern University ( JD )
+Mike,Johnson,Mike Johnson,1/30/72,53,1/3/17,104,8.67,"8 years, 8 months",House,J000299,,,"Louisiana State University ( BA , JD )"
+Dusty,Johnson,Dusty Johnson,9/30/76,48,1/3/19,80,6.67,"6 years, 8 months",House,J000301,,,University of South Dakota ( BA ) University of Kansas ( MPA )
+Julie,Johnson,Julie Johnson,5/2/66,59,1/3/25,8,0.67,8 months,House,J000310,,,University of Texas at Austin ( BA ) University of Houston ( JD )
+Jim,Jordan,Jim Jordan,2/17/64,61,1/3/07,224,18.67,"18 years, 8 months",House,J000289,,,University of Wisconsin–Madison ( BS ) Ohio State University ( MA ) Capital University ( JD )
+David,Joyce,David Joyce,3/17/57,68,1/3/13,152,12.67,"12 years, 8 months",House,J000295,,,"University of Dayton ( BS , JD )"
+John,Joyce,John Joyce,2/8/57,68,1/3/19,80,6.67,"6 years, 8 months",House,J000302,,,"Pennsylvania State University, Altoona Pennsylvania State University, University Park ( BS ) Temple University ( MD )"
+Thomas Kean,Jr.,Thomas Kean Jr.,9/5/68,57,1/3/23,32,2.67,"2 years, 8 months",House,,,,Dartmouth College ( BA ) Tufts University ( MA )
+Jim,Justice,Jim Justice,4/27/51,74,1/14/25,8,0.67,8 months,Senate,,,,
+Tim,Kaine,Tim Kaine,2/26/58,67,1/3/13,152,12.67,"12 years, 8 months",Senate,,,,
+Sydney,Kamlager-Dove,Sydney Kamlager-Dove,7/20/72,53,1/3/23,32,2.67,"2 years, 8 months",House,K000400,,,Compton College University of Southern California ( BA ) Carnegie Mellon University ( MA )
+Marcy,Kaptur,Marcy Kaptur,6/17/46,79,1/3/83,512,42.67,"42 years, 8 months",House,K000009,,,University of Wisconsin–Madison ( BA ) University of Michigan ( MUP ) Massachusetts Institute of Technology
+Bill,Keating,Bill Keating,9/6/52,73,1/3/11,176,14.67,"14 years, 8 months",House,,,,"Boston College ( BA , MBA ) Suffolk University ( JD )"
+Mark,Kelly,Mark Kelly,2/21/64,61,12/2/20,57,4.75,"4 years, 9 months",Senate,K000377,,,United States Merchant Marine Academy ( BS ) Naval Postgraduate School ( MS )
+Robin,Kelly,Robin Kelly,4/30/56,69,4/11/13,149,12.42,"12 years, 5 months",House,K000385,,,"Bradley University ( BA , MA ) Northern Illinois University ( PhD )"
+Trent,Kelly,Trent Kelly,3/1/66,59,6/2/15,123,10.25,"10 years, 3 months",House,K000388,Mississippi Army National Guard,Yes,"East Central Community College University of Mississippi ( BA , JD ) United States Army War College ( MA )"
+Mike,Kelly,Mike Kelly,5/10/48,77,1/3/11,176,14.67,"14 years, 8 months",House,K000376,,,University of Notre Dame ( BA )
+John,Kennedy,John Kennedy,11/21/51,73,1/3/17,104,8.67,"8 years, 8 months",Senate,K000393,,,
+Tim,Kennedy,Tim Kennedy,10/20/76,48,5/6/24,16,1.33,"1 year, 4 months",House,,,,"D'Youville University ( BA , MS )"
+Mike,Kennedy,Mike Kennedy,2/2/69,56,1/3/25,8,0.67,8 months,House,K000403,,,"Brigham Young University ( BS , JD ) Michigan State University ( MD )"
+Ro,Khanna,Ro Khanna,9/13/76,49,1/3/17,104,8.67,"8 years, 8 months",House,K000389,,,University of Chicago ( BA ) Yale University ( JD )
+Jen,Kiggans,Jen Kiggans,6/18/71,54,1/3/23,32,2.67,"2 years, 8 months",House,,Navy,Yes,Old Dominion University ( BSN ) Vanderbilt University ( MSN )
+Kevin,Kiley,Kevin Kiley,1/30/85,40,1/3/23,32,2.67,"2 years, 8 months",House,K000401,,,Harvard University ( BA ) Yale University ( JD ) Loyola Marymount University ( MA )
+Andy,Kim,Andy Kim,7/12/82,43,12/8/24,9,0.75,9 months,Senate,K000394,,,
+Young,Kim,Young Kim,10/18/62,62,1/3/21,56,4.67,"4 years, 8 months",House,K000397,,,University of Southern California ( BBA )
+Angus,King,Angus King,3/31/44,81,1/3/13,152,12.67,"12 years, 8 months",Senate,K000383,,,
+Amy,Klobuchar,Amy Klobuchar,5/25/60,65,1/3/07,224,18.67,"18 years, 8 months",Senate,K000367,,,Yale University ( BA ) University of Chicago ( JD )
+Brad,Knott,Brad Knott,4/17/86,39,1/3/25,8,0.67,8 months,House,K000405,,,Baylor University ( BA ) Wake Forest University ( JD )
+Raja,Krishnamoorthi,Raja Krishnamoorthi,7/19/73,52,1/3/17,104,8.67,"8 years, 8 months",House,K000391,,,Princeton University ( BS ) Harvard University ( JD )
+David,Kustoff,David Kustoff,10/8/66,58,1/3/17,104,8.67,"8 years, 8 months",House,K000392,,,"University of Memphis ( BA , JD )"
+Darin,LaHood,Darin LaHood,7/5/68,57,9/17/15,120,10,10 years,House,L000585,,,"Loras College ( BA ) John Marshall Law School, Chicago ( JD )"
+Nick,LaLota,Nick LaLota,6/23/78,47,1/3/23,32,2.67,"2 years, 8 months",House,L000598,Navy,Yes,"United States Naval Academy ( BS ) Hofstra University ( JD , MBA )"
+Doug,LaMalfa,Doug LaMalfa,7/2/60,65,1/3/13,152,12.67,"12 years, 8 months",House,L000578,,,Butte College California Polytechnic State University ( BS )
+Greg,Landsman,Greg Landsman,12/4/76,48,1/3/23,32,2.67,"2 years, 8 months",House,L000601,,,Ohio University ( BA ) Harvard University ( MA )
+Nick,Langworthy,Nick Langworthy,2/27/81,44,1/3/23,32,2.67,"2 years, 8 months",House,,,,Niagara University ( BA )
+James,Lankford,James Lankford,3/4/68,57,1/3/15,128,10.67,"10 years, 8 months",Senate,L000575,,,"University of Texas, Austin ( BS ) Southwestern Baptist Theological Seminary ( MDiv )"
+Rick,Larsen,Rick Larsen,6/15/65,60,1/3/01,296,24.67,"24 years, 8 months",House,L000560,,,Pacific Lutheran University ( BA ) University of Minnesota ( MPA )
+John B.,Larson,John B. Larson,7/22/48,77,1/3/99,320,26.67,"26 years, 8 months",House,,,,Central Connecticut State University ( BA )
+George,Latimer,George Latimer,11/22/53,71,1/3/25,8,0.67,8 months,House,L000606,,,Fordham University ( BA ) New York University ( MPA )
+Bob,Latta,Bob Latta,4/18/56,69,12/13/07,213,17.75,"17 years, 9 months",House,,,,Bowling Green State University ( BA ) University of Toledo ( JD )
+Mike,Lawler,Mike Lawler,9/9/86,39,1/3/23,32,2.67,"2 years, 8 months",House,,,,Manhattan College ( BS )
+Mike,Lee,Mike Lee,6/4/71,54,1/3/11,176,14.67,"14 years, 8 months",Senate,L000577,,,"Brigham Young University ( BA , JD )"
+Laurel,Lee,Laurel Lee,3/26/74,51,1/3/23,32,2.67,"2 years, 8 months",House,L000597,,,"University of Florida ( BA , JD )"
+Susie,Lee,Susie Lee,11/7/66,58,1/3/19,80,6.67,"6 years, 8 months",House,L000590,,,"Carnegie Mellon University ( BA , MS )"
+Summer,Lee,Summer Lee,11/26/87,37,1/3/23,32,2.67,"2 years, 8 months",House,L000602,,,Pennsylvania State University ( BA ) Howard University ( JD )
+Julia,Letlow,Julia Letlow,3/16/81,44,4/14/21,53,4.42,"4 years, 5 months",House,L000595,,,"University of Louisiana at Monroe ( BA , MA ) University of South Florida ( PhD )"
+Mike,Levin,Mike Levin,10/20/78,46,1/3/19,80,6.67,"6 years, 8 months",House,L000593,,,Stanford University ( BA ) Duke University ( JD )
+Sam,Liccardo,Sam Liccardo,4/16/70,55,1/3/25,8,0.67,8 months,House,L000607,,,"Georgetown University ( BA ) Harvard University ( MPP , JD )"
+Ted,Lieu,Ted Lieu,3/29/69,56,1/3/15,128,10.67,"10 years, 8 months",House,L000582,Air Force Air Force Reserve,Yes,"Stanford University ( BA , BS ) Georgetown University ( JD )"
+Zoe,Lofgren,Zoe Lofgren,12/21/47,77,1/3/95,368,30.67,"30 years, 8 months",House,L000397,,,Stanford University ( BA ) Santa Clara University ( JD )
+Barry,Loudermilk,Barry Loudermilk,12/22/63,61,1/3/15,128,10.67,"10 years, 8 months",House,L000583,Air Force,Yes,Air University Wayland Baptist University ( BS )
+Frank,Lucas,Frank Lucas,1/6/60,65,5/10/94,376,31.33,"31 years, 4 months",House,L000491,,,Oklahoma State University–Stillwater ( BS )
+Ben Ray,Luján,Ben Ray Luján,6/7/72,53,1/3/21,56,4.67,"4 years, 8 months",Senate,,,,
+Cynthia,Lummis,Cynthia Lummis,9/10/54,71,1/3/21,56,4.67,"4 years, 8 months",Senate,L000571,,,
+Anna Paulina,Luna,Anna Paulina Luna,5/6/89,36,1/3/23,32,2.67,"2 years, 8 months",House,L000596,Air Force Oregon Air National Guard,Yes,University of West Florida ( BS )
+Morgan,Luttrell,Morgan Luttrell,11/7/75,49,1/3/23,32,2.67,"2 years, 8 months",House,L000603,Navy,Yes,Sam Houston State University ( BS ) University of Texas at Dallas ( MA )
+Stephen F.,Lynch,Stephen F. Lynch,3/31/55,70,10/16/01,287,23.92,"23 years, 11 months",House,,,,Wentworth Institute of Technology ( BS ) Boston College ( JD ) Harvard University ( MPA )
+Nancy,Mace,Nancy Mace,12/4/77,47,1/3/21,56,4.67,"4 years, 8 months",House,M000194,,,The Citadel ( BS ) University of Georgia ( MS )
+Ryan,Mackenzie,Ryan Mackenzie,8/3/82,43,1/3/25,8,0.67,8 months,House,M001230,,,New York University ( BS ) Harvard University ( MBA )
+Seth,Magaziner,Seth Magaziner,7/22/83,42,1/3/23,32,2.67,"2 years, 8 months",House,M001223,,,Brown University ( BA ) Yale University ( MBA )
+Nicole,Malliotakis,Nicole Malliotakis,11/11/80,44,1/3/21,56,4.67,"4 years, 8 months",House,M000317,,,Seton Hall University ( BA ) Wagner College ( MBA )
+Celeste,Maloy,Celeste Maloy,5/22/81,44,11/28/23,22,1.83,"1 year, 10 months",House,M001228,,,Southern Utah University ( BS ) Brigham Young University ( JD )
+Tracey,Mann,Tracey Mann,12/17/76,48,1/3/21,56,4.67,"4 years, 8 months",House,M000871,,,Kansas State University ( BS )
+John,Mannion,John Mannion,7/8/68,57,1/3/25,8,0.67,8 months,House,M001231,,,State University of New York at Binghamton ( BS ) State University of New York at Oswego ( MS )
+Ed,Markey,Ed Markey,7/11/46,79,7/16/13,146,12.17,"12 years, 2 months",Senate,,,,
+Roger,Marshall,Roger Marshall,8/9/60,65,1/3/21,56,4.67,"4 years, 8 months",Senate,M001198,,,
+Thomas,Massie,Thomas Massie,1/13/71,54,11/13/12,154,12.83,"12 years, 10 months",House,M001184,,,"Massachusetts Institute of Technology ( BS , MS )"
+Brian,Mast,Brian Mast,7/10/80,45,1/3/17,104,8.67,"8 years, 8 months",House,M001199,Army,Yes,Palm Beach Atlantic University American Military University Harvard University ( BLA )
+Doris,Matsui,Doris Matsui,9/25/44,81,3/10/05,246,20.5,"20 years, 6 months",House,M001163,,,"University of California, Berkeley ( BA )"
+Lucy,McBath,Lucy McBath,6/1/60,65,1/3/19,80,6.67,"6 years, 8 months",House,M001208,,,Virginia State University ( BA )
+Sarah,McBride,Sarah McBride,8/9/90,35,1/3/25,8,0.67,8 months,House,M001238,,,American University ( BA )
+Michael,McCaul,Michael McCaul,1/14/62,63,1/3/05,248,20.67,"20 years, 8 months",House,M001157,,,"Trinity University ( BA ) St. Mary's University, Texas ( JD )"
+Lisa,McClain,Lisa McClain,4/7/66,59,1/3/21,56,4.67,"4 years, 8 months",House,M001136,,,Lansing Community College Northwood University ( BA )
+Jennifer,McClellan,Jennifer McClellan,12/28/72,52,3/7/23,30,2.5,"2 years, 6 months",House,M001227,,,University of Richmond ( BA ) University of Virginia ( JD )
+Tom,McClintock,Tom McClintock,7/10/56,69,1/3/09,200,16.67,"16 years, 8 months",House,M001177,,,"University of California, Los Angeles ( BA )"
+Betty,McCollum,Betty McCollum,7/12/54,71,1/3/01,296,24.67,"24 years, 8 months",House,M001143,,,St. Catherine University ( BA )
+Mitch,McConnell,Mitch McConnell,2/20/42,83,1/3/85,488,40.67,"40 years, 8 months",Senate,M000355,,,University of Louisville ( BA ) University of Kentucky ( JD )
+Dave,McCormick,Dave McCormick,8/17/65,60,1/3/25,8,0.67,8 months,Senate,,,,
+Rich,McCormick,Rich McCormick,10/7/68,56,1/3/23,32,2.67,"2 years, 8 months",House,,Marine Corps Navy,Yes,Oregon State University ( BS ) Morehouse School of Medicine ( MD ) National University ( MBA )
+Addison,McDowell,Addison McDowell,1/21/94,31,1/3/25,8,0.67,8 months,House,M001240,,,University of North Carolina at Charlotte ( BS )
+Morgan,McGarvey,Morgan McGarvey,12/23/79,45,1/3/23,32,2.67,"2 years, 8 months",House,M001220,,,University of Missouri ( BA ) University of Kentucky ( JD )
+Jim,McGovern,Jim McGovern,11/20/59,65,1/3/97,344,28.67,"28 years, 8 months",House,,,,"American University ( BA , MPA )"
+John,McGuire,John McGuire,8/24/68,57,1/3/25,8,0.67,8 months,House,M001239,Navy,Yes,Okaloosa-Walton Community College
+LaMonica,McIver,LaMonica McIver,6/20/86,39,9/23/24,12,1,1 year,House,M001229,,,Bloomfield College ( BA ) Seton Hall University ( MA ) Kean University ( EdD )
+Gregory,Meeks,Gregory Meeks,9/25/53,72,2/5/98,331,27.58,"27 years, 7 months",House,M001137,,,Adelphi University ( BA ) Howard University ( JD )
+Rob,Menendez,Rob Menendez,7/12/85,40,1/3/23,32,2.67,"2 years, 8 months",House,,,,University of North Carolina at Chapel Hill ( BA ) Rutgers University–Newark ( JD )
+Grace,Meng,Grace Meng,10/1/75,49,1/3/13,152,12.67,"12 years, 8 months",House,M001188,,,University of Michigan ( BA ) Yeshiva University ( JD )
+Jeff,Merkley,Jeff Merkley,10/24/56,68,1/3/09,200,16.67,"16 years, 8 months",Senate,M001176,,,
+Mark,Messmer,Mark Messmer,12/16/67,57,1/3/25,8,0.67,8 months,House,M001233,,,Purdue University ( BS )
+Dan,Meuser,Dan Meuser,2/10/64,61,1/3/19,80,6.67,"6 years, 8 months",House,,,,State University of New York Maritime College Cornell University ( BA )
+Kweisi,Mfume,Kweisi Mfume,10/24/48,76,5/5/20,64,5.33,"5 years, 4 months",House,M000687,,,Baltimore City Community College Morgan State University ( BA ) Johns Hopkins University ( MA )
+Mary,Miller,Mary Miller,8/27/59,66,1/3/21,56,4.67,"4 years, 8 months",House,M001211,,,"Eastern Illinois University ( BA , BS )"
+Max,Miller,Max Miller,11/13/88,36,1/3/23,32,2.67,"2 years, 8 months",House,M001222,Marine Corps Reserve,Yes,Cleveland State University ( BA )
+Carol,Miller,Carol Miller,11/4/50,74,1/3/19,80,6.67,"6 years, 8 months",House,M001205,,,"Columbia College, South Carolina ( BA )"
+Mariannette,Miller-Meeks,Mariannette Miller-Meeks,9/6/55,70,1/3/21,56,4.67,"4 years, 8 months",House,M001215,Army Army Reserve,Yes,"Texas Christian University ( BS ) University of Southern California ( MS ) University of Texas, San Antonio ( MD )"
+Cory,Mills,Cory Mills,7/13/80,45,1/3/23,32,2.67,"2 years, 8 months",House,M001216,Army,Yes,"Florida State College at Jacksonville ( AA ) American Military University ( BS , MA )"
+Dave,Min,Dave Min,3/5/76,49,1/3/25,8,0.67,8 months,House,M001241,,,University of Pennsylvania ( BA ) Harvard University ( JD )
+Ashley,Moody,Ashley Moody,3/28/75,50,1/21/25,8,0.67,8 months,Senate,M001244,,,
+John,Moolenaar,John Moolenaar,5/8/61,64,1/3/15,128,10.67,"10 years, 8 months",House,M001194,,,Hope College ( BS ) Harvard University ( MPA )
+Barry,Moore,Barry Moore,9/26/66,59,1/3/21,56,4.67,"4 years, 8 months",House,M001212,Alabama National Guard Alabama Reserve,Yes,Enterprise State Community College ( AS ) Auburn University ( BS )
+Tim,Moore,Tim Moore,10/2/70,54,1/3/25,8,0.67,8 months,House,M001236,,,Campbell University University of North Carolina at Chapel Hill ( BA ) Wake Forest University ( JD )
+Blake,Moore,Blake Moore,6/22/80,45,1/3/21,56,4.67,"4 years, 8 months",House,M001213,,,University of Utah ( BA ) Northwestern University ( MS )
+Riley,Moore,Riley Moore,7/1/80,45,1/3/25,8,0.67,8 months,House,M001235,,,George Mason University ( BA ) National Defense University ( MS )
+Gwen,Moore,Gwen Moore,4/18/51,74,1/3/05,248,20.67,"20 years, 8 months",House,M001160,,,Marquette University ( BA )
+Jerry,Moran,Jerry Moran,5/29/54,71,1/3/11,176,14.67,"14 years, 8 months",Senate,M000934,,,"Fort Hays State University University of Kansas ( BA , JD )"
+Nathaniel,Moran,Nathaniel Moran,9/23/74,51,1/3/23,32,2.67,"2 years, 8 months",House,M001224,,,"Texas Tech University ( BA , MBA , JD )"
+Joseph,Morelle,Joseph Morelle,4/29/57,68,11/13/18,82,6.83,"6 years, 10 months",House,M001206,,,State University of New York at Geneseo ( BA )
+Bernie,Moreno,Bernie Moreno,2/14/67,58,1/3/25,8,0.67,8 months,Senate,M001242,,,University of Michigan ( BBA )
+Kelly,Morrison,Kelly Morrison,2/2/69,56,1/3/25,8,0.67,8 months,House,M001234,,,Yale University ( BA ) Boston University Case Western Reserve University ( MD )
+Jared,Moskowitz,Jared Moskowitz,12/18/80,44,1/3/23,32,2.67,"2 years, 8 months",House,M001217,,,George Washington University ( BA ) Nova Southeastern University ( JD )
+Seth,Moulton,Seth Moulton,10/24/78,46,1/3/15,128,10.67,"10 years, 8 months",House,M001196,Marine Corps,Yes,"Harvard University ( BS , MBA , MPP )"
+Frank J.,Mrvan,Frank J. Mrvan,4/16/69,56,1/3/21,56,4.67,"4 years, 8 months",House,,,,Ball State University ( BS )
+Markwayne,Mullin,Markwayne Mullin,7/26/77,48,1/3/23,32,2.67,"2 years, 8 months",Senate,M001190,,,
+Kevin,Mullin,Kevin Mullin,6/15/70,55,1/3/23,32,2.67,"2 years, 8 months",House,M001225,,,University of San Francisco ( BA ) San Francisco State University ( MPA )
+Lisa,Murkowski,Lisa Murkowski,5/22/57,68,12/20/02,273,22.75,"22 years, 9 months",Senate,M001153,,,Georgetown University ( AB ) Willamette University ( JD )
+Chris,Murphy,Chris Murphy,8/3/73,52,1/3/13,152,12.67,"12 years, 8 months",Senate,,,,
+Greg,Murphy,Greg Murphy,3/5/63,62,9/17/19,72,6,6 years,House,,,,Davidson College ( BA ) University of North Carolina at Chapel Hill ( MD )
+Patty,Murray,Patty Murray,10/11/50,74,1/3/93,392,32.67,"32 years, 8 months",Senate,M001111,,,Washington State University ( BA )
+Jerry,Nadler,Jerry Nadler,6/13/47,78,11/3/92,394,32.83,"32 years, 10 months",House,,,,Columbia University ( BA ) Fordham University ( JD )
+Richard,Neal,Richard Neal,2/14/49,76,1/3/89,440,36.67,"36 years, 8 months",House,N000015,,,Holyoke Community College American International College ( BA ) University of Hartford ( MA )
+Joe,Neguse,Joe Neguse,5/13/84,41,1/3/19,80,6.67,"6 years, 8 months",House,N000191,,,"University of Colorado, Boulder ( BA , JD )"
+Troy,Nehls,Troy Nehls,4/7/68,57,1/3/21,56,4.67,"4 years, 8 months",House,N000026,Army Reserve Wisconsin National Guard,Yes,Liberty University ( BA ) University of Houston–Downtown ( MA )
+Dan,Newhouse,Dan Newhouse,7/10/55,70,1/3/15,128,10.67,"10 years, 8 months",House,N000189,,,Washington State University ( BS )
+Donald,Norcross,Donald Norcross,12/13/58,66,11/12/14,130,10.83,"10 years, 10 months",House,N000188,,,Camden County College Rutgers University-Camden
+Ralph,Norman,Ralph Norman,6/20/53,72,6/20/17,99,8.25,"8 years, 3 months",House,N000190,,,Presbyterian College ( BS )
+Zach,Nunn,Zach Nunn,5/4/79,46,1/3/23,32,2.67,"2 years, 8 months",House,,Air Force Air Force Reserve Iowa Air National Guard,Yes,Drake University ( BA ) Air University ( MMAS ) University of Cambridge ( MSt )
+Jay,Obernolte,Jay Obernolte,8/18/70,55,1/3/21,56,4.67,"4 years, 8 months",House,O000019,,,"California Institute of Technology ( BS ) University of California, Los Angeles ( MS )"
+Alexandria,Ocasio-Cortez,Alexandria Ocasio-Cortez,10/13/89,35,1/3/19,80,6.67,"6 years, 8 months",House,O000172,,,Boston University ( BA )
+Andy,Ogles,Andy Ogles,6/18/71,54,1/3/23,32,2.67,"2 years, 8 months",House,,,,Middle Tennessee State University ( BS )
+Johnny,Olszewski,Johnny Olszewski,9/10/82,43,1/3/25,8,0.67,8 months,House,O000176,,,"Goucher College ( BA ) George Washington University ( MA ) University of Maryland, Baltimore County ( PhD )"
+Ilhan,Omar,Ilhan Omar,10/4/82,42,1/3/19,80,6.67,"6 years, 8 months",House,O000173,,,North Dakota State University ( BA )
+Bob,Onder,Bob Onder,1/6/62,63,1/3/25,8,0.67,8 months,House,,,,"Washington University in St. Louis ( BS , MD ) Saint Louis University ( JD )"
+Derrick Van,Orden,Derrick Van Orden,9/15/69,56,1/3/23,32,2.67,"2 years, 8 months",House,V000135,Navy,Yes,Excelsior College ( BS ) Mitchell Hamline School of Law
+Jon,Ossoff,Jon Ossoff,2/16/87,38,1/20/21,56,4.67,"4 years, 8 months",Senate,O000174,,,Georgetown University ( BS ) London School of Economics ( MSc )
+Burgess,Owens,Burgess Owens,8/2/51,74,1/3/21,56,4.67,"4 years, 8 months",House,O000086,,,University of Miami ( BS )
+Alex,Padilla,Alex Padilla,3/22/73,52,1/20/21,56,4.67,"4 years, 8 months",Senate,P000145,,,Massachusetts Institute of Technology ( BS )
+Frank,Pallone,Frank Pallone,10/30/51,73,11/8/88,442,36.83,"36 years, 10 months",House,P000034,,,Middlebury College ( BA ) Tufts University ( MA ) Rutgers University–Camden ( JD )
+Gary,Palmer,Gary Palmer,5/14/54,71,1/3/15,128,10.67,"10 years, 8 months",House,P000609,,,University of Alabama ( BS )
+Jimmy,Panetta,Jimmy Panetta,10/1/69,55,1/3/17,104,8.67,"8 years, 8 months",House,P000613,Navy Reserve,Yes,"Monterey Peninsula College University of California, Davis ( BA ) Santa Clara University ( JD )"
+Chris,Pappas,Chris Pappas,6/4/80,45,1/3/19,80,6.67,"6 years, 8 months",House,P000614,,,Harvard University ( BA )
+Jimmy,Patronis,Jimmy Patronis,4/13/72,53,4/2/25,5,0.42,5 months,House,P000622,,,Gulf Coast State College ( AS ) Florida State University ( BS )
+Rand,Paul,Rand Paul,1/7/63,62,1/3/11,176,14.67,"14 years, 8 months",Senate,P000603,,,
+Nancy,Pelosi,Nancy Pelosi,3/26/40,85,6/2/87,459,38.25,"38 years, 3 months",House,P000197,,,Trinity Washington University ( BA )
+Marie Gluesenkamp,Perez,Marie Gluesenkamp Perez,6/6/88,37,1/3/23,32,2.67,"2 years, 8 months",House,,,,Reed College ( BA )
+Scott,Perry,Scott Perry,5/27/62,63,1/3/13,152,12.67,"12 years, 8 months",House,P000605,Army Pennsylvania Army National Guard,Yes,Pennsylvania State University ( BS ) United States Army War College ( MS )
+Gary,Peters,Gary Peters,12/1/58,66,1/3/15,128,10.67,"10 years, 8 months",Senate,P000595,,,"Alma College ( BA ) University of Detroit ( MBA ) Wayne State University ( JD , MA ) Michigan State University ( MA )"
+Scott,Peters,Scott Peters,6/17/58,67,1/3/13,152,12.67,"12 years, 8 months",House,P000608,,,Duke University ( BA ) New York University ( JD )
+Brittany,Pettersen,Brittany Pettersen,12/6/81,43,1/3/23,32,2.67,"2 years, 8 months",House,P000620,,,Metropolitan State University of Denver ( BA )
+August,Pfluger,August Pfluger,12/28/78,46,1/3/21,56,4.67,"4 years, 8 months",House,P000048,Air Force Air Force Reserve,Yes,United States Air Force Academy ( BS ) Embry–Riddle Aeronautical University ( MS ) Air University ( MS ) Georgetown University ( MS )
+Chellie,Pingree,Chellie Pingree,4/2/55,70,1/3/09,200,16.67,"16 years, 8 months",House,P000597,,,University of Southern Maine College of the Atlantic ( BS )
+Mark,Pocan,Mark Pocan,8/14/64,61,1/3/13,152,12.67,"12 years, 8 months",House,P000607,,,University of Wisconsin–Madison ( BA )
+Nellie,Pou,Nellie Pou,5/20/56,69,1/3/25,8,0.67,8 months,House,P000621,,,Kean College Rutgers University University of Virginia ( BA )
+Ayanna,Pressley,Ayanna Pressley,2/3/74,51,1/3/19,80,6.67,"6 years, 8 months",House,P000617,,,Boston University
+Mike,Quigley,Mike Quigley,10/17/58,66,4/7/09,197,16.42,"16 years, 5 months",House,Q000023,,,Roosevelt University ( BA ) University of Chicago ( MPP ) Loyola University Chicago ( JD )
+Delia,Ramirez,Delia Ramirez,6/2/83,42,1/3/23,32,2.67,"2 years, 8 months",House,R000617,,,Northeastern Illinois University ( BA )
+Emily,Randall,Emily Randall,10/3/85,39,1/3/25,8,0.67,8 months,House,R000621,,,Wellesley College ( BA )
+Jamie,Raskin,Jamie Raskin,12/13/62,62,1/3/17,104,8.67,"8 years, 8 months",House,R000606,,,"Harvard University ( BA , JD )"
+Jack,Reed,Jack Reed,11/12/49,75,1/3/97,344,28.67,"28 years, 8 months",Senate,,,,"United States Military Academy ( BS ) Harvard University ( MPP , JD )"
+Guy,Reschenthaler,Guy Reschenthaler,4/17/83,42,1/3/19,80,6.67,"6 years, 8 months",House,R000610,Navy,Yes,"Pennsylvania State University, Behrend ( BA ) Duquesne University ( JD )"
+Pete,Ricketts,Pete Ricketts,8/19/64,61,1/12/23,32,2.67,"2 years, 8 months",Senate,R000618,,,
+Josh,Riley,Josh Riley,1/21/81,44,1/3/25,8,0.67,8 months,House,R000622,,,College of William & Mary ( BS ) Harvard University ( JD )
+Jim,Risch,Jim Risch,5/3/43,82,1/3/09,200,16.67,"16 years, 8 months",Senate,,,,
+Luz,Rivas,Luz Rivas,2/6/74,51,1/3/25,8,0.67,8 months,House,R000620,,,Massachusetts Institute of Technology ( BS ) Harvard University ( MEd )
+Kristen McDonald,Rivet,Kristen McDonald Rivet,7/11/70,55,1/3/25,8,0.67,8 months,House,M001237,,,Michigan State University ( BA ) University of Michigan–Flint ( MA )
+Mike,Rogers,Mike Rogers,7/16/58,67,1/3/03,272,22.67,"22 years, 8 months",House,R000575,,,"Jacksonville State University ( BA , MPA ) Birmingham School of Law ( JD )"
+Hal,Rogers,Hal Rogers,12/31/37,87,1/3/81,536,44.67,"44 years, 8 months",House,,Kentucky Army National Guard North Carolina Army National Guard,Yes,Western Kentucky University ( BA ) University of Kentucky ( LLB )
+John,Rose,John Rose,2/23/65,60,1/3/19,80,6.67,"6 years, 8 months",House,R000612,,,"Tennessee Technological University ( BS ) Purdue University, West Lafayette ( MS ) Vanderbilt University ( JD )"
+Jacky,Rosen,Jacky Rosen,8/2/57,68,1/3/19,80,6.67,"6 years, 8 months",Senate,R000608,,,
+Deborah,Ross,Deborah Ross,6/20/63,62,1/3/21,56,4.67,"4 years, 8 months",House,R000305,,,Brown University ( AB ) University of North Carolina at Chapel Hill ( JD )
+Mike,Rounds,Mike Rounds,10/24/54,70,1/3/15,128,10.67,"10 years, 8 months",Senate,R000605,,,
+David,Rouzer,David Rouzer,2/16/72,53,1/3/15,128,10.67,"10 years, 8 months",House,R000603,,,North Carolina State University ( BS )
+Chip,Roy,Chip Roy,8/7/72,53,1/3/19,80,6.67,"6 years, 8 months",House,R000614,,,"University of Virginia ( BS , MS ) University of Texas, Austin ( JD )"
+Raul,Ruiz,Raul Ruiz,8/25/72,53,1/3/13,152,12.67,"12 years, 8 months",House,R000599,,,"University of California, Los Angeles ( BS ) Harvard University ( MD , MPP , MPH )"
+Michael,Rulli,Michael Rulli,3/11/69,56,6/25/24,15,1.25,"1 year, 3 months",House,R000619,,,Emerson College ( BA )
+John,Rutherford,John Rutherford,9/2/52,73,1/3/17,104,8.67,"8 years, 8 months",House,R000609,,,Florida State College Florida State University ( BS )
+Pat,Ryan,Pat Ryan,3/28/82,43,9/13/22,36,3,3 years,House,,Army,Yes,United States Military Academy ( BS ) Georgetown University ( MA )
+Linda,Sánchez,Linda Sánchez,1/28/69,56,1/3/03,272,22.67,"22 years, 8 months",House,S001156,,,"University of California, Berkeley ( BA ) University of California, Los Angeles ( JD )"
+María Elvira,Salazar,María Elvira Salazar,11/1/61,63,1/3/21,56,4.67,"4 years, 8 months",House,,,,Miami Dade College University of Miami ( BA ) Harvard University ( MPA )
+Andrea,Salinas,Andrea Salinas,12/6/69,55,1/3/23,32,2.67,"2 years, 8 months",House,S001226,,,"University of California, Berkeley ( BA )"
+Bernie,Sanders,Bernie Sanders,9/8/41,84,1/3/07,224,18.67,"18 years, 8 months",Senate,S000033,,,Brooklyn College University of Chicago ( BA )
+Steve,Scalise,Steve Scalise,10/6/65,59,5/3/08,208,17.33,"17 years, 4 months",House,S001176,,,Louisiana State University ( BS )
+Mary Gay,Scanlon,Mary Gay Scanlon,8/30/59,66,11/13/18,82,6.83,"6 years, 10 months",House,S001205,,,Colgate University ( BA ) University of Pennsylvania ( JD )
+Jan,Schakowsky,Jan Schakowsky,5/26/44,81,1/3/99,320,26.67,"26 years, 8 months",House,,,,University of Illinois Urbana-Champaign ( BS )
+Brian,Schatz,Brian Schatz,10/20/72,52,12/26/12,153,12.75,"12 years, 9 months",Senate,S001194,,,Pomona College ( BA )
+Adam,Schiff,Adam Schiff,6/22/60,65,12/8/24,9,0.75,9 months,Senate,S001150,,,
+Derek,Schmidt,Derek Schmidt,1/23/68,57,1/3/25,8,0.67,8 months,House,S001228,,,University of Kansas ( BA ) University of Leicester ( MA ) Georgetown University ( JD )
+Eric,Schmitt,Eric Schmitt,6/20/75,50,1/3/23,32,2.67,"2 years, 8 months",Senate,S001227,,,
+Brad,Schneider,Brad Schneider,8/20/61,64,1/3/17,104,8.67,"8 years, 8 months",House,,,,"Northwestern University ( BS , MBA )"
+Hillary,Scholten,Hillary Scholten,2/22/82,43,1/3/23,32,2.67,"2 years, 8 months",House,S001221,,,"Gordon College ( BA ) University of Maryland, Baltimore ( JD )"
+Kim,Schrier,Kim Schrier,8/23/68,57,1/3/19,80,6.67,"6 years, 8 months",House,S001216,,,"University of California, Berkeley ( BS ) University of California, Davis ( MD )"
+Debbie Wasserman,Schultz,Debbie Wasserman Schultz,9/27/66,59,1/3/05,248,20.67,"20 years, 8 months",House,W000797,,,"University of Florida ( BA , MA )"
+Chuck,Schumer,Chuck Schumer,11/23/50,74,1/3/99,320,26.67,"26 years, 8 months",Senate,,,,"Harvard University ( AB , JD )"
+David,Schweikert,David Schweikert,3/3/62,63,1/3/11,176,14.67,"14 years, 8 months",House,S001183,,,"Arizona State University, Tempe ( BS , MBA )"
+Rick,Scott,Rick Scott,12/1/52,72,1/8/19,80,6.67,"6 years, 8 months",Senate,S001217,,,University of Missouri-Kansas City ( BS ) Southern Methodist University ( JD )
+Tim,Scott,Tim Scott,9/19/65,60,1/2/13,152,12.67,"12 years, 8 months",Senate,S001184,,,
+Austin,Scott,Austin Scott,12/10/69,55,1/3/11,176,14.67,"14 years, 8 months",House,S001189,,,University of Georgia ( BA )
+David,Scott,David Scott,6/27/45,80,1/3/03,272,22.67,"22 years, 8 months",House,S001157,,,Florida A&M University ( BA ) University of Pennsylvania ( MBA )
+Bobby,Scott,Bobby Scott,4/30/47,78,1/3/93,392,32.67,"32 years, 8 months",House,,Army Reserve Massachusetts National Guard,Yes,Harvard University ( BA ) Boston College ( JD )
+Keith,Self,Keith Self,3/20/53,72,1/3/23,32,2.67,"2 years, 8 months",House,S001224,Army,Yes,United States Military Academy ( BS ) University of Southern California ( MA )
+Pete,Sessions,Pete Sessions,3/22/55,70,1/3/21,56,4.67,"4 years, 8 months",House,S000250,,,Southwestern University ( BS )
+Terri,Sewell,Terri Sewell,1/1/65,60,1/3/11,176,14.67,"14 years, 8 months",House,S001185,,,"Princeton University ( BA ) St Hilda's College, Oxford ( MA ) Harvard University ( JD )"
+Jeanne,Shaheen,Jeanne Shaheen,1/28/47,78,1/3/09,200,16.67,"16 years, 8 months",Senate,S001181,,,Shippensburg University ( BA ) University of Mississippi ( MSS )
+Tim,Sheehy,Tim Sheehy,11/18/85,39,1/3/25,8,0.67,8 months,Senate,S001232,,,
+Brad,Sherman,Brad Sherman,10/24/54,70,1/3/97,344,28.67,"28 years, 8 months",House,S000344,,,"University of California, Los Angeles ( BA ) Harvard University ( JD )"
+Mikie,Sherrill,Mikie Sherrill,1/19/72,53,1/3/19,80,6.67,"6 years, 8 months",House,S001207,Navy,Yes,United States Naval Academy ( BS ) London School of Economics ( MSc ) Georgetown University ( JD )
+Jefferson,Shreve,Jefferson Shreve,9/24/65,60,1/3/25,8,0.67,8 months,House,S001229,,,Indiana University Bloomington ( BA ) University of London ( MA ) Purdue University ( MBA )
+Lateefah,Simon,Lateefah Simon,1/29/77,48,1/3/25,8,0.67,8 months,House,S001231,,,Mills College ( BA ) University of San Francisco ( MPA )
+Mike,Simpson,Mike Simpson,9/8/50,75,1/3/99,320,26.67,"26 years, 8 months",House,,,,Utah State University ( BS ) Washington University in St. Louis ( DMD )
+Elissa,Slotkin,Elissa Slotkin,7/10/76,49,1/3/25,8,0.67,8 months,Senate,S001208,,,
+Tina,Smith,Tina Smith,3/4/58,67,1/3/18,92,7.67,"7 years, 8 months",Senate,S001203,,,
+Jason,Smith,Jason Smith,6/16/80,45,6/4/13,147,12.25,"12 years, 3 months",House,S001195,,,University of Missouri ( BS ) Oklahoma City University ( JD )
+Adrian,Smith,Adrian Smith,12/19/70,54,1/3/07,224,18.67,"18 years, 8 months",House,S001172,,,Liberty University University of Nebraska–Lincoln ( BA )
+Chris,Smith,Chris Smith,3/4/53,72,1/3/81,536,44.67,"44 years, 8 months",House,,,,The College of New Jersey ( BS )
+Adam,Smith,Adam Smith,6/15/65,60,1/3/97,344,28.67,"28 years, 8 months",House,S000510,,,Western Washington University Fordham University ( BA ) University of Washington ( JD )
+Lloyd,Smucker,Lloyd Smucker,1/23/64,61,1/3/17,104,8.67,"8 years, 8 months",House,S001199,,,Lebanon Valley College Franklin and Marshall College
+Eric,Sorensen,Eric Sorensen,3/18/76,49,1/3/23,32,2.67,"2 years, 8 months",House,S001225,,,Northern Illinois University ( BS )
+Darren,Soto,Darren Soto,2/25/78,47,1/3/17,104,8.67,"8 years, 8 months",House,S001200,,,Rutgers University–New Brunswick ( BA ) George Washington University ( JD )
+Victoria,Spartz,Victoria Spartz,10/6/78,46,1/3/21,56,4.67,"4 years, 8 months",House,S000929,,,"Kyiv National Economic University ( BS , MBA ) Indiana University, Indianapolis ( MAcc )"
+Melanie,Stansbury,Melanie Stansbury,1/31/79,46,6/14/21,51,4.25,"4 years, 3 months",House,S001218,,,Saint Mary's College of California ( BA ) Cornell University ( MS )
+Greg,Stanton,Greg Stanton,3/8/70,55,1/3/19,80,6.67,"6 years, 8 months",House,S001211,,,Marquette University ( BA ) University of Michigan ( JD )
+Pete,Stauber,Pete Stauber,5/10/66,59,1/3/19,80,6.67,"6 years, 8 months",House,S001212,,,Lake Superior State University ( BA )
+Elise,Stefanik,Elise Stefanik,7/2/84,41,1/3/15,128,10.67,"10 years, 8 months",House,S001196,,,Harvard University ( BA )
+Bryan,Steil,Bryan Steil,3/3/81,44,1/3/19,80,6.67,"6 years, 8 months",House,S001213,,,Georgetown University ( BS ) University of Wisconsin–Madison ( JD )
+Greg,Steube,Greg Steube,5/19/78,47,1/3/19,80,6.67,"6 years, 8 months",House,,Army,Yes,"University of Florida ( BS , JD )"
+Haley,Stevens,Haley Stevens,6/24/83,42,1/3/19,80,6.67,"6 years, 8 months",House,S001215,,,"American University ( BA , MA )"
+Marilyn,Strickland,Marilyn Strickland,9/25/62,63,1/3/21,56,4.67,"4 years, 8 months",House,S001159,,,University of Washington ( BA ) Clark Atlanta University ( MBA )
+Dale,Strong,Dale Strong,5/8/70,55,1/3/23,32,2.67,"2 years, 8 months",House,S001220,,,Athens State University ( BA )
+Marlin,Stutzman,Marlin Stutzman,8/31/76,49,1/3/25,8,0.67,8 months,House,S001188,,,Glen Oaks Community College Trine University
+Suhas,Subramanyam,Suhas Subramanyam,9/26/86,39,1/3/25,8,0.67,8 months,House,S001230,,,Tulane University ( BA ) Northwestern University ( JD )
+Dan,Sullivan,Dan Sullivan,11/13/64,60,1/3/15,128,10.67,"10 years, 8 months",Senate,S001198,,,
+Tom,Suozzi,Tom Suozzi,8/31/62,63,2/28/24,19,1.58,"1 year, 7 months",House,,,,Boston College ( BA ) Fordham University ( JD )
+Eric,Swalwell,Eric Swalwell,11/16/80,44,1/3/13,152,12.67,"12 years, 8 months",House,S001193,,,"Campbell University University of Maryland, College Park ( BA ) University of Maryland, Baltimore ( JD )"
+Emilia,Sykes,Emilia Sykes,1/4/86,39,1/3/23,32,2.67,"2 years, 8 months",House,S001223,,,"Kent State University ( BA ) University of Florida ( JD , MPH )"
+Mark,Takano,Mark Takano,12/10/60,64,1/3/13,152,12.67,"12 years, 8 months",House,T000472,,,"Harvard University ( BA ) University of California, Riverside ( MFA )"
+David,Taylor,David Taylor,11/16/69,55,1/3/25,8,0.67,8 months,House,T000490,,,Miami University ( BA ) University of Dayton ( JD )
+Claudia,Tenney,Claudia Tenney,2/4/61,64,1/3/21,56,4.67,"4 years, 8 months",House,T000478,,,Colgate University ( BA ) University of Cincinnati ( JD )
+Shri,Thanedar,Shri Thanedar,2/22/55,70,1/3/23,32,2.67,"2 years, 8 months",House,T000488,,,"University of Mumbai ( BS , MS ) University of Akron ( PhD )"
+Mike,Thompson,Mike Thompson,1/24/51,74,1/3/99,320,26.67,"26 years, 8 months",House,T000460,Army,Yes,"Napa Valley College California State University, Chico ( BA , MPA )"
+Bennie,Thompson,Bennie Thompson,1/28/48,77,4/13/93,389,32.42,"32 years, 5 months",House,T000193,,,Tougaloo College ( BA ) Jackson State University ( MS )
+Glenn,Thompson,Glenn Thompson,7/27/59,66,1/3/09,200,16.67,"16 years, 8 months",House,T000467,,,Pennsylvania State University ( BS ) Temple University ( MEd )
+John,Thune,John Thune,1/7/61,64,1/3/05,248,20.67,"20 years, 8 months",Senate,T000250,,,Biola University ( BA ) University of South Dakota ( MBA )
+Tom,Tiffany,Tom Tiffany,12/30/57,67,5/19/20,64,5.33,"5 years, 4 months",House,,,,University of Wisconsin–River Falls ( BS )
+Thom,Tillis,Thom Tillis,8/30/60,65,1/3/15,128,10.67,"10 years, 8 months",Senate,,,,University of Maryland University College ( BS )
+William,Timmons,William Timmons,4/30/84,41,1/3/19,80,6.67,"6 years, 8 months",House,T000480,South Carolina Air National Guard,Yes,"George Washington University ( BA ) University of South Carolina ( MA , JD )"
+Dina,Titus,Dina Titus,5/23/50,75,1/3/13,152,12.67,"12 years, 8 months",House,T000468,,,College of William & Mary ( BA ) University of Georgia ( MA ) Florida State University ( PhD )
+Rashida,Tlaib,Rashida Tlaib,7/24/76,49,1/3/19,80,6.67,"6 years, 8 months",House,T000481,,,Wayne State University ( BA ) Thomas M. Cooley Law School ( JD )
+Jill,Tokuda,Jill Tokuda,3/3/76,49,1/3/23,32,2.67,"2 years, 8 months",House,T000487,,,University of Hawaiʻi at Mānoa ( BA )
+Paul,Tonko,Paul Tonko,6/18/49,76,1/3/09,200,16.67,"16 years, 8 months",House,T000469,,,Clarkson University ( BS )
+Norma,Torres,Norma Torres,4/4/65,60,1/3/15,128,10.67,"10 years, 8 months",House,T000474,,,National Labor College ( BA )
+Ritchie,Torres,Ritchie Torres,3/12/88,37,1/3/21,56,4.67,"4 years, 8 months",House,T000486,,,New York University
+Lori,Trahan,Lori Trahan,10/27/73,51,1/3/19,80,6.67,"6 years, 8 months",House,T000482,,,Georgetown University ( BA )
+Derek,Tran,Derek Tran,12/22/80,44,1/3/25,8,0.67,8 months,House,T000491,Army Army Reserve,Yes,Bentley University ( BS ) Glendale University College of Law ( JD )
+Tommy,Tuberville,Tommy Tuberville,9/18/54,71,1/3/21,56,4.67,"4 years, 8 months",Senate,T000278,,,Southern Arkansas University ( BS )
+Mike,Turner,Mike Turner,1/11/60,65,1/3/03,272,22.67,"22 years, 8 months",House,,,,Ohio Northern University ( BA ) Case Western Reserve University ( JD ) University of Dayton ( MBA )
+Lauren,Underwood,Lauren Underwood,10/4/86,38,1/3/19,80,6.67,"6 years, 8 months",House,U000040,,,"University of Michigan ( BSN ) Johns Hopkins University ( MSN , MPH )"
+David,Valadao,David Valadao,4/14/77,48,1/3/21,56,4.67,"4 years, 8 months",House,V000129,,,College of the Sequoias
+Chris,Van Hollen,Chris Van Hollen,1/10/59,66,1/3/17,104,8.67,"8 years, 8 months",Senate,V000128,,,Swarthmore College ( BA ) Harvard University ( MPP ) Georgetown University ( JD )
+Juan,Vargas,Juan Vargas,3/7/61,64,1/3/13,152,12.67,"12 years, 8 months",House,V000130,,,University of San Diego ( BA ) Fordham University ( MA ) Harvard University ( JD )
+Gabe,Vasquez,Gabe Vasquez,8/3/84,41,1/3/23,32,2.67,"2 years, 8 months",House,V000136,,,New Mexico State University ( BA )
+Marc,Veasey,Marc Veasey,1/3/71,54,1/3/13,152,12.67,"12 years, 8 months",House,V000131,,,Texas Wesleyan University ( BA )
+Nydia,Velázquez,Nydia Velázquez,3/28/53,72,1/3/93,392,32.67,"32 years, 8 months",House,V000081,,,"University of Puerto Rico, Río Piedras ( BA ) New York University ( MA )"
+Eugene,Vindman,Eugene Vindman,6/6/75,50,1/3/25,8,0.67,8 months,House,V000138,Army,Yes,State University of New York at Binghamton ( BA ) Central Michigan University ( MS ) University of Georgia ( JD ) The Judge Advocate General's Legal Center and School ( LLM )
+Ann,Wagner,Ann Wagner,9/13/62,63,1/3/13,152,12.67,"12 years, 8 months",House,W000812,,,University of Missouri ( BS )
+Tim,Walberg,Tim Walberg,4/12/51,74,1/3/11,176,14.67,"14 years, 8 months",House,W000798,,,"Western Illinois University Moody Bible Institute Taylor University ( BA ) Wheaton College, Illinois ( MA )"
+James,Walkinshaw,James Walkinshaw,10/2/82,42,9/10/25,0,0,0 months,House,W000831,,,New York University ( BA )
+Mark,Warner,Mark Warner,12/15/54,70,1/3/09,200,16.67,"16 years, 8 months",Senate,W000805,,,George Washington University ( BA ) Harvard University ( JD )
+Raphael,Warnock,Raphael Warnock,7/23/69,56,1/20/21,56,4.67,"4 years, 8 months",Senate,W000790,,,
+Elizabeth,Warren,Elizabeth Warren,6/22/49,76,1/3/13,152,12.67,"12 years, 8 months",Senate,W000817,,,George Washington University University of Houston ( BS ) Rutgers University ( JD )
+Maxine,Waters,Maxine Waters,8/15/38,87,1/3/91,416,34.67,"34 years, 8 months",House,W000187,,,"California State University, Los Angeles ( BA )"
+Randy,Weber,Randy Weber,7/2/53,72,1/3/13,152,12.67,"12 years, 8 months",House,W000814,,,Alvin Community College University of Houston–Clear Lake ( BS )
+Daniel,Webster,Daniel Webster,4/27/49,76,1/3/11,176,14.67,"14 years, 8 months",House,W000806,,,Georgia Institute of Technology ( BS )
+Peter,Welch,Peter Welch,5/2/47,78,1/3/23,32,2.67,"2 years, 8 months",Senate,W000800,,,
+Bruce,Westerman,Bruce Westerman,11/18/67,57,1/3/15,128,10.67,"10 years, 8 months",House,W000821,,,University of Arkansas ( BS ) Yale University ( MS )
+Sheldon,Whitehouse,Sheldon Whitehouse,10/20/55,69,1/3/07,224,18.67,"18 years, 8 months",Senate,W000802,,,
+George,Whitesides,George Whitesides,3/3/74,51,1/3/25,8,0.67,8 months,House,W000830,,,"Princeton University ( BA ) King's College, Cambridge ( MPhil )"
+Roger,Wicker,Roger Wicker,7/5/51,74,12/31/07,212,17.67,"17 years, 8 months",Senate,W000437,,,"University of Mississippi ( BA , JD )"
+Tony,Wied,Tony Wied,5/3/76,49,11/12/24,10,0.83,10 months,House,W000829,,,St. Norbert College ( BA )
+Nikema,Williams,Nikema Williams,7/30/78,47,1/3/21,56,4.67,"4 years, 8 months",House,W000788,,,Talladega College ( BA )
+Roger,Williams,Roger Williams,9/13/49,76,1/3/13,152,12.67,"12 years, 8 months",House,W000816,,,Texas Christian University ( BA )
+Frederica,Wilson,Frederica Wilson,11/5/42,82,1/3/11,176,14.67,"14 years, 8 months",House,W000808,,,Fisk University ( BA ) University of Miami ( MA )
+Joe,Wilson,Joe Wilson,7/31/47,78,12/18/01,285,23.75,"23 years, 9 months",House,W000795,Army Reserve South Carolina National Guard,Yes,Washington and Lee University ( BA ) University of South Carolina ( JD )
+Rob,Wittman,Rob Wittman,2/3/59,66,12/11/07,213,17.75,"17 years, 9 months",House,,,,Virginia Tech ( BS ) University of North Carolina at Chapel Hill ( MPH ) Virginia Commonwealth University ( PhD )
+Steve,Womack,Steve Womack,2/18/57,68,1/3/11,176,14.67,"14 years, 8 months",House,W000809,Arkansas Army National Guard,Yes,Arkansas Tech University ( BA )
+Ron,Wyden,Ron Wyden,5/3/49,76,2/5/96,355,29.58,"29 years, 7 months",Senate,W000779,,,Stanford University ( BA ) University of Oregon ( JD )
+Rudy,Yakym,Rudy Yakym,2/24/84,41,11/14/22,34,2.83,"2 years, 10 months",House,Y000067,,,"Indiana University South Bend ( AS , BS ) University of Notre Dame ( MBA )"
+Todd,Young,Todd Young,8/24/72,53,1/3/17,104,8.67,"8 years, 8 months",Senate,Y000064,,,"United States Naval Academy ( BS ) University of Chicago ( MBA ) University of London ( MA ) Indiana University, Indianapolis ( JD )"
+Ryan,Zinke,Ryan Zinke,11/1/61,63,1/3/23,32,2.67,"2 years, 8 months",House,Z000018,Navy,Yes,University of Oregon ( BS ) National University ( MBA ) University of San Diego ( MS )

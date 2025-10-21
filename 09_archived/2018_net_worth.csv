@@ -1,0 +1,433 @@
+﻿rank,original,first_name,last_name,info,minimum_net_worth,net_worth,maximum_net_worth,chamber
+1,Mark Warner (D-Va),Mark,Warner,D-Va,80129151,214092575,348056000,Senate
+2,Greg Gianforte (R-Mont),Greg,Gianforte,R-Mont,189334335,189334335,189334335,House
+3,Paul Mitchell (R-Mich),Paul,Mitchell,R-Mich,75420142,179610071,283800000,House
+4,Vernon Buchanan (R-Fla),Vernon,Buchanan,R-Fla,32310120,157169056,282027993,House
+5,Chris Collins (R-NY),Chris,Collins,R-NY,80834052,154497026,228160000,House
+6,Don Beyer (D-Va),Don,Beyer,D-Va,10881046,124901516,238921986,House
+7,Nancy Pelosi (D-Calif),Nancy,Pelosi,D-Calif,-12825949,114662521,242150991,House
+8,Dianne Feinstein (D-Calif),Dianne,Feinstein,D-Calif,55027069,87938540,120850011,Senate
+9,Suzan DelBene (D-Wash),Suzan,DelBene,D-Wash,33667084,79361042,125055000,House
+10,Fred Upton (R-Mich),Fred,Upton,R-Mich,32541229,78965614,125390000,House
+11,Roger Williams (R-Texas),Roger,Williams,R-Texas,44597061,66980026,89362992,House
+12,Kevin Hern (R-Okla),Kevin,Hern,R-Okla,34505238,60979615,87453992,House
+13,Scott Peters (D-Calif),Scott,Peters,D-Calif,42982085,60456054,77930023,House
+14,Richard W Allen (R-Ga),Richard,W Allen,R-Ga,16905053,52127525,87349998,House
+15,John Hoeven (R-ND),John,Hoeven,R-ND,19263138,46689569,74116000,Senate
+16,Joe Kennedy III (D-Mass),Joe,Kennedy III,D-Mass,21823213,46546606,71270000,House
+17,Ralph Norman (R-SC),Ralph,Norman,R-SC,5517147,43398070,81278994,House
+18,Johnny Isakson (R-Ga),Johnny,Isakson,R-Ga,16510042,43006021,69502000,Senate
+19,James E Risch (R-Idaho),James,Risch,R-Idaho,15174053,41807024,68439996,Senate
+20,Ron Johnson (R-Wis),Ron,Johnson,R-Wis,14101014,39233507,64366000,Senate
+21,Mitch McConnell (R-Ky),Mitch,McConnell,R-Ky,13445069,34137534,54830000,Senate
+22,Kenny Marchant (R-Texas),Kenny,Marchant,R-Texas,12960026,33738015,54516004,House
+23,Buddy Carter (R-Ga),Buddy,Carter,R-Ga,13829062,33232031,52635000,House
+24,Steven Daines (R-Mont),Steven,Daines,R-Mont,13442084,32863042,52284000,Senate
+25,Lloyd Doggett (D-Texas),Lloyd,Doggett,D-Texas,14295056,29723027,45150999,House
+26,Brad Schneider (D-Ill),Brad,Schneider,D-Ill,16143165,27159082,38175000,House
+27,Lamar Alexander (R-Tenn),Lamar,Alexander,R-Tenn,-9491902,25919044,61329991,Senate
+28,David Perdue (R-Ga),David,Perdue,R-Ga,10195194,25822596,41449999,Senate
+29,Nita M Lowey (D-NY),Nita,Lowey,D-NY,9480019,24765009,40050000,House
+30,Jim Sensenbrenner (R-Wis),Jim,Sensenbrenner,R-Wis,15921438,21750911,27580385,House
+31,Phil Roe (R-Tenn),Phil,Roe,R-Tenn,19761620,20218616,20675613,House
+32,Richard C Shelby (R-Ala),Richard,Shelby,R-Ala,7590027,19145013,30700000,Senate
+33,John A Yarmuth (D-Ky),John,Yarmuth,D-Ky,5439096,17075547,28711999,House
+34,Jim Cooper (D-Tenn),Jim,Cooper,D-Tenn,7654050,16269525,24885000,House
+35,Michael Bennet (D-Colo),Michael,Bennet,D-Colo,6277029,15706014,25135000,Senate
+36,Liz Cheney (R-Wyo),Liz,Cheney,R-Wyo,5671028,14710513,23749999,House
+37,Tom Rice (R-SC),Tom,Rice,R-SC,5629020,14569510,23510000,House
+38,Bill Foster (D-Ill),Bill,Foster,D-Ill,7246036,14130518,21015000,House
+39,Dan Newhouse (R-Wash),Dan,Newhouse,R-Wash,894040,13777019,26659998,House
+40,Carolyn B Maloney (D-NY),Carolyn,Maloney,D-NY,5128059,12999029,20869999,House
+41,Earl Blumenauer (D-Ore),Earl,Blumenauer,D-Ore,4695086,12561042,20426998,House
+42,Mike Kelly (R-Pa),Mike,Kelly,R-Pa,2493113,12419056,22344999,House
+43,Mike Conaway (R-Texas),Mike,Conaway,R-Texas,6302179,12417089,18532000,House
+44,Ralph Abraham (R-La),Ralph,Abraham,R-La,4890050,12370524,19850999,House
+45,Markwayne Mullin (R-Okla),Markwayne,Mullin,R-Okla,4012026,11384012,18755999,House
+46,Ann L Wagner (R-Mo),Ann,Wagner,R-Mo,6655131,11055565,15456000,House
+47,Jackie Speier (D-Calif),Jackie,Speier,D-Calif,5980059,11028529,16077000,House
+48,Thom Tillis (R-NC),Thom,Tillis,R-NC,4002094,10966045,17929996,Senate
+49,Rob Portman (R-Ohio),Rob,Portman,R-Ohio,5725090,10827545,15930000,Senate
+50,Lisa Blunt Rochester (D-Del),Lisa,Blunt Rochester,D-Del,5549092,10692546,15836000,House
+51,Anna Eshoo (D-Calif),Anna,Eshoo,D-Calif,4806022,10298011,15790000,House
+52,Chris Coons (D-Del),Chris,Coons,D-Del,6678074,10126038,13574003,Senate
+53,Chellie Pingree (D-Maine),Chellie,Pingree,D-Maine,3586013,9938006,16290000,House
+54,Neal Dunn (R-Fla),Neal,Dunn,R-Fla,4874067,9529533,14184999,House
+55,Angus King (I-Maine),Angus,King,I-Maine,3477125,9494061,15510998,Senate
+56,Vicky Hartzler (R-Mo),Vicky,Hartzler,R-Mo,3165029,9395012,15624995,House
+57,Josh Gottheimer (D-NJ),Josh,Gottheimer,D-NJ,3442330,8935664,14428999,House
+58,Al Lawson (D-Fla),Al,Lawson,D-Fla,4956123,8673061,12390000,House
+59,Debbie Dingell (D-Mich),Debbie,Dingell,D-Mich,4820144,8486072,12152000,House
+60,Brad Sherman (D-Calif),Brad,Sherman,D-Calif,3400032,8427016,13454000,House
+61,John A Barrasso (R-Wyo),John,Barrasso,R-Wyo,3533013,8339006,13145000,Senate
+62,Ken Calvert (R-Calif),Ken,Calvert,R-Calif,-4349984,8000004,20349992,House
+63,Elizabeth Warren (D-Mass),Elizabeth,Warren,D-Mass,4880024,7977513,11075002,Senate
+64,Kurt Schrader (D-Ore),Kurt,Schrader,D-Ore,3443148,7907573,12371999,House
+65,John Curtis (R-Utah),John,Curtis,R-Utah,-1870893,7860050,17590994,House
+66,Brett Guthrie (R-Ky),Brett,Guthrie,R-Ky,3025020,7663010,12301000,House
+67,Joe Manchin (D-WVa),Joe,Manchin,D-WVa,3473070,7623534,11773999,Senate
+68,Chuck Grassley (R-Iowa),Chuck,Grassley,R-Iowa,4240150,7550075,10860000,Senate
+69,Sheldon Whitehouse (D-RI),Sheldon,Whitehouse,D-RI,3064259,7443628,11822998,Senate
+70,Richard Burr (R-NC),Richard,Burr,R-NC,3426214,7426213,11426212,Senate
+71,Ami Bera (D-Calif),Ami,Bera,D-Calif,3454067,7420029,11385992,House
+72,Dennis Heck (D-Wash),Dennis,Heck,D-Wash,4437069,7301034,10164999,House
+73,Roger Marshall (R-Kan),Roger,Marshall,R-Kan,2857100,7264049,11670998,House
+74,Jim Himes (D-Conn),Jim,Himes,D-Conn,3563044,7262522,10962000,House
+75,Joyce Beatty (D-Ohio),Joyce,Beatty,D-Ohio,2655029,7216014,11777000,House
+76,Judy Chu (D-Calif),Judy,Chu,D-Calif,4383063,7090031,9797000,House
+77,French Hill (R-Ark),French,Hill,R-Ark,3224069,7035033,10845998,House
+78,Suzanne Bonamici (D-Ore),Suzanne,Bonamici,D-Ore,3491033,6978016,10465000,House
+79,Ron Wyden (D-Ore),Ron,Wyden,D-Ore,5370048,6877025,8384003,Senate
+80,Katherine Clark (D-Mass),Katherine,Clark,D-Mass,2677119,6804059,10930999,House
+81,John Lee Ratcliffe (R-Texas),John,Lee Ratcliffe,R-Texas,2465006,6757503,11050000,House
+82,David McKinley (R-WVa),David,McKinley,R-WVa,3839113,6739056,9639000,House
+83,Scott Tipton (R-Colo),Scott,Tipton,R-Colo,2978071,6574035,10170000,House
+84,Ted Budd (R-NC),Ted,Budd,R-NC,2798071,6400534,10002998,House
+85,Robert B Aderholt (R-Ala),Robert,Aderholt,R-Ala,2676022,6370510,10064999,House
+86,Kathy Castor (D-Fla),Kathy,Castor,D-Fla,3001037,6296518,9592000,House
+87,Tom O'Halleran (D-Ariz),Tom,O'Halleran,D-Ariz,2136011,6288005,10440000,House
+88,Steve Cohen (D-Tenn),Steve,Cohen,D-Tenn,3448116,6198058,8948000,House
+89,Chuck Fleischmann (R-Tenn),Chuck,Fleischmann,R-Tenn,3340555,5958051,8575548,House
+90,Lou Correa (D-Calif),Lou,Correa,D-Calif,3794043,5940521,8087000,House
+91,Brad Wenstrup (R-Ohio),Brad,Wenstrup,R-Ohio,2077066,5917032,9756999,House
+92,Bill Pascrell Jr. (D-NJ),Bill,Pascrell Jr.,D-NJ,2635041,5757020,8879000,House
+93,Maria Cantwell (D-Wash),Maria,Cantwell,D-Wash,1094022,5756508,10418994,Senate
+94,Tom Carper (D-Del),Tom,Carper,D-Del,2833192,5726595,8619999,Senate
+95,Roy Blunt (R-Mo),Roy,Blunt,R-Mo,2599022,5704510,8809999,Senate
+96,Mike Thompson (D-Calif),Mike,Thompson,D-Calif,3434046,5672022,7909999,House
+97,Pete Olson (R-Texas),Pete,Olson,R-Texas,2605038,5665019,8725000,House
+98,Peter Welch (D-Vt),Peter,Welch,D-Vt,3013128,5567564,8122000,House
+99,Al Green (D-Texas),Al,Green,D-Texas,2467014,5373507,8280000,House
+100,James Comer (R-Ky),James,Comer,R-Ky,1920024,5285011,8649998,House
+101,Tom Cole (R-Okla),Tom,Cole,R-Okla,3186060,5251030,7316000,House
+102,Doug Jones (D-Ala),Doug,Jones,D-Ala,2226130,5209563,8192997,Senate
+103,Robert E Latta (R-Ohio),Robert,Latta,R-Ohio,3147063,5188531,7230000,House
+104,John Garamendi (D-Calif),John,Garamendi,D-Calif,2356016,5168508,7981000,House
+105,James M Inhofe (R-Okla),James,Inhofe,R-Okla,2368012,5157006,7946000,Senate
+106,Stephanie Murphy (D-Fla),Stephanie,Murphy,D-Fla,2888035,4985016,7081998,House
+107,Mary Gay Scanlon (D-Pa),Mary,Gay Scanlon,D-Pa,2770069,4924533,7078998,House
+108,Jim Costa (D-Calif),Jim,Costa,D-Calif,1894028,4902513,7910999,House
+109,George Holding (R-NC),George,Holding,R-NC,1938024,4876510,7814997,House
+110,Catherine Cortez Masto (D-Nev),Catherine,Cortez Masto,D-Nev,2350042,4601020,6851998,Senate
+111,Mike Rounds (R-SD),Mike,Rounds,R-SD,-1442935,4532031,10506998,Senate
+112,Andy Biggs (R-Ariz),Andy,Biggs,R-Ariz,1953009,4512004,7070999,House
+113,Blake Farenthold (R-Texas),Blake,Farenthold,R-Texas,3410600,4405582,5400564,House
+114,Gary Peters (D-Mich),Gary,Peters,D-Mich,1750211,4368105,6985999,Senate
+115,Justin Amash (R-Mich),Justin,Amash,R-Mich,1202037,4366518,7530999,House
+116,Mazie K Hirono (D-Hawaii),Mazie,Hirono,D-Hawaii,2661039,4339019,6017000,Senate
+117,Daniel Lipinski (D-Ill),Daniel,Lipinski,D-Ill,2557054,4256027,5955000,House
+118,Collin Peterson (D-Minn),Collin,Peterson,D-Minn,1816008,4241504,6667000,House
+119,Cindy Hyde-Smith (R-Miss),Cindy,Hyde-Smith,R-Miss,1921089,4175541,6429994,Senate
+120,Jamie Raskin (D-Md),Jamie,Raskin,D-Md,2314073,4162036,6010000,House
+121,Susan Collins (R-Maine),Susan,Collins,R-Maine,2255087,4124043,5993000,Senate
+122,Zoe Lofgren (D-Calif),Zoe,Lofgren,D-Calif,2143093,3844546,5546000,House
+123,Jeanne Shaheen (D-NH),Jeanne,Shaheen,D-NH,-344974,3823005,7990984,Senate
+124,Blaine Luetkemeyer (R-Mo),Blaine,Luetkemeyer,R-Mo,1466006,3765503,6065000,House
+125,Jon Tester (D-Mont),Jon,Tester,D-Mont,1284008,3672003,6059999,Senate
+126,Virginia Foxx (R-NC),Virginia,Foxx,R-NC,2240032,3670516,5101000,House
+127,David Price (D-NC),David,Price,D-NC,1910084,3568042,5226000,House
+128,Ted Lieu (D-Calif),Ted,Lieu,D-Calif,1049040,3533519,6017999,House
+129,Kamala Harris (D-Calif),Kamala,Harris,D-Calif,1592053,3499026,5405999,Senate
+130,Doug LaMalfa (R-Calif),Doug,LaMalfa,R-Calif,1281008,3498504,5716000,House
+131,Bill Flores (R-Texas),Bill,Flores,R-Texas,3490195,3490195,3490195,House
+132,Maggie Hassan (D-NH),Maggie,Hassan,D-NH,1478086,3467042,5455998,Senate
+133,Susan Brooks (R-Ind),Susan,Brooks,R-Ind,2412037,3428519,4445001,House
+134,David P Joyce (R-Ohio),David,Joyce,R-Ohio,1905063,3415031,4925000,House
+135,Frank Pallone Jr. (D-NJ),Frank,Pallone Jr.,D-NJ,1768105,3413551,5058998,House
+136,John Carter (R-Texas),John,Carter,R-Texas,1067008,3373503,5679999,House
+137,Matt Cartwright (D-Pa),Matt,Cartwright,D-Pa,3305306,3305306,3305306,House
+138,Andy Harris (R-Md),Andy,Harris,R-Md,1918038,3244519,4571000,House
+139,Ted Cruz (R-Texas),Ted,Cruz,R-Texas,-9027848,3198068,15423985,Senate
+140,Ben Cardin (D-Md),Ben,Cardin,D-Md,1602092,3112546,4623000,Senate
+141,Diana DeGette (D-Colo),Diana,DeGette,D-Colo,1680051,3095025,4509999,House
+142,Ted Yoho (R-Fla),Ted,Yoho,R-Fla,2015944,3089937,4163931,House
+143,David Kustoff (R-Tenn),David,Kustoff,R-Tenn,1590084,3048541,4506999,House
+144,Alan Lowenthal (D-Calif),Alan,Lowenthal,D-Calif,1301143,3015071,4729000,House
+145,Pat Roberts (R-Kan),Pat,Roberts,R-Kan,1680030,2966514,4252999,Senate
+146,Bob Gibbs (R-Ohio),Bob,Gibbs,R-Ohio,1587064,2947531,4307999,House
+147,Bill Keating (D-Mass),Bill,Keating,D-Mass,1708042,2940021,4172000,House
+148,Tom Suozzi (D-NY),Tom,Suozzi,D-NY,1657067,2932533,4208000,House
+149,Susan Davis (D-Calif),Susan,Davis,D-Calif,1674042,2817021,3960000,House
+150,Thomas Massie (R-Ky),Thomas,Massie,R-Ky,703004,2816501,4929998,House
+151,Lloyd Smucker (R-Pa),Lloyd,Smucker,R-Pa,435010,2810002,5184995,House
+152,Ben Sasse (R-Neb),Ben,Sasse,R-Neb,281015,2788007,5294999,Senate
+153,Billy Long (R-Mo),Billy,Long,R-Mo,1152045,2783022,4413999,House
+154,Deb Fischer (R-Neb),Deb,Fischer,R-Neb,122012,2776005,5429998,Senate
+155,Ann Kuster (D-NH),Ann,Kuster,D-NH,2145625,2762620,3379616,House
+156,Don Norcross (D-NJ),Don,Norcross,D-NJ,1446068,2744534,4043000,House
+157,James P McGovern (D-Mass),James,P McGovern,D-Mass,381005,2698001,5014998,House
+158,Gerry Connolly (D-Va),Gerry,Connolly,D-Va,1405047,2650022,3894997,House
+159,Jeff Merkley (D-Ore),Jeff,Merkley,D-Ore,980019,2603008,4225998,Senate
+160,Lois J Frankel (D-Fla),Lois,J Frankel,D-Fla,939176,2588088,4237000,House
+161,Greg Walden (R-Ore),Greg,Walden,R-Ore,1556033,2574016,3592000,House
+162,Rosa L DeLauro (D-Conn),Rosa,DeLauro,D-Conn,131007,2541002,4950997,House
+163,David Scott (D-Ga),David,Scott,D-Ga,151004,2508001,4864998,House
+164,Nanette Barragan (D-Calif),Nanette,Barragan,D-Calif,21016,2435507,4849998,House
+165,Austin Scott (R-Ga),Austin,Scott,R-Ga,1155044,2397020,3638997,House
+166,Dan Sullivan (R-Alaska),Dan,Sullivan,R-Alaska,986042,2372519,3758997,Senate
+167,Michael Burgess (R-Texas),Michael,Burgess,R-Texas,1326054,2328027,3330000,House
+168,Brian Babin (R-Texas),Brian,Babin,R-Texas,1034102,2287551,3541000,House
+169,Shelley Moore Capito (R-WVa),Shelley,Moore Capito,R-WVa,-224830,2149080,4522991,Senate
+170,Mike Enzi (R-Wyo),Mike,Enzi,R-Wyo,1042056,2137028,3232000,Senate
+171,Eleanor Holmes Norton (D-DC),Eleanor,Holmes Norton,D-DC,1162038,2084019,3006000,House
+172,Pat Toomey (R-Pa),Pat,Toomey,R-Pa,721060,2038029,3354998,Senate
+173,Tom Udall (D-NM),Tom,Udall,D-NM,635032,1985515,3335998,Senate
+174,Martha Roby (R-Ala),Martha,Roby,R-Ala,1058047,1948523,2839000,House
+175,Mike Simpson (R-Idaho),Mike,Simpson,R-Idaho,1023041,1944519,2865998,House
+176,Gary Palmer (R-Ala),Gary,Palmer,R-Ala,796088,1918044,3040000,House
+177,Cathy McMorris Rodgers (R-Wash),Cathy,McMorris Rodgers,R-Wash,985027,1892513,2799999,House
+178,John Cornyn (R-Texas),John,Cornyn,R-Texas,1074046,1884522,2694999,Senate
+179,Dutch Ruppersberger (D-Md),Dutch,Ruppersberger,D-Md,1131021,1860510,2590000,House
+180,Ron Kind (D-Wis),Ron,Kind,D-Wis,1145018,1835009,2525000,House
+181,Pete Visclosky (D-Ind),Pete,Visclosky,D-Ind,964037,1775018,2586000,House
+182,Jerry Moran (R-Kan),Jerry,Moran,R-Kan,749079,1759539,2769999,Senate
+183,Susan Wild (D-Pa),Susan,Wild,D-Pa,839032,1746015,2652999,House
+184,Larry Bucshon (R-Ind),Larry,Bucshon,R-Ind,960040,1744520,2529000,House
+185,John Rutherford (R-Fla),John,Rutherford,R-Fla,712109,1712054,2712000,House
+186,Tina Smith (D-Minn),Tina,Smith,D-Minn,-3638944,1696020,7030984,Senate
+187,Patty Murray (D-Wash),Patty,Murray,D-Wash,839022,1687010,2534999,Senate
+188,Rob Wittman (R-Va),Rob,Wittman,R-Va,-256872,1645563,3547998,House
+189,Mike D Rogers (R-Ala),Mike,Rogers,R-Ala,152026,1601011,3049996,House
+190,Juan Vargas (D-Calif),Juan,Vargas,D-Calif,17009,1591002,3164995,House
+191,Raja Krishnamoorthi (D-Ill),Raja,Krishnamoorthi,D-Ill,482030,1581013,2679997,House
+192,Julia Brownley (D-Calif),Julia,Brownley,D-Calif,207036,1569516,2931997,House
+193,Frederica Wilson (D-Fla),Frederica,Wilson,D-Fla,960011,1555005,2150000,House
+194,David Cicilline (D-RI),David,Cicilline,D-RI,1017006,1548503,2080000,House
+195,Peter DeFazio (D-Ore),Peter,DeFazio,D-Ore,910020,1519010,2128000,House
+196,Stephen F Lynch (D-Mass),Stephen,Lynch,D-Mass,807018,1519008,2230999,House
+197,Lisa Murkowski (R-Alaska),Lisa,Murkowski,R-Alaska,817024,1499011,2180999,Senate
+198,Bill Huizenga (R-Mich),Bill,Huizenga,R-Mich,926022,1498511,2071000,House
+199,Jared Huffman (D-Calif),Jared,Huffman,D-Calif,811045,1478522,2146000,House
+200,Charlie Crist (D-Fla),Charlie,Crist,D-Fla,902011,1442005,1982000,House
+201,Adam Schiff (D-Calif),Adam,Schiff,D-Calif,796024,1436011,2075999,House
+202,Bobby Scott (D-Va),Bobby,Scott,D-Va,566071,1422035,2277999,House
+203,Elijah E Cummings (D-Md),Elijah,Cummings,D-Md,636005,1420501,2204998,House
+204,Pat Tiberi (R-Ohio),Pat,Tiberi,R-Ohio,687041,1399520,2111999,House
+205,Dwight Evans (D-Pa),Dwight,Evans,D-Pa,489051,1354524,2219998,House
+206,Frank D Lucas (R-Okla),Frank,Lucas,R-Okla,485013,1352504,2219995,House
+207,Debbie Lesko (R-Ariz),Debbie,Lesko,R-Ariz,767030,1348515,1930000,House
+208,Doris Matsui (D-Calif),Doris,Matsui,D-Calif,763014,1279007,1795000,House
+209,Don Young (R-Alaska),Don,Young,R-Alaska,782009,1256004,1730000,House
+210,Donald McEachin (D-Va),Donald,McEachin,D-Va,733012,1232505,1731999,House
+211,Bradley Byrne (R-Ala),Bradley,Byrne,R-Ala,700037,1230518,1761000,House
+212,Jeff Duncan (R-SC),Jeff,Duncan,R-SC,593015,1222005,1850996,House
+213,Drew Ferguson (R-Ga),Drew,Ferguson,R-Ga,684026,1197513,1711000,House
+214,Mo Brooks (R-Ala),Mo,Brooks,R-Ala,527059,1191529,1856000,House
+215,Jodey Arrington (R-Texas),Jodey,Arrington,R-Texas,616031,1190515,1765000,House
+216,Steve Stivers (R-Ohio),Steve,Stivers,R-Ohio,591041,1181020,1771000,House
+217,Brenda Lawrence (D-Mich),Brenda,Lawrence,D-Mich,621021,1173010,1724999,House
+218,Sean Patrick Maloney (D-NY),Sean,Patrick Maloney,D-NY,754006,1157003,1560000,House
+219,Mike Doyle (D-Pa),Mike,Doyle,D-Pa,531039,1153019,1774999,House
+220,Tammy Baldwin (D-Wis),Tammy,Baldwin,D-Wis,434008,1147003,1859998,Senate
+221,Charles E Schumer (D-NY),Charles,Schumer,D-NY,370043,1122521,1874999,Senate
+222,Glenn S Grothman (R-Wis),Glenn,Grothman,R-Wis,635015,1105007,1575000,House
+223,Vicente Gonzalez (D-Texas),Vicente,Gonzalez,D-Texas,1090921,1090921,1090921,House
+224,Paul Cook (R-Calif),Paul,Cook,R-Calif,629016,1070508,1512000,House
+225,Ron Estes (R-Kan),Ron,Estes,R-Kan,489047,1055023,1621000,House
+226,Ken Buck (R-Colo),Ken,Buck,R-Colo,416027,1053013,1689999,House
+227,Paul Gosar (R-Ariz),Paul,Gosar,R-Ariz,650002,1050000,1449999,House
+228,John Bergman (R-Mich),John,Bergman,R-Mich,647010,1014005,1381000,House
+229,Joe Courtney (D-Conn),Joe,Courtney,D-Conn,442045,987022,1532000,House
+230,Lindsey Graham (R-SC),Lindsey,Graham,R-SC,258046,969022,1679999,Senate
+231,Cheri Bustos (D-Ill),Cheri,Bustos,D-Ill,532020,956010,1380000,House
+232,Steve Chabot (R-Ohio),Steve,Chabot,R-Ohio,510027,955513,1401000,House
+233,Bill Johnson (R-Ohio),Bill,Johnson,R-Ohio,417037,948518,1480000,House
+234,Mike Crapo (R-Idaho),Mike,Crapo,R-Idaho,204044,944521,1684999,Senate
+235,Evan Jenkins (R-WVa),Evan,Jenkins,R-WVa,399046,920023,1441000,House
+236,Grace Napolitano (D-Calif),Grace,Napolitano,D-Calif,36012,913004,1789996,House
+237,Steven Palazzo (R-Miss),Steven,Palazzo,R-Miss,172006,908501,1644997,House
+238,Ted Deutch (D-Fla),Ted,Deutch,D-Fla,357050,907525,1458000,House
+239,Bennie G Thompson (D-Miss),Bennie,Thompson,D-Miss,469023,889511,1310000,House
+240,Scott Perry (R-Pa),Scott,Perry,R-Pa,355019,877508,1399998,House
+241,Mike Gallagher (R-Wis),Mike,Gallagher,R-Wis,466016,853007,1239999,House
+242,Don Bacon (R-Neb),Don,Bacon,R-Neb,494013,852006,1210000,House
+243,Cory Gardner (R-Colo),Cory,Gardner,R-Colo,326038,850518,1374999,Senate
+244,Hakeem Jeffries (D-NY),Hakeem,Jeffries,D-NY,452024,841012,1230000,House
+245,Val Demings (D-Fla),Val,Demings,D-Fla,468008,824003,1179999,House
+246,Daniel Webster (R-Fla),Daniel,Webster,R-Fla,483008,814004,1145000,House
+247,Tim Kaine (D-Va),Tim,Kaine,D-Va,409018,811008,1212999,Senate
+248,Cory Booker (D-NJ),Cory,Booker,D-NJ,515006,807503,1100000,Senate
+249,Bill Posey (R-Fla),Bill,Posey,R-Fla,432010,807004,1181999,House
+250,John Shimkus (R-Ill),John,Shimkus,R-Ill,251007,803003,1354999,House
+251,Maxine Waters (D-Calif),Maxine,Waters,D-Calif,-3579987,793006,5165999,House
+252,Rand Paul (R-Ky),Rand,Paul,R-Ky,170041,773520,1376999,Senate
+253,Marcia L Fudge (D-Ohio),Marcia,Fudge,D-Ohio,256011,773004,1289998,House
+254,Kevin Brady (R-Texas),Kevin,Brady,R-Texas,405026,766513,1128000,House
+255,Patrick McHenry (R-NC),Patrick,McHenry,R-NC,393015,765007,1137000,House
+256,Jan Schakowsky (D-Ill),Jan,Schakowsky,D-Ill,258036,749017,1239998,House
+257,Nydia M Velazquez (D-NY),Nydia,Velazquez,D-NY,485001,737500,990000,House
+258,Seth Moulton (D-Mass),Seth,Moulton,D-Mass,180069,728534,1277000,House
+259,G K Butterfield (D-NC),G K,Butterfield,D-NC,-255981,727007,1709995,House
+260,Grace Meng (D-NY),Grace,Meng,D-NY,139047,708522,1277998,House
+261,David Rouzer (R-NC),David,Rouzer,R-NC,369023,703011,1037000,House
+262,Tammy Duckworth (D-Ill),Tammy,Duckworth,D-Ill,139063,697531,1255999,Senate
+263,Rick Larsen (D-Wash),Rick,Larsen,D-Wash,372019,676509,981000,House
+264,Randy Weber (R-Texas),Randy,Weber,R-Texas,250008,676003,1101999,House
+265,Mark Meadows (R-NC),Mark,Meadows,R-NC,66022,666010,1265999,House
+266,Bonnie Coleman (D-NJ),Bonnie,Coleman,D-NJ,350002,642500,934998,House
+267,Darren Soto (D-Fla),Darren,Soto,D-Fla,-17990,641002,1299995,House
+268,David Schweikert (R-Ariz),David,Schweikert,R-Ariz,286011,618004,949998,House
+269,Eddie Bernice Johnson (D-Texas),Eddie,Bernice Johnson,D-Texas,266003,615501,964999,House
+270,Bob Casey (D-Pa),Bob,Casey,D-Pa,142020,609007,1075995,Senate
+271,Henry Cuellar (D-Texas),Henry,Cuellar,D-Texas,19018,602008,1184999,House
+272,Derek Kilmer (D-Wash),Derek,Kilmer,D-Wash,180043,596521,1012999,House
+273,Mac Thornberry (R-Texas),Mac,Thornberry,R-Texas,104006,582002,1059999,House
+274,Robert Menendez (D-NJ),Robert,Menendez,D-NJ,303005,541502,779999,Senate
+275,Adrian Smith (R-Neb),Adrian,Smith,R-Neb,256016,535508,815000,House
+276,Pete King (R-NY),Pete,King,R-NY,350003,525001,700000,House
+277,Dan Kildee (D-Mich),Dan,Kildee,D-Mich,295006,522503,750000,House
+278,John Sarbanes (D-Md),John,Sarbanes,D-Md,298010,521505,745000,House
+279,Bernie Sanders (I-Vt),Bernie,Sanders,I-Vt,-27973,513513,1054999,Senate
+280,Bruce Westerman (R-Ark),Bruce,Westerman,R-Ark,214025,512012,810000,House
+281,Linda Sanchez (D-Calif),Linda,Sanchez,D-Calif,-73979,508508,1090996,House
+282,Charlie Dent (R-Pa),Charlie,Dent,R-Pa,210032,507016,804000,House
+283,David Loebsack (D-Iowa),David,Loebsack,D-Iowa,258013,502006,746000,House
+284,Tom Cotton (R-Ark),Tom,Cotton,R-Ark,229017,498008,767000,Senate
+285,Tom Graves (R-Ga),Tom,Graves,R-Ga,38027,491512,944998,House
+286,Raul Ruiz (D-Calif),Raul,Ruiz,D-Calif,217005,491001,764998,House
+287,Michael R Turner (R-Ohio),Michael,R Turner,R-Ohio,183029,489514,796000,House
+288,Ruben Gallego (D-Ariz),Ruben,Gallego,D-Ariz,189013,479505,769998,House
+289,Sam Graves (R-Mo),Sam,Graves,R-Mo,-4339490,473002,5285494,House
+290,John B Larson (D-Conn),John,Larson,D-Conn,91050,466025,841000,House
+291,Warren Davidson (R-Ohio),Warren,Davidson,R-Ohio,-4003989,457004,4917998,House
+292,Hal Rogers (R-Ky),Hal,Rogers,R-Ky,322330,446327,570324,House
+293,Ed Perlmutter (D-Colo),Ed,Perlmutter,D-Colo,117043,437521,758000,House
+294,Andy Barr (R-Ky),Andy,Barr,R-Ky,224013,429506,635000,House
+295,Danny K Davis (D-Ill),Danny,Davis,D-Ill,266009,418504,571000,House
+296,Karen Bass (D-Calif),Karen,Bass,D-Calif,266003,415501,565000,House
+297,Mike Lee (R-Utah),Mike,Lee,R-Utah,208010,414005,620000,Senate
+298,Adam Kinzinger (R-Ill),Adam,Kinzinger,R-Ill,161007,413003,664999,House
+299,John Moolenaar (R-Mich),John,Moolenaar,R-Mich,103042,412521,722000,House
+300,Alma Adams (D-NC),Alma,Adams,D-NC,265002,407501,550000,House
+301,Garret Graves (R-La),Garret,Graves,R-La,156027,400013,644000,House
+302,Tom Reed (R-NY),Tom,Reed,R-NY,182006,398502,614999,House
+303,Douglas L Lamborn (R-Colo),Douglas,Lamborn,R-Colo,114016,397007,679998,House
+304,Jim Banks (R-Ind),Jim,Banks,R-Ind,168022,395011,622000,House
+305,Adam Smith (D-Wash),Adam,Smith,D-Wash,220012,393006,566000,House
+306,Mark Pocan (D-Wis),Mark,Pocan,D-Wis,200002,385000,569998,House
+307,Chris Stewart (R-Utah),Chris,Stewart,R-Utah,251002,383001,515000,House
+308,Jackie Walorski (R-Ind),Jackie,Walorski,R-Ind,143025,382012,621000,House
+309,Brian Mast (R-Fla),Brian,Mast,R-Fla,169713,370702,571692,House
+310,Mark Amodei (R-Nev),Mark,Amodei,R-Nev,102005,366002,629999,House
+311,Steve Womack (R-Ark),Steve,Womack,R-Ark,205008,365004,525000,House
+312,Rodney Davis (R-Ill),Rodney,Davis,R-Ill,140021,357510,575000,House
+313,Lucille Roybal-Allard (D-Calif),Lucille,Roybal-Allard,D-Calif,-825992,357002,1539996,House
+314,Darin LaHood (R-Ill),Darin,LaHood,R-Ill,108029,341514,575000,House
+315,Glenn Thompson (R-Pa),Glenn,Thompson,R-Pa,172010,338505,505000,House
+316,Joe Wilson (R-SC),Joe,Wilson,R-SC,-564992,337501,1239994,House
+317,William L Clay Jr. (D-Mo),William,Clay Jr.,D-Mo,-7984,336007,679999,House
+318,Morgan Griffith (R-Va),Morgan,Griffith,R-Va,1006,333001,664997,House
+319,Terri A Sewell (D-Ala),Terri,Sewell,D-Ala,145013,330006,515000,House
+320,Matt Gaetz (R-Fla),Matt,Gaetz,R-Fla,104013,312006,519999,House
+321,John Thune (R-SD),John,Thune,R-SD,51025,310512,569999,Senate
+322,Martin Heinrich (D-NM),Martin,Heinrich,D-NM,-361964,309017,979998,Senate
+323,Kirsten Gillibrand (D-NY),Kirsten,Gillibrand,D-NY,162008,296004,430000,Senate
+324,Steven A. King (R-Iowa),Steven,King,R-Iowa,140014,295007,450000,House
+325,Brendan Boyle (D-Pa),Brendan,Boyle,D-Pa,-169994,295001,759996,House
+326,Jim Jordan (R-Ohio),Jim,Jordan,R-Ohio,147007,289003,431000,House
+327,Joseph D Morelle (D-NY),Joseph,Morelle,D-NY,98024,285512,473000,House
+328,Tim Walberg (R-Mich),Tim,Walberg,R-Mich,101017,283008,465000,House
+329,Elise Stefanik (R-NY),Elise,Stefanik,R-NY,-71983,282007,635998,House
+330,Ben Ray Lujan (D-NM),Ben,Ray Lujan,D-NM,153005,274002,395000,House
+331,Debbie Wasserman Schultz (D-Fla),Debbie,Wasserman Schultz,D-Fla,-240956,270521,781998,House
+332,Jimmy Gomez (D-Calif),Jimmy,Gomez,D-Calif,75013,267506,459999,House
+333,Mike Bost (R-Ill),Mike,Bost,R-Ill,-37990,264004,565998,House
+334,Jimmy Panetta (D-Calif),Jimmy,Panetta,D-Calif,30036,263517,496999,House
+335,Sherrod Brown (D-Ohio),Sherrod,Brown,D-Ohio,-163988,263005,689998,Senate
+336,Barbara Lee (D-Calif),Barbara,Lee,D-Calif,154008,257504,361000,House
+337,Raul M Grijalva (D-Ariz),Raul,Grijalva,D-Ariz,70021,235010,400000,House
+338,Robin Kelly (D-Ill),Robin,Kelly,D-Ill,132006,231003,330000,House
+339,Rob Woodall (R-Ga),Rob,Woodall,R-Ga,106007,223003,340000,House
+340,Kevin McCarthy (R-Calif),Kevin,McCarthy,R-Calif,81006,223002,364999,House
+341,Devin Nunes (R-Calif),Devin,Nunes,R-Calif,131005,223002,315000,House
+342,Mark Takano (D-Calif),Mark,Takano,D-Calif,116005,216502,317000,House
+343,Pramila Jayapal (D-Wash),Pramila,Jayapal,D-Wash,-816963,214017,1244998,House
+344,Chris Smith (R-NJ),Chris,Smith,R-NJ,212012,212012,212012,House
+345,Michael Cloud (R-Texas),Michael,Cloud,R-Texas,89012,212006,335000,House
+346,Yvette D Clarke (D-NY),Yvette,Clarke,D-NY,115002,207501,300000,House
+347,Mark Desaulnier (D-Calif),Mark,Desaulnier,D-Calif,103004,199002,295000,House
+348,Patrick Meehan (R-Pa),Patrick,Meehan,R-Pa,55015,198007,341000,House
+349,Gregorio Sablan (D-NMI),Gregorio,Sablan,D-NMI,98007,196503,295000,House
+350,Amata Coleman Radewagen (R-AS),Amata,Coleman Radewagen,R-AS,46018,193009,340000,House
+351,James E Clyburn (D-SC),James,E Clyburn,D-SC,97008,189504,282000,House
+352,Anthony Brown (D-Md),Anthony,Brown,D-Md,97006,188503,280000,House
+353,Jerry McNerney (D-Calif),Jerry,McNerney,D-Calif,101003,183501,266000,House
+354,Richard E Neal (D-Mass),Richard,E Neal,D-Mass,77010,180005,283000,House
+355,Kay Granger (R-Texas),Kay,Granger,R-Texas,-184995,157502,499999,House
+356,Marcy Kaptur (D-Ohio),Marcy,Kaptur,D-Ohio,-110985,155006,420998,House
+357,Sanford Bishop (D-Ga),Sanford,Bishop,D-Ga,87004,153502,220000,House
+358,Scott Desjarlais (R-Tenn),Scott,Desjarlais,R-Tenn,-118987,153005,424998,House
+359,Alex Mooney (R-WVa),Alex,Mooney,R-WVa,39011,137005,235000,House
+360,Richard Hudson (R-NC),Richard,Hudson,R-NC,14017,133008,252000,House
+361,Jerrold Nadler (D-NY),Jerrold,Nadler,D-NY,32006,121003,210000,House
+362,Pete Aguilar (D-Calif),Pete,Aguilar,D-Calif,34008,117504,201000,House
+363,James Lankford (R-Okla),James,Lankford,R-Okla,-159980,116509,392999,Senate
+364,Donald M Payne Jr. (D-NJ),Donald,M Payne Jr.,D-NJ,66005,116502,167000,House
+365,Jack Reed (D-RI),Jack,Reed,D-RI,-561945,107026,775998,Senate
+366,Jody Hice (R-Ga),Jody,Hice,R-Ga,32005,101002,170000,House
+367,Conor Lamb (D-Pa),Conor,Lamb,D-Pa,1,100000,199999,House
+368,Jeff Fortenberry (R-Neb),Jeff,Fortenberry,R-Neb,-4150991,97003,4344997,House
+369,Gus Bilirakis (R-Fla),Gus,Bilirakis,R-Fla,-273965,96016,465998,House
+370,Mario Diaz-Balart (R-Fla),Mario,Diaz-Balart,R-Fla,21009,81504,142000,House
+371,Albio Sires (D-NJ),Albio,Sires,D-NJ,32004,81002,130000,House
+372,Salud Carbajal (D-Calif),Salud,Carbajal,D-Calif,-37994,81002,199998,House
+373,Steny H Hoyer (D-Md),Steny,H Hoyer,D-Md,50003,76001,102000,House
+374,Jose E Serrano (D-NY),Jose,E Serrano,D-NY,50001,75000,100000,House
+375,Will Hurd (R-Texas),Will,Hurd,R-Texas,9009,72004,135000,House
+376,Kathleen Rice (D-NY),Kathleen,Rice,D-NY,-15994,64502,144999,House
+377,Brian M Higgins (D-NY),Brian,M Higgins,D-NY,8008,64004,120000,House
+378,Mike Quigley (D-Ill),Mike,Quigley,D-Ill,35001,62500,90000,House
+379,Ron DeSantis (R-Fla),Ron,DeSantis,R-Fla,-11996,54001,119999,House
+380,Troy Balderson (R-Ohio),Troy,Balderson,R-Ohio,17003,48501,80000,House
+381,Steve Scalise (R-La),Steve,Scalise,R-La,1,42500,84999,House
+382,Norma Torres (D-Calif),Norma,Torres,D-Calif,-233995,41502,316999,House
+383,Barry Loudermilk (R-Ga),Barry,Loudermilk,R-Ga,16002,40501,65000,House
+384,Rob Bishop (R-Utah),Rob,Bishop,R-Utah,16002,40501,65000,House
+385,Tom McClintock (R-Calif),Tom,McClintock,R-Calif,16002,40501,65000,House
+386,Sean P Duffy (R-Wis),Sean,Duffy,R-Wis,-290990,39504,369998,House
+387,Tulsi Gabbard (D-Hawaii),Tulsi,Gabbard,D-Hawaii,-508992,36003,580999,House
+388,Tom Emmer (R-Minn),Tom,Emmer,R-Minn,-134998,32500,199999,House
+389,Louis B Gohmert Jr. (R-Texas),Louis,Gohmert Jr.,R-Texas,15001,32500,50000,House
+390,Debbie Stabenow (D-Mich),Debbie,Stabenow,D-Mich,15001,32500,50000,Senate
+391,Betty McCollum (D-Minn),Betty,McCollum,D-Minn,4004,32002,60000,House
+392,John Lewis (D-Ga),John,Lewis,D-Ga,1005,10002,19000,House
+393,Paul Tonko (D-NY),Paul,Tonko,D-NY,1001,8000,15000,House
+394,Jaime Herrera Beutler (R-Wash),Jaime,Herrera Beutler,R-Wash,1001,8000,15000,House
+395,Adriano Espaillat (D-NY),Adriano,Espaillat,D-NY,1001,8000,15000,House
+396,Clay Higgins (R-La),Clay,Higgins,R-La,0,0,0,House
+397,Rick Crawford (R-Ark),Rick,Crawford,R-Ark,0,0,0,House
+398,Gwen Moore (D-Wis),Gwen,Moore,D-Wis,0,0,0,House
+399,Amy Klobuchar (D-Minn),Amy,Klobuchar,D-Minn,0,0,0,Senate
+400,Lee Zeldin (R-NY),Lee,Zeldin,R-NY,0,0,0,House
+401,Gregory W Meeks (D-NY),Gregory,W Meeks,D-NY,0,0,0,House
+402,Tim Ryan (D-Ohio),Tim,Ryan,D-Ohio,-164991,-1997,160997,House
+403,Jason Smith (R-Mo),Jason,Smith,R-Mo,-1786970,-5490,1775990,House
+404,Duncan D. Hunter (R-Calif),Duncan,Hunter,R-Calif,-15000,-12500,-10000,House
+405,Andre Carson (D-Ind),Andre,Carson,D-Ind,-48999,-24500,-1,House
+406,Eliot L Engel (D-NY),Eliot,Engel,D-NY,-182995,-31498,119999,House
+407,Mike Johnson (R-La),Mike,Johnson,R-La,-50000,-32500,-15001,House
+408,Eric Swalwell (D-Calif),Eric,Swalwell,D-Calif,-113998,-37000,39998,House
+409,Tony Cardenas (D-Calif),Tony,Cardenas,D-Calif,-299991,-47499,204992,House
+410,John Katko (R-NY),John,Katko,R-NY,-98999,-67000,-35001,House
+411,Jenniffer Gonzalez (3-PR),Jenniffer,Gonzalez,3-PR,-100000,-75000,-50001,House
+412,Marc Veasey (D-Texas),Marc,Veasey,D-Texas,-194993,-79498,35997,House
+413,Patrick Leahy (D-Vt),Patrick,Leahy,D-Vt,-330992,-85496,159999,Senate
+414,Stacey Plaskett (D-VI),Stacey,Plaskett,D-VI,-115000,-87500,-60001,House
+415,Hank Johnson (D-Ga),Hank,Johnson,D-Ga,-219998,-109999,-1,House
+416,Mark Walker (R-NC),Mark,Walker,R-NC,-165000,-110001,-55003,House
+417,Brian Fitzpatrick (R-Pa),Brian,Fitzpatrick,R-Pa,-678998,-124500,429997,House
+418,Trent Kelly (R-Miss),Trent,Kelly,R-Miss,-200000,-140001,-80003,House
+419,Christopher S Murphy (D-Conn),Christopher,Murphy,D-Conn,-1069978,-149991,769996,Senate
+420,Roger Wicker (R-Miss),Roger,Wicker,R-Miss,-788986,-180995,426995,Senate
+421,Sheila Jackson Lee (D-Texas),Sheila,Jackson Lee,D-Texas,-681993,-181001,319991,House
+422,Joni Ernst (R-Iowa),Joni,Ernst,R-Iowa,-783966,-196984,389998,Senate
+423,Doug Collins (R-Ga),Doug,Collins,R-Ga,-747988,-246494,254999,House
+424,Brian Schatz (D-Hawaii),Brian,Schatz,D-Hawaii,-1242983,-554493,133997,Senate
+425,Tim Scott (R-SC),Tim,Scott,R-SC,-1862988,-1053997,-245007,Senate
+426,Jim Langevin (D-RI),Jim,Langevin,D-RI,-3812969,-1078494,1655980,House
+427,Bill Cassidy (R-La),Bill,Cassidy,R-La,-3001937,-1115970,769996,Senate
+428,Marco Rubio (R-Fla),Marco,Rubio,R-Fla,-1896988,-1262995,-629002,Senate
+429,Todd Young (R-Ind),Todd,Young,R-Ind,-1995994,-1392999,-790005,Senate
+430,Bobby L Rush (D-Ill),Bobby,Rush,D-Ill,-4499999,-2250000,-1,House
+431,Emanuel Cleaver (D-Mo),Emanuel,Cleaver,D-Mo,-4623988,-2266995,89998,House
+432,Alcee L Hastings (D-Fla),Alcee,Hastings,D-Fla,-12097998,-7549002,-3000006,House

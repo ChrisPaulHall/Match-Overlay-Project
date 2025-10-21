@@ -19,5 +19,4 @@ deepface_env/
 env310/
 
 # Data files you’ll regenerate
-*.csv
 *.db

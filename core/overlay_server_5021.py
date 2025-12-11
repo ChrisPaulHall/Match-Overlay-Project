@@ -400,7 +400,7 @@ def add_no_cache_headers(resp):
 def overlay():
     timestamp = int(time.time())
     overlay_js_url = url_for("static", filename="js/overlay.js", v=timestamp)
-    css_href = url_for("static", filename="css/overlay3.css", v=timestamp)
+    css_href = url_for("static", filename="css/overlay1.css", v=timestamp)
     return render_template_string(
         HTML_TEMPLATE,
         overlay_js_url=overlay_js_url,
@@ -413,7 +413,7 @@ def overlay():
 def overlay_1():
     timestamp = int(time.time())
     overlay_js_url = url_for("static", filename="js/overlay.js", v=timestamp)
-    css_href = url_for("static", filename="css/overlay1.css", v=timestamp)
+    css_href = url_for("static", filename="css/overlay3.css", v=timestamp)
     return render_template_string(
         HTML_TEMPLATE,
         overlay_js_url=overlay_js_url,

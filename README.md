@@ -2,7 +2,7 @@
 
 Real-time face recognition system that identifies U.S. Congress members on a live video feed and renders an overlay for OBS streaming.
 
-> **[QUICKSTART.md](QUICKSTART.md)** for the fastest path to running the demo.
+> **[QUICKSTART.md](QUICKSTART.md)** for the fastest path to running the program.
 
 ## What it does
 - Captures video from OBS Virtual Camera
@@ -10,7 +10,7 @@ Real-time face recognition system that identifies U.S. Congress members on a liv
 - Matches against a database of 500+ Congress member faces (`01_data/faces_official`)
 - Displays member info: name, title, net worth, committee assignments, recent stock trades
 - Writes structured overlay data to `02_outputs/overlay_data.json`
-- Serves a browser overlay at `http://localhost:5021/` for OBS browser source
+- Serves a browser overlay at `http://localhost:5021/` displayed over stream as an OBS browser source
 
 ## Prerequisites
 - **Python 3.10 or 3.11** (required; 3.9 will fail because of dependency minimums; 3.13 has compatibility issues)
@@ -100,7 +100,7 @@ bash 03_scripts/install_m1.sh
 ```
 
 ## Running the system
-You typically run two processes: the matcher (produces overlay JSON) and the web overlay server (renders it).
+The program consists of two primary processes: the matcher (produces overlay JSON) and the web overlay server (renders it).
 
 1) Start the matcher (camera index 0 by default):
 ```bash
@@ -121,7 +121,7 @@ source venv/bin/activate
 python core/overlay_server_5021.py
 ```
 Endpoints:
-- Overlay (use in OBS browser window): `http://localhost:5021/` (default), `/1`, or `/2` for different layouts
+- Overlay (use in OBS browser window): `http://localhost:5021/`
 - Data feed: `http://localhost:5021/data.json`
 - Runtime config (GET/POST): `http://localhost:5021/config`
 - Health check: `/health`
@@ -131,8 +131,9 @@ Endpoints:
    - Set URL to any video with Congress members (live stream, member social media, YouTube, etc.)
    - Examples: https://live.house.gov/, https://www.senate.gov/legislative/floor_activity_pail.htm
 2. Add another **Browser Source** for the overlay (576x1080):
-   - Set URL to `http://localhost:5021/` (try `/1` or `/2` for different layouts)
+   - Set URL to `http://localhost:5021/`
    - Refresh once `overlay_server_5021.py` is running
+   - Alternative layouts available at `/1` and `/2`
 3. Start the OBS **Virtual Camera** (feeds matcher.py):
    - In OBS, go to **Controls → Start Virtual Camera**.
    - Set **Output Type** to “Source” and **Output Selection** to your video source (1920x1080).
@@ -140,7 +141,7 @@ Endpoints:
 
 ## Face Database Augmentation
 
-The matcher automatically captures diverse face images for under-represented members:
+The matcher automatically stores face images for under-represented members:
 
 **How it works:**
 - Saves faces with confidence scores between 0.70-0.85 (diverse but confident)
@@ -160,15 +161,6 @@ This opens each image in Preview for review:
 
 Use `--auto` to import all without review, or `--dry-run` to preview.
 
-**Tuning parameters:**
-```bash
---save_face_min_confidence 0.70   # Floor (avoid false positives)
---save_face_max_confidence 0.85   # Ceiling (avoid duplicates)
---save_face_max_db_images 10      # Only save if member has fewer
---save_face_max_per_person 5      # Max pending images per person
-```
-
-Pending review saves are grouped by member (bioguide), so variants of the same person share the same per-person limits and session diversity checks.
 
 After approving faces, regenerate embeddings:
 ```bash
@@ -198,14 +190,6 @@ export FACE_OVERLAY_USE_GPU=true
 export FACE_OVERLAY_DET_SIZE=640
 ```
 
-**Performance comparison:**
-
-| Configuration | Typical CPU Usage |
-|---------------|-------------------|
-| CPU only, det_size=960 | ~300-400% |
-| CPU only, det_size=640 | ~100-150% |
-| GPU (CoreML), det_size=640 | ~30-50% |
-
 **Note:** GPU/det_size changes require restarting the matcher to take effect.
 
 ## Troubleshooting
@@ -225,28 +209,6 @@ export FACE_OVERLAY_DET_SIZE=640
 | **CoreML not available** | Check `python -c "import onnxruntime; print(onnxruntime.get_available_providers())"` |
 | **`mutex lock failed` on Apple Silicon** | Set threading env vars before running: `OMP_NUM_THREADS=1 TF_NUM_INTEROP_THREADS=1 TF_NUM_INTRAOP_THREADS=1 python ...` |
 
-## Project Structure
-
-```
-face_overlay_proj/
-├── core/                    # Main application code
-│   ├── matcher.py           # Face recognition main loop
-│   ├── overlay_server_5021.py  # Flask server for browser overlay
-│   ├── faces.py             # Face embedding backends
-│   ├── overlay.py           # Overlay data generation
-│   └── warm_embeddings.py   # Pre-compute face embeddings
-├── 01_data/                 # Data files
-│   ├── faces_official/      # Face database (download separately)
-│   ├── pending_review/      # Captured faces awaiting review
-│   ├── *.csv                # Member data, trades, donors
-│   └── *.yaml               # Congress/committee metadata
-├── 02_outputs/              # Runtime outputs (overlay JSON, caches)
-├── 03_scripts/              # Utility and scraper scripts
-├── 04_reports/              # Validation reports
-├── requirements.txt         # Python dependencies
-├── QUICKSTART.md            # Fast setup guide
-└── README.md                # This file
-```
 
 ## Data layout
 - `01_data/faces_official/` : reference face crops (**download from** https://drive.google.com/drive/folders/1VjMNSBHbMNhX-oLgdK1u1NF8ttAcBxpC?usp=drive_link)

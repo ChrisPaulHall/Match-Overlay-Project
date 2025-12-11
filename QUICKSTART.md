@@ -112,7 +112,7 @@ Adjust `--cam_index` if OBS Virtual Camera isn't on index 0.
    - URL: Any Congress video stream (e.g., https://live.house.gov/)
 
 2. **Add Overlay Source** (Browser Source, 576x1080):
-   - URL: `http://localhost:5021/` (try `/1` or `/2` for layouts)
+   - URL: `http://localhost:5021/`
 
 3. **Start Virtual Camera**:
    - Controls → Start Virtual Camera

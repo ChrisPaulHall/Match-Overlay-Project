@@ -632,9 +632,10 @@ def config_ui():
     </div>
     
     <div class="control-group">
-      <label>OCR Weight <span class="value-display" id="val-ocr_weight">1.0</span></label>
-      <div class="description">Multiplier for OCR contribution to final score (0.25-4.0)</div>
-      <input type="range" id="ocr_weight" min="0.25" max="4" step="0.05" value="1.0">
+      <label>Use GPU Acceleration</label>
+      <div class="description">Enable CoreML/GPU for face detection (requires restart)</div>
+      <input type="checkbox" id="use_gpu" checked>
+      <span class="value-display" id="val-use_gpu">On</span>
     </div>
     
     <div class="control-group">
@@ -650,9 +651,9 @@ def config_ui():
     </div>
     
     <div class="control-group">
-      <label>OCR Min Face Score <span class="value-display" id="val-ocr_min_face_for_weight">0.20</span></label>
-      <div class="description">Minimum face score required before OCR contributes (0.0-0.5)</div>
-      <input type="range" id="ocr_min_face_for_weight" min="0" max="0.5" step="0.01" value="0.20">
+      <label>Detection Size <span class="value-display" id="val-det_size">640</span></label>
+      <div class="description">Face detection resolution (480=fast, 640=balanced, 960=accurate). Requires restart.</div>
+      <input type="range" id="det_size" min="320" max="960" step="160" value="640">
     </div>
     
     <div class="control-group">
@@ -688,15 +689,15 @@ def config_ui():
   </div>
   
   <script>
-    const sliders = ['face_threshold', 'ocr_weight', 'beam_min', 'switch_margin', 
-                     'ocr_min_face_for_weight', 'cooldown_frames', 'face_interval', 'frame_interval'];
+    const sliders = ['face_threshold', 'beam_min', 'switch_margin',
+                     'cooldown_frames', 'face_interval', 'frame_interval', 'det_size'];
     
     // Load current config on page load
     async function loadConfig() {
       try {
         const response = await fetch('/config.json');
         const config = await response.json();
-        
+
         sliders.forEach(key => {
           const slider = document.getElementById(key);
           const display = document.getElementById('val-' + key);
@@ -705,6 +706,14 @@ def config_ui():
             display.textContent = config[key];
           }
         });
+
+        // Handle GPU checkbox
+        const gpuCheckbox = document.getElementById('use_gpu');
+        const gpuDisplay = document.getElementById('val-use_gpu');
+        if (config.use_gpu !== undefined) {
+          gpuCheckbox.checked = config.use_gpu;
+          gpuDisplay.textContent = config.use_gpu ? 'On' : 'Off';
+        }
       } catch (e) {
         console.error('Failed to load config:', e);
       }
@@ -714,10 +723,15 @@ def config_ui():
     sliders.forEach(key => {
       const slider = document.getElementById(key);
       const display = document.getElementById('val-' + key);
-      
+
       slider.addEventListener('input', (e) => {
         display.textContent = e.target.value;
       });
+    });
+
+    // Handle GPU checkbox display
+    document.getElementById('use_gpu').addEventListener('change', (e) => {
+      document.getElementById('val-use_gpu').textContent = e.target.checked ? 'On' : 'Off';
     });
     
     async function rejectCurrent() {
@@ -763,7 +777,9 @@ def config_ui():
         const value = parseFloat(document.getElementById(key).value);
         config[key] = value;
       });
-      
+      // Add GPU checkbox
+      config.use_gpu = document.getElementById('use_gpu').checked;
+
       try {
         const response = await fetch('/config/update', {
           method: 'POST',
@@ -888,28 +904,31 @@ def _validate_config_value(key: str, value: Any) -> bool:
     """Validate configuration values with type and range checking."""
     validation_rules = {
         "face_threshold": (float, 0.0, 1.0),
-        "ocr_weight": (float, 0.25, 4.0),
         "beam_min": (float, 0.0, 1.0),
         "switch_margin": (float, 0.0, 0.3),
-        "ocr_min_face_for_weight": (float, 0.0, 0.5),
         "cooldown_frames": (int, 5, 120),
-        "face_interval": (int, 1, 10),
-        "frame_interval": (int, 1, 60),
+        "face_interval": (int, 1, 30),
+        "frame_interval": (int, 1, 200),
+        "det_size": (int, 320, 960),
     }
-    
+
+    # Boolean settings
+    if key == "use_gpu":
+        return isinstance(value, bool)
+
     if key not in validation_rules:
         return False
-    
+
     expected_type, min_val, max_val = validation_rules[key]
-    
+
     # Type check
     if not isinstance(value, (expected_type, int if expected_type == float else float)):
         return False
-    
+
     # Range check
     if not (min_val <= value <= max_val):
         return False
-    
+
     return True
 
 @app.route("/config/update", methods=["POST"])

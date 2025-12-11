@@ -1,30 +1,32 @@
 #!/usr/bin/env python3
-"""Fetch Quiver net-worth estimates, top holdings, and traded sectors.
+"""Fetch Quiver politician profile data via HTML + JSON API.
 
 This script reads `01_data/members_face_lookup.csv`, de-duplicates entries by
-BioGuide ID, fetches the holdings payload used by Quiver's politician detail
-page, and writes a summary CSV containing the current net-worth estimate,
-the top holdings breakdown, and the "Top Traded Sectors" snippet per member.
+BioGuide ID, fetches politician data from Quiver, and extracts:
+- Net worth estimate (from JSON API)
+- Top holdings by asset type (from JSON API)
+- Top traded sectors (from HTML page)
+- Strategy returns vs SPY (from strategy page)
 
 The output CSV is stored at `01_data/00members_holdings_and_sectors.csv`.
 
-Rate Limiting Strategy:
-- Global RateLimiter ensures max 1 request/second across all threads
-- Reduced concurrent workers from 5 to 2 to avoid burst requests
-- Added 0.5s delay between the two API calls per member
-- All requests use exponential backoff with retry logic
-- Jitter added to avoid synchronized request bursts
-- Incremental saves every 10 records for better resume capability
+Approach:
+- Sequential processing for simplicity and rate limit compliance
+- JSON API for net worth + holdings (single call)
+- HTML page for sectors (single call)
+- Strategy page for portfolio returns vs SPY
+- Append mode for resume capability
+- Optional API token for authenticated requests
 """
 
 from __future__ import annotations
 
 import argparse
-import ast
 import concurrent.futures
 import csv
 import hashlib
 import json
+import logging
 import math
 import os
 import random
@@ -32,29 +34,44 @@ import re
 import sys
 import threading
 import time
-from collections import OrderedDict
 from pathlib import Path
-from typing import Dict, Optional, List, Set, Tuple
+from typing import Dict, List, Optional, Set
 from urllib.parse import quote, urlparse
 
 import requests
 from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
+# Logging setup
+LOG_FORMAT = "%(asctime)s %(levelname)s [QUIVER]: %(message)s"
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 INPUT_CSV = PROJECT_ROOT / "01_data" / "members_face_lookup.csv"
 OUTPUT_CSV = PROJECT_ROOT / "01_data" / "00members_holdings_and_sectors.csv"
-DEFAULT_CACHE_DIR = ".cache_quiver"
+DEFAULT_CACHE_DIR = PROJECT_ROOT / ".cache_quiver"
 
-REQUEST_DELAY_SEC = 1.0  # 1 second minimum between requests (increased from 0.1)
-MAX_BACKOFF_SEC = 15.0  # reduced from 30 to fail faster
-MAX_RETRIES = 4  # reduced from 8 to avoid excessive retries
-TOP_SECTOR_LIMIT = 5
-SECTOR_PATTERN = re.compile(r"let\s+sectorData\s*=\s*({.*?});", re.DOTALL)
-
-# Quiver API settings
+# API token settings (optional - works without token but may have lower rate limits)
 ENV_TOKEN_KEY = "QUIVER_API_TOKEN"
 DEFAULT_TOKEN_FILE = "quiver_token.txt"
+
+# Rate limiting - per-worker delay (not global) for true concurrency
+DEFAULT_DELAY_SEC = 0.5  # Delay per worker after each politician (was 1.5 global)
+DEFAULT_TIMEOUT = 15
+DEFAULT_CONCURRENCY = 6
+
+# Regex for sectorData in JavaScript
+SECTOR_PATTERN = re.compile(r"let\s+sectorData\s*=\s*(\{[^}]+\});", re.DOTALL)
+
+# Browser-like headers
+DEFAULT_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+}
 
 OUTPUT_FIELDNAMES = [
     "bioguide_id",
@@ -65,11 +82,14 @@ OUTPUT_FIELDNAMES = [
     "normalized_net_worth",
     "top_holdings",
     "top_traded_sectors",
+    "strategy_return",
+    "spy_return",
+    "strategy_start_date",
 ]
 
 
-def load_token() -> str:
-    """Resolve the API token from env var or a local file."""
+def load_token() -> Optional[str]:
+    """Resolve the API token from env var or a local file. Returns None if not found."""
     env_token = os.getenv(ENV_TOKEN_KEY)
     if env_token:
         return env_token.strip()
@@ -84,390 +104,109 @@ def load_token() -> str:
         if path.is_file():
             return path.read_text(encoding="utf-8").strip()
 
-    raise ValueError(
-        "No API token found. Set QUIVER_API_TOKEN or create quiver_token.txt."
-    )
-
-
-# Token loaded lazily in main() to allow --help without credentials
-TOKEN: Optional[str] = None
-
-
-class RateLimiter:
-    """Thread-safe rate limiter using token bucket algorithm."""
-
-    def __init__(self, requests_per_second: float):
-        self.min_interval = 1.0 / requests_per_second
-        self.last_request_time = 0.0
-        self.lock = threading.Lock()
-
-    def wait(self):
-        """Wait if necessary to respect rate limit."""
-        with self.lock:
-            now = time.time()
-            time_since_last = now - self.last_request_time
-            if time_since_last < self.min_interval:
-                sleep_time = self.min_interval - time_since_last
-                # Add jitter to avoid synchronized bursts
-                jitter = random.uniform(0, 0.2)
-                time.sleep(sleep_time + jitter)
-            self.last_request_time = time.time()
-
-
-def build_session() -> requests.Session:
-    """Build a session whose retries are handled explicitly by our backoff."""
-    sess = requests.Session()
-    sess.headers.update({
-        "User-Agent": "Mozilla/5.0 (Codex fetch script)",
-        "X-Requested-With": "XMLHttpRequest",
-    })
-    # Keep the adapter for pooling but let _request_with_backoff drive retries.
-    adapter = HTTPAdapter(max_retries=0, pool_connections=10, pool_maxsize=10)
-    sess.mount("http://", adapter)
-    sess.mount("https://", adapter)
-    # Set default timeout
-    original_get = sess.get
-    def get_with_timeout(*args, **kwargs):
-        kwargs.setdefault("timeout", 15)  # reduced from 30 to fail faster
-        return original_get(*args, **kwargs)
-    sess.get = get_with_timeout  # type: ignore
-    return sess
-
-
-SESSION = build_session()
-RATE_LIMITER = RateLimiter(requests_per_second=1.0)  # Max 1 request/second globally
-
-CACHE_DIR: Optional[str] = None
-CACHE_LOCK = threading.Lock()
-
-
-def _short_hash(value: str) -> str:
-    return hashlib.sha1(value.encode("utf-8")).hexdigest()[:10]
-
-
-def _cache_path_for(url: str, ext: str) -> Optional[str]:
-    if not CACHE_DIR:
-        return None
-    parsed = urlparse(url)
-    base = parsed.path.rstrip("/").split("/")[-1] or "index"
-    filename = f"{base}-{_short_hash(url)}.{ext}"
-    return os.path.join(CACHE_DIR, filename)
-
-
-def _read_cache_text(path: str) -> Optional[str]:
-    try:
-        with open(path, "r", encoding="utf-8") as fh:
-            return fh.read()
-    except FileNotFoundError:
-        return None
-    except OSError:
-        return None
-
-
-def _write_cache_text(path: str, data: str) -> None:
-    try:
-        with CACHE_LOCK:
-            parent = os.path.dirname(path)
-            if parent:
-                os.makedirs(parent, exist_ok=True)
-            tmp_path = f"{path}.tmp"
-            with open(tmp_path, "w", encoding="utf-8") as fh:
-                fh.write(data)
-            os.replace(tmp_path, path)
-    except OSError:
-        pass
-
-
-def _request_with_backoff(
-    url: str,
-    *,
-    headers: Dict[str, str] | None = None,
-    timeout: int = 15,
-    purpose: str = "",
-):
-    """GET helper with exponential backoff for rate-limited endpoints."""
-
-    delay = max(REQUEST_DELAY_SEC, 0.5)
-    for attempt in range(1, MAX_RETRIES + 1):
-        try:
-            response = SESSION.get(url, headers=headers, timeout=timeout)
-        except requests.Timeout as exc:
-            if attempt == MAX_RETRIES:
-                print(f"WARN: {purpose or url} timed out after {timeout}s: {exc}", file=sys.stderr)
-                return None
-            print(f"WARN: {purpose or url} timeout on attempt {attempt}/{MAX_RETRIES}, retrying...", file=sys.stderr)
-            time.sleep(min(delay, MAX_BACKOFF_SEC))
-            delay = min(delay * 2, MAX_BACKOFF_SEC)
-            continue
-        except requests.RequestException as exc:
-            if attempt == MAX_RETRIES:
-                print(f"WARN: {purpose or url} request failed: {exc}", file=sys.stderr)
-                return None
-            print(f"WARN: {purpose or url} error on attempt {attempt}/{MAX_RETRIES}: {exc}, retrying...", file=sys.stderr)
-            time.sleep(min(delay, MAX_BACKOFF_SEC))
-            delay = min(delay * 2, MAX_BACKOFF_SEC)
-            continue
-
-        if response.status_code == 429:
-            retry_after = response.headers.get("Retry-After")
-            if retry_after:
-                try:
-                    wait = float(retry_after)
-                except ValueError:
-                    wait = delay
-            else:
-                wait = delay
-
-            if attempt == MAX_RETRIES:
-                print(
-                    f"WARN: rate limited on {purpose or url}; giving up after {attempt} attempts",
-                    file=sys.stderr,
-                )
-                return None
-
-            time.sleep(min(wait, MAX_BACKOFF_SEC))
-            delay = min(max(delay, wait) * 1.5, MAX_BACKOFF_SEC)
-            continue
-
-        if response.status_code >= 400:
-            if attempt == MAX_RETRIES:
-                print(
-                    f"WARN: {purpose or url} returned HTTP {response.status_code}",
-                    file=sys.stderr,
-                )
-                return None
-
-            time.sleep(min(delay, MAX_BACKOFF_SEC))
-            delay = min(delay * 1.5, MAX_BACKOFF_SEC)
-            continue
-
-        return response
-
     return None
 
 
-def load_member_base_rows(path: Path) -> List[Dict[str, str]]:
-    """Return ordered, unique member records with identity fields copied."""
+def build_session(
+    timeout: int = DEFAULT_TIMEOUT,
+    pool_maxsize: int = 10,
+) -> requests.Session:
+    """Build a session with automatic retry handling."""
+    sess = requests.Session()
+    sess.headers.update(DEFAULT_HEADERS)
 
-    seen: OrderedDict[str, Dict[str, str]] = OrderedDict()
-    with path.open(newline="", encoding="utf-8") as fh:
-        reader = csv.DictReader(fh)
-        for row in reader:
-            bioguide = (row.get("bioguide_id") or "").strip()
-            if not bioguide or bioguide in seen:
-                continue
+    retry = Retry(
+        total=5,
+        connect=5,
+        read=5,
+        backoff_factor=1.2,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=("GET", "HEAD"),
+        raise_on_status=False,
+        respect_retry_after_header=True,
+    )
+    adapter = HTTPAdapter(
+        max_retries=retry,
+        pool_connections=pool_maxsize,
+        pool_maxsize=pool_maxsize,
+    )
+    sess.mount("http://", adapter)
+    sess.mount("https://", adapter)
 
-            first = (
-                row.get("first_name")
-                or row.get("first")
-                or row.get("given_name")
-                or row.get("first_name1")
-                or row.get("first_name2")
-                or ""
-            ).strip()
-            last = (
-                row.get("last_name")
-                or row.get("last")
-                or row.get("family_name")
-                or row.get("last_name1")
-                or row.get("last_name2")
-                or ""
-            ).strip()
-            middle = (
-                row.get("middle_name")
-                or row.get("middle")
-                or row.get("middle_name1")
-                or ""
-            ).strip()
+    # Default timeout wrapper
+    original_get = sess.get
+    def get_with_timeout(*args, **kwargs):
+        kwargs.setdefault("timeout", timeout)
+        return original_get(*args, **kwargs)
+    sess.get = get_with_timeout  # type: ignore
 
-            seen[bioguide] = {
-                "bioguide_id": bioguide,
-                "first_name": first,
-                "last_name": last,
-                "middle_name": middle,
-                "net_worth_estimate": "",
-                "normalized_net_worth": "",
-                "top_holdings": "",
-                "top_traded_sectors": "",
-            }
-
-    return list(seen.values())
+    return sess
 
 
-def hydrate_existing_rows(path: Path, rows_index: Dict[str, Dict[str, str]]) -> Set[str]:
-    """Populate base rows with any existing output data; return completed IDs."""
-
-    done: Set[str] = set()
-    if not path.exists():
-        return done
-
-    with path.open(newline="", encoding="utf-8") as fh:
-        reader = csv.DictReader(fh)
-        for row in reader:
-            bioguide = (row.get("bioguide_id") or "").strip()
-            if not bioguide:
-                continue
-
-            entry = rows_index.get(bioguide)
-            if not entry:
-                entry = {
-                    "bioguide_id": bioguide,
-                    "first_name": (row.get("first_name") or "").strip(),
-                    "last_name": (row.get("last_name") or "").strip(),
-                    "middle_name": (row.get("middle_name") or "").strip(),
-                    "net_worth_estimate": "",
-                    "normalized_net_worth": "",
-                    "top_holdings": "",
-                    "top_traded_sectors": "",
-                }
-                rows_index[bioguide] = entry
-
-            for key in OUTPUT_FIELDNAMES:
-                if key in row:
-                    entry[key] = (row.get(key) or "").strip()
-
-            # Only mark as done if we have actual data (any of the data fields populated)
-            has_data = any([
-                (row.get("net_worth_estimate") or "").strip(),
-                (row.get("normalized_net_worth") or "").strip(),
-                (row.get("top_holdings") or "").strip(),
-                (row.get("top_traded_sectors") or "").strip(),
-            ])
-            if has_data:
-                done.add(bioguide)
-
-    return done
+# ---------- Caching ----------
+def _short_hash(s: str) -> str:
+    return hashlib.sha1(s.encode("utf-8")).hexdigest()[:10]
 
 
+def cache_path_for(url: str, cache_dir: Path) -> Path:
+    parsed = urlparse(url)
+    base = parsed.path.rstrip("/").split("/")[-1] or "index"
+    return cache_dir / f"{base}-{_short_hash(url)}.html"
+
+
+def get_html(
+    url: str,
+    session: requests.Session,
+    cache_dir: Optional[Path],
+) -> Optional[str]:
+    """Fetch HTML, using cache if available."""
+    if cache_dir:
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        cpath = cache_path_for(url, cache_dir)
+        if cpath.exists():
+            return cpath.read_text(encoding="utf-8", errors="ignore")
+
+    try:
+        resp = session.get(url)
+        if resp.status_code == 429:
+            retry_after = resp.headers.get("Retry-After", "30")
+            wait_time = min(float(retry_after), 60.0)
+            logging.warning("Rate limited, waiting %.1fs...", wait_time)
+            time.sleep(wait_time)
+            resp = session.get(url)
+
+        if resp.status_code >= 400:
+            logging.warning("HTTP %d for %s", resp.status_code, url)
+            return None
+
+        html = resp.text
+
+        if cache_dir:
+            cpath = cache_path_for(url, cache_dir)
+            cpath.write_text(html, encoding="utf-8")
+
+        return html
+
+    except requests.RequestException as exc:
+        logging.warning("Request failed for %s: %s", url, exc)
+        return None
+
+
+# ---------- URL building ----------
 def build_profile_url(first: str, last: str, bioguide: str) -> str:
-    """Base politician URL used for scraping and referers."""
-
+    """Build the Quiver politician profile URL."""
     full_name = f"{first} {last}".strip() or bioguide
     safe_name = quote(full_name.replace(" ", " "))
-    return (
-        "https://www.quiverquant.com/congresstrading/politician/"
-        f"{safe_name}-{bioguide}"
-    )
+    return f"https://www.quiverquant.com/congresstrading/politician/{safe_name}-{bioguide}"
 
 
-def build_referer(first: str, last: str, bioguide: str) -> str:
-    """Construct the Quiver referer URL expected by their endpoint."""
-
-    return build_profile_url(first, last, bioguide) + "/net-worth"
-
-
-def fetch_quiver_payload(bioguide: str, first: str, last: str) -> Dict:
-    """Return the holdings payload for a member; empty dict on failure."""
-
-    url = f"https://www.quiverquant.com/get_politician_page_tab_data/{bioguide}"
-    headers = {
-        "Referer": build_referer(first, last, bioguide),
-        "Authorization": f"Bearer {TOKEN}",
-        "accept": "application/json",
-    }
-
-    cache_path = _cache_path_for(url, "json")
-    if cache_path:
-        cached = _read_cache_text(cache_path)
-        if cached:
-            try:
-                return json.loads(cached)
-            except json.JSONDecodeError:
-                pass
-
-    # Use global rate limiter and backoff logic
-    RATE_LIMITER.wait()
-    response = _request_with_backoff(
-        url,
-        headers=headers,
-        timeout=30,
-        purpose=f"payload for {bioguide}"
-    )
-    if not response:
-        return {}
-
-    try:
-        payload = response.json()
-    except json.JSONDecodeError as exc:
-        print(f"WARN: invalid JSON from payload for {bioguide}: {exc}", file=sys.stderr)
-        return {}
-
-    if cache_path and payload:
-        try:
-            _write_cache_text(cache_path, json.dumps(payload))
-        except Exception:
-            pass
-
-    return payload
-
-
-def extract_top_sectors_from_html(html: str, limit: int = TOP_SECTOR_LIMIT) -> str:
-    """Parse the Top Traded Sectors list from the raw HTML snippet."""
-
-    match = SECTOR_PATTERN.search(html)
-    if not match:
-        return ""
-
-    raw_map = match.group(1)
-    try:
-        data = ast.literal_eval(raw_map)
-    except (SyntaxError, ValueError):
-        return ""
-
-    if not isinstance(data, dict):
-        return ""
-
-    items = [
-        (str(name), float(value) if isinstance(value, (int, float)) else 0.0)
-        for name, value in data.items()
-    ]
-    items.sort(key=lambda kv: kv[1], reverse=True)
-
-    formatted = []
-    for name, value in items[:max(1, limit)]:
-        if value.is_integer():
-            display_val = int(value)
-        else:
-            display_val = round(value, 2)
-        formatted.append(f"{name}: {display_val}")
-
-    return "; ".join(formatted)
-
-
-def fetch_top_traded_sectors(bioguide: str, first: str, last: str) -> str:
-    """Retrieve and format the Top Traded Sectors snippet for a member."""
-
-    url = build_profile_url(first, last, bioguide)
-    cache_path = _cache_path_for(url, "html")
-    html: Optional[str] = None
-    if cache_path:
-        html = _read_cache_text(cache_path)
-
-    if html is None:
-        # Use global rate limiter and backoff logic
-        RATE_LIMITER.wait()
-        response = _request_with_backoff(
-            url,
-            timeout=30,
-            purpose=f"sectors for {bioguide}"
-        )
-        if not response:
-            return ""
-
-        html = response.text
-        if cache_path:
-            _write_cache_text(cache_path, html)
-
-    return extract_top_sectors_from_html(html)
-
-
-def _normalize_money_display(value: Optional[str | float | int]) -> str:
+# ---------- Money normalization ----------
+def normalize_money_display(value: Optional[str | float | int]) -> str:
     """Normalize money-like text into a dollar string like "$8,200,000".
 
     Accepts forms like "8.2M", "$8.2m", "1.5B", "250k", numeric strings, or numbers.
     Returns an empty string when input is blank or not parseable.
     """
-
     amount: Optional[float] = None
     if value is None:
         return ""
@@ -509,204 +248,577 @@ def _normalize_money_display(value: Optional[str | float | int]) -> str:
     return f"${rounded:,.0f}"
 
 
-def extract_networth_and_holdings(data: Dict) -> Tuple[str, str, str]:
-    """Return (net_worth_estimate, normalized_net_worth, top_holdings).
+# ---------- Parsing functions ----------
+def parse_sector_data(html: str, limit: int = 5) -> str:
+    """Extract top traded sectors from sectorData JavaScript variable."""
+    match = SECTOR_PATTERN.search(html)
+    if not match:
+        return ""
 
-    - net_worth_estimate: raw numeric string from Quiver (when available)
-    - normalized_net_worth: human-friendly, normalized like "$8,200,000"
-    - top_holdings: semicolon-separated list of top holdings with dollar amounts
-    """
-
-    holdings_data = data.get("holdings_data") or {}
-    net_worth_estimate = ""
-
+    raw_map = match.group(1)
     try:
-        live_vals = json.loads(holdings_data.get("politician_net_worth_live") or "[]")
-        hist_vals = json.loads(holdings_data.get("politician_net_worth_data") or "[]")
-    except json.JSONDecodeError:
-        live_vals, hist_vals = [], []
-
-    if live_vals:
-        net_worth_estimate = f"{live_vals[0]:.2f}"
-    elif hist_vals:
-        latest = hist_vals[0][0] if isinstance(hist_vals[0], (list, tuple)) else hist_vals[0]
+        # Parse JavaScript object literal (simple case)
+        # Convert to valid Python dict syntax
+        cleaned = raw_map.replace("'", '"')
+        data = json.loads(cleaned)
+    except (json.JSONDecodeError, ValueError):
+        # Fallback: try ast.literal_eval
         try:
-            net_worth_estimate = f"{float(latest):.2f}"
-        except (TypeError, ValueError):
-            net_worth_estimate = ""
+            import ast
+            data = ast.literal_eval(raw_map)
+        except (SyntaxError, ValueError):
+            return ""
 
-    normalized_net_worth = _normalize_money_display(net_worth_estimate)
+    if not isinstance(data, dict):
+        return ""
 
-    holdings_amounts = holdings_data.get("holdings_amounts") or {}
-    if isinstance(holdings_amounts, dict):
-        top_items = sorted(
-            holdings_amounts.items(),
-            key=lambda kv: (kv[1] if kv[1] is not None else 0.0),
-            reverse=True,
-        )[:5]
-        formatted = []
-        for name, value in top_items:
-            if value is None:
-                continue
-            formatted.append(f"{name}: ${value:,.0f}")
-        top_holdings = "; ".join(formatted)
-    else:
-        top_holdings = ""
+    # Sort by value descending
+    items = [
+        (str(name), float(value) if isinstance(value, (int, float)) else 0.0)
+        for name, value in data.items()
+    ]
+    items.sort(key=lambda kv: kv[1], reverse=True)
 
-    return net_worth_estimate, normalized_net_worth, top_holdings
+    formatted = []
+    for name, value in items[:limit]:
+        if value.is_integer():
+            display_val = int(value)
+        else:
+            display_val = round(value, 2)
+        formatted.append(f"{name}: {display_val}")
+
+    return "; ".join(formatted)
 
 
-def process_member(base_row: Dict[str, str]) -> Dict[str, str]:
-    """Process a single member: fetch data and return enriched row dict."""
+def parse_strategy_returns_from_graphdata(html: str) -> Dict[str, str]:
+    """Extract strategy return data by parsing the graphDataStrategy and graphDataSPY arrays.
 
-    bioguide = (base_row.get("bioguide_id") or "").strip()
-    first = (base_row.get("first_name") or "").strip()
-    last = (base_row.get("last_name") or "").strip()
-    middle = (base_row.get("middle_name") or "").strip()
+    The strategy page contains two JavaScript arrays:
+    - graphDataStrategy: [{date, close}, ...] - normalized strategy portfolio values starting at 100M
+    - graphDataSPY: [{date, close}, ...] - normalized SPY values starting at 100M
 
+    Returns are calculated as: (last_value - 100000000) / 100000000 * 100
+    """
     result = {
-        "bioguide_id": bioguide,
-        "first_name": first,
-        "last_name": last,
-        "middle_name": middle,
-        "net_worth_estimate": "",
-        "normalized_net_worth": "",
-        "top_holdings": "",
-        "top_traded_sectors": "",
+        "strategy_return": "",
+        "spy_return": "",
+        "strategy_start_date": "",
     }
 
-    if not bioguide:
-        return result
-
-    print(f"Processing {bioguide} ({first} {last})...", file=sys.stderr)
-
-    networth = ""
-    normalized_networth = ""
-    holdings = ""
-    sectors = ""
-
-    try:
-        payload = fetch_quiver_payload(bioguide, first, last)
-        if payload:
-            networth, normalized_networth, holdings = extract_networth_and_holdings(payload)
-
-        # Add delay between API calls for same member to avoid burst requests
-        time.sleep(0.5)
-
-        sectors = fetch_top_traded_sectors(bioguide, first, last)
-    except Exception as exc:
-        print(f"Error processing {bioguide} ({first} {last}): {exc}", file=sys.stderr)
-
-    result.update(
-        {
-            "net_worth_estimate": networth,
-            "normalized_net_worth": normalized_networth,
-            "top_holdings": holdings,
-            "top_traded_sectors": sectors,
-        }
+    # Extract graphDataStrategy array
+    strategy_match = re.search(
+        r'graphDataStrategy\s*=\s*\[(.*?)\];',
+        html,
+        re.DOTALL
     )
+
+    if strategy_match:
+        strategy_data_str = strategy_match.group(1)
+        # Extract all {date, close} objects
+        entries = re.findall(
+            r'\{\s*"date"\s*:\s*"([^"]+)"\s*,\s*"close"\s*:\s*([0-9.]+)\s*\}',
+            strategy_data_str
+        )
+
+        if entries:
+            # First entry gives start date
+            first_date = entries[0][0]
+            result["strategy_start_date"] = first_date
+
+            # Last entry gives final value
+            last_value = float(entries[-1][1])
+            start_value = 100000000.0
+
+            # Calculate return percentage
+            return_pct = (last_value - start_value) / start_value * 100
+            result["strategy_return"] = f"{return_pct:.2f}%"
+
+    # Extract graphDataSPY array
+    spy_match = re.search(
+        r'graphDataSPY\s*=\s*\[(.*?)\];',
+        html,
+        re.DOTALL
+    )
+
+    if spy_match:
+        spy_data_str = spy_match.group(1)
+        # Extract all {date, close} objects
+        entries = re.findall(
+            r'\{\s*"date"\s*:\s*"([^"]+)"\s*,\s*"close"\s*:\s*([0-9.]+)\s*\}',
+            spy_data_str
+        )
+
+        if entries:
+            # Last entry gives final value
+            last_value = float(entries[-1][1])
+            start_value = 100000000.0
+
+            # Calculate return percentage
+            return_pct = (last_value - start_value) / start_value * 100
+            result["spy_return"] = f"{return_pct:.2f}%"
 
     return result
 
 
-def ensure_output_dir(path: Path) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
+def fetch_strategy_page(
+    first: str,
+    last: str,
+    session: requests.Session,
+    cache_dir: Optional[Path],
+) -> Optional[str]:
+    """Fetch strategy page HTML which contains graphDataStrategy and graphDataSPY arrays."""
+    full_name = f"{first} {last}".strip()
+    safe_name = quote(full_name.replace(" ", " "))
+    url = f"https://www.quiverquant.com/strategies/s/{safe_name}/"
+
+    # Check cache first
+    if cache_dir:
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        cpath = cache_path_for(url, cache_dir)
+        if cpath.exists():
+            return cpath.read_text(encoding="utf-8", errors="ignore")
+
+    try:
+        resp = session.get(url)
+        if resp.status_code == 200:
+            html = resp.text
+            # Cache if successful
+            if cache_dir:
+                cpath = cache_path_for(url, cache_dir)
+                cpath.write_text(html, encoding="utf-8")
+            return html
+    except requests.RequestException:
+        pass  # Strategy page may not exist for all politicians
+
+    return None
 
 
-def write_output_rows(rows: List[Dict[str, str]], path: Path) -> None:
-    """Write the collected rows to disk, ensuring the parent directory exists."""
+# ---------- JSON API functions ----------
+def fetch_json_data(
+    bioguide: str,
+    first: str,
+    last: str,
+    session: requests.Session,
+    token: Optional[str] = None,
+) -> Optional[dict]:
+    """Fetch politician data from JSON API endpoint."""
+    url = f"https://www.quiverquant.com/get_politician_page_tab_data/{bioguide}"
+    headers = {
+        "Referer": build_profile_url(first, last, bioguide) + "/net-worth",
+        "Accept": "application/json",
+        "X-Requested-With": "XMLHttpRequest",
+    }
 
-    ensure_output_dir(path)
-    with path.open("w", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=OUTPUT_FIELDNAMES)
-        writer.writeheader()
-        writer.writerows(rows)
+    # Add auth token if available
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    try:
+        resp = session.get(url, headers=headers)
+        if resp.status_code == 429:
+            retry_after = resp.headers.get("Retry-After", "30")
+            wait_time = min(float(retry_after), 60.0)
+            logging.warning("Rate limited on JSON API, waiting %.1fs...", wait_time)
+            time.sleep(wait_time)
+            resp = session.get(url, headers=headers)
+
+        if resp.status_code >= 400:
+            logging.debug("JSON API returned %d for %s", resp.status_code, bioguide)
+            return None
+
+        return resp.json()
+    except (requests.RequestException, ValueError) as exc:
+        logging.debug("JSON API error for %s: %s", bioguide, exc)
+        return None
 
 
+def parse_json_data(data: dict) -> Dict[str, str]:
+    """Extract net worth and holdings from JSON API response."""
+    result = {
+        "net_worth_estimate": "",
+        "normalized_net_worth": "",
+        "top_holdings": "",
+    }
+
+    holdings_data = data.get("holdings_data") or {}
+
+    # Net worth - prefer live value
+    # Note: values may be JSON strings that need parsing
+    try:
+        live_vals = holdings_data.get("politician_net_worth_live") or []
+        hist_vals = holdings_data.get("politician_net_worth_data") or []
+
+        # Parse if string
+        if isinstance(live_vals, str):
+            live_vals = json.loads(live_vals)
+        if isinstance(hist_vals, str):
+            hist_vals = json.loads(hist_vals)
+
+        if live_vals and isinstance(live_vals, list) and live_vals[0]:
+            net_worth = float(live_vals[0])
+            result["net_worth_estimate"] = f"{net_worth:.2f}"
+            result["normalized_net_worth"] = normalize_money_display(net_worth)
+        elif hist_vals and isinstance(hist_vals, list) and hist_vals[0]:
+            # hist_vals is [[value, year], ...]
+            latest = hist_vals[0][0] if isinstance(hist_vals[0], list) else hist_vals[0]
+            net_worth = float(latest)
+            result["net_worth_estimate"] = f"{net_worth:.2f}"
+            result["normalized_net_worth"] = normalize_money_display(net_worth)
+    except (TypeError, ValueError, IndexError, json.JSONDecodeError):
+        pass
+
+    # Holdings by asset type
+    holdings_amounts = holdings_data.get("holdings_amounts") or {}
+    # Parse if string
+    if isinstance(holdings_amounts, str):
+        try:
+            holdings_amounts = json.loads(holdings_amounts)
+        except json.JSONDecodeError:
+            holdings_amounts = {}
+
+    if isinstance(holdings_amounts, dict) and holdings_amounts:
+        # Sort by value descending, take top 5
+        items = sorted(
+            holdings_amounts.items(),
+            key=lambda kv: kv[1] if kv[1] is not None else 0,
+            reverse=True,
+        )[:5]
+
+        formatted = []
+        for name, value in items:
+            if value is None:
+                continue
+            # Format as millions if large
+            if value >= 1_000_000:
+                formatted.append(f"{name}: ${value/1_000_000:.1f}M")
+            elif value >= 1_000:
+                formatted.append(f"{name}: ${value/1_000:.1f}K")
+            else:
+                formatted.append(f"{name}: ${value:,.0f}")
+
+        result["top_holdings"] = "; ".join(formatted)
+
+    return result
+
+
+# ---------- Main scraping function ----------
+def scrape_politician(
+    bioguide: str,
+    first: str,
+    last: str,
+    session: requests.Session,
+    cache_dir: Optional[Path],
+    include_strategy: bool,
+    token: Optional[str] = None,
+) -> Dict[str, str]:
+    """Scrape all data for a single politician."""
+    result = {
+        "net_worth_estimate": "",
+        "normalized_net_worth": "",
+        "top_holdings": "",
+        "top_traded_sectors": "",
+        "strategy_return": "",
+        "spy_return": "",
+        "strategy_start_date": "",
+    }
+
+    # 1. Fetch JSON API for net worth + holdings
+    json_data = fetch_json_data(bioguide, first, last, session, token)
+    if json_data:
+        result.update(parse_json_data(json_data))
+
+    # 2. Fetch HTML page for sectors
+    url = build_profile_url(first, last, bioguide)
+    html = get_html(url, session, cache_dir)
+    if html:
+        result["top_traded_sectors"] = parse_sector_data(html)
+
+    # 3. Fetch strategy page for returns (contains graphDataStrategy and graphDataSPY)
+    if include_strategy:
+        strategy_html = fetch_strategy_page(first, last, session, cache_dir)
+        if strategy_html:
+            strategy_data = parse_strategy_returns_from_graphdata(strategy_html)
+            if strategy_data.get("strategy_return"):
+                result.update(strategy_data)
+
+    return result
+
+
+# ---------- Data loading ----------
+def load_members(path: Path) -> List[Dict[str, str]]:
+    """Load member records from input CSV."""
+    members = []
+    seen = set()
+
+    with path.open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        for row in reader:
+            bioguide = (row.get("bioguide_id") or "").strip()
+            if not bioguide or bioguide in seen:
+                continue
+            seen.add(bioguide)
+
+            first = (
+                row.get("first_name")
+                or row.get("first")
+                or row.get("given_name")
+                or ""
+            ).strip()
+            last = (
+                row.get("last_name")
+                or row.get("last")
+                or row.get("family_name")
+                or ""
+            ).strip()
+            middle = (row.get("middle_name") or row.get("middle") or "").strip()
+
+            members.append({
+                "bioguide_id": bioguide,
+                "first_name": first,
+                "last_name": last,
+                "middle_name": middle,
+            })
+
+    return members
+
+
+def load_done_ids(path: Path) -> Set[str]:
+    """Load bioguide IDs that already have data in output CSV."""
+    done = set()
+    if not path.exists():
+        return done
+
+    with path.open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        for row in reader:
+            bioguide = (row.get("bioguide_id") or "").strip()
+            # Only mark as done if we have actual data
+            has_data = any([
+                (row.get("net_worth_estimate") or "").strip(),
+                (row.get("top_traded_sectors") or "").strip(),
+                (row.get("strategy_return") or "").strip(),
+            ])
+            if bioguide and has_data:
+                done.add(bioguide)
+
+    return done
+
+
+# ---------- Main ----------
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Fetch Quiver net-worth, holdings, and sectors for politicians.")
+    parser = argparse.ArgumentParser(
+        description="Scrape Quiver politician profiles for net worth, holdings, sectors, and strategy returns."
+    )
+    parser.add_argument(
+        "--delay",
+        type=float,
+        default=DEFAULT_DELAY_SEC,
+        help=f"Per-worker delay after each politician in seconds (default: {DEFAULT_DELAY_SEC})",
+    )
+    parser.add_argument(
+        "--timeout",
+        type=int,
+        default=DEFAULT_TIMEOUT,
+        help=f"HTTP timeout in seconds (default: {DEFAULT_TIMEOUT})",
+    )
+    parser.add_argument(
+        "--concurrency",
+        type=int,
+        default=DEFAULT_CONCURRENCY,
+        help=f"Number of concurrent workers (default: {DEFAULT_CONCURRENCY})",
+    )
+    parser.add_argument(
+        "--skip-strategy",
+        action="store_true",
+        help="Skip fetching strategy performance page to reduce requests",
+    )
     parser.add_argument(
         "--cache-dir",
+        type=Path,
         default=DEFAULT_CACHE_DIR,
-        help="Directory to cache fetched responses (set '' to disable)",
+        help="Directory to cache fetched HTML (set '' to disable)",
     )
-    parser.add_argument("--resume", action="store_true", help="Skip rows whose bioguide_id already exists in output")
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="Skip rows that already have data in output",
+    )
     parser.add_argument(
         "--test",
         nargs="?",
-        const=1,
+        const=5,
         type=int,
         metavar="N",
-        help="Process only the first N politicians for testing (default 1)",
+        help="Process only first N politicians for testing (default: 5)",
+    )
+    parser.add_argument(
+        "--bioguide",
+        nargs="+",
+        metavar="ID",
+        help="Process only specific bioguide IDs",
+    )
+    parser.add_argument(
+        "-v", "--verbose",
+        action="store_true",
+        help="Verbose logging",
     )
     args = parser.parse_args()
 
-    # Load token after argparse so --help works without credentials
-    global TOKEN
-    TOKEN = load_token()
+    logging.basicConfig(
+        level=logging.DEBUG if args.verbose else logging.INFO,
+        format=LOG_FORMAT,
+    )
 
-    print("Script starting...")
+    # Load optional API token
+    token = load_token()
+    if token:
+        logging.info("Using API token for authenticated requests")
+    else:
+        logging.info("No API token found; using unauthenticated requests")
 
-    global CACHE_DIR
-    CACHE_DIR = args.cache_dir or None
-    if CACHE_DIR and not os.path.isabs(CACHE_DIR):
-        CACHE_DIR = str((PROJECT_ROOT / CACHE_DIR).resolve())
-
+    # Validate input
     if not INPUT_CSV.exists():
-        print(f"ERROR: missing input CSV at {INPUT_CSV}")
+        logging.error("Input CSV not found: %s", INPUT_CSV)
         return 1
 
-    member_rows = load_member_base_rows(INPUT_CSV)
-    if not member_rows:
-        print(f"ERROR: no members found in {INPUT_CSV}")
+    # Load members
+    members = load_members(INPUT_CSV)
+    if not members:
+        logging.error("No members found in %s", INPUT_CSV)
         return 1
+    logging.info("Loaded %d members from %s", len(members), INPUT_CSV)
 
-    print(f"Copied {len(member_rows)} member identities from {INPUT_CSV}")
+    # Filter by bioguide if specified
+    if args.bioguide:
+        target_ids = set(args.bioguide)
+        members = [m for m in members if m["bioguide_id"] in target_ids]
+        logging.info("Filtered to %d members by bioguide ID", len(members))
 
-    rows_index = {row["bioguide_id"]: row for row in member_rows if row.get("bioguide_id")}
+    # Resume mode
+    done_ids = load_done_ids(OUTPUT_CSV) if args.resume else set()
+    if args.resume:
+        logging.info("Resume mode: %d members already have data", len(done_ids))
 
-    existing_done = hydrate_existing_rows(OUTPUT_CSV, rows_index)
-    done = existing_done if args.resume else set()
+    # Filter out already-done members (unless specific bioguides requested)
+    if args.resume and not args.bioguide:
+        members = [m for m in members if m["bioguide_id"] not in done_ids]
 
-    to_process = [row for row in member_rows if row.get("bioguide_id") and row["bioguide_id"] not in done]
-    test_limit = 0
-    if args.test is not None:
-        test_limit = max(0, args.test)
-    if test_limit:
-        to_process = to_process[:test_limit]
+    # Test mode
+    if args.test:
+        members = members[:args.test]
+        logging.info("Test mode: processing %d members", len(members))
 
-    num_to_process = len(to_process)
-    print(f"Starting to fetch data for {num_to_process} politicians...")
+    if not members:
+        logging.info("No members to process")
+        return 0
 
-    if not args.resume or not OUTPUT_CSV.exists():
-        write_output_rows(member_rows, OUTPUT_CSV)
+    logging.info("Will process %d members", len(members))
+    logging.info(
+        "Delay: %.2fs, Timeout: %ds, Concurrency: %d, Strategy: %s",
+        args.delay,
+        args.timeout,
+        args.concurrency,
+        "skip" if args.skip_strategy else "include",
+    )
 
-    processed = 0
-    if num_to_process:
-        # Reduced from 5 to 2 workers to avoid overwhelming rate limits
-        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
-            futures = {executor.submit(process_member, dict(row)): row["bioguide_id"] for row in to_process}
-            for future in concurrent.futures.as_completed(futures):
-                row = future.result()
-                bioguide = (row.get("bioguide_id") or "").strip()
-                if bioguide:
-                    target = rows_index.get(bioguide)
-                    if not target:
-                        target = {key: "" for key in OUTPUT_FIELDNAMES}
-                        target["bioguide_id"] = bioguide
-                        member_rows.append(target)
-                        rows_index[bioguide] = target
-                    target.update(row)
-                processed += 1
-                if processed % 10 == 0 or processed == num_to_process:
-                    print(f"Processed {processed}/{num_to_process} politicians")
-                    # Save incrementally every 10 records for better resume capability
-                    write_output_rows(member_rows, OUTPUT_CSV)
+    # Setup
+    pool_size = max(args.concurrency * 2, 10)
+    thread_local = threading.local()
 
-    write_output_rows(member_rows, OUTPUT_CSV)
-    print(f"Wrote {len(member_rows)} rows to {OUTPUT_CSV}")
+    def get_session() -> requests.Session:
+        """Thread-local session to avoid cross-thread sharing."""
+        sess = getattr(thread_local, "session", None)
+        if sess is None:
+            sess = build_session(
+                timeout=args.timeout,
+                pool_maxsize=pool_size,
+            )
+            thread_local.session = sess
+        return sess
+
+    cache_dir = args.cache_dir if args.cache_dir else None
+
+    # Prepare output
+    OUTPUT_CSV.parent.mkdir(parents=True, exist_ok=True)
+
+    # Determine write mode
+    write_header = not OUTPUT_CSV.exists() or not args.resume
+    mode = "w" if write_header else "a"
+
+    stats = {"processed": 0, "success": 0, "empty": 0}
+
+    indexed_members = list(enumerate(members, 1))
+
+    def process_member(item: tuple[int, Dict[str, str]]) -> Dict[str, str]:
+        idx, member = item
+        bioguide = member["bioguide_id"]
+        first = member["first_name"]
+        last = member["last_name"]
+        middle = member["middle_name"]
+
+        logging.info(
+            "[%d/%d] Scraping: %s %s (%s)",
+            idx,
+            len(indexed_members),
+            first,
+            last,
+            bioguide,
+        )
+
+        session = get_session()
+        data = scrape_politician(
+            bioguide,
+            first,
+            last,
+            session,
+            cache_dir,
+            include_strategy=not args.skip_strategy,
+            token=token,
+        )
+
+        # Per-worker delay: sleep after each politician to be respectful
+        # With 6 workers, this allows ~6 politicians processed per delay period
+        if args.delay > 0:
+            time.sleep(args.delay + random.uniform(0, args.delay * 0.2))
+
+        row = {
+            "bioguide_id": bioguide,
+            "first_name": first,
+            "last_name": last,
+            "middle_name": middle,
+            **data,
+        }
+        return row
+
+    with OUTPUT_CSV.open(mode, newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=OUTPUT_FIELDNAMES)
+        if write_header:
+            writer.writeheader()
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
+            for row in executor.map(process_member, indexed_members):
+                writer.writerow(row)
+                stats["processed"] += 1
+                if (
+                    row.get("net_worth_estimate")
+                    or row.get("top_traded_sectors")
+                    or row.get("strategy_return")
+                ):
+                    stats["success"] += 1
+                else:
+                    stats["empty"] += 1
+
+    # Summary
+    logging.info("=" * 50)
+    logging.info("SUMMARY")
+    logging.info("  Processed: %d", stats["processed"])
+    logging.info("  With data: %d", stats["success"])
+    logging.info("  Empty/errors: %d", stats["empty"])
+    logging.info("Output: %s", OUTPUT_CSV)
+    logging.info("=" * 50)
+
     return 0
 
 
-if __name__ == "__main__":  # pragma: no cover
+if __name__ == "__main__":
     sys.exit(main())

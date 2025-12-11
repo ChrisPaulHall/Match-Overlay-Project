@@ -33,13 +33,16 @@ def _env_lookup(*candidates: str) -> Optional[str]:
 @dataclass
 class RuntimeDefaults:
     face_threshold: float = 0.50
-    ocr_weight: float = 1.2
     beam_min: float = 0.50
     switch_margin: float = 0.06
-    ocr_min_face_for_weight: float = 0.20
     cooldown_frames: int = 20
-    face_interval: int = 3
-    frame_interval: int = 20
+    face_interval: int = 5
+    frame_interval: int = 30
+    use_gpu: bool = True
+    det_size: int = 640
+    # OCR settings (kept for config.py compatibility even though OCR is disabled)
+    ocr_weight: float = 1.0
+    ocr_min_face_for_weight: float = 0.20
 
     @classmethod
     def from_env(cls) -> "RuntimeDefaults":
@@ -61,13 +64,15 @@ class RuntimeDefaults:
     def as_dict(self) -> Dict[str, Any]:
         return {
             "face_threshold": self.face_threshold,
-            "ocr_weight": self.ocr_weight,
             "beam_min": self.beam_min,
             "switch_margin": self.switch_margin,
-            "ocr_min_face_for_weight": self.ocr_min_face_for_weight,
             "cooldown_frames": self.cooldown_frames,
             "face_interval": self.face_interval,
             "frame_interval": self.frame_interval,
+            "use_gpu": self.use_gpu,
+            "det_size": self.det_size,
+            "ocr_weight": self.ocr_weight,
+            "ocr_min_face_for_weight": self.ocr_min_face_for_weight,
         }
 
 

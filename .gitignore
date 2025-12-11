@@ -48,6 +48,7 @@ TempFiles/
 *.tmp
 *.bak
 *_OLD.csv
+01_data/00*.csv
 
 # Logs
 *.log
@@ -70,6 +71,9 @@ quiver_token.txt
 02_outputs/quiver_trades_cache.json
 02_outputs/matcher_commands.json
 
+# Pending review face captures
+01_data/pending_review/
+
 # Generated data files (keep source CSVs, ignore outputs)
 .db
 
@@ -88,3 +92,6 @@ quiver_token.txt
 # Temp files and archives
 09_tempfiles/
 *.tar.gz
+
+# Temporary command files
+zzcomnds.txt

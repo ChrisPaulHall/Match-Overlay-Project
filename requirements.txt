@@ -3,6 +3,16 @@
 # **Recommended:** follow the staged install in README.md/QUICKSTART.md to avoid long
 # OpenCV source builds. `pip install -r requirements.txt` can work but may compile
 # OpenCV from source (slow). Order matters for the staged approach.
+#
+# **Apple Silicon (M1/M2/M3):** Do NOT use `pip install -r requirements.txt` directly.
+# Instead, run the automated installer from the repo root:
+#   bash 03_scripts/install_m1.sh
+# Or follow the Apple Silicon section in QUICKSTART.md which uses:
+#   - tensorflow-macos + tensorflow-metal (instead of tensorflow)
+#   - onnxruntime-silicon (instead of onnxruntime)
+#   - Pinned numpy==1.26.4 to avoid threading conflicts
+#
+# GPU Support: On macOS, onnxruntime includes CoreMLExecutionProvider for GPU acceleration.
 
 # Core Web Framework
 Flask>=3.0,<4.0
@@ -24,6 +34,7 @@ scikit-image>=0.22,<1.0
 
 # Machine Learning / Face Recognition
 # IMPORTANT: onnx must be <1.17 due to ml_dtypes compatibility issues
+# onnxruntime includes CoreMLExecutionProvider on macOS for GPU acceleration
 tensorflow>=2.15,<2.20
 onnx>=1.14,<1.17
 onnxruntime>=1.18,<2.0

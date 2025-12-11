@@ -99,7 +99,7 @@ def compare_files():
     # Check files exist
     if not NEWER_FILE.exists():
         print(f"ERROR: Newer file not found: {NEWER_FILE}")
-        print("       Run the scraper first: python 03_scripts/scraper_quiver.py --resume")
+        print("       Run the scraper first: python 03_scripts/scraper_quiver.py --skip-strategy --resume")
         sys.exit(1)
     if not OLDER_FILE.exists():
         print(f"ERROR: Older file not found: {OLDER_FILE}")

@@ -6,6 +6,7 @@ Quick guide to getting the program running in ~15 minutes. For detailed setup, s
 
 - **Python 3.10 or 3.11** (3.9 too old, 3.13 not yet supported)
 - **OBS Studio** with Virtual Camera capability
+- **GPU** (optional) — macOS CoreML support for lower CPU usage
 
 
 ## Step 1: Download the Face Database (~1.6 GB)
@@ -52,6 +53,35 @@ pip install --no-deps fire gdown gunicorn mtcnn retina-face
 python -c "import cv2, tensorflow, flask, insightface, deepface; print('All imports OK')"
 ```
 
+### Apple Silicon (M1/M2/M3) Install
+
+Prefer the arm64 wheels to avoid x86 fallbacks:
+
+```bash
+# Core dependencies
+pip install Flask beautifulsoup4 requests pillow PyYAML xxhash scikit-image quiverquant
+
+# Pinned arm64 wheels
+pip install "numpy==1.26.4" "opencv-python-headless==4.12.0.88"
+pip install "onnx==1.16.2" "onnxruntime-silicon==1.16.3"
+pip install tensorflow-macos tensorflow-metal
+
+# Face recognition
+pip install --no-deps deepface
+pip install insightface
+pip install --no-deps fire gdown gunicorn mtcnn retina-face
+```
+
+Verify:
+```bash
+python -c "import cv2, tensorflow, flask, insightface, deepface; print('All imports OK')"
+```
+
+**Or use the automated script** (from repo root, venv activated):
+```bash
+bash 03_scripts/install_m1.sh
+```
+
 ## Step 4: Generate Face Embeddings (First Run Only)
 
 ```bash
@@ -90,6 +120,19 @@ Adjust `--cam_index` if OBS Virtual Camera isn't on index 0.
 
 The matcher reads from the virtual camera and writes overlay data; the browser source displays it.
 
+## Step 7: Configure (Optional)
+
+Open `http://localhost:5021/config` in your browser to tune settings:
+
+| Setting | Description | Default |
+|---------|-------------|---------|
+| **Use GPU** | Enable CoreML acceleration (macOS) | On |
+| **Detection Size** | Face detection resolution | 640 |
+| **Face Threshold** | Minimum similarity for matches | 0.50 |
+| **Face Interval** | Detect faces every N frames | 5 |
+
+**Note:** GPU and Detection Size changes require restarting the matcher.
+
 ## Troubleshooting
 
 | Issue | Solution |
@@ -98,5 +141,7 @@ The matcher reads from the virtual camera and writes overlay data; the browser s
 | ml_dtypes error | `pip install "onnx>=1.14,<1.17"` |
 | OpenCV building from source | Use staged install above |
 | No faces detected | Check `python 03_scripts/list_cameras.py` for correct cam index |
+| High CPU usage | Enable GPU and reduce Detection Size at `http://localhost:5021/config` |
+| `mutex lock failed` (Apple Silicon) | Set env vars: `OMP_NUM_THREADS=1 TF_NUM_INTEROP_THREADS=1 TF_NUM_INTRAOP_THREADS=1 python ...` |
 
-See [README.md](README.md) for troubleshooting guide.
+See [README.md](README.md) for full documentation.

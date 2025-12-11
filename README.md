@@ -2,7 +2,7 @@
 
 Real-time face recognition system that identifies U.S. Congress members on a live video feed and renders an overlay for OBS streaming.
 
-> **[QUICKSTART.md](QUICKSTART.md) for the fastest path to running the demo.
+> **[QUICKSTART.md](QUICKSTART.md)** for the fastest path to running the demo.
 
 ## What it does
 - Captures video from OBS Virtual Camera
@@ -14,10 +14,8 @@ Real-time face recognition system that identifies U.S. Congress members on a liv
 
 ## Prerequisites
 - **Python 3.10 or 3.11** (required; 3.9 will fail because of dependency minimums; 3.13 has compatibility issues)
-- **Tesseract OCR** (optional, only for text/ticker OCR)
-  - Install with `brew install tesseract` (macOS) or `apt-get install tesseract-ocr` (Linux)
-  - Face recognition works without it; OCR features require the binary on PATH
 - **OBS Studio** with Browser Source capability
+- **GPU** (optional but recommended) - macOS with CoreML support for GPU acceleration
 
 ## Setup
 
@@ -80,6 +78,27 @@ This generates face embeddings for fast matching (~5-15 minutes). Use `--embed_b
 | opencv-python-headless | >=4.8 | Single OpenCV variant (no GUI) |
 | deepface | >=0.0.90 | Face recognition framework |
 
+### Apple Silicon (M1/M2/M3) Notes
+
+- Use the arm64 wheels: `tensorflow-macos` + `tensorflow-metal` (instead of `tensorflow`), and `onnxruntime-silicon` (instead of `onnxruntime`).
+- Keep `onnx<1.17` (ml_dtypes compat) and avoid `numpy>=2.3` when paired with OpenCV 4.12.x.
+- If you see resolver warnings, explicitly pin the compatible trio used in testing:
+  ```bash
+  pip install "numpy==1.26.4" "opencv-python-headless==4.12.0.88"
+  pip install "onnx==1.16.2" "onnxruntime-silicon==1.16.3"
+  pip install tensorflow-macos tensorflow-metal
+  pip install --no-deps deepface
+  pip install insightface
+  pip install --no-deps fire gdown gunicorn mtcnn retina-face
+  ```
+- Verify imports: `python -c "import cv2, tensorflow, flask, insightface, deepface; print('All imports OK')"`
+
+**Quick install script (Apple Silicon):** For automated setup, use the provided script:
+```bash
+source venv/bin/activate
+bash 03_scripts/install_m1.sh
+```
+
 ## Running the system
 You typically run two processes: the matcher (produces overlay JSON) and the web overlay server (renders it).
 
@@ -90,10 +109,11 @@ python core/matcher.py --cam_index 0
 ```
 Useful flags:
 - `--embed_backend {auto,deepface,insightface}` (default `auto`) — **must match the backend used for `warm_embeddings.py`**
-- OCR is disabled by default in code; `--ocr_engine` is ignored unless you re-enable OCR and install Tesseract.
+- `--insight_det_size 640,640` — detection resolution (480=fast, 640=balanced, 960=accurate)
+- `--insight_det_thresh 0.5` — face detection confidence threshold
 - `--fast_cache_only` to refuse computing embeddings if the cache is missing
 - `--save_face_hits` (on by default) saves diverse face crops to `01_data/pending_review/`
-- `--quiver_token <TOKEN>` to fetch live trades from Quiver (optional; otherwise uses cached data) https://api.quiverquant.com/
+- `--quiver_token <TOKEN>` to fetch live trades from Quiver (optional; otherwise uses cached data)
 
 2) In another shell, start the overlay server:
 ```bash
@@ -155,6 +175,39 @@ After approving faces, regenerate embeddings:
 python core/warm_embeddings.py --faces_db 01_data/faces_official
 ```
 
+## GPU Acceleration (macOS)
+
+On macOS, the matcher can use CoreML to offload face detection to the GPU, reducing CPU usage significantly.
+
+**Check if GPU is available:**
+```bash
+python -c "import onnxruntime; print(onnxruntime.get_available_providers())"
+# Should show: ['CoreMLExecutionProvider', 'CPUExecutionProvider']
+```
+
+**GPU is enabled by default.** Configure via the web UI at `http://localhost:5021/config`:
+
+| Setting | Description | Default |
+|---------|-------------|---------|
+| **Use GPU** | Enable CoreML/GPU acceleration | On |
+| **Detection Size** | Face detection resolution (320-960) | 640 |
+
+Or via environment variables (requires restart):
+```bash
+export FACE_OVERLAY_USE_GPU=true
+export FACE_OVERLAY_DET_SIZE=640
+```
+
+**Performance comparison:**
+
+| Configuration | Typical CPU Usage |
+|---------------|-------------------|
+| CPU only, det_size=960 | ~300-400% |
+| CPU only, det_size=640 | ~100-150% |
+| GPU (CoreML), det_size=640 | ~30-50% |
+
+**Note:** GPU/det_size changes require restarting the matcher to take effect.
+
 ## Troubleshooting
 
 | Problem | Solution |
@@ -167,8 +220,10 @@ python core/warm_embeddings.py --faces_db 01_data/faces_official
 | **Broken venv shebang** | Recreate env: `rm -rf venv && python3.11 -m venv venv` |
 | **Tesseract not found** | OCR is optional. Install if needed: `brew install tesseract` (macOS) |
 | **Empty overlay** | Check `02_outputs/overlay_data.json` and matcher logs; lower `--beam_min` or `--face_min` |
-| **High CPU** | Increase `--frame_interval` and `--face_interval`; use `--embed_backend insightface` |
+| **High CPU** | Enable GPU at `http://localhost:5021/config`; reduce detection size to 480; increase `face_interval` and `frame_interval` |
 | **Python 3.13 errors** | Use Python 3.10/3.11 instead |
+| **CoreML not available** | Check `python -c "import onnxruntime; print(onnxruntime.get_available_providers())"` |
+| **`mutex lock failed` on Apple Silicon** | Set threading env vars before running: `OMP_NUM_THREADS=1 TF_NUM_INTEROP_THREADS=1 TF_NUM_INTRAOP_THREADS=1 python ...` |
 
 ## Project Structure
 
@@ -209,6 +264,7 @@ face_overlay_proj/
 - `core/ocr.py` — OCR pipeline and ROI extraction
 - `core/faces.py` — embedding backends (InsightFace/DeepFace) and face DB handling
 - `03_scripts/import_pending_faces.py` — interactive review and import of captured faces
+- `03_scripts/analyze_pending_faces.py` — calculate impact score for pending images
 - `03_scripts/validate_member_images.py` — cross-check face DB for mislabeled images
 - `03_scripts/scraper_OS.py` — scrape donor data from OpenSecrets (see Data Scrapers)
 - `03_scripts/scraper_quiver.py` — fetch net worth and holdings from QuiverQuant (see Data Scrapers)
@@ -217,6 +273,8 @@ face_overlay_proj/
 - `03_scripts/list_cameras.py` — list available cameras to find OBS virtual camera index
 - `03_scripts/update_trades_snapshot.py` — append latest trades to local CSV (requires Quiver token)
 - `03_scripts/analyze_member_database_strength.py` — analyze face DB quality and find weak members
+- `03_scripts/fetch_company_logos.py` — download company logos for stock tickers
+- `03_scripts/install_m1.sh` — automated Apple Silicon install script
 
 ## Data Scrapers
 
@@ -251,10 +309,11 @@ Options:
 ### QuiverQuant Scraper (`03_scripts/scraper_quiver.py`)
 
 Fetches financial disclosure data from [QuiverQuant](https://www.quiverquant.com/):
-- Net worth estimates and top stock holdings (via authenticated API)
+- Net worth estimates and top stock holdings (via JSON API)
 - Top traded sectors (scraped from public pages)
+- **Strategy returns vs SPY** — portfolio performance comparison (e.g., "Pelosi: +800%, SPY: +200% since 5/16/2014")
 
-**Requires API token:** Set `QUIVER_API_TOKEN` env var or create `quiver_token.txt` in the project root.
+**API token optional:** Set `QUIVER_API_TOKEN` env var or create `quiver_token.txt` for authenticated requests (higher rate limits). Works without token but may be slower.
 
 ```bash
 python 03_scripts/scraper_quiver.py --resume
@@ -264,6 +323,20 @@ Options:
 - `--cache-dir .cache_quiver` — cache responses locally
 - `--resume` — skip already-processed members
 - `--test N` — process only first N members (for testing)
+- `--bioguide ID [ID ...]` — process specific member(s) by bioguide ID
+- `--delay 1.5` — seconds between requests (default 1.5)
+- `-v, --verbose` — verbose logging
+
+**Output fields:**
+| Field | Description | Example |
+|-------|-------------|---------|
+| `net_worth_estimate` | Raw net worth value | `8200000.00` |
+| `normalized_net_worth` | Formatted net worth | `$8,200,000` |
+| `top_holdings` | Top 5 holdings by asset type | `Stocks: $5.2M; Real Estate: $2.1M` |
+| `top_traded_sectors` | Top 5 traded sectors | `Technology: 45; Healthcare: 23` |
+| `strategy_return` | Portfolio return percentage | `800.25%` |
+| `spy_return` | SPY benchmark return | `200.15%` |
+| `strategy_start_date` | First trade date | `2014-05-16` |
 
 ### Validating Scraped Data
 
@@ -307,9 +380,23 @@ Use the index shown for `--cam_index` when running the matcher.
 
 Append latest congressional trades to the local CSV (requires Quiver token):
 ```bash
-python 03_scripts/update_trades_snapshot.py
-python 03_scripts/update_trades_snapshot.py --dry-run  # preview without writing
+python 03_scripts/update_trades_snapshot.py                    # live endpoint (last ~1000 trades)
+python 03_scripts/update_trades_snapshot.py --bulk             # full history (paginated)
+python 03_scripts/update_trades_snapshot.py --v2               # V2 API format (more fields)
+python 03_scripts/update_trades_snapshot.py --dry-run          # preview without writing
+python 03_scripts/update_trades_snapshot.py --bioguide P000197 # filter by member
+python 03_scripts/update_trades_snapshot.py --ticker AAPL      # filter by ticker
 ```
+
+Options:
+- `--bulk` — use bulk endpoint for full trade history (paginated)
+- `--v2` — use V2 API format with extra fields (company, status, district, etc.)
+- `--bioguide ID` — filter by BioGuide ID
+- `--ticker SYMBOL` — filter by ticker symbol
+- `--nonstock` — include non-stock transactions
+- `--page-size N` — items per page for bulk endpoint (default: 10000)
+- `--max-pages N` — max pages to fetch (0 = unlimited)
+- `--dry-run` — preview without writing
 
 ### Analyze Face Database (`03_scripts/analyze_member_database_strength.py`)
 
@@ -317,6 +404,28 @@ Identify members with weak face representation (few images, poor quality):
 ```bash
 python 03_scripts/analyze_member_database_strength.py --db 01_data/faces_official
 ```
+
+### Analyze Pending Faces (`03_scripts/analyze_pending_faces.py`)
+
+Calculate the impact of adding pending images to the face database:
+```bash
+python 03_scripts/analyze_pending_faces.py
+python 03_scripts/analyze_pending_faces.py --show-all  # Include low-impact images
+```
+
+The script analyzes each pending image and scores it based on:
+- **Diversity** — how different from existing images
+- **Consistency** — confirms it's the same person
+- **Coverage** — members with fewer images get higher scores
+- **Quality** — face detection confidence
+
+Output categories:
+- 🟢 **HIGH** — recommend approve (adds diversity)
+- 🟡 **MEDIUM** — consider (moderate value)
+- 🔴 **SUSPICIOUS** — low similarity (might be wrong person)
+- ⚪ **LOW** — similar to existing or member well-covered
+
+Reports are saved to `04_reports/pending_analysis_TIMESTAMP.txt`.
 
 ### Validate Face Database (`03_scripts/validate_member_images.py`)
 
@@ -330,6 +439,22 @@ Options:
 - `--output-dir 04_reports` — where to save validation reports
 
 Reports are saved to `04_reports/` with details on problematic members.
+
+### Fetch Company Logos (`03_scripts/fetch_company_logos.py`)
+
+Download company logos for stock tickers in the trades data:
+```bash
+python 03_scripts/fetch_company_logos.py              # fetch all missing logos
+python 03_scripts/fetch_company_logos.py --test 50    # test with first 50 tickers
+python 03_scripts/fetch_company_logos.py --force      # re-fetch even if cached
+python 03_scripts/fetch_company_logos.py --dry-run    # preview without downloading
+```
+
+Output:
+- `01_data/logos/{TICKER}.png` — Cached logo images
+- `01_data/ticker_logos.csv` — Index mapping tickers to logo paths
+
+Uses [Logo.dev](https://logo.dev) API. Set `LOGO_DEV_TOKEN` env var to use your own token.
 
 ## Data Sources & Attribution
 
@@ -367,4 +492,4 @@ Contributions are welcome! Please:
 For bug reports and feature requests, please open an issue on GitHub.
 
 ---
-*Last updated: 2025-12-11*
+*Last updated: 2025-12-11* (Apple Silicon support, strategy returns, bulk trades API, fetch_company_logos)

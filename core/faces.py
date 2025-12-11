@@ -583,16 +583,33 @@ class FacePipeline:
         if self._insight_app is not None:
             return True
         try:
-            self._insight_app = FaceAnalysis(name="buffalo_l", providers=["CPUExecutionProvider"])
+            # Select providers based on use_gpu config
+            use_gpu = self.config.get("use_gpu", True)
+            if use_gpu:
+                providers = ["CoreMLExecutionProvider", "CPUExecutionProvider"]
+            else:
+                providers = ["CPUExecutionProvider"]
+            logging.info("InsightFace providers: %s (use_gpu=%s)", providers, use_gpu)
+
+            self._insight_app = FaceAnalysis(name="buffalo_l", providers=providers)
+
+            # Get detection size from config (support both old and new keys)
             det_size = (640, 640)
             try:
-                sz = str(self.config.get("insight_det_size", "640,640"))
-                parts = [int(x.strip()) for x in sz.replace("x", ",").split(",") if x.strip()]
-                if len(parts) == 2 and parts[0] > 0 and parts[1] > 0:
-                    det_size = (parts[0], parts[1])
+                # Try new key first (single int), then old key (string "W,H")
+                if "det_size" in self.config:
+                    sz = int(self.config["det_size"])
+                    det_size = (sz, sz)
+                elif "insight_det_size" in self.config:
+                    sz = str(self.config["insight_det_size"])
+                    parts = [int(x.strip()) for x in sz.replace("x", ",").split(",") if x.strip()]
+                    if len(parts) == 2 and parts[0] > 0 and parts[1] > 0:
+                        det_size = (parts[0], parts[1])
             except Exception:
                 det_size = (640, 640)
+
             det_thresh = float(self.config.get("insight_det_thresh", 0.45))
+            logging.info("InsightFace det_size=%s, det_thresh=%s", det_size, det_thresh)
             self._insight_app.prepare(ctx_id=0, det_size=det_size, det_thresh=det_thresh)
             return True
         except Exception as exc:

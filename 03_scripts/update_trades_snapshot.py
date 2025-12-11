@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Append the latest Quiver live-congress trading data to the local snapshot.
+"""Append the latest Quiver congress trading data to the local snapshot.
 
 This helper keeps ``01_data/members_trades_clean.csv`` growing beyond the
 1,000-row window returned by QuiverQuant's ``/beta/live/congresstrading``
-endpoint.  It fetches the current feed, normalizes the payload to match the
-overlay's fallback schema, de-duplicates rows that are already present, and
-rewrites the CSV sorted by trade date (most recent first).
+endpoint.  It can also use the bulk endpoint for full history with pagination.
+
+It fetches the current feed, normalizes the payload to match the overlay's
+fallback schema, de-duplicates rows that are already present, and rewrites
+the CSV sorted by trade date (most recent first).
 
 Usage (from the project root):
 
@@ -17,6 +19,13 @@ Optional flags::
     --token-file PATH    Point to a specific quiver_token.txt.
     --dry-run            Skip writing changes; prints the summary instead.
     --verbose            Show debug logs while processing.
+    --bulk               Use bulk endpoint for full history (paginated).
+    --page-size N        Items per page for bulk endpoint (default: 10000).
+    --max-pages N        Maximum pages to fetch (default: unlimited).
+    --bioguide ID        Filter by BioGuide ID.
+    --ticker SYMBOL      Filter by ticker symbol.
+    --nonstock           Include non-stock transactions.
+    --v2                 Use V2 API format (more fields).
 
 The script looks for ``QUIVER_API_TOKEN`` in the environment or, if unset,
 falls back to resolving ``quiver_token.txt`` using the same search order as the
@@ -50,6 +59,7 @@ except Exception as exc:  # pragma: no cover - defensive fallback
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DATA_PATH = PROJECT_ROOT / "01_data" / "members_trades_clean.csv"
 LIVE_ENDPOINT = "https://api.quiverquant.com/beta/live/congresstrading"
+BULK_ENDPOINT = "https://api.quiverquant.com/beta/bulk/congresstrading"
 FIELD_ORDER = [
     "BioGuideID",
     "first_name",
@@ -69,6 +79,16 @@ FIELD_ORDER = [
     "report_date",
     "transaction_date",
     "last_modified",
+]
+
+# Additional V2 fields (appended when --v2 is used)
+V2_EXTRA_FIELDS = [
+    "company",
+    "status",
+    "subholding",
+    "chamber",
+    "district",
+    "comments",
 ]
 
 NAME_INDEX_SOURCES = [
@@ -113,7 +133,7 @@ class FetchError(RuntimeError):
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Merge Quiver live congress trades into the local snapshot CSV."
+        description="Merge Quiver congress trades into the local snapshot CSV."
     )
     parser.add_argument(
         "--data-file",
@@ -135,6 +155,46 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--verbose",
         action="store_true",
         help="Verbose logging for debugging.",
+    )
+    # Bulk endpoint options
+    parser.add_argument(
+        "--bulk",
+        action="store_true",
+        help="Use bulk endpoint for full history (paginated).",
+    )
+    parser.add_argument(
+        "--page-size",
+        type=int,
+        default=10000,
+        help="Items per page for bulk endpoint (default: 10000).",
+    )
+    parser.add_argument(
+        "--max-pages",
+        type=int,
+        default=0,
+        help="Maximum pages to fetch, 0 for unlimited (default: 0).",
+    )
+    # Filtering options
+    parser.add_argument(
+        "--bioguide",
+        type=str,
+        help="Filter by BioGuide ID.",
+    )
+    parser.add_argument(
+        "--ticker",
+        type=str,
+        help="Filter by ticker symbol.",
+    )
+    parser.add_argument(
+        "--nonstock",
+        action="store_true",
+        help="Include non-stock transactions.",
+    )
+    # V2 API format
+    parser.add_argument(
+        "--v2",
+        action="store_true",
+        help="Use V2 API format (more fields: company, status, chamber, etc.).",
     )
     return parser.parse_args(argv)
 
@@ -209,30 +269,119 @@ def build_name_index() -> Dict[str, str]:
     return index
 
 
-def fetch_live_trades(token: str) -> List[dict]:
+def fetch_live_trades(
+    token: str,
+    *,
+    use_bulk: bool = False,
+    page_size: int = 10000,
+    max_pages: int = 0,
+    bioguide: str | None = None,
+    ticker: str | None = None,
+    nonstock: bool = False,
+    use_v2: bool = False,
+) -> List[dict]:
+    """Fetch trades from Quiver API.
+
+    Args:
+        token: API authentication token
+        use_bulk: Use bulk endpoint (paginated) instead of live
+        page_size: Items per page for bulk endpoint
+        max_pages: Max pages to fetch (0 = unlimited)
+        bioguide: Filter by BioGuide ID
+        ticker: Filter by ticker symbol
+        nonstock: Include non-stock transactions
+        use_v2: Use V2 API format
+    """
     headers = {
         "Accept": "application/json",
         "Authorization": f"Bearer {token}",
     }
-    try:
-        response = requests.get(LIVE_ENDPOINT, headers=headers, timeout=30)
-    except requests.RequestException as exc:  # pragma: no cover - network failure
-        raise FetchError(f"Request failed: {exc}") from exc
 
-    if response.status_code // 100 != 2:
-        raise FetchError(
-            f"HTTP {response.status_code} from live endpoint: {response.text.strip()}"
-        )
+    # Build query parameters
+    params: Dict[str, str] = {"normalized": "true"}
+    if use_v2:
+        params["version"] = "V2"
+    if bioguide:
+        params["bioguide_id"] = bioguide
+    if ticker:
+        params["ticker"] = ticker
+    if nonstock:
+        params["nonstock"] = "true"
 
-    try:
-        payload = response.json()
-    except ValueError as exc:
-        raise FetchError("Live endpoint returned invalid JSON") from exc
+    if not use_bulk:
+        # Live endpoint - single request
+        try:
+            response = requests.get(
+                LIVE_ENDPOINT, headers=headers, params=params, timeout=30
+            )
+        except requests.RequestException as exc:
+            raise FetchError(f"Request failed: {exc}") from exc
 
-    if not isinstance(payload, list):
-        raise FetchError("Expected a JSON array from live endpoint")
+        if response.status_code // 100 != 2:
+            raise FetchError(
+                f"HTTP {response.status_code} from live endpoint: {response.text.strip()}"
+            )
 
-    return payload
+        try:
+            payload = response.json()
+        except ValueError as exc:
+            raise FetchError("Live endpoint returned invalid JSON") from exc
+
+        if not isinstance(payload, list):
+            raise FetchError("Expected a JSON array from live endpoint")
+
+        return payload
+
+    # Bulk endpoint - paginated requests
+    all_rows: List[dict] = []
+    page = 1
+    params["page_size"] = str(page_size)
+
+    while True:
+        params["page"] = str(page)
+        logging.info("Fetching bulk page %d (page_size=%d)...", page, page_size)
+
+        try:
+            response = requests.get(
+                BULK_ENDPOINT, headers=headers, params=params, timeout=60
+            )
+        except requests.RequestException as exc:
+            raise FetchError(f"Request failed on page {page}: {exc}") from exc
+
+        if response.status_code // 100 != 2:
+            raise FetchError(
+                f"HTTP {response.status_code} from bulk endpoint (page {page}): "
+                f"{response.text.strip()}"
+            )
+
+        try:
+            payload = response.json()
+        except ValueError as exc:
+            raise FetchError(f"Bulk endpoint page {page} returned invalid JSON") from exc
+
+        if not isinstance(payload, list):
+            raise FetchError(f"Expected a JSON array from bulk endpoint (page {page})")
+
+        if not payload:
+            logging.info("Page %d returned 0 rows, stopping pagination.", page)
+            break
+
+        all_rows.extend(payload)
+        logging.info("Page %d returned %d rows (total: %d)", page, len(payload), len(all_rows))
+
+        # Check if we've hit max pages
+        if max_pages > 0 and page >= max_pages:
+            logging.info("Reached max_pages limit (%d), stopping.", max_pages)
+            break
+
+        # Check if we got fewer rows than page_size (last page)
+        if len(payload) < page_size:
+            logging.info("Last page reached (got %d < %d).", len(payload), page_size)
+            break
+
+        page += 1
+
+    return all_rows
 
 
 def load_existing_rows(path: Path) -> List[dict]:
@@ -257,7 +406,9 @@ def dedupe_key(row: dict) -> Tuple[str, str, str, str, str]:
     return ident, date, ticker, txn, amount
 
 
-def normalize_trade(entry: dict, *, name_index: Dict[str, str]) -> dict | None:
+def normalize_trade(
+    entry: dict, *, name_index: Dict[str, str], include_v2_fields: bool = False
+) -> dict | None:
     full_name = _first_nonempty(entry, REPRESENTATIVE_KEYS)
     first, last = _split_name(full_name)
     ticker = _first_nonempty(entry, ("Ticker", "ticker"))
@@ -282,12 +433,21 @@ def normalize_trade(entry: dict, *, name_index: Dict[str, str]) -> dict | None:
     ]
     bioguide = next((c for c in bioguide_candidates if c), "")
 
+    # V2 API uses "Chamber" instead of "House"
+    house = (
+        entry.get("House")
+        or entry.get("house")
+        or entry.get("Chamber")
+        or entry.get("chamber")
+        or ""
+    ).strip()
+
     cleaned = {
         "first_name": first,
         "last_name": last,
         "representative": full_name,
         "BioGuideID": bioguide,
-        "house": (entry.get("House") or entry.get("house") or "").strip(),
+        "house": house,
         "party": (entry.get("Party") or entry.get("party") or "").strip(),
         "transaction": transaction,
         "ticker": ticker,
@@ -298,10 +458,20 @@ def normalize_trade(entry: dict, *, name_index: Dict[str, str]) -> dict | None:
         "excess_return": _first_nonempty(entry, ("ExcessReturn", "excess_return")),
         "price_change": _first_nonempty(entry, ("PriceChange", "price_change")),
         "spy_change": _first_nonempty(entry, ("SPYChange", "spy_change")),
-        "report_date": _first_nonempty(entry, ("ReportDate", "report_date")),
+        "report_date": _first_nonempty(entry, ("ReportDate", "report_date", "Filed", "filed")),
         "transaction_date": trade_date,
         "last_modified": _first_nonempty(entry, ("last_modified", "LastModified")),
     }
+
+    # Add V2 extra fields if requested
+    if include_v2_fields:
+        cleaned["company"] = _first_nonempty(entry, ("Company", "company"))
+        cleaned["status"] = _first_nonempty(entry, ("Status", "status"))
+        cleaned["subholding"] = _first_nonempty(entry, ("Subholding", "subholding"))
+        cleaned["chamber"] = house  # Same as house for V2
+        cleaned["district"] = _first_nonempty(entry, ("District", "district"))
+        cleaned["comments"] = _first_nonempty(entry, ("Comments", "comments"))
+
     return cleaned
 
 
@@ -327,13 +497,14 @@ def merge_trades(existing: List[dict], fresh: List[dict]) -> Tuple[List[dict], i
     return sorted_rows, added
 
 
-def write_rows(path: Path, rows: List[dict]) -> None:
+def write_rows(path: Path, rows: List[dict], *, include_v2_fields: bool = False) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
+    fieldnames = FIELD_ORDER + (V2_EXTRA_FIELDS if include_v2_fields else [])
     with path.open("w", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=FIELD_ORDER)
+        writer = csv.DictWriter(fh, fieldnames=fieldnames)
         writer.writeheader()
         for row in rows:
-            writer.writerow({field: row.get(field, "") for field in FIELD_ORDER})
+            writer.writerow({field: row.get(field, "") for field in fieldnames})
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -349,21 +520,48 @@ def main(argv: Sequence[str] | None = None) -> int:
         logging.error("Unable to resolve Quiver API token: %s", exc)
         return 2
 
-    logging.info("Fetching live congress trades from Quiver...")
+    # Build description of what we're doing
+    endpoint_type = "bulk" if args.bulk else "live"
+    version_str = "V2" if args.v2 else "V1"
+    filters = []
+    if args.bioguide:
+        filters.append(f"bioguide={args.bioguide}")
+    if args.ticker:
+        filters.append(f"ticker={args.ticker}")
+    if args.nonstock:
+        filters.append("nonstock=true")
+    filter_str = f" ({', '.join(filters)})" if filters else ""
+
+    logging.info(
+        "Fetching %s congress trades from Quiver (%s%s)...",
+        endpoint_type,
+        version_str,
+        filter_str,
+    )
+
     try:
-        payload = fetch_live_trades(token)
+        payload = fetch_live_trades(
+            token,
+            use_bulk=args.bulk,
+            page_size=args.page_size,
+            max_pages=args.max_pages,
+            bioguide=args.bioguide,
+            ticker=args.ticker,
+            nonstock=args.nonstock,
+            use_v2=args.v2,
+        )
     except (FetchError, QuiverQuantError) as exc:
-        logging.error("Failed to download live feed: %s", exc)
+        logging.error("Failed to download feed: %s", exc)
         return 3
 
-    logging.info("Loaded %d rows from live endpoint", len(payload))
+    logging.info("Loaded %d rows from %s endpoint", len(payload), endpoint_type)
 
     name_index = build_name_index()
     logging.debug("Name index contains %d unique entries", len(name_index))
 
     normalized_rows = []
     for entry in payload:
-        row = normalize_trade(entry, name_index=name_index)
+        row = normalize_trade(entry, name_index=name_index, include_v2_fields=args.v2)
         if row:
             normalized_rows.append(row)
 
@@ -385,7 +583,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         logging.info("Dry-run enabled; skipping file write.")
         return 0
 
-    write_rows(args.data_file, merged_rows)
+    write_rows(args.data_file, merged_rows, include_v2_fields=args.v2)
     logging.info("Updated snapshot written to %s", args.data_file)
     return 0
 

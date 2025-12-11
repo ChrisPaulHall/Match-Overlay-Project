@@ -1,0 +1,51 @@
+# Requires Python 3.10 or 3.11 (scikit-image >=0.25 needs 3.10+)
+#
+# **IMPORTANT:** Do NOT use `pip install -r requirements.txt` directly.
+# Instead, follow the STAGED INSTALL approach in README.md or QUICKSTART.md
+# to avoid long OpenCV source builds. The order matters!
+#
+# See README.md for staged install tips to avoid OpenCV source builds.
+
+# Core Web Framework
+Flask==3.0.3
+flask-cors==5.0.0
+
+# Web Scraping & Parsing
+beautifulsoup4==4.12.3
+requests==2.32.3
+
+# Data Processing
+numpy==1.26.4
+pandas==2.2.2
+PyYAML==6.0.2
+xxhash==3.4.1
+
+# Image Processing
+pillow==10.4.0
+opencv-python-headless==4.10.0.84
+scikit-image==0.25.2
+
+# Machine Learning / Face Recognition
+tensorflow==2.15.0
+tensorflow-estimator==2.15.0
+onnx>=1.14,<1.17
+onnxruntime==1.18.1
+insightface==0.7.3
+deepface==0.0.93
+
+# DeepFace dependencies (installable with --no-deps to avoid opencv rebuild)
+fire>=0.4.0
+gdown>=3.10.1
+gunicorn>=20.1.0
+mtcnn>=0.1.0
+retina-face>=0.0.1
+
+# OCR (optional - Tesseract binary must be installed separately)
+pytesseract==0.3.13
+
+# Financial Data
+quiverquant==0.2.2
+
+# Installation help
+# If OpenCV attempts to build from source, install deepface with --no-deps and
+# then install the explicit dependencies above. See README for details.

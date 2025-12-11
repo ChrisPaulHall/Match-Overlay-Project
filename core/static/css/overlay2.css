@@ -1,0 +1,921 @@
+@import url("overlay3.css"); /* pull in base overlay styles */
+
+:root { /* theme variables for light overlay */
+  --section-heading-gap: 7px;
+  --section-row-gap: 7px;
+  --section-row-padding: 7px;
+  --section-subline-gap: 7px;
+
+  --white: #ffffff; /* desaturated white foreground */
+  --accent: #5fc7ff; /* primary accent color - from overlay-sharp */
+  --accent-2: #9be9ff; /* secondary accent hue - from overlay-sharp */
+  --money: #6fd0cb; /* secondary accent hue */
+  --fg: #eef3ff; /* default light foreground text - from overlay-sharp */
+  --muted: rgba(238, 243, 255, 0.68); /* subdued text color - from overlay-sharp */
+  --bg: #040d1d; /* overlay background wash - from overlay-sharp */
+  --bg-panel: #142338; /* panel background - from overlay-sharp */
+  --card: #495D75; /* card surface tint */
+  --hairline: rgba(150, 209, 255, 0.32); /* subtle divider color - from overlay-sharp */
+  --surface: #172C42; /* main surface color */
+  --surface-alt: #031326; /* alternate surface tint */
+  --panel-surface: #1a2f4a; /* main panel surface - from overlay-sharp */
+  --panel-surface-alt: #112036; /* alternate panel surface - from overlay-sharp */
+  --panel-outline: rgba(150, 209, 255, 0.26); /* panel outline - from overlay-sharp */
+  --panel-outline-strong: rgba(150, 209, 255, 0.42); /* strong panel outline - from overlay-sharp */
+  --border-soft: rgba(150, 209, 255, 0.26); /* gentle border tone - updated */
+  --border-strong: rgba(150, 209, 255, 0.42); /* brighter border tone - updated */
+  --shadow: 0 34px 60px rgba(2, 6, 16, 0.55); /* global drop shadow - from overlay-sharp */
+  --glow-accent: 0 0px 0px rgba(122, 147, 167, 0.99); /* accent glow shadow */
+  --ticker-shell: rgba(7, 14, 28, 0.88); /* ticker background - from overlay-sharp */
+
+  --font-label-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* primary label family */
+  --text-label-weight: 600; /* bold labels */
+  --text-label-size: 15px; /* consistent label size */
+  --text-label-spacing: 0.0em; /* subtle tracking for labels */
+  --text-label-color: var(--white); /* label color token */
+
+  --font-value-family: var(--font-label-family); /* reuse font family for values */
+  --text-value-weight: 600; /* medium values */
+  --text-value-size: 15px; /* consistent value size */
+  --text-value-spacing: 0.0em; /* value tracking */
+  --text-value-color: var(--accent); /* value color token */
+
+  --font-alt-family: var(--font-label-family); /* alternate text family */
+  --text-alt-weight: 500; /* medium alternate style */
+  --text-alt-size: 15px; /* alternate text size */
+  --text-alt-spacing: 0.0em; /* alternate tracking */
+  --text-alt-color: var(--accent-2); /* alternate accent color */
+
+  --text-money-weight: 500; /* monetary emphasis */
+  --text-money-size: 15px; /* monetary size */
+  --text-money-spacing: 0em; /* monetary tracking */
+  --text-money-color: var(--money); /* monetary color */
+}
+
+body { /* default body styling */
+  color: var(--white); /* set body text to light foreground */
+  font-weight: 500; /* make base text medium weight */
+}
+
+/* -------------------------------------------------------------------------- *
+ * Typography system for overlay cards
+ * -------------------------------------------------------------------------- */
+
+
+ .typography-label,
+#bio-list .bio-label,
+[data-original-id="bio-list"] .bio-label,
+.list.list--kv .kv-label,
+#committee-list .committee-line,
+[data-original-id="committee-list"] .committee-line,
+#sectors-list > li,
+[data-original-id="sectors-list"] > li,
+.trade-col--asset {
+  font-family: var(--font-label-family) !important;
+  font-weight: var(--text-label-weight) !important;
+  font-size: var(--text-label-size) !important;
+  letter-spacing: var(--text-label-spacing) !important;
+  color: var(--text-label-color) !important;
+}
+
+.typography-value,
+#bio-list .bio-value,
+[data-original-id="bio-list"] .bio-value,
+.list.list--kv .kv-amount,
+.education-degree-inline,
+.education-degree-value {
+  font-family: var(--font-value-family) !important;
+  font-weight: var(--text-value-weight) !important;
+  font-size: var(--text-value-size) !important;
+  letter-spacing: var(--text-value-spacing) !important;
+  color: var(--text-value-color) !important;
+}
+
+.typography-alt,
+#committee-list .committee-subitem,
+[data-original-id="committee-list"] .committee-subitem,
+.trade-asset-name,
+.trade-col--date {
+  font-family: var(--font-alt-family) !important;
+  font-weight: var(--text-alt-weight) !important;
+  font-size: var(--text-alt-size) !important;
+  letter-spacing: var(--text-alt-spacing) !important;
+  color: var(--text-alt-color) !important;
+}
+
+.typography-money,
+.trade-col--amount,
+.ticker-trade-grid-cell.trade-col--amount {
+  font-family: var(--font-value-family) !important;
+  font-weight: var(--text-money-weight) !important;
+  font-size: var(--text-money-size) !important;
+  letter-spacing: var(--text-money-spacing) !important;
+  color: var(--text-money-color) !important;
+}
+
+/* -------------------------------------------------------------------------- *
+ * Spacing helpers
+ * -------------------------------------------------------------------------- */
+.section-eyebrow,
+.section-subhead,
+#donors-period,
+#industries-period,
+[data-original-id="donors-period"],
+[data-original-id="industries-period"] {
+  margin-bottom: var(--section-heading-gap);
+}
+
+.section .list {
+  gap: var(--section-row-gap);
+}
+
+.list.list--kv > li,
+#bio-list li.bio-pair,
+[data-original-id="bio-list"] li.bio-pair,
+#sectors-list > li,
+[data-original-id="sectors-list"] > li,
+#committee-list > li,
+[data-original-id="committee-list"] > li,
+.overlay-grid [data-loop-clone="true"] [data-original-id="committee-list"] > li,
+.list:not(.small):not(.flat) > li {
+  padding-top: var(--section-row-padding);
+  padding-bottom: var(--section-row-padding);
+}
+
+#committee-list > li,
+[data-original-id="committee-list"] > li,
+.overlay-grid [data-loop-clone="true"] [data-original-id="committee-list"] > li {
+  gap: var(--section-subline-gap);
+}
+
+#committee-list .committee-sublist,
+[data-original-id="committee-list"] .committee-sublist,
+.overlay-grid [data-loop-clone="true"] .committee-sublist {
+  gap: var(--section-subline-gap);
+}
+
+#committee-list .committee-subitem,
+[data-original-id="committee-list"] .committee-subitem,
+.overlay-grid [data-loop-clone="true"] .committee-subitem {
+  padding-top: var(--section-row-padding) !important;
+  padding-bottom: var(--section-row-padding) !important;
+  padding-left: 18px !important;
+}
+
+h2 { 
+  font-weight: 600; 
+  letter-spacing: 0.12em; 
+  color: var(--accent); 
+}
+
+h3 {
+  font-weight: 500; 
+  letter-spacing: 0.12em; 
+  color: var(--accent);
+  text-transform: uppercase; 
+}
+
+#speaker-name { /* speaker name container */
+  display: flex; /* lay out name stack with flexbox */
+  flex-direction: column; /* stack name lines vertically */
+  gap: 12px; /* space between name and metadata */
+  margin: 0; /* remove default margins */
+  font-size: clamp(28px, 4.6vh, 30px); /* slightly larger for title emphasis */
+  line-height: 1.0; /* keep lines tight together */
+  font-weight: 600; /* semi-bold weight */
+  letter-spacing: 0.01em; /* small positive tracking for a more "title" feel */
+  text-align: left; /* align name to left edge */
+  color: var(--white); /* set primary name color to soft white */
+  /*text-shadow: /* layer glowing shadow effects */
+  /*  0 18px 38px rgb(23, 43, 64, 0.2), /* deep drop shadow for depth */
+  /*  0 0 2px var(--accent-2); /* subtle cyan halo */
+}
+
+#speaker-name strong { /* emphasized speaker name line */
+  font-weight: 600; /* extra-bold to highlight */
+  letter-spacing: 0.06em; /* expand spacing for emphasis */
+  color: var(--fg); /* shift color to brighter foreground */
+  font-size: 1.05em; /* enlarge highlighted portion */
+  text-shadow: 0 0 18px rgba(124, 191, 238, 0.1); /* add inner glow */
+}
+
+#speaker-name .speaker-name__primary { /* main given name styling */
+  color: var(--accent); /* match primary foreground color */
+  font-weight: 600; /* bold primary name */
+}
+
+.speaker-name__meta { /* metadata chip under name */
+  display: inline-flex; /* align metadata inline */
+  align-items: flex-start; /* align meta text to the top edge */
+  gap: 0.0; /* no extra spacing between children */
+  font-size: 0.72em; /* reduce font size for metadata */
+  font-weight: 600; /* make metadata bold */
+  letter-spacing: 0.15em; /* widen characters for badge feel */
+  text-transform: uppercase; /* enforce uppercase metadata */
+  color: var(--accent); /* color metadata by accent hue */
+  opacity: 0.96; /* keep metadata crisp but not overpowering */
+  /*text-shadow: var(--glow-accent); /* apply ready-made accent glow */
+}
+
+.speaker-name__meta::before { /* metadata divider line */
+  content: ""; /* render decorative line */
+  display: inline-block; /* allow box sizing */
+  width: 0; /* set line width */
+  height: 0; /* make line very thin */
+  border-radius: 999px; /* fully round line ends */
+  background: linear-gradient(90deg, transparent, var(--accent)); /* fade line to steel blue */
+}
+
+.speaker-name--with-meta { /* spacing tweak when metadata present */
+  gap: 0px; /* increase distance between name and metadata */
+}
+
+.overlay-header { /* from overlay-sharp */
+  display: grid;
+  gap: 18px; /* tighten spacing between name and KPI */
+  padding-bottom: 8px; /* build a clearer header band */
+  margin-bottom: 8px; /* separate header from rotating cards */
+  border-bottom: 1px solid var(--border-soft); /* subtle divider line */
+}
+
+.identity-block { /* container for identity section */
+  display: grid; /* lay out subsections in grid */
+  gap: 14px; /* slightly tighter vertical spacing for a unified title feel */
+}
+
+.identity-headline { /* highlighted identity card for speaker identity */
+  position: relative; /* allow layered effects */
+  display: grid; /* grid layout keeps content tidy */
+  grid-template-columns: minmax(0, 1fr); /* single-column card */
+  align-items: start; /* align content to top */
+  gap: 22px; /* internal spacing between rows */
+  padding: 24px 20px; /* from overlay-sharp */
+  border-radius: 22px; /* from overlay-sharp */
+  background: linear-gradient(140deg, rgba(33, 64, 105, 0.82), rgba(15, 24, 41, 0.9)); /* from overlay-sharp */
+  border: 1px solid var(--panel-outline); /* from overlay-sharp */
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05); /* from overlay-sharp */
+  overflow: hidden; /* clip decorative overflow */
+}
+.identity-headline__body { /* copy block inside identity card */
+  display: flex; /* stack content with flexbox */
+  flex-direction: column; /* vertical layout */
+  gap: 14px; /* spacing between elements */
+  min-width: 0; /* allow flex child to shrink properly */
+}
+.identity-networth { /* standalone net worth card stacked below identity */
+  align-self: stretch; /* make tile span card width */
+  min-width: 0; /* prevent overflow within grid column */
+}
+
+.identity-headline::before { /* glowing backdrop for identity card */
+  content: ""; /* create decorative overlay */
+  position: absolute; /* position relative to card */
+  inset: -30% -10% 30% 10%; /* stretch glow beyond edges */
+  /* background:
+      radial-gradient(circle at 18% 20%, #7cbfee80, transparent 95%),
+      radial-gradient(circle at 80% 0%, rgba(47, 68, 92, 0.42), transparent 10%);
+     opacity: 0.1;
+  */
+  pointer-events: none; /* keep overlay from blocking interactions */
+}
+
+.subtle { /* muted text helper class */
+  font-weight: 500; /* medium emphasis weight */
+  color: var(--accent-2); /* use muted tone */
+}
+
+.meta-line .meta-label { /* label styling inside meta rows */
+  font-weight: 500; /* emphasize label text */
+  color: var(--white); /* tinted muted color */
+  letter-spacing: 0.02em; /* slight letter spacing */
+}
+
+.meta-line .meta-value { /* value styling inside meta rows */
+  font-weight: 500; /* semi-bold weight */
+  color: var(--accent);
+}
+
+.overlay { /* main overlay container */
+  position: relative; /* enable layered pseudo-elements */
+  padding: 32px 24px 26px; /* from overlay-sharp */
+  border-radius: 0; /* from overlay-sharp */
+  border: 1px solid var(--panel-outline); /* from overlay-sharp */
+  background: linear-gradient(180deg, rgba(11, 22, 40, 0.96), rgba(5, 11, 23, 0.92)); /* from overlay-sharp */
+  box-shadow: var(--shadow); /* from overlay-sharp */
+}
+
+.overlay::before { /* from overlay-sharp */
+  opacity: 0.4;
+}
+
+.overlay::after { /* from overlay-sharp */
+  background: linear-gradient(180deg, rgba(8, 16, 32, 0.8), rgba(4, 8, 18, 0.95));
+}
+
+#networth-section { /* net worth stats container */
+  position: relative; /* enable positioned pseudo-elements */
+  display: grid; /* arrange header content in grid */
+  grid-template-columns: 5px minmax(0, auto) 1fr; /* ribbon + label + value layout */
+  column-gap: 18px; /* space between label and value */
+  row-gap: 0px; /* no vertical gap in single-row layout */
+  align-items: center; /* vertically align label and value */
+  padding: 18px 18px 18px 16px; /* slightly tighter to read as part of the title band */
+  border-radius: 20px; /* match section cards */
+  background: linear-gradient(155deg, var(--panel-surface), var(--panel-surface-alt)); /* match section cards */
+  border: 1px solid var(--panel-outline-strong); /* vivid border */
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 18px 32px rgba(4, 8, 22, 0.5); /* slightly softer drop shadow than body cards */
+  isolation: isolate; /* contain z-index blending effects */
+  min-width: 0; /* avoid overflow issues in grid */
+  margin-top: -4px; /* visually tuck net worth card closer to the name card */
+}
+
+#networth-section::before { /* glowing overlay for net worth card */
+  content: ""; /* create decorative layer */
+  position: absolute; /* position relative to card container */
+  inset: 0; /* cover full card area */
+  background-image:
+    radial-gradient(circle at 18% 20%, rgba(95, 199, 255, 0.08), transparent 60%),
+    radial-gradient(circle at 85% 15%, rgba(124, 191, 238, 0.06), transparent 50%); /* subtle cyan accent wash */
+  pointer-events: none; /* keep overlay non-interactive */
+  opacity: 1; /* keep glow subtle but visible */
+  z-index: 0; /* sit beneath card content */
+}
+
+#networth-section::after { /* accent ribbon column */
+  content: ""; /* render ribbon strip */
+  border-radius: 999px; /* rounded ribbon ends */
+  background: linear-gradient(180deg, var(--accent), var(--accent-2)); /* glowing cyan accent gradient */
+  box-shadow: 0 0 12px rgba(95, 199, 255, 0.4); /* add glow around ribbon */
+  grid-column: 1; /* occupy ribbon column */
+  grid-row: 1; /* align with card row */
+  align-self: stretch; /* fill card height */
+  z-index: 1; /* layer above glow but below text */
+}
+
+.identity-networth__label { /* label styling for net worth */
+  color: var(--accent); /* use accent color for label */
+  font-size: 0.80rem; /* keep compact so the value remains the hero */
+  letter-spacing: 0.1em; /* slightly wider for a "badge" feel */
+  text-transform: uppercase; /* uppercase for label */
+  font-weight: 620; /* slightly lighter weight */
+  display: block; /* treat label as block for sizing */
+  width: min-content; /* shrink column to longest word */
+  text-align: left; /* align stacked words to left edge */
+  white-space: normal; /* allow wrapping at spaces */
+  line-height: 1.05; /* tighten spacing between words */
+  grid-column: 2; /* place label in middle column */
+  position: relative; /* allow z-index */
+  z-index: 2; /* stay above ribbon */
+}
+
+.kpi { /* key performance indicator number */
+  color: var(--white); /* pure white text */
+  font-weight: 540; /* slightly stronger emphasis */
+  letter-spacing: 0.02em; /* subtle title-like tracking */
+  text-shadow: 0 10px 8px rgba(124, 191, 238, 0.3); /* glowing outline */
+  font-size: clamp(22px, 2.8vh, 26px); /* nudge size up so it pairs with the name */
+}
+
+.identity-networth__value { /* container for KPI figure */
+  margin: 0; /* remove default paragraph spacing */
+  justify-self: end; /* anchor value to right column edge */
+  text-align: right; /* right-align numbers or placeholders */
+  grid-column: 3; /* place value in right column */
+  position: relative; /* allow z-index stacking */
+  z-index: 2; /* stay above ribbon */
+}
+
+.section { /* base section card styling */
+  position: relative; /* allow pseudo-elements */
+  background: linear-gradient(155deg, var(--panel-surface), var(--panel-surface-alt)); /* from overlay-sharp */
+  border: 1px solid var(--panel-outline); /* from overlay-sharp */
+  border-radius: 20px; /* rounded panel corners */
+  padding: 16px 18px; /* internal spacing - from overlay-sharp */
+  box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+      0 18px 34px rgba(3, 6, 16, 0.45); /* from overlay-sharp */
+  transition: border-color 120ms ease, box-shadow 120ms ease; /* from overlay-sharp */
+}
+
+.section[data-has-content="true"] { /* richer styling when content present */
+  border-color: var(--panel-outline-strong); /* from overlay-sharp */
+  box-shadow: /* from overlay-sharp */
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 22px 42px rgba(4, 8, 22, 0.55);
+}
+
+.section[data-has-content="true"]:hover,
+[data-loop-clone="true"][data-has-content="true"]:hover { /* hover effects on live or looped sections */
+  border-color: rgba(124, 191, 238, 0.7); /* intensify border accent */
+  box-shadow: /* strengthen glow and shadow on hover */
+    inset 0 1px 14px rgba(124, 191, 238, 0.16), /* brighter inner glow */
+    0 26px 48px rgba(10, 24, 42, 0.6); /* deeper drop shadow */
+  transform: translateY(-2px); /* lift card slightly */
+}
+
+.section[data-has-content="false"] { /* subdued state when empty */
+  background: rgba(3, 19, 38, 0.6); /* darker fallback background */
+  border-color: rgba(73, 93, 117, 0.3); /* dim border color */
+  box-shadow: inset 0 1px 0 rgba(124, 191, 238, 0.1); /* light inner highlight only */
+  filter: saturate(0.85); /* desaturate colors subtly */
+}
+
+.accent-text { /* from overlay-sharp */
+  color: var(--accent) !important;
+  text-shadow: none;
+  font-weight: 600;
+}
+
+.section-eyebrow { /* eyebrow label styling */
+  color: var(--accent-2); /* bright accent color - from overlay-sharp */
+  text-shadow: /* from overlay-sharp */
+    0 0 8px rgba(155, 233, 255, 0.45),
+    0 0 18px rgba(72, 140, 255, 0.2);
+  font-weight: 700; /* bold label */
+  letter-spacing: 0.18em; /* widely spaced letters - from overlay-sharp */
+}
+
+.section-subhead { /* subheading styling */
+  color: var(--white); /* muted white */
+  font-weight: 500; /* medium weight */
+  text-transform: uppercase; /* uppercase for uniformity */
+  letter-spacing: 0.08em; /* slight letter spacing */
+}
+
+.section-eyebrow .period-label { /* nested period label styling */
+  color: var(--fg); /* primary foreground color */
+  font-weight: 640; /* semi-bold weight */
+}
+
+.divider { /* hairline divider */
+  height: 1px; /* thin line */
+  background: linear-gradient(90deg, transparent, rgba(148, 196, 230, 0.545), transparent); /* fade gradient line */
+}
+
+.ticker-wrapper { /* from overlay-sharp */
+  background: var(--ticker-shell);
+  border: 1px solid var(--panel-outline);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 18px 40px rgba(0, 0, 0, 0.65);
+}
+
+/* Removed ticker-wrapper::before to match overlay-sharp */
+
+#ticker-title { /* from overlay-sharp */
+  letter-spacing: 0.28em;
+}
+
+#ticker-title .ticker-title-label { /* from overlay-sharp */
+  color: var(--fg);
+}
+
+#ticker-title .ticker-title-meta { /* from overlay-sharp */
+  color: var(--muted);
+}
+
+.ticker-list-item:not(:last-child)::after { /* divider between ticker items */
+  background: var(--hairline); /* thin accent border */
+}
+
+.ticker-name-text { /* from overlay-sharp */
+  text-shadow: 0 0 12px rgba(95, 199, 255, 0.4);
+}
+
+.ticker-name.party-dem .ticker-name-text,
+.ticker-name-meta.party-dem,
+.ticker-networth.party-dem { /* styling for democratic entries */
+  color: #6390fa;
+}
+
+.ticker-name.party-rep .ticker-name-text,
+.ticker-name-meta.party-rep,
+.ticker-networth.party-rep { /* styling for republican entries */
+  color: #fa7d90; /* warm pink accent tone */
+}
+
+.ticker-rank { /* ranking number styling */
+  color: var(--white);
+  font-weight: 560; /* medium weight */
+}
+
+.overlay-grid { /* from overlay-sharp */
+  padding-right: 4px;
+  gap: 18px;
+}
+
+.column { /* from overlay-sharp */
+  gap: 18px;
+}
+
+.list.list--kv > li,
+#bio-list li.bio-pair,
+[data-original-id="bio-list"] li.bio-pair,
+#sectors-list > li,
+[data-original-id="sectors-list"] > li { /* divider styling for list items */
+  border-bottom: 1px solid rgba(122, 147, 167, 0.35); /* light separator line */
+}
+
+#committee-list,
+[data-original-id="committee-list"] { /* from overlay-sharp */
+  gap: 6px;
+}
+
+#committee-list > li,
+[data-original-id="committee-list"] > li,
+.overlay-grid [data-loop-clone="true"] [data-original-id="committee-list"] > li { /* from overlay-sharp */
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 6px;
+}
+
+#committee-list .committee-line,
+[data-original-id="committee-list"] .committee-line,
+.overlay-grid [data-loop-clone="true"] .committee-line { /* top-level committee entries */
+  position: relative;
+  padding: var(--section-row-padding) 0 var(--section-row-padding) 18px; /* consistent vertical spacing with subcommittees */
+  text-align: left; /* hard-left align */
+  line-height: 1.4; /* improve line height for better readability */
+}
+
+.list:not(.small):not(.flat) > li::before,
+.overlay-grid [data-loop-clone="true"] li:not(.small):not(.flat)::before { /* bullet markers for standard lists */
+  background: linear-gradient(135deg, var(--accent), var(--accent-2)); /* from overlay-sharp */
+  box-shadow: 0 4px 10px rgba(95, 199, 255, 0.32); /* from overlay-sharp */
+}
+
+/* Hide default bullets on committee list items since we'll add them to .committee-line */
+#committee-list > li::before,
+[data-original-id="committee-list"] > li::before,
+.overlay-grid [data-loop-clone="true"] [data-original-id="committee-list"] > li::before {
+  display: none !important;
+}
+
+/* Add bullets to committee-line spans for proper alignment with text */
+#committee-list .committee-line::before,
+[data-original-id="committee-list"] .committee-line::before,
+.overlay-grid [data-loop-clone="true"] .committee-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%; /* center vertically relative to committee name line */
+  transform: translateY(-50%); /* perfect vertical centering */
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2)); /* from overlay-sharp */
+  box-shadow: 0 4px 10px rgba(95, 199, 255, 0.32); /* from overlay-sharp */
+}
+
+#committee-list .committee-sublist,
+[data-original-id="committee-list"] .committee-sublist,
+.overlay-grid [data-loop-clone="true"] .committee-sublist { /* container for subcommittees */
+  list-style: none; /* no bullets */
+  margin: 0; /* reset default */
+  padding: 0 !important; /* remove inset so arrow lines up with parent */
+  display: flex; /* stack subitems */
+  flex-direction: column; /* vertical layout */
+  gap: 0; /* no gap - spacing handled by padding on subitems */
+  text-align: left; /* left align entries */
+}
+
+#committee-list .committee-sublist li,
+[data-original-id="committee-list"] .committee-sublist li,
+.overlay-grid [data-loop-clone="true"] .committee-sublist li { /* tighten subcommittee left edge */
+  padding: 0 !important; /* base reset; handled on .committee-subitem */
+}
+
+#committee-list .committee-subitem,
+[data-original-id="committee-list"] .committee-subitem,
+.overlay-grid [data-loop-clone="true"] .committee-subitem { /* from overlay-sharp */
+  color: var(--accent);
+  font-weight: 520;
+}
+
+/* Indent subcommittee text to align with parent committee text */
+#committee-list .committee-subitem > span,
+[data-original-id="committee-list"] .committee-subitem > span,
+.overlay-grid [data-loop-clone="true"] .committee-subitem > span {
+  padding-left: 18px; /* match committee-line padding-left for perfect alignment */
+  display: block;
+}
+
+#committee-list .committee-subitem::before,
+[data-original-id="committee-list"] .committee-subitem::before,
+.overlay-grid [data-loop-clone="true"] .committee-subitem::before { /* subcommittees do not receive bullets */
+  display: none;
+}
+
+/* Removed - now handled by the direct child span rule above */
+
+.list.list--kv .kv-label { /* from overlay-sharp */
+  color: var(--fg);
+  font-weight: 520;
+}
+
+.list.list--kv .kv-amount { /* from overlay-sharp */
+  color: var(--accent) !important;
+  font-weight: 540;
+  text-shadow: none;
+}
+
+.trade-list { /* from overlay-sharp */
+  gap: 10px;
+}
+
+.list.small li,
+.list.flat li { /* small and flat list styling */
+  color: var(--white); /* pale text color */
+  font-weight: 400; /* medium-light weight */
+}
+
+#bio-list li.bio-pair::before,
+[data-original-id="bio-list"] li.bio-pair::before { /* marker for bio pairs */
+  background: linear-gradient(135deg, var(--accent), var(--accent-2)); /* from overlay-sharp */
+  box-shadow: 0 4px 10px rgba(95, 199, 255, 0.32); /* from overlay-sharp */
+}
+
+#bio-list li.bio-pair .bio-label,
+[data-original-id="bio-list"] li.bio-pair .bio-label { /* ensure label alignment */
+  text-align: left;
+}
+
+#bio-list li.bio-pair .bio-value,
+[data-original-id="bio-list"] li.bio-pair .bio-value { /* ensure value alignment */
+  text-align: right;
+}
+
+.trade-item { /* trade list item styling */
+  display: grid; /* three-column layout */
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.45fr) minmax(0, 0.5fr); /* from overlay-sharp */
+  align-items: center; /* vertically center content */
+  gap: 8px; /* spacing between columns */
+  padding: 10px 14px; /* from overlay-sharp */
+  background: linear-gradient(160deg, rgba(23, 43, 70, 0.78), rgba(10, 18, 34, 0.92)); /* from overlay-sharp */
+  border: 1px solid rgba(155, 233, 255, 0.18); /* from overlay-sharp */
+  color: var(--fg); /* from overlay-sharp */
+  border-radius: 16px; /* rounded corners - from overlay-sharp */
+}
+
+.trade-col { /* shared column behaviour */
+  display: block; /* ensure block flow */
+  overflow: hidden; /* prevent overflow */
+  text-overflow: ellipsis; /* ellipsis overflow text */
+  white-space: nowrap; /* keep content on single line */
+}
+
+.trade-col--asset-block { /* asset column wrapper */
+  display: flex; /* stack ticker and company */
+  flex-direction: column; /* vertical arrangement */
+  gap: 2px; /* spacing between ticker and company */
+  text-align: left; /* left align asset info */
+  font-size: 0.9em; /* compact size */
+}
+
+.trade-col--asset { /* from overlay-sharp */
+  font-weight: 560;
+  letter-spacing: 0.02em;
+}
+
+.trade-asset-name { /* from overlay-sharp */
+  color: var(--muted);
+  letter-spacing: 0;
+}
+
+.trade-col--txn-block { /* transaction & amount column */
+  display: flex; /* stack action and amount */
+  flex-direction: column; /* vertical layout */
+  align-items: flex-start; /* left align column */
+  gap: 2px; /* spacing between action and amount */
+  text-align: left; /* align text left */
+}
+
+.trade-col--txn { /* from overlay-sharp */
+  color: rgba(155, 233, 255, 0.9);
+  font-weight: 620;
+  letter-spacing: 0.15em;
+}
+
+.trade-col--amount { /* from overlay-sharp */
+  color: var(--accent-2);
+  font-weight: 540;
+  text-transform: uppercase;
+}
+
+.trade-col--txn-block .trade-col--amount { /* amount styling within grouped block */
+  font-size: 0.9em; /* slightly smaller than ticker text */
+}
+
+.trade-col--date { /* from overlay-sharp */
+  color: var(--muted);
+  font-size: 0.92em;
+}
+
+.trade-date-month { /* keep existing */
+  color: var(--white);
+  font-weight: 600;
+}
+
+.trade-date-year { /* keep existing */
+  color: var(--white);
+  font-weight: 600;
+}
+
+.trade-col--buy { /* from overlay-sharp */
+  color: #79f1a4;
+  text-shadow: 0 0 12px rgba(121, 241, 164, 0.5);
+}
+
+.trade-col--sell { /* from overlay-sharp */
+  color: #ff8ca3;
+  text-shadow: 0 0 12px rgba(255, 140, 163, 0.45);
+}
+
+.trade-txn-modifier { /* from overlay-sharp */
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 560px) { /* from overlay-sharp */
+  .trade-item {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    row-gap: 8px;
+  }
+  .trade-col--asset-block {
+    grid-column: 1 / -1;
+  }
+  .trade-col--date {
+    grid-column: 2 / -1;
+  }
+}
+
+.list { /* from overlay-sharp */
+  gap: 8px;
+}
+
+/* -------------------------------------------------------------------------- *
+ * Ticker Trades Cards (fallback window)
+ * -------------------------------------------------------------------------- */
+.ticker-trade-card {
+  background: linear-gradient(160deg, rgba(23, 43, 70, 0.78), rgba(10, 18, 34, 0.92));
+  border: 1px solid rgba(124, 191, 238, 0.22);
+  border-radius: 16px;
+  padding: 0;
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ticker-trade-detail-card {
+  flex: 0 0 68%;
+  min-width: 0;
+  max-width: 68%;
+  background: linear-gradient(165deg, rgba(17, 30, 52, 0.95), rgba(9, 16, 30, 0.92));
+  border: 1px solid rgba(124, 191, 238, 0.22);
+  border-radius: 16px;
+  padding: 14px 12px 14px 14px;
+  display: flex;
+  align-items: center;
+  margin-left: -1px;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.ticker-trade-name-block {
+  flex: 0 0 32%;
+  min-width: 0;
+  max-width: 32%;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  align-items: flex-start;
+  padding: 16px 14px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.ticker-trade-name-block .ticker-name-text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.15;
+  max-width: 100%;
+}
+
+.ticker-trade-name-line--last {
+  margin-top: 0;
+}
+
+.ticker-trade-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .80fr) minmax(0, 1.00fr);
+  grid-template-rows: auto auto;
+  row-gap: 2px;
+  column-gap: 10px;
+  align-content: space-between;
+  min-height: 100%;
+}
+
+.ticker-trade-grid-cell {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
+.ticker-trade-grid-cell--center {
+  text-align: left;
+}
+
+.ticker-trade-grid-cell--right {
+  text-align: right;
+  padding-right: 2px;
+}
+
+.ticker-trade-grid-cell--date {
+  font-size: 14px;
+  letter-spacing: 0.0em;
+  color: var(--fg);
+  line-height: 1.2;
+}
+
+.ticker-trade-grid-cell.trade-col--date {
+  display: block;
+  flex-direction: initial;
+  align-items: initial;
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0.0em;
+  color: var(--fg);
+  line-height: 1.2;
+}
+
+.ticker-trade-grid-cell.trade-col--amount {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.ticker-trade-grid-cell.trade-col--asset,
+.ticker-trade-grid-cell.trade-asset-name {
+  text-align: right;
+  padding-right: 0;
+}
+
+.ticker-trade-ticker {
+  font-size: 15px;
+  font-weight: 560;
+  letter-spacing: 0.0em;
+  text-align: right;
+  line-height: 1.15;
+  margin-bottom: 1px;
+}
+
+.ticker-trade-company {
+  font-size: 13px;
+  color: var(--fg);
+  text-transform: none;
+  letter-spacing: 0;
+  word-break: normal;
+  line-height: 1.15;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: -1px;
+}
+
+#donors-period,
+#industries-period,
+[data-original-id="donors-period"],
+[data-original-id="industries-period"] { /* period labels for donors/industries */
+  color: var(--white); /* muted blue tone */
+  font-weight: 400; /* semi-bold weight */
+  letter-spacing: -0.015em; /* slight tightening */
+}
+
+.education-degree-inline,
+.education-degree-value { /* from overlay-sharp */
+  color: var(--accent) !important;
+  font-weight: 560;
+}
+
+.list-heading { /* from overlay-sharp */
+  color: var(--fg);
+  font-weight: 540;
+}

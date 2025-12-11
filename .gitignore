@@ -1,22 +1,84 @@
 # Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+*.egg
+dist/
+build/
 
 # OS
 .DS_Store
+Thumbs.db
 
-# Editor
+# Editor / IDE
 *.swp
 *.swo
+.vscode/
+.idea/
+
+# Virtual environments
+venv/
+deepface_env/
+env310/
+env/
+.venv/
+
+# Caches (large, regenerable)
+.cache_pages/
+.cache_quiver/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Claude Code / AI tools
+.claude/
 
 # DeepFace temp files
 temp_frame.jpg
 
-# Your debug snapshots
+# Debug snapshots and reports
 matched_frames/
-# Virtualenv
-deepface_env/
-env310/
+reports/
 
-# Data files you’ll regenerate
-*.db
+# Temp / scratch files
+TempFiles/
+*.tmp
+*.bak
+
+# Logs
+*.log
+match_log*.jsonl
+
+# Sensitive files - API tokens and credentials
+01_data/quiver_token.txt
+quiver_token.txt
+*.token
+*.secret
+.env
+.env.local
+.env.*
+
+# Runtime outputs (entire folder - regenerated each session)
+02_outputs/
+
+# Generated data files (keep source CSVs, ignore outputs)
+.db
+
+# Face database (download separately - see README)
+01_data/faces_official/
+01_data/faces_db_prepped/
+
+# Embedding caches (regenerate with warm_embeddings.py)
+*.pkl
+*.npz
+*_cache*
+
+# Reports and analysis outputs
+04_reports/
+
+# Temp files and archives
+09_tempfiles/
+*.tar.gz

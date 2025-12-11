@@ -61,8 +61,13 @@ quiver_token.txt
 .env.local
 .env.*
 
-# Runtime outputs (entire folder - regenerated each session)
-02_outputs/
+# Runtime outputs (regenerated each session - keep static data files)
+02_outputs/pending_review/
+02_outputs/overlay_data.json
+02_outputs/heartbeat.json
+02_outputs/runtime_config.json
+02_outputs/quiver_trades_cache.json
+02_outputs/matcher_commands.json
 
 # Generated data files (keep source CSVs, ignore outputs)
 .db

@@ -273,7 +273,7 @@ Options:
 Fetches financial disclosure data from [QuiverQuant](https://www.quiverquant.com/):
 - Net worth estimates and top stock holdings (via JSON API)
 - Top traded sectors (scraped from public pages)
-- **Strategy returns vs SPY** — portfolio performance comparison (e.g., "Pelosi: +800%, SPY: +200% since 5/16/2014")
+- **Strategy returns vs SPY** — portfolio performance comparison
 
 **API token optional:** Set `QUIVER_API_TOKEN` env var or create `quiver_token.txt` for authenticated requests (higher rate limits). Works without token but may be slower.
 
@@ -382,10 +382,10 @@ The script analyzes each pending image and scores it based on:
 - **Quality** — face detection confidence
 
 Output categories:
-- 🟢 **HIGH** — recommend approve (adds diversity)
-- 🟡 **MEDIUM** — consider (moderate value)
-- 🔴 **SUSPICIOUS** — low similarity (might be wrong person)
-- ⚪ **LOW** — similar to existing or member well-covered
+- **HIGH** — recommend approve (adds diversity)
+- **MEDIUM** — consider (moderate value)
+- **SUSPICIOUS** — low similarity (might be wrong person)
+- **LOW** — similar to existing or member well-covered
 
 Reports are saved to `04_reports/pending_analysis_TIMESTAMP.txt`.
 
@@ -443,15 +443,6 @@ This project's source code is licensed under the [MIT License](LICENSE) - free f
 
 **Data Attribution:** The financial and biographical data displayed by this application is sourced from third-party providers (OpenSecrets, QuiverQuant, Congress.gov). Please review their respective terms of service for data usage requirements. See [Data Sources & Attribution](#data-sources--attribution) for details.
 
-## Contributing
-
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-For bug reports and feature requests, please open an issue on GitHub.
 
 ---
 *Last updated: 2025-12-11* (Apple Silicon support, strategy returns, bulk trades API, fetch_company_logos)

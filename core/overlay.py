@@ -470,7 +470,7 @@ def init(config: MatcherConfig) -> None:
     OVERLAY_JSON_TMP = OVERLAY_JSON + ".tmp"
     HEARTBEAT_JSON = os.path.join(config.output_dir, "heartbeat.json")
     HEARTBEAT_JSON_TMP = HEARTBEAT_JSON + ".tmp"
-    PENDING_REVIEW_DIR = os.path.join(config.output_dir, "pending_review")
+    PENDING_REVIEW_DIR = os.path.join(config.data_dir, "pending_review")
     os.makedirs(PENDING_REVIEW_DIR, exist_ok=True)
     TRADES_CACHE_FILE = os.path.join(config.output_dir, "quiver_trades_cache.json")
 

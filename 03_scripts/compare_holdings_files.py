@@ -16,6 +16,7 @@ Checks for:
 
 import csv
 import sys
+from datetime import datetime
 from pathlib import Path
 
 # File paths
@@ -32,6 +33,57 @@ def load_csv(filepath):
     """Load CSV file and return list of dicts."""
     with open(filepath, 'r', encoding='utf-8') as f:
         return list(csv.DictReader(f))
+
+
+def normalize_holdings_text(text: str) -> str:
+    """Normalize holdings text by applying abbreviations for display consistency."""
+    if not text:
+        return text
+    replacements = [
+        ("Government Securities and Agency Debt", "Govt Securities & Agency Debt"),
+        ("Government Securities", "Govt Securities"),
+        ("Bank Accounts, Money Market Accounts and CDs", "Bank Accts, Money Market Accts & CDs"),
+        ("Corporate Securities (Bonds and Notes)", "Corporate Securities (Bonds & Notes)"),
+        ("Ownership Interest (Engaged in a Trade or Business)", "Ownership Interest (Trade or Business)"),
+        ("Retirement Plans, Defined Benefit Pension Plan", "Retirement Plans, Benefit Pension"),
+        ("Defined Benefit Pension Plan", "Benefit Pension"),
+        ("Mutual Funds, Mutual Fund", "Mutual Fund"),
+        ("Mutual Funds, Exchange Traded Fund/Note", "Mutual Funds, ETF/Note"),
+        ("Exchange Traded Fund/Note", "ETF/Note"),
+        (" and ", " & "),
+    ]
+    normalized = text
+    for full, abbr in replacements:
+        normalized = normalized.replace(full, abbr)
+    return normalized
+
+
+def apply_abbreviations_to_file(input_file: Path) -> list:
+    """Apply abbreviations to holdings text in the newer file, rewrite it, and return rows."""
+    data = load_csv(input_file)
+    if not data:
+        return data
+
+    for row in data:
+        if "top_holdings" in row:
+            row["top_holdings"] = normalize_holdings_text(row.get("top_holdings", ""))
+
+    with open(input_file, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=data[0].keys())
+        writer.writeheader()
+        writer.writerows(data)
+
+    return data
+
+
+def describe_file(path: Path, label: str) -> str:
+    """Return a human-friendly description with last-modified timestamp."""
+    try:
+        mtime = datetime.fromtimestamp(path.stat().st_mtime)
+        ts = mtime.strftime("%Y-%m-%d %H:%M")
+        return f"{label} ({ts}): {path.name}"
+    except OSError:
+        return f"{label}: {path.name}"
 
 
 def format_money(value):
@@ -54,12 +106,17 @@ def compare_files():
         sys.exit(1)
 
     # Load data
-    print(f"Loading files...")
-    print(f"  Newer (scraped): {NEWER_FILE.name}")
-    print(f"  Older (production): {OLDER_FILE.name}")
+    print("Loading files...")
+    print(f"  {describe_file(NEWER_FILE, 'Newer (scraped)')}")
+    print(f"  {describe_file(OLDER_FILE, 'Older  (production)')}")
     print()
 
-    newer_rows = load_csv(NEWER_FILE)
+    print("Applying abbreviations to newer file for display consistency...")
+    newer_rows = apply_abbreviations_to_file(NEWER_FILE)
+    if newer_rows:
+        print(f"  ✓ Updated {NEWER_FILE.name} with abbreviated holdings text")
+    else:
+        print(f"  ! No data found in {NEWER_FILE.name}")
     older_rows = load_csv(OLDER_FILE)
 
     # Create dictionaries keyed by bioguide_id
@@ -315,7 +372,41 @@ def compare_files():
     else:
         print("Safe to deploy:")
         print("  mv 01_data/00members_holdings_and_sectors.csv 01_data/members_holdings_and_sectors.csv")
-        return 0
+
+        # Ask user if they want to replace the production file
+        print()
+        print("=" * 80)
+        print("DEPLOY TO PRODUCTION?")
+        print("=" * 80)
+        response = input(f"Replace {OLDER_FILE.name} with {NEWER_FILE.name}? (y/N): ").strip().lower()
+
+        if response in ('y', 'yes'):
+            try:
+                # Rename existing production file with _OLD suffix (before extension)
+                old_backup = OLDER_FILE.with_name(f"{OLDER_FILE.stem}_OLD{OLDER_FILE.suffix}")
+                if old_backup.exists():
+                    print(f"Warning: {old_backup.name} already exists, removing it...")
+                    old_backup.unlink()
+
+                OLDER_FILE.rename(old_backup)
+                print(f"Backed up {OLDER_FILE.name} -> {old_backup.name}")
+
+                # Rename new file by removing 00 prefix
+                new_name = NEWER_FILE.name
+                if new_name.startswith('00'):
+                    new_name = new_name[2:]  # Remove '00' prefix
+                new_production = NEWER_FILE.parent / new_name
+                NEWER_FILE.rename(new_production)
+                print(f"Deployed {NEWER_FILE.name} -> {new_production.name}")
+                print()
+                print("Deployment complete!")
+                return 0
+            except Exception as e:
+                print(f"Error during deployment: {e}")
+                return 1
+        else:
+            print("Deployment cancelled.")
+            return 0
 
 
 if __name__ == "__main__":

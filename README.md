@@ -1,8 +1,8 @@
-# Face Overlay Project
+# Congress Face Match & Overlay Project
 
 Real-time face recognition system that identifies U.S. Congress members on a live video feed and renders an overlay for OBS streaming.
 
-> **New here?** Jump to [QUICKSTART.md](QUICKSTART.md) for the fastest path to running the demo.
+> **[QUICKSTART.md](QUICKSTART.md) for the fastest path to running the demo.
 
 ## What it does
 - Captures video from OBS Virtual Camera
@@ -92,7 +92,7 @@ Useful flags:
 - `--embed_backend {auto,deepface,insightface}` (default `auto`) — **must match the backend used for `warm_embeddings.py`**
 - OCR is disabled by default in code; `--ocr_engine` is ignored unless you re-enable OCR and install Tesseract.
 - `--fast_cache_only` to refuse computing embeddings if the cache is missing
-- `--save_face_hits` (on by default) saves diverse face crops to `02_outputs/pending_review/`
+- `--save_face_hits` (on by default) saves diverse face crops to `01_data/pending_review/`
 - `--quiver_token <TOKEN>` to fetch live trades from Quiver (optional; otherwise uses cached data) https://api.quiverquant.com/
 
 2) In another shell, start the overlay server:
@@ -125,18 +125,20 @@ The matcher automatically captures diverse face images for under-represented mem
 **How it works:**
 - Saves faces with confidence scores between 0.70-0.85 (diverse but confident)
 - Only saves if the member has fewer than 10 images in the database
-- Images go to `02_outputs/pending_review/` for human verification
+- Images go to `01_data/pending_review/` for human verification
 
-**Review pending faces:**
+**Review and import pending faces:**
 ```bash
-python 03_scripts/review_pending_faces.py
+python 03_scripts/import_pending_faces.py
 ```
 
-Commands during review:
-- `[a]` Approve - move to faces database
-- `[r]` Reject - delete the image
-- `[s]` Skip - leave for later
-- `[q]` Quit
+This opens each image in Preview for review:
+- `[a]` or `Enter` = Approve (move to `faces_official/`)
+- `[r]` = Reject (delete)
+- `[s]` = Skip (leave for later)
+- `[q]` = Quit
+
+Use `--auto` to import all without review, or `--dry-run` to preview.
 
 **Tuning parameters:**
 ```bash
@@ -180,10 +182,12 @@ face_overlay_proj/
 │   └── warm_embeddings.py   # Pre-compute face embeddings
 ├── 01_data/                 # Data files
 │   ├── faces_official/      # Face database (download separately)
+│   ├── pending_review/      # Captured faces awaiting review
 │   ├── *.csv                # Member data, trades, donors
 │   └── *.yaml               # Congress/committee metadata
-├── 02_outputs/              # Runtime outputs (gitignored)
+├── 02_outputs/              # Runtime outputs (overlay JSON, caches)
 ├── 03_scripts/              # Utility and scraper scripts
+├── 04_reports/              # Validation reports
 ├── requirements.txt         # Python dependencies
 ├── QUICKSTART.md            # Fast setup guide
 └── README.md                # This file
@@ -204,11 +208,12 @@ face_overlay_proj/
 - `core/overlay_server_5021.py` — Flask server for the browser overlay
 - `core/ocr.py` — OCR pipeline and ROI extraction
 - `core/faces.py` — embedding backends (InsightFace/DeepFace) and face DB handling
-- `03_scripts/review_pending_faces.py` — review and approve captured face crops
+- `03_scripts/import_pending_faces.py` — interactive review and import of captured faces
+- `03_scripts/validate_member_images.py` — cross-check face DB for mislabeled images
 - `03_scripts/scraper_OS.py` — scrape donor data from OpenSecrets (see Data Scrapers)
 - `03_scripts/scraper_quiver.py` — fetch net worth and holdings from QuiverQuant (see Data Scrapers)
-- `03_scripts/compare_donor_files.py` — validate scraped donor data before deployment
-- `03_scripts/compare_holdings_files.py` — validate scraped holdings data before deployment
+- `03_scripts/compare_donor_files.py` — validate and deploy scraped donor data
+- `03_scripts/compare_holdings_files.py` — validate and deploy scraped holdings data
 - `03_scripts/list_cameras.py` — list available cameras to find OBS virtual camera index
 - `03_scripts/update_trades_snapshot.py` — append latest trades to local CSV (requires Quiver token)
 - `03_scripts/analyze_member_database_strength.py` — analyze face DB quality and find weak members
@@ -278,7 +283,11 @@ These scripts check for:
 - Significant value changes
 - Period/date mismatches
 
-If no critical issues, deploy to production:
+If no critical issues, the script prompts to deploy automatically:
+- Backs up existing file as `*_OLD.csv`
+- Renames new file to production name
+
+Or deploy manually:
 ```bash
 mv 01_data/00members_donor_summary.csv 01_data/members_donor_summary.csv
 mv 01_data/00members_holdings_and_sectors.csv 01_data/members_holdings_and_sectors.csv
@@ -308,6 +317,19 @@ Identify members with weak face representation (few images, poor quality):
 ```bash
 python 03_scripts/analyze_member_database_strength.py --db 01_data/faces_official
 ```
+
+### Validate Face Database (`03_scripts/validate_member_images.py`)
+
+Cross-check all images for each member to detect mislabeled photos:
+```bash
+python 03_scripts/validate_member_images.py --db 01_data/faces_official
+```
+
+Options:
+- `--threshold 0.4` — similarity threshold (0.4=lenient, 0.5=moderate, 0.6=strict)
+- `--output-dir 04_reports` — where to save validation reports
+
+Reports are saved to `04_reports/` with details on problematic members.
 
 ## Data Sources & Attribution
 
@@ -345,4 +367,4 @@ Contributions are welcome! Please:
 For bug reports and feature requests, please open an issue on GitHub.
 
 ---
-*Last updated: 2025-12-10*
+*Last updated: 2025-12-11*

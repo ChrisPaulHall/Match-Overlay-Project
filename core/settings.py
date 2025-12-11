@@ -91,7 +91,7 @@ class Paths:
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
         pending_override = _env_lookup(f"{ENV_PREFIX}PENDING_REVIEW_DIR")
-        self.pending_review_dir = Path(pending_override) if pending_override else self.output_dir / "pending_review"
+        self.pending_review_dir = Path(pending_override) if pending_override else self.data_dir / "pending_review"
         self.pending_review_dir.mkdir(parents=True, exist_ok=True)
 
         runtime_override = _env_lookup("RUNTIME_CONFIG_PATH", f"{ENV_PREFIX}RUNTIME_CONFIG_PATH")

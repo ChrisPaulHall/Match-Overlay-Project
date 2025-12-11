@@ -207,7 +207,7 @@ def scrape_summary_page(
 # ---------- CLI ----------
 def main():
     ap = argparse.ArgumentParser(description="Scrape Top Contributors/Industries + period from OpenSecrets summary pages.")
-    ap.add_argument("--input", default=str(DEFAULT_INPUT), help="Input CSV with columns: bioguide_id,cid,first_name,last_name,slug_url")
+    ap.add_argument("--input", default=str(DEFAULT_INPUT), help="Input CSV with columns: bioguide_id,first_name,last_name (cid and slug_url optional - URL will be constructed from CID if slug_url missing)")
     ap.add_argument("--output", default=str(DEFAULT_OUTPUT), help="Output CSV path")
     ap.add_argument("--delay", type=float, default=1.5, help="Delay between requests (seconds)")
     ap.add_argument("--top-n", type=int, default=5, help="How many items to keep per section")
@@ -276,7 +276,7 @@ def main():
          open(output_csv, mode, newline="", encoding="utf-8") as outfile:
 
         reader = csv.DictReader(infile)
-        required = {"bioguide_id", "cid", "first_name", "last_name", "slug_url"}
+        required = {"bioguide_id", "first_name", "last_name"}
         missing = required - set(reader.fieldnames or [])
         if missing:
             logging.error("Input CSV missing expected columns: %s", ", ".join(sorted(missing)))
@@ -293,8 +293,34 @@ def main():
             bioguide_id = (row.get("bioguide_id") or "").strip()
             cid = (row.get("cid") or "").strip()
 
+            # Construct slug_url from CID and name if not provided
+            if not slug_url and cid and first_name and last_name:
+                # Convert name to slug format (lowercase, hyphens)
+                name_slug = f"{first_name.lower()}-{last_name.lower()}"
+                # Remove accents/special chars for URL
+                name_slug = name_slug.replace('é', 'e').replace('á', 'a').replace('ñ', 'n')
+                slug_url = f"https://www.opensecrets.org/members-of-congress/{name_slug}/summary?cid={cid}"
+                logging.debug("Constructed URL for %s %s: %s", first_name, last_name, slug_url)
+
             if not valid_url(slug_url):
-                logging.warning("Skipping row with invalid slug_url: %r", row)
+                logging.warning("Row has invalid/empty slug_url, preserving identity data only: %s %s (%s)",
+                               first_name, last_name, bioguide_id)
+                # Write row with identity info but no scraped data (prevents data loss)
+                writer.writerow({
+                    "bioguide_id": bioguide_id,
+                    "cid": cid,
+                    "first_name": first_name,
+                    "last_name": last_name,
+                    "slug_url": slug_url,
+                    "top_contributors": "",
+                    "top_industries": "",
+                    "contributors_period_start": "",
+                    "contributors_period_end": "",
+                    "contributors_period": "",
+                    "industries_period_start": "",
+                    "industries_period_end": "",
+                    "industries_period": "",
+                })
                 stats["skipped_invalid"] += 1
                 continue
             if slug_url in done:

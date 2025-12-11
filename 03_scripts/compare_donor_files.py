@@ -17,6 +17,7 @@ Checks for:
 import csv
 import re
 import sys
+from datetime import datetime
 from pathlib import Path
 
 # File paths
@@ -29,6 +30,15 @@ def load_csv(filepath):
     """Load CSV file and return list of dicts."""
     with open(filepath, 'r', encoding='utf-8') as f:
         return list(csv.DictReader(f))
+
+def describe_file(path: Path, label: str) -> str:
+    """Return a human-friendly description with last-modified timestamp."""
+    try:
+        mtime = datetime.fromtimestamp(path.stat().st_mtime)
+        ts = mtime.strftime("%Y-%m-%d %H:%M")
+        return f"{label} ({ts}): {path.name}"
+    except OSError:
+        return f"{label}: {path.name}"
 
 
 def parse_dollar_amount(text):
@@ -62,9 +72,9 @@ def compare_files():
         sys.exit(1)
 
     # Load data
-    print(f"Loading files...")
-    print(f"  Newer (scraped): {NEWER_FILE.name}")
-    print(f"  Older (production): {OLDER_FILE.name}")
+    print("Loading files...")
+    print(f"  {describe_file(NEWER_FILE, 'Newer (scraped)')}")
+    print(f"  {describe_file(OLDER_FILE, 'Older  (production)')}")
     print()
 
     newer_rows = load_csv(NEWER_FILE)
@@ -307,7 +317,41 @@ def compare_files():
         return 1
     else:
         print("Safe to deploy: mv 00members_donor_summary.csv members_donor_summary.csv")
-        return 0
+
+        # Ask user if they want to replace the production file
+        print()
+        print("=" * 80)
+        print("DEPLOY TO PRODUCTION?")
+        print("=" * 80)
+        response = input(f"Replace {OLDER_FILE.name} with {NEWER_FILE.name}? (y/N): ").strip().lower()
+
+        if response in ('y', 'yes'):
+            try:
+                # Rename existing production file with _OLD suffix (before extension)
+                old_backup = OLDER_FILE.with_name(f"{OLDER_FILE.stem}_OLD{OLDER_FILE.suffix}")
+                if old_backup.exists():
+                    print(f"Warning: {old_backup.name} already exists, removing it...")
+                    old_backup.unlink()
+
+                OLDER_FILE.rename(old_backup)
+                print(f"Backed up {OLDER_FILE.name} -> {old_backup.name}")
+
+                # Rename new file by removing 00 prefix
+                new_name = NEWER_FILE.name
+                if new_name.startswith('00'):
+                    new_name = new_name[2:]  # Remove '00' prefix
+                new_production = NEWER_FILE.parent / new_name
+                NEWER_FILE.rename(new_production)
+                print(f"Deployed {NEWER_FILE.name} -> {new_production.name}")
+                print()
+                print("Deployment complete!")
+                return 0
+            except Exception as e:
+                print(f"Error during deployment: {e}")
+                return 1
+        else:
+            print("Deployment cancelled.")
+            return 0
 
 
 if __name__ == "__main__":

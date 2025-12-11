@@ -1,49 +1,49 @@
-# Requires Python 3.10 or 3.11 (scikit-image >=0.25 needs 3.10+)
+# Requires Python 3.10 or 3.11 (scikit-image >=0.25 needs 3.10+; Python 3.13 not supported)
 #
 # **Recommended:** follow the staged install in README.md/QUICKSTART.md to avoid long
 # OpenCV source builds. `pip install -r requirements.txt` can work but may compile
 # OpenCV from source (slow). Order matters for the staged approach.
 
 # Core Web Framework
-Flask==3.0.3
-flask-cors==5.0.0
+Flask>=3.0,<4.0
 
 # Web Scraping & Parsing
-beautifulsoup4==4.12.3
-requests==2.32.3
+beautifulsoup4>=4.12,<5.0
+requests>=2.31,<3.0
+urllib3>=2.0,<3.0
 
 # Data Processing
-numpy==1.26.4
-pandas==2.2.2
-PyYAML==6.0.2
-xxhash==3.4.1
+numpy>=1.26,<2.0
+PyYAML>=6.0,<7.0
+xxhash>=3.4,<4.0
 
 # Image Processing
-pillow==10.4.0
-opencv-python-headless==4.10.0.84
-scikit-image==0.25.2
+pillow>=10.0,<11.0
+opencv-python-headless>=4.8,<5.0
+scikit-image>=0.22,<1.0
 
 # Machine Learning / Face Recognition
-tensorflow==2.15.0
-tensorflow-estimator==2.15.0
+# IMPORTANT: onnx must be <1.17 due to ml_dtypes compatibility issues
+tensorflow>=2.15,<2.20
 onnx>=1.14,<1.17
-onnxruntime==1.18.1
-insightface==0.7.3
-deepface==0.0.93
+onnxruntime>=1.18,<2.0
+insightface>=0.7,<0.8
+deepface>=0.0.90,<0.1
 
-# DeepFace dependencies (installable with --no-deps to avoid opencv rebuild)
+# DeepFace sub-dependencies (install with --no-deps to avoid opencv rebuild)
 fire>=0.4.0
 gdown>=3.10.1
 gunicorn>=20.1.0
 mtcnn>=0.1.0
 retina-face>=0.0.1
 
-# OCR (optional - Tesseract binary must be installed separately)
-pytesseract==0.3.13
+# OCR (optional - requires Tesseract binary: brew install tesseract)
+pytesseract>=0.3,<1.0
 
-# Financial Data
-quiverquant==0.2.2
+# Financial Data API (optional - for live trade data)
+quiverquant>=0.2,<1.0
 
-# Installation help
-# If OpenCV attempts to build from source, install deepface with --no-deps and
-# then install the explicit dependencies above. See README for details.
+# Installation notes:
+# - If OpenCV attempts to build from source, install deepface with --no-deps
+#   and then install the explicit dependencies above. See README for details.
+# - tensorflow-estimator is pulled in automatically by tensorflow>=2.15

@@ -2,7 +2,7 @@
 """Review and approve pending face crops for database augmentation.
 
 faces_official download:
-https://drive.google.com/drive/folders/10J55kR0nNMOnNC4cl_aGvNOa90pVFS7p?usp=drive_link
+https://drive.google.com/drive/folders/1VjMNSBHbMNhX-oLgdK1u1NF8ttAcBxpC?usp=drive_link
 
 This script displays pending faces one at a time and lets you:
 - [a] Approve: Move to faces_official directory

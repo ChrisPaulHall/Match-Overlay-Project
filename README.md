@@ -2,6 +2,8 @@
 
 Real-time face recognition system that identifies U.S. Congress members on a live video feed and renders an overlay for OBS streaming.
 
+> **New here?** Jump to [QUICKSTART.md](QUICKSTART.md) for the fastest path to running the demo.
+
 ## What it does
 - Captures video from OBS Virtual Camera
 - Detects faces using InsightFace (ONNX) or DeepFace (TensorFlow)
@@ -22,7 +24,7 @@ Real-time face recognition system that identifies U.S. Congress members on a liv
 ### 1. Download the Face Database
 The face database (~1.6 GB) is hosted separately due to size:
 
-**[Download faces_official.zip from Google Drive](https://drive.google.com/drive/folders/1zMTi7956xKNUfFbspdEaMTFKekDscwv9?usp=drive_link)**
+**[Download faces_official.zip from Google Drive](https://drive.google.com/drive/folders/1VjMNSBHbMNhX-oLgdK1u1NF8ttAcBxpC?usp=drive_link)**
 
 Extract to `01_data/`:
 ```bash
@@ -44,24 +46,21 @@ pip install -U pip setuptools wheel
 **Important:** Install in stages to avoid OpenCV compilation:
 ```bash
 # Core dependencies first
-pip install Flask==3.0.3 flask-cors==5.0.0 beautifulsoup4==4.12.3 numpy==1.26.4 \
-    requests==2.32.3 pandas==2.2.2 pillow==10.4.0 PyYAML==6.0.2 xxhash==3.4.1 \
-    pytesseract==0.3.13
+pip install Flask beautifulsoup4 numpy requests pillow PyYAML xxhash pytesseract
 
-# ML packages
-pip install opencv-python-headless==4.10.0.84 tensorflow==2.15.0 \
-    tensorflow-estimator==2.15.0 "onnx>=1.14,<1.17" onnxruntime==1.18.1 \
-    scikit-image==0.25.2 quiverquant==0.2.2
+# ML packages (headless OpenCV avoids GUI/build issues)
+pip install opencv-python-headless tensorflow "onnx>=1.14,<1.17" onnxruntime \
+    scikit-image quiverquant
 
 # Face recognition (install deepface without deps to avoid opencv rebuild)
-pip install --no-deps deepface==0.0.93
-pip install insightface==0.7.3
+pip install --no-deps deepface
+pip install insightface
 
-# Missing deepface dependencies (install without rebuilding opencv-python)
+# DeepFace sub-dependencies (install without rebuilding opencv-python)
 pip install --no-deps fire gdown gunicorn mtcnn retina-face
 
 # Verify all imports
-python -c "import cv2, tensorflow, flask, insightface, deepface; print('✓ All imports successful')"
+python -c "import cv2, tensorflow, flask, insightface, deepface; print('All imports OK')"
 ```
 
 ### 3. Warm the Embedding Cache (first run only)
@@ -75,11 +74,11 @@ This generates face embeddings for fast matching (~5-15 minutes). Use `--embed_b
 ### Key Dependencies
 | Package | Version | Notes |
 |---------|---------|-------|
-| tensorflow | 2.15.0 | ML backend for DeepFace |
-| insightface | 0.7.3 | Primary face detection/embedding |
+| tensorflow | >=2.15 | ML backend for DeepFace |
+| insightface | >=0.7 | Primary face detection/embedding |
 | onnx | >=1.14,<1.17 | **Must be <1.17** (ml_dtypes compat) |
-| opencv-python-headless | 4.10.x | Single OpenCV variant (no GUI) |
-| deepface | 0.0.93 | Face recognition framework |
+| opencv-python-headless | >=4.8 | Single OpenCV variant (no GUI) |
+| deepface | >=0.0.90 | Face recognition framework |
 
 ## Running the system
 You typically run two processes: the matcher (produces overlay JSON) and the web overlay server (renders it).
@@ -154,10 +153,6 @@ After approving faces, regenerate embeddings:
 python core/warm_embeddings.py --faces_db 01_data/faces_official
 ```
 
-## Quick Start
-
-For a faster overview of the setup and running process, see [QUICKSTART.md](QUICKSTART.md).
-
 ## Troubleshooting
 
 | Problem | Solution |
@@ -173,8 +168,29 @@ For a faster overview of the setup and running process, see [QUICKSTART.md](QUIC
 | **High CPU** | Increase `--frame_interval` and `--face_interval`; use `--embed_backend insightface` |
 | **Python 3.13 errors** | Use Python 3.10/3.11 instead |
 
+## Project Structure
+
+```
+face_overlay_proj/
+├── core/                    # Main application code
+│   ├── matcher.py           # Face recognition main loop
+│   ├── overlay_server_5021.py  # Flask server for browser overlay
+│   ├── faces.py             # Face embedding backends
+│   ├── overlay.py           # Overlay data generation
+│   └── warm_embeddings.py   # Pre-compute face embeddings
+├── 01_data/                 # Data files
+│   ├── faces_official/      # Face database (download separately)
+│   ├── *.csv                # Member data, trades, donors
+│   └── *.yaml               # Congress/committee metadata
+├── 02_outputs/              # Runtime outputs (gitignored)
+├── 03_scripts/              # Utility and scraper scripts
+├── requirements.txt         # Python dependencies
+├── QUICKSTART.md            # Fast setup guide
+└── README.md                # This file
+```
+
 ## Data layout
-- `01_data/faces_official/` : reference face crops (**download from** https://drive.google.com/drive/folders/1zMTi7956xKNUfFbspdEaMTFKekDscwv9?usp=drive_link)
+- `01_data/faces_official/` : reference face crops (**download from** https://drive.google.com/drive/folders/1VjMNSBHbMNhX-oLgdK1u1NF8ttAcBxpC?usp=drive_link)
 - `01_data/*.csv`, `01_data/*.yaml` : member data (included in repo)
 - `02_outputs/` : runtime outputs (overlay JSON, runtime config, tickers cache)
 - Environment overrides (optional):
@@ -317,6 +333,16 @@ Please review each provider's terms of service before running the scrapers. The 
 This project's source code is licensed under the [MIT License](LICENSE) - free for personal and commercial use.
 
 **Data Attribution:** The financial and biographical data displayed by this application is sourced from third-party providers (OpenSecrets, QuiverQuant, Congress.gov). Please review their respective terms of service for data usage requirements. See [Data Sources & Attribution](#data-sources--attribution) for details.
+
+## Contributing
+
+Contributions are welcome! Please:
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+For bug reports and feature requests, please open an issue on GitHub.
 
 ---
 *Last updated: 2025-12-10*

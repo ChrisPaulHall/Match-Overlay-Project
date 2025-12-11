@@ -1,6 +1,6 @@
 # Quick Start
 
-This file shows the minimal steps to get the project running for a quick demo.
+This file shows the minimal steps to get the project running.
 
 ## Prerequisites
 - Python 3.10 or 3.11
@@ -80,6 +80,7 @@ source venv/bin/activate
 # IMPORTANT: use the same --embed_backend as step 4 (default: auto)
 python core/matcher.py --cam_index 0
 # matcher writes overlay JSON to 02_outputs/overlay_data.json
+# OCR is disabled by default; matcher runs face-only unless you enable OCR deps
 ```
 
 ### 7) Add the overlay to OBS
@@ -94,12 +95,7 @@ python core/matcher.py --cam_index 0
 - Set URL to `http://localhost:5021/` (try `/1` or `/2` for different layouts)
 - Refresh the source once `overlay_server_5021.py` is running
 
-
-
-## Notes & Troubleshooting
-
-- If pip tries to build `opencv-python` from source, cancel and use the staged commands above.
-- If you see an `onnx`/`ml_dtypes` error, run: `pip install "onnx>=1.14,<1.17"`
-- If Python imports complain, recreate the venv with the proper Python version.
-
-That's it -- this minimal path gets the overlay visible in OBS.
+**Virtual Camera (feeds matcher.py):**
+- In OBS, go to **Controls → Start Virtual Camera**.
+- Make sure the **Output Type** is set to “Source” and **Output Selection** is your video source (1920x1080).
+- Leave the virtual camera running; `matcher.py` will read from it (`--cam_index 0` by default—adjust if needed).

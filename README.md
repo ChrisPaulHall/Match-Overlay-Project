@@ -8,7 +8,7 @@ Real-time face recognition system that identifies U.S. Congress members on a liv
 - Matches against a database of 500+ Congress member faces (`01_data/faces_official`)
 - Displays member info: name, title, net worth, committee assignments, recent stock trades
 - Writes structured overlay data to `02_outputs/overlay_data.json`
-- Serves a browser overlay at `http://localhost:5021/` for OBS
+- Serves a browser overlay at `http://localhost:5021/` for OBS browser source
 
 ## Prerequisites
 - **Python 3.10 or 3.11** (required; 3.9 will fail because of dependency minimums; 3.13 has compatibility issues)
@@ -16,7 +16,6 @@ Real-time face recognition system that identifies U.S. Congress members on a liv
   - Install with `brew install tesseract` (macOS) or `apt-get install tesseract-ocr` (Linux)
   - Face recognition works without it; OCR features require the binary on PATH
 - **OBS Studio** with Browser Source capability
-- macOS/Linux recommended (OCR timeouts rely on `SIGALRM`)
 
 ## Setup
 
@@ -33,7 +32,7 @@ You should end up with `01_data/faces_official/` containing ~3,600 face images.
 
 ### 2. Install Dependencies
 
-**Do not use `pip install -r requirements.txt`** — it skips the critical staging steps needed to avoid long OpenCV builds. Follow the staged approach below instead.
+**Recommended:** use the staged install below to avoid long OpenCV builds. Direct `pip install -r requirements.txt` can work but may compile OpenCV from source (slow).
 
 ```bash
 # From repo root
@@ -69,7 +68,7 @@ python -c "import cv2, tensorflow, flask, insightface, deepface; print('✓ All 
 ```bash
 python core/warm_embeddings.py --faces_db 01_data/faces_official --embed_backend auto
 ```
-This generates face embeddings for fast matching (~2-5 minutes). Use `--embed_backend insightface` or `--embed_backend deepface` to force a specific backend.
+This generates face embeddings for fast matching (~5-15 minutes). Use `--embed_backend insightface` or `--embed_backend deepface` to force a specific backend.
 
 **Important:** If you specify a backend here, use the same `--embed_backend` flag when running `matcher.py` later. If the backends don't match, the matcher will recompute embeddings at runtime (slow).
 
@@ -92,10 +91,10 @@ python core/matcher.py --cam_index 0
 ```
 Useful flags:
 - `--embed_backend {auto,deepface,insightface}` (default `auto`) — **must match the backend used for `warm_embeddings.py`**
-- `--ocr_engine {auto,tesseract}` (Paddle/EasyOCR are disabled unless installed)
+- OCR is disabled by default in code; `--ocr_engine` is ignored unless you re-enable OCR and install Tesseract.
 - `--fast_cache_only` to refuse computing embeddings if the cache is missing
 - `--save_face_hits` (on by default) saves diverse face crops to `02_outputs/pending_review/`
-- `--quiver_token <TOKEN>` to fetch live trades from Quiver (optional; otherwise uses cached data)
+- `--quiver_token <TOKEN>` to fetch live trades from Quiver (optional; otherwise uses cached data) https://api.quiverquant.com/
 
 2) In another shell, start the overlay server:
 ```bash
@@ -103,10 +102,9 @@ source venv/bin/activate
 python core/overlay_server_5021.py
 ```
 Endpoints:
-- Overlay (use in OBS): `http://localhost:5021/` (default), `/1`, or `/2` for different layouts
+- Overlay (use in OBS browser window): `http://localhost:5021/` (default), `/1`, or `/2` for different layouts
 - Data feed: `http://localhost:5021/data.json`
 - Runtime config (GET/POST): `http://localhost:5021/config`
-- Dashboard views: `/dashboard`, `/dashboard/compact`
 - Health check: `/health`
 
 ## Using with OBS
@@ -115,7 +113,11 @@ Endpoints:
    - Examples: https://live.house.gov/, https://www.senate.gov/legislative/floor_activity_pail.htm
 2. Add another **Browser Source** for the overlay (576x1080):
    - Set URL to `http://localhost:5021/` (try `/1` or `/2` for different layouts)
-   - Enable transparency and refresh once `overlay_server_5021.py` is running
+   - Refresh once `overlay_server_5021.py` is running
+3. Start the OBS **Virtual Camera** (feeds matcher.py):
+   - In OBS, go to **Controls → Start Virtual Camera**.
+   - Set **Output Type** to “Source” and **Output Selection** to your video source (1920x1080).
+   - Leave the virtual camera running; `matcher.py` reads from it (`--cam_index 0` by default—adjust if needed).
 
 ## Face Database Augmentation
 
@@ -145,6 +147,8 @@ Commands during review:
 --save_face_max_per_person 5      # Max pending images per person
 ```
 
+Pending review saves are grouped by member (bioguide), so variants of the same person share the same per-person limits and session diversity checks.
+
 After approving faces, regenerate embeddings:
 ```bash
 python core/warm_embeddings.py --faces_db 01_data/faces_official
@@ -158,7 +162,7 @@ For a faster overview of the setup and running process, see [QUICKSTART.md](QUIC
 
 | Problem | Solution |
 |---------|----------|
-| **`ModuleNotFoundError: No module named 'cv2'` or `'flask'`** | Dependencies not installed. Activate venv then `pip install -r requirements.txt` |
+| **`ModuleNotFoundError: No module named 'cv2'` or `'flask'`** | Dependencies not installed. Activate venv then run the staged install commands (or `pip install -r requirements.txt` if you accept possible OpenCV builds) |
 | **`AttributeError: cannot import name 'float4_e2m1fn' from 'ml_dtypes'`** | onnx version too high. Run: `pip install \"onnx>=1.14,<1.17\"` |
 | **`ERROR: No matching distribution found for scikit-image==0.25.2`** | Using Python 3.9 (too old). Install Python 3.10 or 3.11 and recreate venv |
 | **opencv-python building from source (takes forever)** | Cancel and install with staged approach above; install deepface with `--no-deps` |
@@ -201,8 +205,8 @@ The overlay displays financial data for Congress members sourced from external A
 
 | Scraper | Output File | Production File | Overlay Data |
 |---------|-------------|-----------------|--------------|
-| `scraper_OS.py` | `00members_donor_summary.csv` | `members_donor_summary.csv` | Top donors, top industries |
-| `scraper_quiver.py` | `00members_holdings_and_sectors.csv` | `members_holdings_and_sectors.csv` | Net worth, holdings, traded sectors |
+| `scraper_OS.py` | `01_data/00members_donor_summary.csv` | `01_data/members_donor_summary.csv` | Top donors, top industries |
+| `scraper_quiver.py` | `01_data/00members_holdings_and_sectors.csv` | `01_data/members_holdings_and_sectors.csv` | Net worth, holdings, traded sectors |
 
 The scrapers write to `00*` prefixed files. After validating with the comparison scripts, rename to production files.
 

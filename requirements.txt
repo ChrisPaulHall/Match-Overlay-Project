@@ -1,10 +1,8 @@
 # Requires Python 3.10 or 3.11 (scikit-image >=0.25 needs 3.10+)
 #
-# **IMPORTANT:** Do NOT use `pip install -r requirements.txt` directly.
-# Instead, follow the STAGED INSTALL approach in README.md or QUICKSTART.md
-# to avoid long OpenCV source builds. The order matters!
-#
-# See README.md for staged install tips to avoid OpenCV source builds.
+# **Recommended:** follow the staged install in README.md/QUICKSTART.md to avoid long
+# OpenCV source builds. `pip install -r requirements.txt` can work but may compile
+# OpenCV from source (slow). Order matters for the staged approach.
 
 # Core Web Framework
 Flask==3.0.3

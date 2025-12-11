@@ -19,6 +19,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import csv
 import os
 import re
 import shutil
@@ -28,6 +29,36 @@ from pathlib import Path
 # Add project root to path for imports
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
+
+
+def load_bioguide_to_name_map(csv_path: Path) -> dict:
+    """Load mapping from bioguide_id to face filename stem.
+
+    Returns dict like: {'M001239': 'JMcGuire', 'G000558': 'BGuthrie'}
+    """
+    mapping = {}
+    if not csv_path.exists():
+        return mapping
+
+    try:
+        with open(csv_path, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                bioguide = row.get('bioguide_id', '').strip()
+                filename = row.get('filename', '').strip()
+                if bioguide and filename:
+                    # Extract stem (remove .jpg extension)
+                    stem = Path(filename).stem
+                    mapping[bioguide] = stem
+    except Exception as e:
+        print(f"Warning: Could not load bioguide mapping: {e}")
+
+    return mapping
+
+
+def is_bioguide_id(name: str) -> bool:
+    """Check if a string looks like a bioguide ID (e.g., M001239, G000558)."""
+    return bool(re.match(r'^[A-Z]\d{6}$', name))
 
 try:
     import cv2
@@ -96,12 +127,22 @@ def review_faces(
     pending_dir: Path,
     faces_db_dir: Path,
     auto_approve: bool = False,
+    bioguide_map: dict | None = None,
 ) -> dict:
     """Review pending faces interactively.
+
+    Args:
+        pending_dir: Directory containing pending face images
+        faces_db_dir: Target faces database directory
+        auto_approve: If True, approve all without prompting
+        bioguide_map: Optional dict mapping bioguide_id -> face_name
 
     Returns:
         dict with counts: approved, rejected, skipped
     """
+    if bioguide_map is None:
+        bioguide_map = {}
+
     if not pending_dir.exists():
         print(f"Pending directory does not exist: {pending_dir}")
         return {"approved": 0, "rejected": 0, "skipped": 0}
@@ -152,9 +193,25 @@ def review_faces(
             close_display()
             break
         elif action == 'a':
+            # Resolve the proper face name
+            # Check if name looks like a bioguide ID and resolve it
+            face_name = meta['name']
+            if is_bioguide_id(face_name) and face_name in bioguide_map:
+                resolved_name = bioguide_map[face_name]
+                print(f"  Resolved {face_name} -> {resolved_name}")
+                face_name = resolved_name
+            elif is_bioguide_id(face_name) and meta['bioguide'] in bioguide_map:
+                # Try using the bioguide field if name field is the bioguide
+                resolved_name = bioguide_map[meta['bioguide']]
+                print(f"  Resolved via bioguide {meta['bioguide']} -> {resolved_name}")
+                face_name = resolved_name
+            elif is_bioguide_id(face_name):
+                print(f"  WARNING: Could not resolve bioguide {face_name} to name")
+                print(f"           File will be saved as {face_name}.jpg")
+
             # Generate new filename for faces_db
             # Find next available number for this person
-            existing = list(faces_db_dir.glob(f"{meta['name']}*.jpg"))
+            existing = list(faces_db_dir.glob(f"{face_name}*.jpg"))
             if existing:
                 # Extract numbers from existing files
                 numbers = []
@@ -162,12 +219,12 @@ def review_faces(
                     match = re.search(r'(\d+)\.jpg$', f.name)
                     if match:
                         numbers.append(int(match.group(1)))
-                    elif f.stem == meta['name']:
+                    elif f.stem == face_name:
                         numbers.append(0)
                 next_num = max(numbers, default=0) + 1
-                new_name = f"{meta['name']}{next_num}.jpg"
+                new_name = f"{face_name}{next_num}.jpg"
             else:
-                new_name = f"{meta['name']}.jpg"
+                new_name = f"{face_name}.jpg"
 
             dest_path = faces_db_dir / new_name
             shutil.move(str(image_path), str(dest_path))
@@ -219,13 +276,27 @@ def main():
         action="store_true",
         help="Automatically approve all pending faces without prompting",
     )
+    parser.add_argument(
+        "--lookup-csv",
+        type=Path,
+        default=PROJECT_ROOT / "01_data" / "members_face_lookup.csv",
+        help="CSV file with bioguide_id to filename mapping",
+    )
 
     args = parser.parse_args()
+
+    # Load bioguide -> name mapping for proper file naming
+    bioguide_map = load_bioguide_to_name_map(args.lookup_csv)
+    if bioguide_map:
+        print(f"Loaded {len(bioguide_map)} bioguide -> name mappings from {args.lookup_csv.name}")
+    else:
+        print(f"Warning: No bioguide mappings loaded. Files may not be named correctly.")
 
     review_faces(
         pending_dir=args.pending_dir,
         faces_db_dir=args.faces_db,
         auto_approve=args.auto_approve,
+        bioguide_map=bioguide_map,
     )
 
 
